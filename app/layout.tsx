@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "../components/layout/Footer";
+import { Toaster } from "@/components/ui/toaster";
 import Script from "next/script";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
   title: "Smart Pro Visa | Visa, Tours & Travel Made Easy",
@@ -29,6 +30,10 @@ export const metadata: Metadata = {
   },
 };
 
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { Suspense } from "react";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -37,11 +42,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("font-sans", geist.variable)}>
       <body className="antialiased">
-        <Navbar />
-        <main className="pt-16">
-          {children}
-        </main>
-        <Footer />
+        <TooltipProvider>
+          <Suspense fallback={<div className="h-16 bg-primary" />}>
+            <Navbar />
+          </Suspense>
+          <main>
+            {children}
+          </main>
+          <Footer />
+          <Toaster />
+          <Sonner />
+        </TooltipProvider>
 
         {/* Tawk Script */}
         <Script
@@ -61,6 +72,7 @@ export default function RootLayout({
             `,
           }}
         />
+        <Toaster />
       </body>
     </html>
   );
