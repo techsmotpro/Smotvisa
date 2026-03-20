@@ -9,6 +9,8 @@ export interface BlogPost {
     author: string;
     date: string;
     readTime: string;
+    updatedAt?: string;
+    createdAt?: string;
 }
 
 // Fallback blog data for when API fails
