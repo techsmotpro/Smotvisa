@@ -61,7 +61,7 @@ export default function BlogClient({ blogs }: { blogs: BlogPost[] }) {
                             transition={{ delay: idx * 0.1 }}
                             className="group bg-card rounded-3xl overflow-hidden shadow-card border border-border hover:shadow-elevated transition-all duration-300 flex flex-col h-full"
                         >
-                            <Link href={`/blog/${blog.slug}`} className="block overflow-hidden h-64 relative">
+                            <Link href={`/blog/${blog.slug || blog.id}`} className="block overflow-hidden h-64 relative">
                                 <img
                                     src={blog.image.startsWith('http') ? blog.image : 'https://picsum.photos/seed/' + blog.id + '/800/600'}
                                     alt={blog.title}
@@ -84,7 +84,7 @@ export default function BlogClient({ blogs }: { blogs: BlogPost[] }) {
                                     </div>
                                 </div>
 
-                                <Link href={`/blog/${blog.slug}`}>
+                                <Link href={`/blog/${blog.slug || blog.id}`}>
                                     <h3 className="text-xl md:text-2xl font-display font-bold text-foreground mb-4 group-hover:text-secondary transition-colors line-clamp-2 leading-tight">
                                         {blog.title}
                                     </h3>
@@ -101,7 +101,7 @@ export default function BlogClient({ blogs }: { blogs: BlogPost[] }) {
                                         {blog.author}
                                     </div>
                                     <Link
-                                        href={`/blog/${blog.slug}`}
+                                        href={`/blog/${blog.slug || blog.id}`}
                                         className="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:translate-x-2 transition-all"
                                     >
                                         View Full Article <ArrowRight className="h-4 w-4" />

@@ -63,7 +63,11 @@ export const fetchBlogs = async (): Promise<BlogPost[]> => {
         const blogs: BlogPost[] = await response.json();
 
         // Return blogs if we get valid data, otherwise return fallbacks
-        return blogs && blogs.length > 0 ? blogs : fallbackBlogs;
+        const results = blogs && blogs.length > 0 ? blogs : fallbackBlogs;
+        return results.map(b => ({
+            ...b,
+            slug: b.slug || b.id
+        }));
     } catch (error) {
         console.error('Error fetching blogs:', error);
         // Return fallback data if API fails
@@ -84,7 +88,10 @@ export const fetchBlogBySlug = async (slug: string): Promise<BlogPost | undefine
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const blog: BlogPost = await response.json();
-        return blog;
+        return {
+            ...blog,
+            slug: blog.slug || blog.id
+        };
     } catch (error) {
         console.error('Error fetching blog by slug:', error);
         // Find blog from fallback data if API fails

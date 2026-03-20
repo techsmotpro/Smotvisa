@@ -64,7 +64,12 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost }) {
                     <div className="max-w-4xl mx-auto">
                         <div className="prose prose-lg prose-slate max-w-none font-body text-muted-foreground leading-relaxed 
                                       prose-headings:font-display prose-headings:font-bold prose-headings:text-foreground
-                                      prose-strong:text-foreground prose-a:text-secondary hover:prose-a:underline"
+                                      prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:pb-4 prose-h2:border-b prose-h2:border-border/50
+                                      prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4
+                                      prose-p:mb-6 prose-li:mb-2
+                                      prose-strong:font-semibold prose-strong:text-foreground/80
+                                      prose-a:text-secondary prose-a:font-bold hover:prose-a:underline
+                                      prose-img:rounded-[2rem] prose-img:shadow-elevated prose-img:mt-12 prose-img:mb-12"
                             dangerouslySetInnerHTML={{ __html: blog.content }}
                         />
 

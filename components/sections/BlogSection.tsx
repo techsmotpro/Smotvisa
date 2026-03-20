@@ -37,7 +37,7 @@ const BlogSection = async () => {
                             className="group bg-card rounded-2xl overflow-hidden shadow-card border border-border hover:shadow-elevated transition-all duration-300"
                         >
                             <div className="relative overflow-hidden aspect-video">
-                                <Link href={`/blog/${blog.slug}`} className="block w-full h-full">
+                                <Link href={`/blog/${blog.slug || blog.id}`} className="block w-full h-full">
                                     <Image
                                         src={blog.image.startsWith('https://picsum.photos') ? blog.image : 'https://picsum.photos/seed/' + blog.id + '/800/450'}
                                         alt={blog.title}
@@ -50,7 +50,7 @@ const BlogSection = async () => {
                                 </span>
                             </div>
                             <div className="p-6">
-                                <Link href={`/blog/${blog.slug}`}>
+                                <Link href={`/blog/${blog.slug || blog.id}`}>
                                     <h3 className="text-lg font-display font-bold text-foreground mb-2 group-hover:text-secondary transition-colors line-clamp-2">
                                         {blog.title}
                                     </h3>
@@ -70,7 +70,7 @@ const BlogSection = async () => {
                                     </div>
                                 </div>
                                 <div className="mt-4 pt-4 border-t border-border flex justify-end">
-                                    <Link href={`/blog/${blog.slug}`} className="text-xs font-bold text-secondary flex items-center gap-1 hover:gap-2 transition-all">
+                                    <Link href={`/blog/${blog.slug || blog.id}`} className="text-xs font-bold text-secondary flex items-center gap-1 hover:gap-2 transition-all">
                                         Read Story <ArrowRight className="h-3 w-3" />
                                     </Link>
                                 </div>
