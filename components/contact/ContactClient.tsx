@@ -214,7 +214,7 @@ export default function ContactClient({ offices, initialBranchId }: ContactClien
                                         value={formData.name}
                                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                         className="w-full px-6 py-4 rounded-2xl border border-border bg-muted/20 text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/30 focus:border-secondary outline-none transition-all placeholder:text-muted-foreground/50"
-                                        placeholder="John Doe"
+                                        placeholder="Enter your full name"
                                     />
                                 </div>
                                 <div className="space-y-2">
@@ -225,7 +225,7 @@ export default function ContactClient({ offices, initialBranchId }: ContactClien
                                         value={formData.email}
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                         className="w-full px-6 py-4 rounded-2xl border border-border bg-muted/20 text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/30 focus:border-secondary outline-none transition-all placeholder:text-muted-foreground/50"
-                                        placeholder="john@example.com"
+                                        placeholder="Enter your email address"
                                     />
                                 </div>
                             </div>
@@ -237,7 +237,7 @@ export default function ContactClient({ offices, initialBranchId }: ContactClien
                                         value={formData.phone}
                                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                         className="w-full px-6 py-4 rounded-2xl border border-border bg-muted/20 text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/30 focus:border-secondary outline-none transition-all placeholder:text-muted-foreground/50"
-                                        placeholder="+91 88798 22338"
+                                        placeholder="Enter your phone number"
                                     />
                                 </div>
                                 <div className="space-y-2 relative">

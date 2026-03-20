@@ -10,7 +10,7 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost }) {
             {/* Hero Section */}
             <section className="relative h-[65vh] min-h-[500px] overflow-hidden">
                 <img
-                    src={blog.image.startsWith('http') ? blog.image : 'https://picsum.photos/seed/' + blog.id + '/1200/800'}
+                    src={blog.image || 'https://picsum.photos/seed/' + blog.id + '/1200/800'}
                     alt={blog.title}
                     className="absolute inset-0 w-full h-full object-cover"
                 />

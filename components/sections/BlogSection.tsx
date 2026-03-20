@@ -39,7 +39,7 @@ const BlogSection = async () => {
                             <div className="relative overflow-hidden aspect-video">
                                 <Link href={`/blog/${blog.slug || blog.id}`} className="block w-full h-full">
                                     <Image
-                                        src={blog.image.startsWith('https://picsum.photos') ? blog.image : 'https://picsum.photos/seed/' + blog.id + '/800/450'}
+                                        src={blog.image || 'https://picsum.photos/seed/' + blog.id + '/800/450'}
                                         alt={blog.title}
                                         fill
                                         className="object-cover group-hover:scale-105 transition-transform duration-500"

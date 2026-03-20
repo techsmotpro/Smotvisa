@@ -13,6 +13,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
     const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+    const [activeMobileCategory, setActiveMobileCategory] = useState<string | null>(null);
     const pathname = usePathname();
     const searchParams = useSearchParams();
 
@@ -32,6 +33,17 @@ const Navbar = () => {
             }
         }
     }, [pathname]);
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isOpen]);
 
     const isActive = (href: string) => {
         // Return true only if the current pathname exactly matches the link's href.
@@ -53,7 +65,7 @@ const Navbar = () => {
                     </Link>
 
                     {/* Desktop nav */}
-                    <div className="hidden lg:flex items-center gap-1 font-body">
+                    <div className="hidden lg:flex items-center gap-2 xl:gap-1 font-body">
                         {navLinks.map((link) => {
                             if (link.dropdown) {
                                 return (
@@ -149,10 +161,10 @@ const Navbar = () => {
                         })}
                     </div>
 
-                    <div className="hidden lg:block">
+                    <div className="hidden xl:block">
                         <Link
                             href="/contact"
-                            className="px-6 py-2.5 bg-secondary text-secondary-foreground font-body font-bold rounded-full hover:opacity-90 transition-all shadow-gold"
+                            className="px-6 py-2.5 bg-secondary text-secondary-foreground font-body font-bold rounded-full hover:opacity-90 transition-all shadow-gold whitespace-nowrap"
                         >
                             Get a Quote
                         </Link>
@@ -174,64 +186,81 @@ const Navbar = () => {
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
-                            className="lg:hidden overflow-hidden border-t border-primary-foreground/10 bg-primary/95"
+                            className="lg:hidden overflow-y-auto border-t border-primary-foreground/10 bg-primary/95 max-h-[calc(100vh-80px)]"
                         >
                             <div className="px-4 py-4 space-y-1 font-body">
                                 {navLinks.map((link) => {
                                     if (link.dropdown) {
                                         return (
-                                            <div key={link.label}>
-                                                <div className="pt-2 pb-1 px-4 text-xs font-semibold text-primary-foreground/70 uppercase tracking-wider">
-                                                    {link.label}
-                                                </div>
-                                                {link.dropdown.map((item: any) => (
-                                                    <div key={item.id}>
-                                                        {item.submenu ? (
-                                                            <>
-                                                                <button
-                                                                    onClick={() => setActiveSubmenu(activeSubmenu === item.id ? null : item.id)}
-                                                                    className="flex items-center justify-between w-full px-4 py-2.5 text-sm rounded-lg hover:bg-primary-foreground/10 transition-colors text-primary-foreground"
-                                                                >
-                                                                    <span>{item.name}</span>
-                                                                    <ChevronDown className={`h-3 w-3 transition-transform ${activeSubmenu === item.id ? "rotate-180" : ""}`} />
-                                                                </button>
-                                                                {activeSubmenu === item.id && (
-                                                                    <div className="pl-4 mt-1 grid grid-cols-2 gap-1">
-                                                                        {item.submenu.map((sub: any) => (
+                                            <div key={link.label} className="border-b border-primary-foreground/5 last:border-0 pb-1">
+                                                <button
+                                                    onClick={() => setActiveMobileCategory(activeMobileCategory === link.label ? null : link.label)}
+                                                    className="flex items-center justify-between w-full px-4 py-4 text-sm font-bold uppercase tracking-wider text-primary-foreground/90 hover:bg-primary-foreground/5 transition-colors"
+                                                >
+                                                    <span>{link.label}</span>
+                                                    <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${activeMobileCategory === link.label ? "rotate-180 text-secondary" : "text-primary-foreground/40"}`} />
+                                                </button>
+                                                <AnimatePresence>
+                                                    {activeMobileCategory === link.label && (
+                                                        <motion.div
+                                                            initial={{ height: 0, opacity: 0 }}
+                                                            animate={{ height: "auto", opacity: 1 }}
+                                                            exit={{ height: 0, opacity: 0 }}
+                                                            className="overflow-hidden"
+                                                        >
+                                                            <div className="pb-4 space-y-1">
+                                                                {link.dropdown.map((item: any) => (
+                                                                    <div key={item.id}>
+                                                                        {item.submenu ? (
+                                                                            <>
+                                                                                <button
+                                                                                    onClick={() => setActiveSubmenu(activeSubmenu === item.id ? null : item.id)}
+                                                                                    className="flex items-center justify-between w-full px-6 py-2.5 text-sm rounded-lg hover:bg-primary-foreground/10 transition-colors text-primary-foreground/80"
+                                                                                >
+                                                                                    <span>{item.name}</span>
+                                                                                    <ChevronDown className={`h-3 w-3 transition-transform ${activeSubmenu === item.id ? "rotate-180" : ""}`} />
+                                                                                </button>
+                                                                                {activeSubmenu === item.id && (
+                                                                                    <div className="pl-8 mt-1 grid grid-cols-2 gap-1 pb-2">
+                                                                                        {item.submenu.map((sub: any) => (
+                                                                                            <Link
+                                                                                                key={sub.id}
+                                                                                                href={sub.href}
+                                                                                                onClick={handleLinkClick}
+                                                                                                className={`flex items-center gap-2 px-4 py-2 text-sm rounded-lg transition-colors ${isActive(sub.href)
+                                                                                                    ? "text-secondary font-bold bg-secondary/5"
+                                                                                                    : "text-primary-foreground/60 hover:text-primary-foreground hover:bg-primary-foreground/10"
+                                                                                                    }`}
+                                                                                            >
+                                                                                                <span>{sub.flag}</span>
+                                                                                                <span>{sub.name.replace(" Visa", "")}</span>
+                                                                                            </Link>
+                                                                                        ))}
+                                                                                    </div>
+                                                                                )}
+                                                                            </>
+                                                                        ) : item.href ? (
                                                                             <Link
-                                                                                key={sub.id}
-                                                                                href={sub.href}
+                                                                                href={item.href}
                                                                                 onClick={handleLinkClick}
-                                                                                className={`flex items-center gap-2 px-4 py-2 text-sm rounded-lg transition-colors ${isActive(sub.href)
+                                                                                className={`flex items-center justify-between w-full px-6 py-2.5 text-sm rounded-lg transition-colors ${isActive(item.href)
                                                                                     ? "text-secondary font-bold bg-secondary/5"
-                                                                                    : "text-primary-foreground hover:bg-primary-foreground/10"
+                                                                                    : "text-primary-foreground/80 hover:bg-primary-foreground/10"
                                                                                     }`}
                                                                             >
-                                                                                <span>{sub.flag}</span>
-                                                                                <span>{sub.name.replace(" Visa", "")}</span>
+                                                                                <span>{item.name}</span>
                                                                             </Link>
-                                                                        ))}
+                                                                        ) : (
+                                                                            <div className="flex items-center justify-between w-full px-6 py-2.5 text-sm text-primary-foreground/60 rounded-lg select-none cursor-default">
+                                                                                <span>{item.name}</span>
+                                                                            </div>
+                                                                        )}
                                                                     </div>
-                                                                )}
-                                                            </>
-                                                        ) : item.href ? (
-                                                            <Link
-                                                                href={item.href}
-                                                                onClick={handleLinkClick}
-                                                                className={`flex items-center justify-between w-full px-4 py-2.5 text-sm rounded-lg transition-colors ${isActive(item.href)
-                                                                    ? "text-secondary font-bold bg-secondary/5"
-                                                                    : "text-primary-foreground hover:bg-primary-foreground/10"
-                                                                    }`}
-                                                            >
-                                                                <span>{item.name}</span>
-                                                            </Link>
-                                                        ) : (
-                                                            <div className="flex items-center justify-between w-full px-4 py-2.5 text-sm text-primary-foreground rounded-lg select-none cursor-default">
-                                                                <span>{item.name}</span>
+                                                                ))}
                                                             </div>
-                                                        )}
-                                                    </div>
-                                                ))}
+                                                        </motion.div>
+                                                    )}
+                                                </AnimatePresence>
                                             </div>
                                         );
                                     }

@@ -259,7 +259,7 @@ const VisaEligibilityPage = () => {
                                                         render={({ field }) => (
                                                             <FormItem>
                                                                 <FormLabel className="font-display font-medium">Full Name</FormLabel>
-                                                                <FormControl><Input placeholder="John Doe" {...field} className="rounded-xl" /></FormControl>
+                                                                <FormControl><Input placeholder="Enter your full name" {...field} className="rounded-xl" /></FormControl>
                                                                 <FormMessage />
                                                             </FormItem>
                                                         )}
@@ -271,7 +271,7 @@ const VisaEligibilityPage = () => {
                                                             render={({ field }) => (
                                                                 <FormItem>
                                                                     <FormLabel className="font-display font-medium">Email Address</FormLabel>
-                                                                    <FormControl><Input type="email" placeholder="john@example.com" {...field} className="rounded-xl" /></FormControl>
+                                                                    <FormControl><Input type="email" placeholder="Enter your email address" {...field} className="rounded-xl" /></FormControl>
                                                                     <FormMessage />
                                                                 </FormItem>
                                                             )}
@@ -282,7 +282,7 @@ const VisaEligibilityPage = () => {
                                                             render={({ field }) => (
                                                                 <FormItem>
                                                                     <FormLabel className="font-display font-medium">Phone Number</FormLabel>
-                                                                    <FormControl><Input type="tel" placeholder="+91-XXXXXXXXXX" {...field} className="rounded-xl" /></FormControl>
+                                                                    <FormControl><Input type="tel" placeholder="Enter your phone number" {...field} className="rounded-xl" /></FormControl>
                                                                     <FormMessage />
                                                                 </FormItem>
                                                             )}

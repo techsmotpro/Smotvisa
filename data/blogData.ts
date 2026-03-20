@@ -18,7 +18,7 @@ const fallbackBlogs: BlogPost[] = [
     {
         id: 'fallback-1',
         slug: 'top-10-travel-destinations-2024',
-        image: 'https://picsum.photos/seed/fallback1/800/600',
+        image: '/images/travelers-9_2z2QtE.jpg',
         category: 'Travel Tips',
         title: 'Top 10 Travel Destinations for 2024',
         excerpt: 'Discover the most beautiful and exciting places to visit this year. From tropical paradises to cultural capitals, these destinations should be on every traveler\'s list.',
@@ -30,7 +30,7 @@ const fallbackBlogs: BlogPost[] = [
     {
         id: 'fallback-2',
         slug: 'schengen-visa-application-guide',
-        image: 'https://picsum.photos/seed/fallback2/800/600',
+        image: '/images/visa-services-MHOtW-3U.jpg',
         category: 'Visa Guide',
         title: 'How to Apply for a Schengen Visa',
         excerpt: 'A complete guide to applying for a Schengen visa, including required documents, processing times, and tips for a successful application.',
@@ -42,7 +42,7 @@ const fallbackBlogs: BlogPost[] = [
     {
         id: 'fallback-3',
         slug: 'essential-travel-packing-list',
-        image: 'https://picsum.photos/seed/fallback3/800/600',
+        image: '/images/hero-travel-CJWf8Tv1.jpg',
         category: 'Travel Tips',
         title: 'Essential Travel Packing List',
         excerpt: 'Don\'t forget anything important! This comprehensive packing list covers everything you need for a stress-free trip.',
@@ -68,7 +68,8 @@ export const fetchBlogs = async (): Promise<BlogPost[]> => {
         const results = blogs && blogs.length > 0 ? blogs : fallbackBlogs;
         return results.map(b => ({
             ...b,
-            slug: b.slug || b.id
+            slug: b.slug || b.id,
+            excerpt: b.excerpt ? b.excerpt.replace(/<[^>]*>/g, '').replace(/&hellip;/g, '...') : ''
         }));
     } catch (error) {
         console.error('Error fetching blogs:', error);
@@ -92,7 +93,8 @@ export const fetchBlogBySlug = async (slug: string): Promise<BlogPost | undefine
         const blog: BlogPost = await response.json();
         return {
             ...blog,
-            slug: blog.slug || blog.id
+            slug: blog.slug || blog.id,
+            excerpt: blog.excerpt ? blog.excerpt.replace(/<[^>]*>/g, '').replace(/&hellip;/g, '...') : ''
         };
     } catch (error) {
         console.error('Error fetching blog by slug:', error);

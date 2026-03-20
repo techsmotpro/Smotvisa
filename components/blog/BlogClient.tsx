@@ -63,7 +63,7 @@ export default function BlogClient({ blogs }: { blogs: BlogPost[] }) {
                         >
                             <Link href={`/blog/${blog.slug || blog.id}`} className="block overflow-hidden h-64 relative">
                                 <img
-                                    src={blog.image.startsWith('http') ? blog.image : 'https://picsum.photos/seed/' + blog.id + '/800/600'}
+                                    src={blog.image || 'https://picsum.photos/seed/' + blog.id + '/800/600'}
                                     alt={blog.title}
                                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                 />
@@ -90,7 +90,7 @@ export default function BlogClient({ blogs }: { blogs: BlogPost[] }) {
                                     </h3>
                                 </Link>
                                 <p className="text-muted-foreground font-body text-sm leading-relaxed mb-8 line-clamp-3">
-                                    {blog.excerpt.replace(/<[^>]*>/g, '').replace(/&hellip;/g, '...')}
+                                    {blog.excerpt}
                                 </p>
 
                                 <div className="mt-auto pt-6 border-t border-border flex items-center justify-between">
