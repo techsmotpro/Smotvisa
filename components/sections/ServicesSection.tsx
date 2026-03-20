@@ -1,6 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/components/ui/MotionWrapper";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { visaCountries } from "@/data/navigationData";
@@ -10,7 +8,7 @@ const ServicesSection = () => {
     return (
         <section id="services" className="py-6 bg-background">
             <div className="container mx-auto px-4">
-                <motion.div
+                <MotionDiv
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -23,14 +21,14 @@ const ServicesSection = () => {
                     <p className="text-muted-foreground font-body max-w-2xl mx-auto">
                         From visa processing to tour packages, we handle everything so you can focus on enjoying your trip.
                     </p>
-                </motion.div>
+                </MotionDiv>
 
                 {/* Visa Services Countries */}
                 <div id="visa-services" className="mb-8">
                     <h3 className="text-2xl font-display font-bold text-foreground mb-5 text-center">Popular Visa Destinations</h3>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2.5">
                         {visaCountries.map((country, idx) => (
-                            <motion.div
+                            <MotionDiv
                                 key={country.name}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -47,17 +45,17 @@ const ServicesSection = () => {
                                 >
                                     View Requirements <ArrowRight className="h-3 w-3" />
                                 </Link>
-                            </motion.div>
+                            </MotionDiv>
                         ))}
                     </div>
                 </div>
 
                 {/* SMOT VISA SERVICES */}
                 <div className="mb-8">
-                    <h3 className="text-3xl font-display font-bold text-foreground mb-6 text-center">Smot Visa Services</h3>
+                    <h3 className="text-3xl font-display font-bold text-foreground mb-6 text-center text-gradient-gold">SMOT VISA SERVICES</h3>
                     <div className="grid md:grid-cols-3 gap-5">
                         {servicesData.map((service, idx) => (
-                            <motion.div
+                            <MotionDiv
                                 key={service.id}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -83,7 +81,7 @@ const ServicesSection = () => {
                                 <Link href={service.href} className="text-xs font-body font-bold text-secondary flex items-center gap-1 hover:underline">
                                     Learn More <ArrowRight className="h-3 w-3" />
                                 </Link>
-                            </motion.div>
+                            </MotionDiv>
                         ))}
                     </div>
                 </div>

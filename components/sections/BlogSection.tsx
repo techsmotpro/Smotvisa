@@ -1,41 +1,17 @@
-"use client";
-
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { Calendar, ArrowRight, User, Clock } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import { fetchBlogs, type BlogPost } from "@/data/blogData";
+import { fetchBlogs } from "@/data/blogData";
 
-const BlogSection = () => {
-    const [blogs, setBlogs] = useState<BlogPost[]>([]);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        const loadBlogs = async () => {
-            const fetchedBlogs = await fetchBlogs();
-            setBlogs(fetchedBlogs.slice(0, 3)); // Show only 3 blogs in the section
-            setLoading(false);
-        };
-        loadBlogs();
-    }, []);
-
-    if (loading) {
-        return (
-            <section id="blog" className="py-12 bg-background">
-                <div className="container mx-auto px-4">
-                    <div className="flex justify-center items-center h-64">
-                        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-secondary"></div>
-                    </div>
-                </div>
-            </section>
-        );
-    }
+const BlogSection = async () => {
+    const fetchedBlogs = await fetchBlogs();
+    const blogs = fetchedBlogs.slice(0, 3); // Show only 3 blogs in the section
 
     return (
         <section id="blog" className="py-12 bg-background">
             <div className="container mx-auto px-4">
-                <motion.div
+                <MotionDiv
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -48,11 +24,11 @@ const BlogSection = () => {
                     <p className="text-muted-foreground font-body max-w-2xl mx-auto">
                         Stay updated with the latest visa requirements, travel guides, and destination tips.
                     </p>
-                </motion.div>
+                </MotionDiv>
 
                 <div className="grid md:grid-cols-3 gap-8">
                     {blogs.map((blog, idx) => (
-                        <motion.article
+                        <MotionDiv
                             key={blog.id}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -61,7 +37,7 @@ const BlogSection = () => {
                             className="group bg-card rounded-2xl overflow-hidden shadow-card border border-border hover:shadow-elevated transition-all duration-300"
                         >
                             <div className="relative overflow-hidden aspect-video">
-                                <Link href={`/blog/${blog.id}`} className="block w-full h-full">
+                                <Link href={`/blog/${blog.slug}`} className="block w-full h-full">
                                     <Image
                                         src={blog.image.startsWith('https://picsum.photos') ? blog.image : 'https://picsum.photos/seed/' + blog.id + '/800/450'}
                                         alt={blog.title}
@@ -74,7 +50,7 @@ const BlogSection = () => {
                                 </span>
                             </div>
                             <div className="p-6">
-                                <Link href={`/blog/${blog.id}`}>
+                                <Link href={`/blog/${blog.slug}`}>
                                     <h3 className="text-lg font-display font-bold text-foreground mb-2 group-hover:text-secondary transition-colors line-clamp-2">
                                         {blog.title}
                                     </h3>
@@ -94,12 +70,12 @@ const BlogSection = () => {
                                     </div>
                                 </div>
                                 <div className="mt-4 pt-4 border-t border-border flex justify-end">
-                                    <Link href={`/blog/${blog.id}`} className="text-xs font-bold text-secondary flex items-center gap-1 hover:gap-2 transition-all">
+                                    <Link href={`/blog/${blog.slug}`} className="text-xs font-bold text-secondary flex items-center gap-1 hover:gap-2 transition-all">
                                         Read Story <ArrowRight className="h-3 w-3" />
                                     </Link>
                                 </div>
                             </div>
-                        </motion.article>
+                        </MotionDiv>
                     ))}
                 </div>
 
@@ -107,7 +83,6 @@ const BlogSection = () => {
                     <Link
                         href="/blog"
                         className="inline-flex items-center gap-2 px-8 py-3 bg-secondary/10 text-secondary font-body font-bold rounded-full hover:bg-secondary/20 transition-all"
-                        onClick={() => window.scrollTo(0, 0)}
                     >
                         Browse All Insights <ArrowRight className="h-4 w-4" />
                     </Link>

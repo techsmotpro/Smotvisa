@@ -1,12 +1,16 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ArrowRight, Star, Clock, Users, MapPin, Plane, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import PageHeader from "@/components/ui/PageHeader";
 import { tourPackagesData, popularRoutes, travelTips } from "@/data/tourPackagesData";
+import { MotionDiv } from "@/components/ui/MotionWrapper";
+import { Metadata } from 'next';
 
-const TourPackagesPage = () => {
+export const metadata: Metadata = {
+    title: "International Tour Packages | Bespoke Adventures | SMOT VISA",
+    description: "Discover curated international tour packages with SMOT VISA. From exotic destinations to cultural adventures, we orchestrate every detail for an unforgettable travel experience.",
+};
+
+export default function TourPackagesPage() {
     return (
         <main className="min-h-screen bg-background pb-20">
             <PageHeader
@@ -25,7 +29,7 @@ const TourPackagesPage = () => {
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                         {tourPackagesData.map((pkg, idx) => (
-                            <motion.div
+                            <MotionDiv
                                 key={pkg.id}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -77,7 +81,7 @@ const TourPackagesPage = () => {
                                         </button>
                                     </Link>
                                 </div>
-                            </motion.div>
+                            </MotionDiv>
                         ))}
                     </div>
                 </div>
@@ -87,7 +91,7 @@ const TourPackagesPage = () => {
             <section className="py-24 bg-gradient-to-b from-background to-secondary/5 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-5 pointer-events-none bg-grid-black" />
                 <div className="container mx-auto px-4 relative z-10">
-                    <motion.div
+                    <MotionDiv
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -101,11 +105,11 @@ const TourPackagesPage = () => {
                         <p className="text-muted-foreground font-body text-lg max-w-2xl mx-auto italic">
                             Choose from our exclusive flight packages with competitive pricing and flexible travel dates.
                         </p>
-                    </motion.div>
+                    </MotionDiv>
 
                     <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
                         {popularRoutes.map((route, idx) => (
-                            <motion.div
+                            <MotionDiv
                                 key={idx}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -123,7 +127,7 @@ const TourPackagesPage = () => {
                                         {route.duration}
                                     </div>
                                 </div>
-                            </motion.div>
+                            </MotionDiv>
                         ))}
                     </div>
 
@@ -142,7 +146,7 @@ const TourPackagesPage = () => {
                         <div className="absolute top-0 right-0 p-20 opacity-5 pointer-events-none">
                             <Star className="w-64 h-64 text-secondary" />
                         </div>
-                        <motion.div
+                        <MotionDiv
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -163,14 +167,14 @@ const TourPackagesPage = () => {
                                     </div>
                                 ))}
                             </div>
-                        </motion.div>
+                        </MotionDiv>
                     </div>
                 </div>
             </section>
 
             {/* CTA Section */}
             <section className="py-24 container mx-auto px-4">
-                <motion.div
+                <MotionDiv
                     initial={{ opacity: 0, scale: 0.98 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
@@ -199,10 +203,8 @@ const TourPackagesPage = () => {
                             </Link>
                         </div>
                     </div>
-                </motion.div>
+                </MotionDiv>
             </section>
         </main>
     );
-};
-
-export default TourPackagesPage;
+}

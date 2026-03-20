@@ -1,22 +1,13 @@
-"use client";
-
-import { useEffect } from "react";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-const NotFound = () => {
-    const pathname = usePathname();
-
-    useEffect(() => {
-        // Log 404 error with the attempted path for troubleshooting
-        console.error("404 Error: User attempted to access non-existent route:", pathname);
-    }, [pathname]);
-
+export default function NotFound() {
     return (
         <div className="flex min-h-screen items-center justify-center bg-muted/30">
             <div className="text-center p-8 bg-card rounded-[2.5rem] shadow-elevated border border-border max-w-md w-full">
                 <h1 className="mb-6 text-7xl font-display font-bold text-primary">404</h1>
-                <h2 className="mb-4 text-2xl font-display font-bold text-foreground">Oops! Page not found</h2>
+                <h2 className="mb-4 text-2xl font-display font-bold text-foreground">
+                    Oops! Page not found
+                </h2>
                 <p className="mb-10 text-base font-body text-muted-foreground leading-relaxed">
                     The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
                 </p>
@@ -29,6 +20,4 @@ const NotFound = () => {
             </div>
         </div>
     );
-};
-
-export default NotFound;
+}

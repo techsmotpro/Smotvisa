@@ -1,6 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -20,7 +18,7 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
         <section id="about" className={cn("py-20", isFull ? "bg-background" : "bg-card")}>
             <div className="container mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
-                    <motion.div
+                    <MotionDiv
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -39,9 +37,9 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                             <div className="text-5xl font-display font-bold mb-1">10+</div>
                             <div className="text-sm font-bold uppercase tracking-widest text-secondary-foreground/80">Years of Excellence</div>
                         </div>
-                    </motion.div>
+                    </MotionDiv>
 
-                    <motion.div
+                    <MotionDiv
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -113,7 +111,7 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                                 </Link>
                             )}
                         </div>
-                    </motion.div>
+                    </MotionDiv>
                 </div>
 
                 {isFull && (
@@ -133,7 +131,7 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                                 desc: "Integrity, transparency, and a customer-first approach. we believe in building relationships through successful travel stories."
                             }
                         ].map((item, i) => (
-                            <motion.div
+                            <MotionDiv
                                 key={i}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -143,7 +141,7 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                             >
                                 <h3 className="text-2xl font-display font-bold text-foreground mb-4">{item.title}</h3>
                                 <p className="text-muted-foreground font-body leading-relaxed">{item.desc}</p>
-                            </motion.div>
+                            </MotionDiv>
                         ))}
                     </div>
                 )}

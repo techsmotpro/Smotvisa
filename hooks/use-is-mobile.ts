@@ -4,8 +4,10 @@ import { useEffect, useState } from "react";
 
 export function useIsMobile() {
     const [isMobile, setIsMobile] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
+        setMounted(true);
         const check = () => setIsMobile(window.innerWidth < 768);
         check();
 
@@ -13,5 +15,6 @@ export function useIsMobile() {
         return () => window.removeEventListener("resize", check);
     }, []);
 
+    if (!mounted) return false;
     return isMobile;
 }

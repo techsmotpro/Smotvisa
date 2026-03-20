@@ -1,42 +1,16 @@
-"use client";
-
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { Star } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import { fetchReviews } from "@/data/reviewData";
-import { useState, useEffect } from "react";
-import type { Review } from "@/data/reviewData";
 
-const ReviewCards = () => {
-    const [reviews, setReviews] = useState<Review[]>([]);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        const loadReviews = async () => {
-            const fetchedReviews = await fetchReviews();
-            setReviews(fetchedReviews);
-            setLoading(false);
-        };
-        loadReviews();
-    }, []);
-
-    if (loading) {
-        return (
-            <section className="py-12 bg-muted/30">
-                <div className="container mx-auto px-4">
-                    <div className="flex justify-center items-center h-64">
-                        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-secondary"></div>
-                    </div>
-                </div>
-            </section>
-        );
-    }
+const ReviewCards = async () => {
+    const reviews = await fetchReviews();
 
     return (
         <section className="py-12 bg-muted/30">
             <div className="container mx-auto px-4">
-                <motion.div
+                <MotionDiv
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -47,13 +21,13 @@ const ReviewCards = () => {
                         Client Testimonials
                     </h2>
                     <p className="text-muted-foreground font-body max-w-2xl mx-auto">
-                        Hear from our satisfied clients about their experiences with Smot Visa.
+                        Hear from our satisfied clients about their experiences with SMOT VISA.
                     </p>
-                </motion.div>
+                </MotionDiv>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {reviews.map((review, idx) => (
-                        <motion.div
+                        <MotionDiv
                             key={review.id}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -99,7 +73,7 @@ const ReviewCards = () => {
                                     </div>
                                 </CardContent>
                             </Card>
-                        </motion.div>
+                        </MotionDiv>
                     ))}
                 </div>
             </div>

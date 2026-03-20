@@ -34,6 +34,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Suspense } from "react";
 
+import FloatingCTA from "@/components/ui/FloatingCTA";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -50,11 +52,10 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
-          <Toaster />
-          <Sonner />
+          <FloatingCTA />
         </TooltipProvider>
-
-        {/* Tawk Script */}
+        <Toaster />
+        <Sonner />
         <Script
           id="tawk"
           strategy="afterInteractive"
@@ -72,7 +73,6 @@ export default function RootLayout({
             `,
           }}
         />
-        <Toaster />
       </body>
     </html>
   );

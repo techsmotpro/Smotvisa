@@ -1,6 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -62,7 +60,7 @@ const DestinationsSection = () => {
     return (
         <section id="destinations" className="py-8 bg-muted/50">
             <div className="container mx-auto px-4">
-                <motion.div
+                <MotionDiv
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -75,11 +73,11 @@ const DestinationsSection = () => {
                     <p className="text-muted-foreground font-body max-w-2xl mx-auto">
                         We process visas for 50+ countries. Here are some of our most popular destinations.
                     </p>
-                </motion.div>
+                </MotionDiv>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
                     {destinations.map((dest, idx) => (
-                        <motion.div
+                        <MotionDiv
                             key={dest.name}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -109,12 +107,12 @@ const DestinationsSection = () => {
                                     </div>
                                 </div>
                             </Link>
-                        </motion.div>
+                        </MotionDiv>
                     ))}
                 </div>
 
                 {/* More countries */}
-                <motion.div
+                <MotionDiv
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -139,12 +137,11 @@ const DestinationsSection = () => {
                         <Link
                             href="/contact"
                             className="inline-flex items-center gap-2 text-sm font-body font-semibold text-secondary hover:underline"
-                            onClick={() => window.scrollTo(0, 0)}
                         >
                             Don't see your country? Contact us <ArrowRight className="h-4 w-4" />
                         </Link>
                     </div>
-                </motion.div>
+                </MotionDiv>
             </div>
         </section>
     );

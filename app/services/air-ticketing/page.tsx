@@ -1,89 +1,107 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ArrowRight, Plane, Users, Ticket, Clock, Shield, Globe, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import PageHeader from "@/components/ui/PageHeader";
+import { MotionDiv } from "@/components/ui/MotionWrapper";
+import { Metadata } from 'next';
 
-const AirTicketingPage = () => {
-    const faqs = [
-        {
-            question: "How can I book international flights from India with SMOT VISA?",
-            answer: "You can contact SMOT VISA’s travel consultants who will help you choose the best flight options based on your destination, travel dates, and budget. Our team will assist you with the entire booking process and confirm your tickets quickly."
-        },
-        {
-            question: "What are the best airlines for international flights from India?",
-            answer: "The best airlines depend on your destination and travel preferences. SMOT VISA helps travelers choose reliable airlines that offer comfortable travel, convenient routes, and competitive pricing."
-        },
-        {
-            question: "When is the best time to book international flights from India?",
-            answer: "Booking flights several weeks in advance often helps travelers secure better prices. However, flight prices depend on travel demand, season, and airline availability. SMOT VISA helps you find the best booking time for your trip."
-        },
-        {
-            question: "Can SMOT VISA help with both flight booking and visa assistance?",
-            answer: "Yes. SMOT VISA specializes in both international flight booking and visa assistance, which makes it easier for travelers to plan their international journeys with proper travel timelines."
-        },
-        {
-            question: "Do you provide group flight booking services?",
-            answer: "Yes. SMOT VISA assists with family travel, corporate travel, and group flight bookings, ensuring convenient travel schedules and competitive fares for multiple travelers."
-        },
-        {
-            question: "Can I change my flight after booking?",
-            answer: "Flight change options depend on the airline’s policy and ticket type. SMOT VISA helps travelers choose tickets that offer flexible options whenever possible."
-        }
-    ];
+const faqs = [
+    {
+        question: "How can I book international flights from India with SMOT VISA?",
+        answer: "You can contact SMOT VISA’s travel consultants who will help you choose the best flight options based on your destination, travel dates, and budget. Our team will assist you with the entire booking process and confirm your tickets quickly."
+    },
+    {
+        question: "What are the best airlines for international flights from India?",
+        answer: "The best airlines depend on your destination and travel preferences. SMOT VISA helps travelers choose reliable airlines that offer comfortable travel, convenient routes, and competitive pricing."
+    },
+    {
+        question: "When is the best time to book international flights from India?",
+        answer: "Booking flights several weeks in advance often helps travelers secure better prices. However, flight prices depend on travel demand, season, and airline availability. SMOT VISA helps you find the best booking time for your trip."
+    },
+    {
+        question: "Can SMOT VISA help with both flight booking and visa assistance?",
+        answer: "Yes. SMOT VISA specializes in both international flight booking and visa assistance, which makes it easier for travelers to plan their international journeys with proper travel timelines."
+    },
+    {
+        question: "Do you provide group flight booking services?",
+        answer: "Yes. SMOT VISA assists with family travel, corporate travel, and group flight bookings, ensuring convenient travel schedules and competitive fares for multiple travelers."
+    },
+    {
+        question: "Can I change my flight after booking?",
+        answer: "Flight change options depend on the airline’s policy and ticket type. SMOT VISA helps travelers choose tickets that offer flexible options whenever possible."
+    }
+];
 
-    const features = [
-        {
-            icon: Plane,
-            title: "Expert Travel Consultation",
-            description: "Our experienced team analyzes flight routes, transit times, airline reliability, and travel convenience to help you choose the best international flights from India."
-        },
-        {
-            icon: Ticket,
-            title: "Competitive International Airfares",
-            description: "Air ticket prices change frequently. SMOT VISA helps travelers secure competitive international flight fares by identifying the best options available at the time of booking."
-        },
-        {
-            icon: Clock,
-            title: "Smooth Booking Experience",
-            description: "From flight selection to ticket confirmation, SMOT VISA manages the entire process with a focus on simplicity and efficiency."
-        },
-        {
-            icon: Shield,
-            title: "Visa-Aligned Travel Planning",
-            description: "We help you select flights that align with your visa process and travel requirements, ensuring a seamless travel experience."
-        },
-        {
-            icon: Users,
-            title: "Group and Family Booking",
-            description: "We assist with family vacation flight bookings, group travel arrangements, corporate travel planning, and educational or student group travel."
-        },
-        {
-            icon: Globe,
-            title: "Complete Travel Support",
-            description: "SMOT VISA offers more than just flight booking. We support travelers with visa assistance, tour packages, travel documentation, and travel insurance."
-        }
-    ];
+export const metadata: Metadata = {
+    title: "Best International Flights from India | Premium Air Ticketing | SMOT VISA",
+    description: "Book the Best International Flights from India with SMOT VISA. Expert assistance for competitive fares, visa-aligned travel planning, and global destinations.",
+    other: {
+        "script:ld+json": JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
+                }
+            }))
+        })
+    }
+};
 
-    const destinations = [
-        "United States",
-        "United Kingdom",
-        "Europe (Schengen countries)",
-        "Australia",
-        "Dubai and UAE",
-        "Southeast Asia",
-        "Canada"
-    ];
+const features = [
+    {
+        icon: Plane,
+        title: "Expert Travel Consultation",
+        description: "Our experienced team analyzes flight routes, transit times, airline reliability, and travel convenience to help you choose the best international flights from India."
+    },
+    {
+        icon: Ticket,
+        title: "Competitive International Airfares",
+        description: "Air ticket prices change frequently. SMOT VISA helps travelers secure competitive international flight fares by identifying the best options available at the time of booking."
+    },
+    {
+        icon: Clock,
+        title: "Smooth Booking Experience",
+        description: "From flight selection to ticket confirmation, SMOT VISA manages the entire process with a focus on simplicity and efficiency."
+    },
+    {
+        icon: Shield,
+        title: "Visa-Aligned Travel Planning",
+        description: "We help you select flights that align with your visa process and travel requirements, ensuring a seamless travel experience."
+    },
+    {
+        icon: Users,
+        title: "Group and Family Booking",
+        description: "We assist with family vacation flight bookings, group travel arrangements, corporate travel planning, and educational or student group travel."
+    },
+    {
+        icon: Globe,
+        title: "Complete Travel Support",
+        description: "SMOT VISA offers more than just flight booking. We support travelers with visa assistance, tour packages, travel documentation, and travel insurance."
+    }
+];
 
-    const services = [
-        { icon: "✈️", title: "International Flight Booking", desc: "Helping travelers find the best flights for global destinations." },
-        { icon: "📋", title: "Visa Assistance", desc: "Expert support for US B1/B2 visa, Schengen visa, UK visa, Australia visa, Dubai visa, and other visa applications." },
-        { icon: "🏨", title: "International Tour Packages", desc: "Customized travel packages that include hotels, sightseeing, and guided experiences." },
-        { icon: "📄", title: "Travel Documentation Guidance", desc: "Support with travel documents required for international journeys." },
-        { icon: "🛡️", title: "Travel Insurance Assistance", desc: "Guidance on selecting travel insurance for international trips." }
-    ];
+const destinations = [
+    "United States",
+    "United Kingdom",
+    "Europe (Schengen countries)",
+    "Australia",
+    "Dubai and UAE",
+    "Southeast Asia",
+    "Canada"
+];
 
+const services = [
+    { icon: "✈️", title: "International Flight Booking", desc: "Helping travelers find the best flights for global destinations." },
+    { icon: "📋", title: "Visa Assistance", desc: "Expert support for US B1/B2 visa, Schengen visa, UK visa, Australia visa, Dubai visa, and other visa applications." },
+    { icon: "🏨", title: "International Tour Packages", desc: "Customized travel packages that include hotels, sightseeing, and guided experiences." },
+    { icon: "📄", title: "Travel Documentation Guidance", desc: "Support with travel documents required for international journeys." },
+    { icon: "🛡️", title: "Travel Insurance Assistance", desc: "Guidance on selecting travel insurance for international trips." }
+];
+
+export default function AirTicketingPage() {
     return (
         <main className="bg-background">
             <PageHeader
@@ -95,7 +113,7 @@ const AirTicketingPage = () => {
             {/* Introduction Section */}
             <section className="py-20 bg-background text-center">
                 <div className="container mx-auto px-4 max-w-4xl">
-                    <motion.div
+                    <MotionDiv
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -108,7 +126,7 @@ const AirTicketingPage = () => {
                             options, and travel restrictions. SMOT VISA helps travelers navigate these challenges by providing expert
                             assistance and personalized flight recommendations.
                         </p>
-                    </motion.div>
+                    </MotionDiv>
                 </div>
             </section>
 
@@ -117,7 +135,7 @@ const AirTicketingPage = () => {
                 <div className="container mx-auto px-4">
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {features.map((feature, idx) => (
-                            <motion.div
+                            <MotionDiv
                                 key={idx}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -132,7 +150,7 @@ const AirTicketingPage = () => {
                                 <p className="text-muted-foreground font-body leading-relaxed italic">
                                     {feature.description}
                                 </p>
-                            </motion.div>
+                            </MotionDiv>
                         ))}
                     </div>
                 </div>
@@ -141,7 +159,7 @@ const AirTicketingPage = () => {
             {/* Destinations Section */}
             <section className="py-24 bg-background overflow-hidden">
                 <div className="container mx-auto px-4">
-                    <motion.div
+                    <MotionDiv
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -153,10 +171,10 @@ const AirTicketingPage = () => {
                         <p className="text-muted-foreground font-body max-w-2xl mx-auto text-lg">
                             SMOT VISA offers international air ticket booking services from India to popular global destinations
                         </p>
-                    </motion.div>
+                    </MotionDiv>
                     <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
                         {destinations.map((destination, idx) => (
-                            <motion.div
+                            <MotionDiv
                                 key={idx}
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
@@ -165,7 +183,7 @@ const AirTicketingPage = () => {
                                 className="px-6 py-4 bg-card border border-border rounded-2xl text-base font-body font-semibold text-foreground hover:bg-secondary hover:text-secondary-foreground hover:border-secondary transition-all cursor-default shadow-sm"
                             >
                                 {destination}
-                            </motion.div>
+                            </MotionDiv>
                         ))}
                     </div>
                 </div>
@@ -174,7 +192,7 @@ const AirTicketingPage = () => {
             {/* Services Section */}
             <section className="py-24 bg-gradient-to-b from-background to-secondary/5">
                 <div className="container mx-auto px-4">
-                    <motion.div
+                    <MotionDiv
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -186,10 +204,10 @@ const AirTicketingPage = () => {
                         <p className="text-secondary font-body max-w-2xl mx-auto text-lg font-semibold italic">
                             Beyond just booking flights, we support you from documentation to destination.
                         </p>
-                    </motion.div>
+                    </MotionDiv>
                     <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
                         {services.map((service, idx) => (
-                            <motion.div
+                            <MotionDiv
                                 key={idx}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -200,7 +218,7 @@ const AirTicketingPage = () => {
                                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
                                 <h3 className="text-lg font-display font-bold text-foreground mb-3">{service.title}</h3>
                                 <p className="text-sm font-body text-muted-foreground leading-relaxed">{service.desc}</p>
-                            </motion.div>
+                            </MotionDiv>
                         ))}
                     </div>
                 </div>
@@ -209,7 +227,7 @@ const AirTicketingPage = () => {
             {/* FAQ Section */}
             <section className="py-24 bg-background">
                 <div className="container mx-auto px-4">
-                    <motion.div
+                    <MotionDiv
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -220,7 +238,7 @@ const AirTicketingPage = () => {
                         </h2>
                         <div className="space-y-4">
                             {faqs.map((faq, idx) => (
-                                <motion.div
+                                <MotionDiv
                                     key={idx}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -239,10 +257,10 @@ const AirTicketingPage = () => {
                                             {faq.answer}
                                         </div>
                                     </details>
-                                </motion.div>
+                                </MotionDiv>
                             ))}
                         </div>
-                    </motion.div>
+                    </MotionDiv>
                 </div>
             </section>
 
@@ -250,7 +268,7 @@ const AirTicketingPage = () => {
             <section className="py-24 relative overflow-hidden bg-primary text-primary-foreground">
                 <div className="absolute inset-0 opacity-10 pointer-events-none bg-grid-white" />
                 <div className="container mx-auto px-4 relative z-10 text-center">
-                    <motion.div
+                    <MotionDiv
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -276,11 +294,9 @@ const AirTicketingPage = () => {
                                 Talk to Travel Experts
                             </Link>
                         </div>
-                    </motion.div>
+                    </MotionDiv>
                 </div>
             </section>
         </main>
     );
-};
-
-export default AirTicketingPage;
+}

@@ -1,13 +1,11 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Globe, Search, Plane, MapPin, Ticket, Headphones, CheckCircle2 } from "lucide-react";
 import { visaCountries } from "@/data/navigationData";
 import { servicesData } from "@/data/servicesData";
 import PageHeader from "@/components/ui/PageHeader";
+import { MotionDiv } from "@/components/ui/MotionWrapper";
 
-const ServicesPage = () => {
+export default function ServicesPage() {
     return (
         <main className="min-h-screen bg-background pb-20">
             <PageHeader
@@ -18,7 +16,7 @@ const ServicesPage = () => {
 
             <div className="container mx-auto px-4 mt-20">
                 {/* Intro Section */}
-                <motion.div
+                <MotionDiv
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="text-center mb-16"
@@ -30,12 +28,12 @@ const ServicesPage = () => {
                     <p className="text-muted-foreground font-body text-lg max-w-2xl mx-auto leading-relaxed">
                         Discover our suite of professional services designed to make your international journey seamless, from documentation to destination.
                     </p>
-                </motion.div>
+                </MotionDiv>
 
                 {/* Main Services Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
                     {servicesData.map((service, idx) => (
-                        <motion.div
+                        <MotionDiv
                             key={service.id}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -64,7 +62,7 @@ const ServicesPage = () => {
                             >
                                 Detailed Intelligence <ArrowRight className="h-4 w-4" />
                             </Link>
-                        </motion.div>
+                        </MotionDiv>
                     ))}
                 </div>
 
@@ -83,7 +81,7 @@ const ServicesPage = () => {
 
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
                             {visaCountries.map((country: any, idx: number) => (
-                                <motion.div
+                                <MotionDiv
                                     key={country.name}
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
@@ -100,7 +98,7 @@ const ServicesPage = () => {
                                     >
                                         Requirements <ArrowRight className="h-3 w-3" />
                                     </Link>
-                                </motion.div>
+                                </MotionDiv>
                             ))}
                         </div>
                     </div>
@@ -127,6 +125,4 @@ const ServicesPage = () => {
             </div>
         </main>
     );
-};
-
-export default ServicesPage;
+}

@@ -1,10 +1,8 @@
-"use client";
-
-import { useParams } from "next/navigation";
-import { motion } from "framer-motion";
 import { ArrowRight, Plane, MapPin, Ticket, Headphones, CheckCircle2, Star, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import PageHeader from "@/components/ui/PageHeader";
+import { MotionDiv } from "@/components/ui/MotionWrapper";
+import { Metadata } from 'next';
 
 const serviceData: Record<string, any> = {
     "air-ticketing": {
@@ -42,9 +40,26 @@ const serviceData: Record<string, any> = {
     }
 };
 
-const ServiceDetailPage = () => {
-    const params = useParams();
-    const serviceId = params.serviceId as string;
+export async function generateStaticParams() {
+    return Object.keys(serviceData).map((serviceId) => ({
+        serviceId,
+    }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ serviceId: string }> }): Promise<Metadata> {
+    const { serviceId } = await params;
+    const data = serviceData[serviceId];
+    
+    if (!data) return { title: 'Service Not Found | SMOT VISA' };
+
+    return {
+        title: `${data.title} | Premium Travel Solutions | SMOT VISA`,
+        description: data.description,
+    };
+}
+
+export default async function ServiceDetailPage({ params }: { params: Promise<{ serviceId: string }> }) {
+    const { serviceId } = await params;
     const data = serviceId ? serviceData[serviceId] : null;
 
     if (!data) {
@@ -66,7 +81,7 @@ const ServiceDetailPage = () => {
             <PageHeader
                 title={data.title}
                 description={data.description}
-                breadcrumbs={[{ label: "Services", href: "/#services" }, { label: data.title }]}
+                breadcrumbs={[{ label: "Services", href: "/services" }, { label: data.title }]}
             />
 
             {/* Features Grid */}
@@ -78,7 +93,7 @@ const ServiceDetailPage = () => {
                     </div>
                     <div className="grid md:grid-cols-2 gap-8">
                         {data.features.map((feature: any, idx: number) => (
-                            <motion.div
+                            <MotionDiv
                                 key={idx}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -97,7 +112,7 @@ const ServiceDetailPage = () => {
                                         </p>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </MotionDiv>
                         ))}
                     </div>
                 </div>
@@ -106,7 +121,7 @@ const ServiceDetailPage = () => {
             {/* Trust Indicators */}
             <section className="py-24 bg-muted/30 border-y border-border">
                 <div className="container mx-auto px-4 text-center">
-                    <motion.div
+                    <MotionDiv
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
@@ -139,13 +154,13 @@ const ServiceDetailPage = () => {
                                 <p className="text-sm font-display font-bold text-muted-foreground uppercase tracking-widest">Dedicated Support</p>
                             </div>
                         </div>
-                    </motion.div>
+                    </MotionDiv>
                 </div>
             </section>
 
             {/* Branded CTA */}
             <section className="py-24 container mx-auto px-4">
-                <motion.div
+                <MotionDiv
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -169,10 +184,8 @@ const ServiceDetailPage = () => {
                             <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </div>
-                </motion.div>
+                </MotionDiv>
             </section>
         </main>
     );
-};
-
-export default ServiceDetailPage;
+}

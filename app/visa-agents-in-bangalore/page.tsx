@@ -1,13 +1,73 @@
-"use client";
-
-import { motion } from "framer-motion";
 import PageHeader from "@/components/ui/PageHeader";
 import { MapPin, CheckCircle2, Star, ShieldCheck, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { offices } from "@/data/officeData";
+import { MotionDiv } from "@/components/ui/MotionWrapper";
+import { Metadata } from 'next';
 
-const VisaAgentsInBangalore = () => {
+export const metadata: Metadata = {
+    title: "Best Visa Agents in Bangalore | Expert Visa Consultancy | SMOT VISA",
+    description: "Expert visa processing services in HSR Layout, Indiranagar, Koramangala and across Bangalore. SMOT VISA is the best visa agency in Bangalore for US, UK, Canada, and Schengen visas.",
+    other: {
+        "script:ld+json": JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "SMOT VISA Bangalore",
+            "image": "https://www.smotvisa.com/logo.png", // Replace with actual logo URL
+            "@id": "https://www.smotvisa.com/visa-agents-in-bangalore",
+            "url": "https://www.smotvisa.com/visa-agents-in-bangalore",
+            "telephone": "+91 80 1234 5678", // Replace with actual phone
+            "address": [
+                {
+                    "@type": "PostalAddress",
+                    "streetAddress": "No.123, 19th Main Rd, Sector 4, HSR Layout",
+                    "addressLocality": "Bangalore",
+                    "postalCode": "560102",
+                    "addressCountry": "IN"
+                },
+                {
+                    "@type": "PostalAddress",
+                    "streetAddress": "No.456, 100 Feet Rd, Indiranagar",
+                    "addressLocality": "Bangalore",
+                    "postalCode": "560038",
+                    "addressCountry": "IN"
+                }
+            ],
+            "geo": [
+                {
+                    "@type": "GeoCoordinates",
+                    "latitude": 12.9121,
+                    "longitude": 77.6446
+                },
+                {
+                    "@type": "GeoCoordinates",
+                    "latitude": 12.9719,
+                    "longitude": 77.6412
+                }
+            ],
+            "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                ],
+                "opens": "09:00",
+                "closes": "18:00"
+            },
+            "sameAs": [
+                "https://www.facebook.com/smotvisa",
+                "https://www.instagram.com/smotvisa",
+                "https://www.linkedin.com/company/smotvisa"
+            ]
+        })
+    }
+};
+
+export default function VisaAgentsInBangalore() {
     // Filter for Bangalore offices specifically
     const bangaloreOffices = offices.filter(o => o.city === "Bangalore" || o.address.includes("Bangalore"));
 
@@ -24,7 +84,7 @@ const VisaAgentsInBangalore = () => {
 
             <section className="py-24 container mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
-                    <motion.div
+                    <MotionDiv
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -59,9 +119,9 @@ const VisaAgentsInBangalore = () => {
                                 </div>
                             ))}
                         </div>
-                    </motion.div>
+                    </MotionDiv>
 
-                    <motion.div
+                    <MotionDiv
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
@@ -91,7 +151,7 @@ const VisaAgentsInBangalore = () => {
                                 Book Home Consultation <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
                             </Button>
                         </div>
-                    </motion.div>
+                    </MotionDiv>
                 </div>
             </section>
 
@@ -120,7 +180,7 @@ const VisaAgentsInBangalore = () => {
             </section>
 
             <section className="py-24 container mx-auto px-4 text-center">
-                <motion.div
+                <MotionDiv
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -140,10 +200,8 @@ const VisaAgentsInBangalore = () => {
                             Check Eligibility
                         </Link>
                     </div>
-                </motion.div>
+                </MotionDiv>
             </section>
         </main>
     );
-};
-
-export default VisaAgentsInBangalore;
+}

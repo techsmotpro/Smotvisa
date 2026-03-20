@@ -1,6 +1,6 @@
-// Application Blog Post Type
 export interface BlogPost {
     id: string;
+    slug: string;
     image: string;
     category: string;
     title: string;
@@ -15,6 +15,7 @@ export interface BlogPost {
 const fallbackBlogs: BlogPost[] = [
     {
         id: 'fallback-1',
+        slug: 'top-10-travel-destinations-2024',
         image: 'https://picsum.photos/seed/fallback1/800/600',
         category: 'Travel Tips',
         title: 'Top 10 Travel Destinations for 2024',
@@ -26,6 +27,7 @@ const fallbackBlogs: BlogPost[] = [
     },
     {
         id: 'fallback-2',
+        slug: 'schengen-visa-application-guide',
         image: 'https://picsum.photos/seed/fallback2/800/600',
         category: 'Visa Guide',
         title: 'How to Apply for a Schengen Visa',
@@ -37,6 +39,7 @@ const fallbackBlogs: BlogPost[] = [
     },
     {
         id: 'fallback-3',
+        slug: 'essential-travel-packing-list',
         image: 'https://picsum.photos/seed/fallback3/800/600',
         category: 'Travel Tips',
         title: 'Essential Travel Packing List',
@@ -51,12 +54,14 @@ const fallbackBlogs: BlogPost[] = [
 // Fetch blogs from Smot Pro backend API
 export const fetchBlogs = async (): Promise<BlogPost[]> => {
     try {
-        const response = await fetch('https://smot-pro-backend-visa.vercel.app/api/blogs');
+        const response = await fetch('https://smot-pro-backend-visa.vercel.app/api/blogs', {
+            next: { revalidate: 3600 } // Cache for 1 hour
+        });
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const blogs: BlogPost[] = await response.json();
-        
+
         // Return blogs if we get valid data, otherwise return fallbacks
         return blogs && blogs.length > 0 ? blogs : fallbackBlogs;
     } catch (error) {
@@ -69,7 +74,9 @@ export const fetchBlogs = async (): Promise<BlogPost[]> => {
 // Helper function to fetch a single blog by slug
 export const fetchBlogBySlug = async (slug: string): Promise<BlogPost | undefined> => {
     try {
-        const response = await fetch(`https://smot-pro-backend-visa.vercel.app/api/blogs/${slug}`);
+        const response = await fetch(`https://smot-pro-backend-visa.vercel.app/api/blogs/${slug}`, {
+            next: { revalidate: 3600 } // Cache for 1 hour
+        });
         if (!response.ok) {
             if (response.status === 404) {
                 return undefined;
@@ -81,6 +88,6 @@ export const fetchBlogBySlug = async (slug: string): Promise<BlogPost | undefine
     } catch (error) {
         console.error('Error fetching blog by slug:', error);
         // Find blog from fallback data if API fails
-        return fallbackBlogs.find(b => b.id === slug);
+        return fallbackBlogs.find(b => b.slug === slug || b.id === slug);
     }
 };

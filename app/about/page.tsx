@@ -1,5 +1,3 @@
-"use client";
-
 import AboutSection from "@/components/sections/AboutSection";
 import PageHeader from "@/components/ui/PageHeader";
 

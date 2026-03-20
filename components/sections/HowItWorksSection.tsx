@@ -1,6 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { ArrowRight } from "lucide-react";
 
 const HowItWorksSection = () => {
@@ -25,7 +23,7 @@ const HowItWorksSection = () => {
     return (
         <section id="how-it-works" className="py-20 bg-background">
             <div className="container mx-auto px-4">
-                <motion.div
+                <MotionDiv
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -35,11 +33,11 @@ const HowItWorksSection = () => {
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-4">
                         Simple 3 Steps
                     </h2>
-                </motion.div>
+                </MotionDiv>
 
                 <div className="grid md:grid-cols-3 gap-8">
                     {steps.map((step, idx) => (
-                        <motion.div
+                        <MotionDiv
                             key={step.number}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -61,7 +59,7 @@ const HowItWorksSection = () => {
                                     </div>
                                 )}
                             </div>
-                        </motion.div>
+                        </MotionDiv>
                     ))}
                 </div>
             </div>

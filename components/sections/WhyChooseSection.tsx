@@ -1,6 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { ShieldCheck, Zap, Headphones, DollarSign, Award, Users } from "lucide-react";
 
 const reasons = [
@@ -40,7 +38,7 @@ const WhyChooseSection = () => {
     return (
         <section className="py-24 bg-muted/30 overflow-hidden">
             <div className="container mx-auto px-4">
-                <motion.div
+                <MotionDiv
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -51,11 +49,11 @@ const WhyChooseSection = () => {
                     <p className="text-xl font-body text-muted-foreground max-w-2xl mx-auto">
                         Experience the gold standard in visa consulting and international travel management.
                     </p>
-                </motion.div>
+                </MotionDiv>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {reasons.map((reason, idx) => (
-                        <motion.div
+                        <MotionDiv
                             key={idx}
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
@@ -70,7 +68,7 @@ const WhyChooseSection = () => {
                             <p className="text-base font-body text-muted-foreground leading-relaxed leading-relaxed">
                                 {reason.description}
                             </p>
-                        </motion.div>
+                        </MotionDiv>
                     ))}
                 </div>
             </div>
