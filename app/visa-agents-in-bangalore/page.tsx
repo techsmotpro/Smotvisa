@@ -15,7 +15,7 @@ const VisaAgentsInBangalore = () => {
         <main className="bg-background">
             <PageHeader
                 title="Best Visa Agents in Bangalore"
-                description="Expert visa processing services in HSR Layout, Indiranagar, Koramangala and across Bangalore. Smotvisa is your trusted partner for premium travel consultancy."
+                description="Expert visa processing services in HSR Layout, Indiranagar, Koramangala and across Bangalore. SMOT VISA is your trusted partner for premium travel consultancy."
                 breadcrumbs={[
                     { label: "Home", href: "/" },
                     { label: "Visa Agents Bangalore" }
@@ -38,7 +38,7 @@ const VisaAgentsInBangalore = () => {
                             Your Search for the Best Visa Agents in Bangalore Ends Here.
                         </h2>
                         <p className="text-lg font-body text-muted-foreground italic leading-relaxed">
-                            With specialized expertise in Bangalore's major tech and residential hubs, Smotvisa provides end-to-end support for US, UK, Canada, and Schengen visas right from your neighborhood.
+                            With specialized expertise in Bangalore's major tech and residential hubs, SMOT VISA provides end-to-end support for US, UK, Canada, and Schengen visas right from your neighborhood.
                         </p>
 
                         <div className="grid sm:grid-cols-2 gap-6">
@@ -72,7 +72,7 @@ const VisaAgentsInBangalore = () => {
                             <h3 className="text-2xl font-display font-bold text-foreground">Our Bangalore Footprint</h3>
                             <div className="space-y-6">
                                 {bangaloreOffices.map((office, idx) => (
-                                    <div key={idx} className="p-6 bg-muted/30 rounded-2xl border border-border group hover:border-secondary transition-colors">
+                                    <div key={idx} className="p-6 bg-card rounded-2xl border border-border group hover:border-secondary transition-colors shadow-sm">
                                         <div className="flex justify-between items-start mb-4">
                                             <div className="flex items-center gap-3">
                                                 <MapPin className="h-5 w-5 text-secondary" />
@@ -95,11 +95,11 @@ const VisaAgentsInBangalore = () => {
                 </div>
             </section>
 
-            <section className="py-24 bg-muted/30 border-t border-b border-border">
+            <section className="py-24 bg-gradient-to-b from-background to-secondary/5 border-t border-b border-border">
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
                         <h2 className="text-4xl font-display font-bold text-foreground">Strategic Service Portfolio</h2>
-                        <p className="text-muted-foreground italic tracking-wide">Why Bangalore's professionals trust Smotvisa for their international mobility.</p>
+                        <p className="text-muted-foreground italic tracking-wide">Why Bangalore's professionals trust SMOT VISA for their international mobility.</p>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[

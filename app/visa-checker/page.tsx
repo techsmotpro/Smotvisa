@@ -438,7 +438,7 @@ const VisaEligibilityPage = () => {
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                 >
-                                    <Card className="bg-primary p-2 rounded-[3.5rem] shadow-elevated relative overflow-hidden border border-white/10">
+                                    <Card className="bg-gradient-to-r from-primary via-primary-light to-secondary p-2 rounded-[3.5rem] shadow-elevated relative overflow-hidden border border-white/10">
                                         <div className="absolute inset-0 opacity-10 pointer-events-none bg-grid-white" />
                                         <CardHeader className="text-center pt-10">
                                             <div className="mx-auto w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mb-6 shadow-gold">
@@ -521,8 +521,8 @@ const VisaEligibilityPage = () => {
                             ))}
                         </div>
 
-                        <div className="p-8 bg-muted/50 rounded-[2.5rem] border border-border space-y-6">
-                            <h3 className="text-xl font-display font-bold text-foreground">Why Smotvisa?</h3>
+                        <div className="p-8 bg-secondary/5 rounded-[2.5rem] border border-border space-y-6">
+                            <h3 className="text-xl font-display font-bold text-foreground">Why SMOT VISA?</h3>
                             <div className="space-y-4">
                                 {[
                                     "Algorithmic Precision based on current consulate data",

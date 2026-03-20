@@ -10,20 +10,20 @@ import { cn } from "@/lib/utils";
 const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
-  title: "Smart Pro Visa | Visa, Tours & Travel Made Easy",
+  title: "SMOT VISA | Visa and Travel Agency",
   description:
-    "Smart Pro Visa helps you travel hassle-free with expert visa processing for US, UK, GCC & 50+ countries, flight bookings, tour packages, and 24/7 support.",
+    "SMOT VISA helps you travel hassle-free with expert visa processing for US, UK, Canada, Australia & 50+ countries. Your trusted partner for global mobility.",
   openGraph: {
-    title: "Smart Pro Visa | Hassle-Free Visa & Travel Services",
+    title: "SMOT VISA | Visa and Travel Agency",
     description:
-      "Expert visa processing for US, UK, GCC & 50+ countries. Flight bookings, tour packages, and 24/7 support.",
+      "Expert visa processing for US, UK, Canada, Australia & 50+ countries. Hassle-free travel services and 24/7 support.",
     type: "website",
-    images: ["/newlogo.png"],
+    images: ["/assets/small--Y9qzfea.png"],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@SmartProVisa",
-    images: ["/newlogo.png"],
+    site: "@SMOT_VISA",
+    images: ["/assets/small--Y9qzfea.png"],
   },
   icons: {
     icon: "/assets/small--Y9qzfea.png",

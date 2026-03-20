@@ -20,7 +20,7 @@ const TourPackagesSection = () => {
                         Tour Packages
                     </span>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-4">
-                        Explore the World with Smotvisa
+                        Explore the World with SMOT VISA
                     </h2>
                     <p className="text-muted-foreground font-body max-w-2xl mx-auto">
                         From exotic destinations to cultural adventures, discover our handpicked international tour packages
@@ -109,7 +109,7 @@ const TourPackagesSection = () => {
                 </div>
 
                 {/* Flight Packages Section */}
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 mb-12 border border-blue-100">
+                <div className="bg-gradient-to-br from-secondary/5 to-primary/5 rounded-3xl p-8 mb-12 border border-secondary/10">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -168,14 +168,14 @@ const TourPackagesSection = () => {
                 </div>
 
                 {/* Travel Tips Section */}
-                <div className="bg-card rounded-2xl shadow-card border border-border p-8 mb-12">
+                <div className="bg-card rounded-3xl shadow-card border border-border p-8 mb-12 bg-gradient-to-br from-background to-muted/50">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         className="text-center mb-6"
                     >
-                        <h3 className="text-2xl font-display font-bold text-foreground mb-3">Travel Smart with Smotvisa</h3>
+                        <h3 className="text-2xl font-display font-bold text-foreground mb-3">Travel Smart with SMOT VISA</h3>
                         <p className="text-muted-foreground font-body max-w-2xl mx-auto">
                             Expert tips to make your international travel experience smooth and enjoyable
                         </p>
@@ -205,13 +205,13 @@ const TourPackagesSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="bg-gradient-to-r from-primary to-blue-600 rounded-2xl p-8 text-center text-white"
+                    className="bg-gradient-to-r from-primary via-primary-light to-secondary rounded-3xl p-12 text-center text-white shadow-elevated"
                 >
                     <h3 className="text-2xl sm:text-3xl font-display font-bold mb-3">
                         Ready for Your Next Adventure?
                     </h3>
                     <p className="text-blue-100 font-body max-w-2xl mx-auto mb-6">
-                        Let Smotvisa handle all your travel arrangements from flights and visas to accommodation and sightseeing.
+                        Let SMOT VISA handle all your travel arrangements from flights and visas to accommodation and sightseeing.
                         Start your journey today!
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3 justify-center">

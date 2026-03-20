@@ -24,7 +24,7 @@ export const tourPackagesData: TourPackage[] = [
         flag: "🇪🇺",
         duration: "14 Days",
         price: "From $2,999",
-        image: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=800&h=600&fit=crop",
+        image: "/images/europe-tour.png",
         description: "Experience the best of Europe with our Grand Tour package. Visit iconic cities, historic landmarks, and scenic countryside across 5 countries.",
         highlights: [
             "Paris - Eiffel Tower & Louvre Museum",
@@ -54,7 +54,7 @@ export const tourPackagesData: TourPackage[] = [
         flag: "🇦🇪",
         duration: "5 Days",
         price: "From $1,299",
-        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=600&fit=crop",
+        image: "/images/dubai-tour.png",
         description: "Indulge in luxury and adventure with our Dubai Escape package. Experience the perfect mix of modern attractions and desert adventures.",
         highlights: [
             "Burj Khalifa - At the Top Observatory",
@@ -84,7 +84,7 @@ export const tourPackagesData: TourPackage[] = [
         flag: "🇦🇺",
         duration: "10 Days",
         price: "From $2,499",
-        image: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&h=600&fit=crop",
+        image: "/images/australia-tour.png",
         description: "Explore the stunning landscapes and unique wildlife of Australia. From Sydney's iconic landmarks to the Great Barrier Reef.",
         highlights: [
             "Sydney Opera House & Harbour Bridge",
@@ -114,7 +114,7 @@ export const tourPackagesData: TourPackage[] = [
         flag: "🇬🇧",
         duration: "8 Days",
         price: "From $1,899",
-        image: "https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?w=800&h=600&fit=crop",
+        image: "/images/uk-tour.png",
         description: "Immerse yourself in British culture and royalty. Visit London's historic landmarks and explore the charming countryside.",
         highlights: [
             "London City Tour - Big Ben, Buckingham Palace",
@@ -144,7 +144,7 @@ export const tourPackagesData: TourPackage[] = [
         flag: "🇲🇻",
         duration: "4 Days",
         price: "From $1,499",
-        image: "https://images.unsplash.com/photo-1501426026826-31c667bdf23d?w=800&h=600&fit=crop",
+        image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&h=600&fit=crop",
         description: "Escape to paradise with our Maldives honeymoon package. Stay in overwater villas and enjoy pristine beaches and crystal-clear waters.",
         highlights: [
             "Overwater villa accommodation",
@@ -174,7 +174,7 @@ export const tourPackagesData: TourPackage[] = [
         flag: "🇹🇭",
         duration: "7 Days",
         price: "From $999",
-        image: "https://images.unsplash.com/photo-1548013146-8777a42871ab?w=800&h=600&fit=crop",
+        image: "/images/thailand-tour.png",
         description: "Discover the rich culture and stunning landscapes of Thailand. From bustling cities to ancient temples and beautiful beaches.",
         highlights: [
             "Bangkok Grand Palace & Wat Phra Kaew",

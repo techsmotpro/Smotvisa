@@ -47,7 +47,7 @@ const WhyChooseSection = () => {
                     className="text-center mb-20"
                 >
                     <span className="text-sm font-display font-bold text-secondary uppercase tracking-[0.2em] mb-4 block">Our Advantage</span>
-                    <h2 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">Why Choose Smotvisa?</h2>
+                    <h2 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">Why Choose SMOT VISA?</h2>
                     <p className="text-xl font-body text-muted-foreground max-w-2xl mx-auto">
                         Experience the gold standard in visa consulting and international travel management.
                     </p>

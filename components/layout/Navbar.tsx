@@ -45,7 +45,11 @@ const Navbar = () => {
             <nav className="fixed top-0 left-0 w-full z-50 bg-primary/95 backdrop-blur-md shadow-card border-b border-primary-foreground/10">
                 <div className="container mx-auto flex items-center justify-between px-4 py-5">
                     <Link href="/" onClick={handleLinkClick} className="flex items-center gap-2">
-                        <Image src="/newlogo.png" alt="SMOT VISA" width={140} height={70} className="w-auto" />
+                        <Image src="/assets/small--Y9qzfea.png" alt="SMOT VISA" width={70} height={70} className="w-auto h-14" />
+                        <div className="flex flex-col">
+                            <span className="font-display font-bold text-xl text-primary-foreground leading-none">SMOT VISA</span>
+                            <span className="text-[10px] font-body text-primary-foreground/60 uppercase tracking-widest mt-1">Visa and Travel Agency</span>
+                        </div>
                     </Link>
 
                     {/* Desktop nav */}

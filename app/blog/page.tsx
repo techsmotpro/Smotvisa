@@ -47,7 +47,7 @@ const BlogListingPage = () => {
     return (
         <main className="bg-background min-h-screen">
             <PageHeader
-                title="Smotvisa Travel Blog"
+                title="SMOT VISA Travel Blog"
                 description="Expert insights, visa guides, and travel inspiration to help you navigate the world with confidence."
                 breadcrumbs={[{ label: "Blog" }]}
             />
@@ -145,7 +145,7 @@ const BlogListingPage = () => {
                     </div>
 
                     {filteredBlogs.length === 0 && (
-                        <div className="text-center py-32 bg-muted/20 rounded-[3rem] border-2 border-dashed border-border">
+                        <div className="text-center py-32 bg-secondary/5 rounded-[3rem] border-2 border-dashed border-border/50">
                             <p className="text-xl text-muted-foreground font-display font-bold italic">No articles match your criteria. Try another search!</p>
                             <button
                                 onClick={() => { setSearch(""); setSelectedCategory("All") }}
@@ -159,7 +159,7 @@ const BlogListingPage = () => {
             </section>
 
             {/* Newsletter CTA */}
-            <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
+            <section className="py-24 bg-gradient-to-r from-primary via-primary-light to-secondary text-primary-foreground relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 pointer-events-none bg-grid-white" />
                 <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl px-4">
                     <motion.div

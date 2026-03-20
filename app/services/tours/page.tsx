@@ -10,7 +10,7 @@ const TourPackagesPage = () => {
     return (
         <main className="min-h-screen bg-background pb-20">
             <PageHeader
-                title="Explore the World with Smotvisa"
+                title="Explore the World with SMOT VISA"
                 description="From exotic destinations to cultural adventures, discover our handpicked international tour packages designed for an unforgettable travel experience."
                 breadcrumbs={[{ label: "Tours & Packages" }]}
             />
@@ -61,11 +61,11 @@ const TourPackagesPage = () => {
                                     </p>
 
                                     <div className="grid grid-cols-2 gap-4 mb-10">
-                                        <div className="flex items-center gap-2 text-xs font-display font-bold text-foreground/80 uppercase tracking-widest bg-muted/30 p-3 rounded-xl border border-border/50">
+                                        <div className="flex items-center gap-2 text-xs font-display font-bold text-foreground/80 uppercase tracking-widest bg-secondary/10 p-3 rounded-xl border border-border/50">
                                             <Clock className="h-4 w-4 text-secondary" />
                                             {pkg.duration}
                                         </div>
-                                        <div className="flex items-center gap-2 text-xs font-display font-bold text-foreground/80 uppercase tracking-widest bg-muted/30 p-3 rounded-xl border border-border/50">
+                                        <div className="flex items-center gap-2 text-xs font-display font-bold text-foreground/80 uppercase tracking-widest bg-secondary/10 p-3 rounded-xl border border-border/50">
                                             <Users className="h-4 w-4 text-secondary" />
                                             {pkg.groupSize}
                                         </div>
@@ -84,7 +84,7 @@ const TourPackagesPage = () => {
             </section>
 
             {/* Flight Packages Section */}
-            <section className="py-24 bg-muted/30 relative overflow-hidden">
+            <section className="py-24 bg-gradient-to-b from-background to-secondary/5 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-5 pointer-events-none bg-grid-black" />
                 <div className="container mx-auto px-4 relative z-10">
                     <motion.div
@@ -148,7 +148,7 @@ const TourPackagesPage = () => {
                             viewport={{ once: true }}
                             className="relative z-10"
                         >
-                            <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">Travel Smart with Smotvisa</h2>
+                            <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">Travel Smart with SMOT VISA</h2>
                             <p className="text-muted-foreground font-body text-xl max-w-2xl mb-12 italic border-l-4 border-secondary pl-8">
                                 Expert advice and localized knowledge to ensure your international journey is seamless and stress-free.
                             </p>
@@ -174,7 +174,7 @@ const TourPackagesPage = () => {
                     initial={{ opacity: 0, scale: 0.98 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    className="bg-primary p-12 md:p-24 rounded-[3.5rem] shadow-elevated relative overflow-hidden text-center border border-white/10"
+                    className="bg-gradient-to-r from-primary via-primary-light to-secondary p-12 md:p-24 rounded-[3.5rem] shadow-elevated relative overflow-hidden text-center border border-white/10"
                 >
                     <div className="absolute inset-0 opacity-10 pointer-events-none bg-grid-white" />
                     <div className="relative z-10 max-w-4xl mx-auto space-y-10">
@@ -182,7 +182,7 @@ const TourPackagesPage = () => {
                             Ready for Your Next Bespoke Adventure?
                         </h2>
                         <p className="text-xl md:text-3xl text-primary-foreground/70 font-body leading-relaxed border-t border-b border-white/10 py-10">
-                            Let Smotvisa orchestrate every detail — from regulatory compliance to the perfect sunrise over the Alps.
+                            Let SMOT VISA orchestrate every detail — from regulatory compliance to the perfect sunrise over the Alps.
                         </p>
                         <div className="flex flex-col md:flex-row gap-6 justify-center pt-6">
                             <Link

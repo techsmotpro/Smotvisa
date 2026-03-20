@@ -17,7 +17,7 @@ export const offices: Office[] = [
     {
         id: "bandra-east-mumbai",
         city: "Bandra East, Mumbai",
-        name: "Smotvisa",
+        name: "SMOT VISA",
         address: "Tower A, Pinnacle Corporate Park, Bandra Kurla Complex, Kole Kalyan, Bandra East, Mumbai, Maharashtra 400051",
         phone: ["+91-8879822338"],
         email: "info@smotvisa.com",
@@ -31,7 +31,7 @@ export const offices: Office[] = [
     {
         id: "kandivali-mumbai",
         city: "Kandivali, Mumbai",
-        name: "Smotvisa",
+        name: "SMOT VISA",
         address: "Room No. 5, 474, Sardar Chawl, Mahaderbhai Desai Road, Kandivali East, Mumbai Suburban Mumbai, Maharashtra 400101",
         phone: ["+91-94823 86529"],
         email: "info@smotvisa.com",
@@ -45,7 +45,7 @@ export const offices: Office[] = [
     {
         id: "shivaji-nagar-pune",
         city: "Shivaji Nagar, Pune",
-        name: "Smotvisa",
+        name: "SMOT VISA",
         address: "1, Aparnali, SN 849/1, 184/4, Agarkar Rd, opp. BMCC Road, Shreeman Society, Shivaji Nagar, Deccan Gymkhana, Pune, Maharashtra 411004",
         phone: ["+91-7710988589"],
         email: "info@smotvisa.com",
@@ -59,7 +59,7 @@ export const offices: Office[] = [
     {
         id: "yerwada-pune",
         city: "Yerwada, Pune",
-        name: "Smotvisa",
+        name: "SMOT VISA",
         address: "Level 6, Wing 1, Tower A, Business Bay Survey No.103, Hissa No 2, Airport Road, Yerwada, Pune, Maharashtra 411006",
         phone: ["+91-94823 86529"],
         email: "info@smotvisa.com",
@@ -73,7 +73,7 @@ export const offices: Office[] = [
     {
         id: "delhi",
         city: "Delhi",
-        name: "Smotvisa",
+        name: "SMOT VISA",
         address: "2nd floor, Regal Building, Connaught Place, Hanuman Road Area, New Delhi, Delhi 110001",
         phone: ["+91-94823 86529"],
         email: "info@smotvisa.com",
@@ -87,7 +87,7 @@ export const offices: Office[] = [
     {
         id: "walter-visakhapatnam",
         city: "Walter, Visakhapatnam",
-        name: "Smotvisa",
+        name: "SMOT VISA",
         address: "First Floor, Plot no 21, Beach Rd, Kirlampudi Layout, Chinna Waltair, Pedda Waltair, Visakhapatnam, Andhra Pradesh 530017",
         phone: ["+91-9108233560"],
         email: "info@smotvisa.com",
@@ -101,7 +101,7 @@ export const offices: Office[] = [
     {
         id: "cv-raman-nagar-bangalore",
         city: "CV Raman Nagar, Bangalore",
-        name: "Smotvisa",
+        name: "SMOT VISA",
         address: "80/1 Earthen latitudes, S.S.commercial estates, Nagavarapalya, C V Raman Nagar, Bengaluru, Karnataka 560093",
         phone: ["+91-9380957448"],
         email: "info@smotvisa.com",
@@ -115,7 +115,7 @@ export const offices: Office[] = [
     {
         id: "ahmedabad",
         city: "Ahmedabad",
-        name: "Smotvisa",
+        name: "SMOT VISA",
         address: "1st Floor, East Wing, Privilon, Ambli Road, Sarkhej, Gandhinagar Highway, Ahmedabad, Gujarat 380058",
         phone: ["+91-8951697588"],
         email: "info@smotvisa.com",
@@ -129,7 +129,7 @@ export const offices: Office[] = [
     {
         id: "jaipur",
         city: "Jaipur",
-        name: "Smotvisa",
+        name: "SMOT VISA",
         address: "247/3, Vashisht Marg, near Jawahar Nagar, Raja Park, Jaipur, Rajasthan, 302004",
         phone: ["+91-7710988589"],
         email: "info@smotvisa.com",
