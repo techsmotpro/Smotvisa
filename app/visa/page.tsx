@@ -77,7 +77,7 @@ const DestinationsPage = () => {
             <PageHeader
                 title="Global Visa Destinations"
                 description="Explore visa requirements and processing details for over 50+ countries worldwide. Your journey starts here."
-                breadcrumbs={[{ label: "Destinations" }]}
+                breadcrumbs={[{ label: "Visa Services" }]}
             />
 
             <div className="py-24">
@@ -98,7 +98,7 @@ const DestinationsPage = () => {
                                     transition={{ delay: idx * 0.1 }}
                                     className="group relative rounded-3xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 bg-card border border-border"
                                 >
-                                    <Link href={`/destinations/${dest.id}`}>
+                                    <Link href={`/visa/${dest.id}-visa`}>
                                         <div className="aspect-[3/4] relative overflow-hidden">
                                             <img
                                                 src={dest.image}

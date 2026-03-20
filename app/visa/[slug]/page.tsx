@@ -21,7 +21,8 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 
 const VisaDetailPage = () => {
     const params = useParams();
-    const id = params.id as string;
+    const slug = params.slug as string;
+    const id = slug.replace("-visa", "");
     const visa = visaData[id];
 
     if (!visa) {
@@ -47,7 +48,7 @@ const VisaDetailPage = () => {
                 title={`${visa.name} Visa Services ${visa.flag || ""}`}
                 description={visa.description}
                 breadcrumbs={[
-                    { label: "Visa Services", href: "/destinations" },
+                    { label: "Visa Services", href: "/visa" },
                     { label: visa.name }
                 ]}
             />

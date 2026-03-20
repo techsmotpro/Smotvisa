@@ -9,6 +9,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/destinations',
+        destination: '/visa',
+        permanent: true,
+      },
+      {
+        source: '/destinations/:id',
+        destination: '/visa/:id-visa',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -173,7 +173,7 @@ const VisaEligibilityPage = () => {
                 title="Visa Eligibility Checker"
                 description="Get instant feedback on your visa eligibility with our advanced scoring system."
                 breadcrumbs={[
-                    { label: "Visa Services", href: "/destinations" },
+                    { label: "Visa Services", href: "/visa" },
                     { label: "Eligibility Checker" }
                 ]}
             />

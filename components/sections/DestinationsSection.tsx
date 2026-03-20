@@ -87,7 +87,7 @@ const DestinationsSection = () => {
                             transition={{ delay: idx * 0.1 }}
                             className="group relative rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300"
                         >
-                            <Link href={`/destinations/${dest.id}`}>
+                            <Link href={`/visa/${dest.id}-visa`}>
                                 <div className="aspect-[3/4] relative">
                                     <img src={dest.image} alt={dest.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/10 to-transparent" />
@@ -127,7 +127,7 @@ const DestinationsSection = () => {
                         {moreCountries.map((country) => (
                             <Link
                                 key={country.name}
-                                href={country.id === "#" ? "/contact" : `/destinations/${country.id}`}
+                                href={country.id === "#" ? "/contact" : `/visa/${country.id}-visa`}
                                 className="inline-flex items-center gap-2 px-3.5 py-2 bg-muted rounded-full text-sm font-body font-medium hover:bg-secondary/10 hover:shadow-card transition-all cursor-pointer"
                             >
                                 <span className="text-lg">{country.flag}</span>

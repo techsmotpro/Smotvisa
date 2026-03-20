@@ -2,12 +2,12 @@
 import { offices } from "./officeData";
 
 export const visaCountries = [
-    { id: "us", name: "United States", flag: "🇺🇸", href: "/destinations/us" },
-    { id: "uk", name: "United Kingdom", flag: "🇬🇧", href: "/destinations/uk" },
-    { id: "canada", name: "Canada", flag: "🇨🇦", href: "/destinations/canada" },
-    { id: "australia", name: "Australia", flag: "🇦🇺", href: "/destinations/australia" },
-    { id: "uae", name: "UAE", flag: "🇦🇪", href: "/destinations/uae" },
-    { id: "schengen", name: "Schengen", flag: "🇪🇺", href: "/destinations/schengen" },
+    { id: "us", name: "United States", flag: "🇺🇸", href: "/visa/us-visa" },
+    { id: "uk", name: "United Kingdom", flag: "🇬🇧", href: "/visa/uk-visa" },
+    { id: "canada", name: "Canada", flag: "🇨🇦", href: "/visa/canada-visa" },
+    { id: "australia", name: "Australia", flag: "🇦🇺", href: "/visa/australia-visa" },
+    { id: "uae", name: "UAE", flag: "🇦🇪", href: "/visa/uae-visa" },
+    { id: "schengen", name: "Schengen", flag: "🇪🇺", href: "/visa/schengen-visa" },
 ];
 
 export const services = [
@@ -67,7 +67,7 @@ export const navLinks = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Services", href: "/services", dropdown: services },
-    { label: "Destinations", href: "/destinations" },
+    { label: "Destinations", href: "/visa" },
     { label: "Branches", href: "/contact", dropdown: branches },
     { label: "Blog", href: "/blog" },
     { label: "Visa Checker", href: "/visa-checker" },
