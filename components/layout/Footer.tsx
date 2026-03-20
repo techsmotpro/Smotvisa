@@ -86,15 +86,23 @@ const Footer = () => {
           {/* Our Presence */}
           <div>
             <h4 className="text-xs font-body font-bold uppercase tracking-[0.2em] text-secondary mb-6">Our Presence</h4>
-            <ul className="space-y-4">
-              {offices.map((office) => (
-                <li key={office.id} className="group">
-                  <Link href={`/contact?branch=${office.id}`} className="flex gap-3" onClick={() => window.scrollTo(0, 0)}>
-                    <MapPin className="h-4 w-4 text-secondary shrink-0 mt-0.5" />
-                    <div>
-                      <p className="text-sm font-body font-bold text-primary-foreground/90 group-hover:text-secondary transition-colors">{office.city}</p>
-                      <p className="text-[10px] text-primary-foreground/50 line-clamp-1">{office.address}</p>
-                    </div>
+            <ul className="space-y-3">
+              {[
+                { name: "Maharashtra", href: "/contact" },
+                { name: "Delhi", href: "/contact/delhi" },
+                { name: "Andhra Pradesh", href: "/contact" },
+                { name: "Karnataka", href: "/contact" },
+                { name: "Ahmedabad", href: "/contact/ahmedabad" },
+                { name: "Jaipur", href: "/contact/jaipur" },
+              ].map((loc) => (
+                <li key={loc.name}>
+                  <Link
+                    href={loc.href}
+                    className="text-sm font-body text-primary-foreground/70 hover:text-secondary transition-colors flex items-center gap-2"
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    <div className="w-1.5 h-1.5 rounded-full bg-secondary/40" />
+                    {loc.name}
                   </Link>
                 </li>
               ))}
@@ -130,19 +138,6 @@ const Footer = () => {
               <p className="text-[10px] font-body text-primary-foreground/30">
                 Managed by SMOT VISA Team.
               </p>
-            </div>
-
-            {/* Vite-inspired Attribution Branding */}
-            <div className="flex items-center gap-4 pt-2 group">
-              <a href="https://nextjs.org" target="_blank" rel="noreferrer" className="logo-vite">
-                <Image src="/favicon.ico" alt="Next.js" width={16} height={16} className="opacity-40 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all" />
-              </a>
-              <a href="https://react.dev" target="_blank" rel="noreferrer" className="logo-vite react animate-logo-spin">
-                <div className="w-4 h-4 rounded-full bg-blue-400/20 flex items-center justify-center">
-                  <div className="w-1.5 h-1.5 rounded-full bg-blue-400" />
-                </div>
-              </a>
-              <span className="text-[9px] font-body text-primary-foreground/20 uppercase tracking-[0.2em]">Next.js Power</span>
             </div>
           </div>
 

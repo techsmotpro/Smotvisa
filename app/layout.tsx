@@ -34,7 +34,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Suspense } from "react";
 
-import FloatingCTA from "@/components/ui/FloatingCTA";
 
 export default function RootLayout({
   children,
@@ -52,7 +51,6 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
-          <FloatingCTA />
         </TooltipProvider>
         <Toaster />
         <Sonner />
