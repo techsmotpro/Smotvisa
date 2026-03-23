@@ -15,7 +15,7 @@ export const metadata = {
     "Canada visa",
     "Australia visa",
     "Schengen visa",
-    "SMOT VISA"
+    "SmotVisa"
   ],
 
   alternates: {
@@ -27,14 +27,14 @@ export const metadata = {
     follow: true,
   },
 
-  authors: [{ name: "SMOT VISA Team" }],
-  publisher: "SMOT VISA",
+  authors: [{ name: "SmotVisa Team" }],
+  publisher: "SmotVisa",
 
   openGraph: {
     title: "Global Visa Destinations | Visa Services for 50+ Countries",
     description: "Explore visa requirements and processing details for over 50+ countries worldwide. Your journey starts here.",
     url: "https://smotvisa.com/visa",
-    siteName: "SMOT VISA",
+    siteName: "SmotVisa",
     images: ["/images/visa-services-MHOtW-3U.jpg"],
     type: "website",
   },

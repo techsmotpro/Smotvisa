@@ -52,18 +52,18 @@ export async function generateMetadata({ params }: { params: Promise<{ serviceId
     
     if (!data) {
         return { 
-            title: 'Service Not Found | SMOT VISA',
+            title: 'Service Not Found | SmotVisa',
             description: 'Sorry, we couldn\'t find the service you\'re looking for.'
         };
     }
 
     return {
-        title: `${data.title} | Premium Travel Solutions | SMOT VISA`,
+        title: `${data.title} | Premium Travel Solutions | SmotVisa`,
         description: data.description,
         keywords: [
             data.title.toLowerCase(),
             "travel services India",
-            "SMOT VISA services",
+            "SmotVisa services",
             "premium travel solutions"
         ],
 
@@ -76,14 +76,14 @@ export async function generateMetadata({ params }: { params: Promise<{ serviceId
             follow: true,
         },
 
-        authors: [{ name: "SMOT VISA Team" }],
-        publisher: "SMOT VISA",
+        authors: [{ name: "SmotVisa Team" }],
+        publisher: "SmotVisa",
 
         openGraph: {
             title: `${data.title} | Premium Travel Solutions`,
             description: data.description,
             url: `https://smotvisa.com/services/${serviceId}`,
-            siteName: "SMOT VISA",
+            siteName: "SmotVisa",
             images: ["/images/hero-travel-CJWf8Tv1.jpg"],
             type: "website",
         },

@@ -27,7 +27,7 @@ export default function FloatingCTA() {
     }, []);
 
     const handleWhatsApp = () => {
-        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi SMOT VISA! I'm interested in your visa services. Can you help me?")}`, "_blank");
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi SmotVisa! I'm interested in your visa services. Can you help me?")}`, "_blank");
     };
 
     const handleCall = () => {

@@ -45,14 +45,14 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <span className="text-sm font-body font-semibold text-secondary uppercase tracking-widest">About SMOT VISA</span>
+                        <span className="text-sm font-body font-semibold text-secondary uppercase tracking-widest">About SmotVisa</span>
                         <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-6 leading-tight">
                             India’s Trusted <span className="text-secondary">Visa Experts</span>
                         </h2>
 
                         <div className="space-y-6 text-muted-foreground font-body text-lg leading-relaxed mb-8">
                             <p>
-                                At SMOT VISA, we simplify your international travel dreams with expert visa assistance trusted across India.
+                                At SmotVisa, we simplify your international travel dreams with expert visa assistance trusted across India.
                                 Whether you’re traveling for business, tourism, or family visits, our mission is to make your visa experience
                                 smooth, fast, and stress-free.
                             </p>
@@ -70,7 +70,7 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                                         From understanding your travel purpose to handling documentation and interview preparation, we guide you at every step.
                                     </p>
                                     <p>
-                                        At SMOT VISA, we believe in a <strong>"human-first"</strong> approach. We listen, understand, and deliver solutions that fit
+                                        At SmotVisa, we believe in a <strong>"human-first"</strong> approach. We listen, understand, and deliver solutions that fit
                                         your specific travel needs, not just templates. Our clients appreciate our transparency, quick turnaround time,
                                         and the peace of mind that comes with expert guidance.
                                     </p>

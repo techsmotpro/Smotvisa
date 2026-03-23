@@ -11,13 +11,13 @@ export async function generateMetadata({ params }: { params: Promise<{ branchId?
         const office = offices.find(o => o.id === branchId);
         if (office) {
             return {
-                title: `${office.name} Branch Contact | SMOT VISA`,
+                title: `${office.name} Branch Contact | SmotVisa`,
                 description: `Get in touch with our ${office.name} branch. Expert visa and travel consultants ready to assist you.`,
                 keywords: [
                     `${office.name} visa agents`,
                     `${office.name} travel agency`,
-                    "SMOT VISA branch",
-                    "contact SMOT VISA",
+                    "SmotVisa branch",
+                    "contact SmotVisa",
                     "visa consultants"
                 ],
                 alternates: {
@@ -27,19 +27,19 @@ export async function generateMetadata({ params }: { params: Promise<{ branchId?
                     index: true,
                     follow: true,
                 },
-                authors: [{ name: "SMOT VISA Team" }],
-                publisher: "SMOT VISA",
+                authors: [{ name: "SmotVisa Team" }],
+                publisher: "SmotVisa",
                 openGraph: {
-                    title: `${office.name} Branch Contact | SMOT VISA`,
+                    title: `${office.name} Branch Contact | SmotVisa`,
                     description: `Get in touch with our ${office.name} branch. Expert visa and travel consultants ready to assist you.`,
                     url: `https://smotvisa.com/contact/${branchId}`,
-                    siteName: "SMOT VISA",
+                    siteName: "SmotVisa",
                     images: ["/images/hero-travel-CJWf8Tv1.jpg"],
                     type: "website",
                 },
                 twitter: {
                     card: "summary_large_image",
-                    title: `${office.name} Branch Contact | SMOT VISA`,
+                    title: `${office.name} Branch Contact | SmotVisa`,
                     description: `Get in touch with our ${office.name} branch. Expert visa and travel consultants ready to assist you.`,
                     images: ["/images/hero-travel-CJWf8Tv1.jpg"],
                 }
@@ -48,13 +48,13 @@ export async function generateMetadata({ params }: { params: Promise<{ branchId?
     }
 
     return {
-        title: "Contact Our Experts | SMOT VISA",
+        title: "Contact Our Experts | SmotVisa",
         description: "Connect with India's leading visa and travel consultants. We provide personalized support for all your international journeys.",
         keywords: [
-            "contact SMOT VISA",
+            "contact SmotVisa",
             "visa consultants India",
             "travel agency contact",
-            "SMOT VISA phone number",
+            "SmotVisa phone number",
             "visa assistance India"
         ],
         alternates: {
@@ -64,19 +64,19 @@ export async function generateMetadata({ params }: { params: Promise<{ branchId?
             index: true,
             follow: true,
         },
-        authors: [{ name: "SMOT VISA Team" }],
-        publisher: "SMOT VISA",
+        authors: [{ name: "SmotVisa Team" }],
+        publisher: "SmotVisa",
         openGraph: {
-            title: "Contact Our Experts | SMOT VISA",
+            title: "Contact Our Experts | SmotVisa",
             description: "Connect with India's leading visa and travel consultants. We provide personalized support for all your international journeys.",
             url: "https://smotvisa.com/contact",
-            siteName: "SMOT VISA",
+            siteName: "SmotVisa",
             images: ["/images/hero-travel-CJWf8Tv1.jpg"],
             type: "website",
         },
         twitter: {
             card: "summary_large_image",
-            title: "Contact Our Experts | SMOT VISA",
+            title: "Contact Our Experts | SmotVisa",
             description: "Connect with India's leading visa and travel consultants. We provide personalized support for all your international journeys.",
             images: ["/images/hero-travel-CJWf8Tv1.jpg"],
         }

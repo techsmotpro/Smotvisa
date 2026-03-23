@@ -20,10 +20,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const image = blog.image.startsWith('http') ? blog.image : 'https://picsum.photos/seed/' + blog.id + '/1200/800';
 
     return {
-        title: `${blog.title} | SMOT VISA Blog`,
+        title: `${blog.title} | SmotVisa Blog`,
         description: plainExcerpt,
         keywords: [
-            "SMOT VISA blog",
+            "SmotVisa blog",
             "visa guides",
             "travel tips",
             blog.category.toLowerCase(),
@@ -39,14 +39,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             follow: true,
         },
 
-        authors: [{ name: blog.author || "SMOT VISA Team" }],
-        publisher: "SMOT VISA",
+        authors: [{ name: blog.author || "SmotVisa Team" }],
+        publisher: "SmotVisa",
 
         openGraph: {
             title: blog.title,
             description: plainExcerpt,
             url: `https://smotvisa.com/blog/${slug}`,
-            siteName: "SMOT VISA",
+            siteName: "SmotVisa",
             images: [image],
             type: "article",
         },

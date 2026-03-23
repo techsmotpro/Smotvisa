@@ -9,19 +9,19 @@ export async function generateMetadata({ params }: { params: Promise<{ officeId:
 
     if (!office) {
         return {
-            title: "Office Not Found | SMOT VISA",
+            title: "Office Not Found | SmotVisa",
             description: "Sorry, we couldn't find the requested office information."
         };
     }
 
     return {
-        title: `${office.name} Branch | SMOT VISA`,
+        title: `${office.name} Branch | SmotVisa`,
         description: `Visit our ${office.name} branch for expert visa and travel assistance. We provide personalized support for all your international journeys.`,
         keywords: [
             `${office.name} visa agents`,
             `${office.name} travel agency`,
             `${office.name} branch`,
-            "SMOT VISA offices",
+            "SmotVisa offices",
             "visa consultants"
         ],
 
@@ -34,21 +34,21 @@ export async function generateMetadata({ params }: { params: Promise<{ officeId:
             follow: true,
         },
 
-        authors: [{ name: "SMOT VISA Team" }],
-        publisher: "SMOT VISA",
+        authors: [{ name: "SmotVisa Team" }],
+        publisher: "SmotVisa",
 
         openGraph: {
-            title: `${office.name} Branch | SMOT VISA`,
+            title: `${office.name} Branch | SmotVisa`,
             description: `Visit our ${office.name} branch for expert visa and travel assistance. We provide personalized support for all your international journeys.`,
             url: `https://smotvisa.com/offices/${officeId}`,
-            siteName: "SMOT VISA",
+            siteName: "SmotVisa",
             images: ["/images/hero-travel-CJWf8Tv1.jpg"],
             type: "website",
         },
 
         twitter: {
             card: "summary_large_image",
-            title: `${office.name} Branch | SMOT VISA`,
+            title: `${office.name} Branch | SmotVisa`,
             description: `Visit our ${office.name} branch for expert visa and travel assistance. We provide personalized support for all your international journeys.`,
             images: ["/images/hero-travel-CJWf8Tv1.jpg"],
         }

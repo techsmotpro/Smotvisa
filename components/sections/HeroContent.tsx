@@ -44,7 +44,7 @@ export default function HeroContent() {
                 transition={{ duration: 0.7, delay: 0.2 }}
                 className="text-lg sm:text-xl text-primary-foreground/80 font-body leading-relaxed mb-8 max-w-xl"
             >
-                Planning to travel abroad for leisure or business? SMOT VISA makes visa applications simple, fast, and stress-free.
+                Planning to travel abroad for leisure or business? SmotVisa makes visa applications simple, fast, and stress-free.
                 We assist Indian travelers in obtaining Tourist and Business Visas for over 50+ countries with a 99% success rate.
             </MotionP>
 

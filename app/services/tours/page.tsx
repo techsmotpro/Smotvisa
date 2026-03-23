@@ -6,14 +6,14 @@ import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "International Tour Packages | Bespoke Adventures | SMOT VISA",
-    description: "Discover curated international tour packages with SMOT VISA. From exotic destinations to cultural adventures, we orchestrate every detail for an unforgettable travel experience.",
+    title: "International Tour Packages | Bespoke Adventures | SmotVisa",
+    description: "Discover curated international tour packages with SmotVisa. From exotic destinations to cultural adventures, we orchestrate every detail for an unforgettable travel experience.",
 
     keywords: [
         "international tour packages",
         "bespoke travel packages",
         "custom tour packages India",
-        "SMOT VISA tours",
+        "SmotVisa tours",
         "travel packages from India"
     ],
 
@@ -26,22 +26,22 @@ export const metadata: Metadata = {
         follow: true,
     },
 
-    authors: [{ name: "SMOT VISA Team" }],
-    publisher: "SMOT VISA",
+    authors: [{ name: "SmotVisa Team" }],
+    publisher: "SmotVisa",
 
     openGraph: {
-        title: "International Tour Packages | Bespoke Adventures | SMOT VISA",
-        description: "Discover curated international tour packages with SMOT VISA. From exotic destinations to cultural adventures, we orchestrate every detail for an unforgettable travel experience.",
+        title: "International Tour Packages | Bespoke Adventures | SmotVisa",
+        description: "Discover curated international tour packages with SmotVisa. From exotic destinations to cultural adventures, we orchestrate every detail for an unforgettable travel experience.",
         url: "https://smotvisa.com/services/tours",
-        siteName: "SMOT VISA",
+        siteName: "SmotVisa",
         images: ["/images/australia-tour.png"],
         type: "website",
     },
 
     twitter: {
         card: "summary_large_image",
-        title: "International Tour Packages | Bespoke Adventures | SMOT VISA",
-        description: "Discover curated international tour packages with SMOT VISA. From exotic destinations to cultural adventures, we orchestrate every detail for an unforgettable travel experience.",
+        title: "International Tour Packages | Bespoke Adventures | SmotVisa",
+        description: "Discover curated international tour packages with SmotVisa. From exotic destinations to cultural adventures, we orchestrate every detail for an unforgettable travel experience.",
         images: ["/images/australia-tour.png"],
     }
 };
@@ -50,7 +50,7 @@ export default function TourPackagesPage() {
     return (
         <main className="min-h-screen bg-background pb-20">
             <PageHeader
-                title="Explore the World with SMOT VISA"
+                title="Explore the World with SmotVisa"
                 description="From exotic destinations to cultural adventures, discover our handpicked international tour packages designed for an unforgettable travel experience."
                 breadcrumbs={[{ label: "Tours & Packages" }]}
             />
@@ -188,7 +188,7 @@ export default function TourPackagesPage() {
                             viewport={{ once: true }}
                             className="relative z-10"
                         >
-                            <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">Travel Smart with SMOT VISA</h2>
+                            <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">Travel Smart with SmotVisa</h2>
                             <p className="text-muted-foreground font-body text-xl max-w-2xl mb-12 italic border-l-4 border-secondary pl-8">
                                 Expert advice and localized knowledge to ensure your international journey is seamless and stress-free.
                             </p>
@@ -222,7 +222,7 @@ export default function TourPackagesPage() {
                             Ready for Your Next Bespoke Adventure?
                         </h2>
                         <p className="text-xl md:text-3xl text-primary-foreground/70 font-body leading-relaxed border-t border-b border-white/10 py-10">
-                            Let SMOT VISA orchestrate every detail — from regulatory compliance to the perfect sunrise over the Alps.
+                            Let SmotVisa orchestrate every detail — from regulatory compliance to the perfect sunrise over the Alps.
                         </p>
                         <div className="flex flex-col md:flex-row gap-6 justify-center pt-6">
                             <Link

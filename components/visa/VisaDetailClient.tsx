@@ -139,7 +139,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                                     </div>
                                     <div className="p-8 bg-secondary/5 rounded-3xl border border-secondary/10">
                                         <p className="text-xs font-display font-bold text-secondary uppercase tracking-widest mb-4">Intelligence Alert</p>
-                                        <p className="text-xs font-body text-foreground/80 leading-relaxed italic">The Standard Visitor Visa strictly prohibits paid employment within the United Kingdom. SMOT VISA provides end-to-end file preparation to ensure regulatory compliance.</p>
+                                        <p className="text-xs font-body text-foreground/80 leading-relaxed italic">The Standard Visitor Visa strictly prohibits paid employment within the United Kingdom. SmotVisa provides end-to-end file preparation to ensure regulatory compliance.</p>
                                     </div>
                                 </div>
                             </div>
@@ -178,7 +178,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                                         <h3 className="text-xl font-display font-bold text-foreground mb-4">Business Visitor Protocols</h3>
                                         <p className="text-xs font-body text-muted-foreground leading-relaxed italic mb-6">For professionals attending conferences, trade fairs, or strategic contract discussions.</p>
                                         <div className="p-4 bg-primary/5 rounded-2xl border border-primary/10">
-                                            <p className="text-[10px] font-display font-bold text-foreground leading-relaxed uppercase tracking-widest italic">Success Strategy: SMOT VISA ensures error-free TRV applications and robust biometrics coordination.</p>
+                                            <p className="text-[10px] font-display font-bold text-foreground leading-relaxed uppercase tracking-widest italic">Success Strategy: SmotVisa ensures error-free TRV applications and robust biometrics coordination.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -218,7 +218,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                             <div className="p-10 bg-primary rounded-[3rem] text-primary-foreground text-center relative overflow-hidden shadow-elevated">
                                 <div className="absolute inset-0 opacity-10 pointer-events-none bg-grid-white" />
                                 <h3 className="text-2xl font-display font-bold mb-4 relative z-10">High Success Rate Advocacy</h3>
-                                <p className="text-lg font-body text-primary-foreground/70 max-w-2xl mx-auto relative z-10 italic leading-relaxed">Trusted by thousands of applicants across India, SMOT VISA provides step-by-step appointment scheduling and real-time monitoring of consulate availability.</p>
+                                <p className="text-lg font-body text-primary-foreground/70 max-w-2xl mx-auto relative z-10 italic leading-relaxed">Trusted by thousands of applicants across India, SmotVisa provides step-by-step appointment scheduling and real-time monitoring of consulate availability.</p>
                             </div>
                         </motion.div>
                     </div>

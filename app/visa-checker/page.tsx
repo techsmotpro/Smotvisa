@@ -186,7 +186,7 @@ const VisaEligibilityPage = () => {
     };
 
     const handleWhatsApp = () => {
-        const message = `Hi SMOT VISA! I just checked my visa eligibility for ${formValues.country?.toUpperCase()}. My score was ${breakdown?.total} (${result}). I'd like a professional review of my profile.`;
+        const message = `Hi SmotVisa! I just checked my visa eligibility for ${formValues.country?.toUpperCase()}. My score was ${breakdown?.total} (${result}). I'd like a professional review of my profile.`;
         window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
     };
 
@@ -507,7 +507,7 @@ const VisaEligibilityPage = () => {
                         <div className="space-y-4">
                             <h3 className="text-2xl font-display font-bold text-foreground underline decoration-secondary decoration-4 underline-offset-8">Intelligent Logistics</h3>
                             <p className="text-muted-foreground font-body italic leading-relaxed text-lg">
-                                SMOT VISA uses proprietary data models that simulate actual visa application workflows. Our scoring is dynamic, meaning it shifts with current regulatory climates.
+                                SmotVisa uses proprietary data models that simulate actual visa application workflows. Our scoring is dynamic, meaning it shifts with current regulatory climates.
                             </p>
                         </div>
 

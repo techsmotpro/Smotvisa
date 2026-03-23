@@ -11,7 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // 1. Core Static Pages
     const staticPages: MetadataRoute.Sitemap = [
         "/", "/about", "/services", "/visa", "/blog", "/contact", "/visa-checker",
-        "/visa-agents-in-bangalore"
+        "/visa-agents-in-bangalore", "/visa-services-in-hsr-layout", "/visa-services-in-indiranagar"
     ].map(path => ({
         url: `${baseUrl}${path}`,
         lastModified: lastMod,

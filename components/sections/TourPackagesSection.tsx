@@ -20,7 +20,7 @@ const TourPackagesSection = () => {
                         Tour Packages
                     </span>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-4">
-                        Explore the World with SMOT VISA
+                        Explore the World with SmotVisa
                     </h2>
                     <p className="text-muted-foreground font-body max-w-2xl mx-auto">
                         From exotic destinations to cultural adventures, discover our handpicked international tour packages
@@ -175,7 +175,7 @@ const TourPackagesSection = () => {
                         viewport={{ once: true }}
                         className="text-center mb-6"
                     >
-                        <h3 className="text-2xl font-display font-bold text-foreground mb-3">Travel Smart with SMOT VISA</h3>
+                        <h3 className="text-2xl font-display font-bold text-foreground mb-3">Travel Smart with SmotVisa</h3>
                         <p className="text-muted-foreground font-body max-w-2xl mx-auto">
                             Expert tips to make your international travel experience smooth and enjoyable
                         </p>
@@ -211,7 +211,7 @@ const TourPackagesSection = () => {
                         Ready for Your Next Adventure?
                     </h3>
                     <p className="text-blue-100 font-body max-w-2xl mx-auto mb-6">
-                        Let SMOT VISA handle all your travel arrangements from flights and visas to accommodation and sightseeing.
+                        Let SmotVisa handle all your travel arrangements from flights and visas to accommodation and sightseeing.
                         Start your journey today!
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3 justify-center">

@@ -1,0 +1,204 @@
+import PageHeader from "@/components/ui/PageHeader";
+import { MapPin, CheckCircle2, Star, ShieldCheck, Clock, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { offices } from "@/data/officeData";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Best Visa Services in HSR Layout | Expert Visa Consultants | SmotVisa",
+    description: "Professional visa processing services in HSR Layout, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
+    
+    keywords: [
+        "visa services in HSR Layout",
+        "visa agents in HSR Layout",
+        "HSR Layout visa consultants",
+        "SmotVisa HSR Layout",
+        "HSR Layout visa processing",
+        "best visa agents HSR Layout",
+        "visa consultants in HSR Layout"
+    ],
+
+    alternates: {
+        canonical: "https://smotvisa.com/visa-services-in-hsr-layout",
+    },
+
+    robots: {
+        index: true,
+        follow: true,
+    },
+
+    authors: [{ name: "SmotVisa Team" }],
+    publisher: "SmotVisa",
+
+    openGraph: {
+        title: "Best Visa Services in HSR Layout | Expert Visa Consultants | SmotVisa",
+        description: "Professional visa processing services in HSR Layout, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
+        url: "https://smotvisa.com/visa-services-in-hsr-layout",
+        siteName: "SmotVisa",
+        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        type: "website",
+    },
+
+    twitter: {
+        card: "summary_large_image",
+        title: "Best Visa Services in HSR Layout | Expert Visa Consultants | SmotVisa",
+        description: "Professional visa processing services in HSR Layout, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
+        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+    },
+
+    other: {
+        "script:ld+json": JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "SmotVisa HSR Layout",
+            "image": "https://www.smotvisa.com/logo.png",
+            "@id": "https://www.smotvisa.com/visa-services-in-hsr-layout",
+            "url": "https://www.smotvisa.com/visa-services-in-hsr-layout",
+            "telephone": "+91-9380957448",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "No. 123, 19th Main Road, Sector 4, HSR Layout",
+                "addressLocality": "Bangalore",
+                "postalCode": "560102",
+                "addressCountry": "IN"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 12.9121,
+                "longitude": 77.6446
+            },
+            "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                ],
+                "opens": "09:00",
+                "closes": "18:00"
+            },
+            "sameAs": [
+                "https://www.facebook.com/smotvisa",
+                "https://www.instagram.com/smotvisa",
+                "https://www.linkedin.com/company/smotvisa"
+            ]
+        })
+    }
+};
+
+export default function VisaServicesInHSRLayout() {
+    const hsrOffice = offices.find(o => o.id === "hsr-layout-bangalore");
+
+    return (
+        <main className="bg-background">
+            <PageHeader
+                title="Visa Services in HSR Layout"
+                description="Expert visa processing services for tech professionals and expatriates in HSR Layout, Bangalore. SmotVisa is your trusted partner for premium travel consultancy."
+                breadcrumbs={[
+                    { label: "Visa Services", href: "/visa" },
+                    { label: "HSR Layout" }
+                ]}
+            />
+
+            <section className="py-24 container mx-auto px-4">
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="space-y-8">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full">
+                            <Star className="h-4 w-4 text-secondary fill-secondary" />
+                            <span className="text-xs font-display font-bold text-secondary uppercase tracking-widest">Premium Visa Services</span>
+                        </div>
+                        <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight">
+                            Expert Visa Services for HSR Layout's Tech Community.
+                        </h2>
+                        <p className="text-lg font-body text-muted-foreground italic leading-relaxed">
+                            Strategically located in the heart of HSR Layout, SmotVisa provides specialized visa assistance tailored for the vibrant tech professionals and expatriate community in this premier IT hub of Bangalore.
+                        </p>
+
+                        <div className="grid sm:grid-cols-2 gap-6">
+                            {[
+                                { title: "Tech Professional Specialization", desc: "Expert guidance for IT professionals seeking US, UK, Canada, and Schengen visas." },
+                                { title: "Doorstep Services", desc: "Convenient document pickup & delivery across HSR Layout sectors." },
+                                { title: "24/7 IT Support", desc: "Dedicated case managers for every HSR Layout client." },
+                                { title: "High Success Rate", desc: "Proven track record with Bangalore's global workforce." }
+                            ].map((item, i) => (
+                                <div key={i} className="flex gap-4">
+                                    <div className="w-10 h-10 bg-primary/5 rounded-xl flex items-center justify-center shrink-0">
+                                        <CheckCircle2 className="h-5 w-5 text-secondary" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-display font-bold text-foreground">{item.title}</h4>
+                                        <p className="text-xs text-muted-foreground italic">{item.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="relative">
+                        <div className="absolute inset-0 bg-secondary rounded-[3rem] rotate-3 opacity-10" />
+                        <div className="relative bg-card p-10 rounded-[3rem] border border-border shadow-elevated space-y-8">
+                            <h3 className="text-2xl font-display font-bold text-foreground">How We Can Help You</h3>
+                            <div className="space-y-6">
+                                <div className="p-6 bg-card rounded-2xl border border-border group hover:border-secondary transition-colors shadow-sm">
+                                    <p className="text-sm font-body text-muted-foreground italic leading-relaxed mb-4">
+                                        Our dedicated team provides expert visa services tailored for HSR Layout residents. 
+                                        Whether you're a tech professional, entrepreneur, or family traveler, we're here to assist you.
+                                    </p>
+                                </div>
+                            </div>
+                            <Button className="w-full bg-primary text-primary-foreground py-8 rounded-2xl font-display font-bold text-lg shadow-gold group">
+                                Contact Our Team <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-24 bg-gradient-to-b from-background to-secondary/5 border-t border-b border-border">
+                <div className="container mx-auto px-4">
+                    <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                        <h2 className="text-4xl font-display font-bold text-foreground">Visa Services We Offer</h2>
+                        <p className="text-muted-foreground italic tracking-wide">Specialized visa solutions for HSR Layout's diverse community.</p>
+                    </div>
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {[
+                            { icon: ShieldCheck, title: "US B1/B2 & H1B Visas", desc: "Specialized assistance for tech professionals seeking US work and business visas." },
+                            { icon: Clock, title: "Express UK Processing", desc: "Priority services for leisure and business visitors to the United Kingdom." },
+                            { icon: CheckCircle2, title: "Schengen Group Filings", desc: "Hassle-free group applications for corporate and family trips to Europe." }
+                        ].map((s, i) => (
+                            <div key={i} className="p-10 bg-card rounded-[2.5rem] shadow-card border border-border hover:shadow-elevated transition-all text-center">
+                                <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <s.icon className="h-8 w-8 text-secondary" />
+                                </div>
+                                <h3 className="text-xl font-display font-bold text-foreground mb-4">{s.title}</h3>
+                                <p className="text-sm font-body text-muted-foreground italic leading-relaxed">{s.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-24 container mx-auto px-4 text-center">
+                <div className="max-w-4xl mx-auto space-y-10">
+                    <h2 className="text-4xl md:text-7xl font-display font-bold text-foreground leading-tight">
+                        Your Trusted Visa Partner in HSR Layout.
+                    </h2>
+                    <p className="text-xl font-body text-muted-foreground max-w-2xl mx-auto italic leading-relaxed">
+                        Don't let complex visa regulations stand in the way of your international career. Connect with our HSR Layout experts today.
+                    </p>
+                    <div className="flex flex-col md:flex-row gap-6 justify-center">
+                        <Link href="/contact" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-secondary text-secondary-foreground font-display font-bold text-lg rounded-2xl hover:translate-y-[-2px] transition-all shadow-gold group">
+                            Contact HSR Layout Desk <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                        <Link href="/visa-checker" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-transparent border-2 border-primary text-primary font-display font-bold text-lg rounded-2xl hover:bg-primary/5 transition-all">
+                            Check Eligibility
+                        </Link>
+                    </div>
+                </div>
+            </section>
+        </main>
+    );
+}

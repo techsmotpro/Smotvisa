@@ -8,9 +8,9 @@ import ReviewCards from "@/components/sections/ReviewCards";
 import BlogSection from "@/components/sections/BlogSection";
 
 export const metadata = {
-  title: "SMOT VISA | Visa and Travel Agency",
+  title: "SmotVisa | Visa and Travel Agency",
   description:
-    "SMOT VISA helps you travel hassle-free with expert visa processing for US, UK, Canada, Australia & 50+ countries.",
+    "SmotVisa helps you travel hassle-free with expert visa processing for US, UK, Canada, Australia & 50+ countries.",
 
   keywords: [
     "visa services India",
@@ -19,7 +19,7 @@ export const metadata = {
     "Canada visa help",
     "Australia visa consultants",
     "travel visa services",
-    "SMOT VISA"
+    "SmotVisa"
   ],
 
   alternates: {
@@ -31,22 +31,22 @@ export const metadata = {
     follow: true,
   },
 
-  authors: [{ name: "SMOT VISA Team" }],
-  publisher: "SMOT VISA",
+  authors: [{ name: "SmotVisa Team" }],
+  publisher: "SmotVisa",
 
   openGraph: {
-    title: "SMOT VISA | Visa and Travel Agency",
-    description: "SMOT VISA helps you travel hassle-free with expert visa processing for US, UK, Canada, Australia & 50+ countries.",
+    title: "SmotVisa | Visa and Travel Agency",
+    description: "SmotVisa helps you travel hassle-free with expert visa processing for US, UK, Canada, Australia & 50+ countries.",
     url: "https://smotvisa.com",
-    siteName: "SMOT VISA",
+    siteName: "SmotVisa",
     images: ["/images/visa-services-MHOtW-3U.jpg"],
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "SMOT VISA | Visa and Travel Agency",
-    description: "SMOT VISA helps you travel hassle-free with expert visa processing for US, UK, Canada, Australia & 50+ countries.",
+    title: "SmotVisa | Visa and Travel Agency",
+    description: "SmotVisa helps you travel hassle-free with expert visa processing for US, UK, Canada, Australia & 50+ countries.",
   }
 };
 

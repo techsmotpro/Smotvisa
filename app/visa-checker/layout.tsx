@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Visa Eligibility Calculator | Check Your Visa Chances | SMOT VISA",
+    title: "Visa Eligibility Calculator | Check Your Visa Chances | SmotVisa",
     description: "Calculate your visa eligibility for Canada PR, UK visitor visa, and USA B1/B2 in seconds using our advanced visa checker.",
 
     keywords: [
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
         "UK visa checker",
         "USA B1/B2 eligibility",
         "visa eligibility test",
-        "SMOT VISA checker"
+        "SmotVisa checker"
     ],
 
     alternates: {
@@ -23,21 +23,21 @@ export const metadata: Metadata = {
         follow: true,
     },
 
-    authors: [{ name: "SMOT VISA Team" }],
-    publisher: "SMOT VISA",
+    authors: [{ name: "SmotVisa Team" }],
+    publisher: "SmotVisa",
 
     openGraph: {
-        title: "Visa Eligibility Calculator | Check Your Visa Chances | SMOT VISA",
+        title: "Visa Eligibility Calculator | Check Your Visa Chances | SmotVisa",
         description: "Calculate your visa eligibility for Canada PR, UK visitor visa, and USA B1/B2 in seconds using our advanced visa checker.",
         url: "https://smotvisa.com/visa-checker",
-        siteName: "SMOT VISA",
+        siteName: "SmotVisa",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
         type: "website",
     },
 
     twitter: {
         card: "summary_large_image",
-        title: "Visa Eligibility Calculator | Check Your Visa Chances | SMOT VISA",
+        title: "Visa Eligibility Calculator | Check Your Visa Chances | SmotVisa",
         description: "Calculate your visa eligibility for Canada PR, UK visitor visa, and USA B1/B2 in seconds using our advanced visa checker.",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
     }

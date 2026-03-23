@@ -7,8 +7,8 @@ import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Best Visa Agents in Bangalore | Expert Visa Consultancy | SMOT VISA",
-    description: "Expert visa processing services in HSR Layout, Indiranagar, Koramangala and across Bangalore. SMOT VISA is the best visa agency in Bangalore for US, UK, Canada, and Schengen visas.",
+    title: "Best Visa Agents in Bangalore | Expert Visa Consultancy | SmotVisa",
+    description: "Expert visa processing services in HSR Layout, Indiranagar, Koramangala and across Bangalore. SmotVisa is the best visa agency in Bangalore for US, UK, Canada, and Schengen visas.",
     
     keywords: [
         "visa agents in Bangalore",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         "HSR Layout visa agents",
         "Indiranagar visa consultants",
         "Koramangala visa services",
-        "SMOT VISA Bangalore"
+        "SmotVisa Bangalore"
     ],
 
     alternates: {
@@ -29,22 +29,22 @@ export const metadata: Metadata = {
         follow: true,
     },
 
-    authors: [{ name: "SMOT VISA Team" }],
-    publisher: "SMOT VISA",
+    authors: [{ name: "SmotVisa Team" }],
+    publisher: "SmotVisa",
 
     openGraph: {
-        title: "Best Visa Agents in Bangalore | Expert Visa Consultancy | SMOT VISA",
-        description: "Expert visa processing services in HSR Layout, Indiranagar, Koramangala and across Bangalore. SMOT VISA is the best visa agency in Bangalore for US, UK, Canada, and Schengen visas.",
+        title: "Best Visa Agents in Bangalore | Expert Visa Consultancy | SmotVisa",
+        description: "Expert visa processing services in HSR Layout, Indiranagar, Koramangala and across Bangalore. SmotVisa is the best visa agency in Bangalore for US, UK, Canada, and Schengen visas.",
         url: "https://smotvisa.com/visa-agents-in-bangalore",
-        siteName: "SMOT VISA",
+        siteName: "SmotVisa",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
         type: "website",
     },
 
     twitter: {
         card: "summary_large_image",
-        title: "Best Visa Agents in Bangalore | Expert Visa Consultancy | SMOT VISA",
-        description: "Expert visa processing services in HSR Layout, Indiranagar, Koramangala and across Bangalore. SMOT VISA is the best visa agency in Bangalore for US, UK, Canada, and Schengen visas.",
+        title: "Best Visa Agents in Bangalore | Expert Visa Consultancy | SmotVisa",
+        description: "Expert visa processing services in HSR Layout, Indiranagar, Koramangala and across Bangalore. SmotVisa is the best visa agency in Bangalore for US, UK, Canada, and Schengen visas.",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
     },
 
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
         "script:ld+json": JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "SMOT VISA Bangalore",
+            "name": "SmotVisa Bangalore",
             "image": "https://www.smotvisa.com/logo.png", // Replace with actual logo URL
             "@id": "https://www.smotvisa.com/visa-agents-in-bangalore",
             "url": "https://www.smotvisa.com/visa-agents-in-bangalore",
@@ -114,7 +114,7 @@ export default function VisaAgentsInBangalore() {
         <main className="bg-background">
             <PageHeader
                 title="Best Visa Agents in Bangalore"
-                description="Expert visa processing services in HSR Layout, Indiranagar, Koramangala and across Bangalore. SMOT VISA is your trusted partner for premium travel consultancy."
+                description="Expert visa processing services in HSR Layout, Indiranagar, Koramangala and across Bangalore. SmotVisa is your trusted partner for premium travel consultancy."
                 breadcrumbs={[
                     { label: "Home", href: "/" },
                     { label: "Visa Agents Bangalore" }
@@ -137,7 +137,7 @@ export default function VisaAgentsInBangalore() {
                             Your Search for the Best Visa Agents in Bangalore Ends Here.
                         </h2>
                         <p className="text-lg font-body text-muted-foreground italic leading-relaxed">
-                            With specialized expertise in Bangalore's major tech and residential hubs, SMOT VISA provides end-to-end support for US, UK, Canada, and Schengen visas right from your neighborhood.
+                            With specialized expertise in Bangalore's major tech and residential hubs, SmotVisa provides end-to-end support for US, UK, Canada, and Schengen visas right from your neighborhood.
                         </p>
 
                         <div className="grid sm:grid-cols-2 gap-6">
@@ -198,7 +198,7 @@ export default function VisaAgentsInBangalore() {
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
                         <h2 className="text-4xl font-display font-bold text-foreground">Strategic Service Portfolio</h2>
-                        <p className="text-muted-foreground italic tracking-wide">Why Bangalore's professionals trust SMOT VISA for their international mobility.</p>
+                        <p className="text-muted-foreground italic tracking-wide">Why Bangalore's professionals trust SmotVisa for their international mobility.</p>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[

@@ -10,11 +10,11 @@ import { cn } from "@/lib/utils";
 const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
-  title: "SMOT VISA | Visa and Travel Agency",
+  title: "SmotVisa | Visa and Travel Agency",
   description:
-    "SMOT VISA helps you travel hassle-free with expert visa processing for US, UK, Canada, Australia & 50+ countries. Your trusted partner for global mobility.",
+    "SmotVisa helps you travel hassle-free with expert visa processing for US, UK, Canada, Australia & 50+ countries. Your trusted partner for global mobility.",
   openGraph: {
-    title: "SMOT VISA | Visa and Travel Agency",
+    title: "SmotVisa | Visa and Travel Agency",
     description:
       "Expert visa processing for US, UK, Canada, Australia & 50+ countries. Hassle-free travel services and 24/7 support.",
     type: "website",

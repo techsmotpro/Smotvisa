@@ -11,20 +11,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
     if (!visa) {
         return {
-            title: "Visa Information Not Found | SMOT VISA",
+            title: "Visa Information Not Found | SmotVisa",
             description: "Sorry, we couldn't find information for this destination."
         };
     }
 
     return {
-        title: `${visa.name} Visa Services ${visa.flag || ""} | SMOT VISA`,
+        title: `${visa.name} Visa Services ${visa.flag || ""} | SmotVisa`,
         description: visa.description,
         keywords: [
             `${visa.name} visa`,
             "visa services India",
             `${visa.name} visa requirements`,
             `${visa.name} visa processing`,
-            "SMOT VISA"
+            "SmotVisa"
         ],
 
         alternates: {
@@ -36,14 +36,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             follow: true,
         },
 
-        authors: [{ name: "SMOT VISA Team" }],
-        publisher: "SMOT VISA",
+        authors: [{ name: "SmotVisa Team" }],
+        publisher: "SmotVisa",
 
         openGraph: {
             title: `${visa.name} Visa Services ${visa.flag || ""}`,
             description: visa.description,
             url: `https://smotvisa.com/visa/${slug}`,
-            siteName: "SMOT VISA",
+            siteName: "SmotVisa",
             images: [visa.image || "/images/visa-services-MHOtW-3U.jpg"],
             type: "website",
         },

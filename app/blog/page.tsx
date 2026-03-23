@@ -4,14 +4,14 @@ import { fetchBlogs } from "@/data/blogData";
 import BlogClient from "@/components/blog/BlogClient";
 
 export const metadata = {
-  title: "SMOT VISA Travel Blog | Expert Visa Guides & Travel Tips",
+  title: "SmotVisa Travel Blog | Expert Visa Guides & Travel Tips",
   description: "Expert insights, visa guides, and travel inspiration to help you navigate the world with confidence.",
 
   keywords: [
     "travel blog India",
     "visa guides",
     "travel tips",
-    "SMOT VISA blog",
+    "SmotVisa blog",
     "visa processing tips",
     "travel inspiration"
   ],
@@ -25,21 +25,21 @@ export const metadata = {
     follow: true,
   },
 
-  authors: [{ name: "SMOT VISA Team" }],
-  publisher: "SMOT VISA",
+  authors: [{ name: "SmotVisa Team" }],
+  publisher: "SmotVisa",
 
   openGraph: {
-    title: "SMOT VISA Travel Blog | Expert Visa Guides & Travel Tips",
+    title: "SmotVisa Travel Blog | Expert Visa Guides & Travel Tips",
     description: "Expert insights, visa guides, and travel inspiration to help you navigate the world with confidence.",
     url: "https://smotvisa.com/blog",
-    siteName: "SMOT VISA",
+    siteName: "SmotVisa",
     images: ["/images/hero-travel-CJWf8Tv1.jpg"],
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "SMOT VISA Travel Blog | Expert Visa Guides & Travel Tips",
+    title: "SmotVisa Travel Blog | Expert Visa Guides & Travel Tips",
     description: "Expert insights, visa guides, and travel inspiration to help you navigate the world with confidence.",
   }
 };
@@ -50,7 +50,7 @@ export default async function BlogListingPage() {
     return (
         <main className="bg-background min-h-screen">
             <PageHeader
-                title="SMOT VISA Travel Blog"
+                title="SmotVisa Travel Blog"
                 description="Expert insights, visa guides, and travel inspiration to help you navigate the world with confidence."
                 breadcrumbs={[{ label: "Blog" }]}
             />

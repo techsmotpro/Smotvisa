@@ -6,7 +6,7 @@ import PageHeader from "@/components/ui/PageHeader";
 import { MotionDiv } from "@/components/ui/MotionWrapper";
 
 export const metadata = {
-  title: "Premium Travel & Visa Services | SMOT VISA",
+  title: "Premium Travel & Visa Services | SmotVisa",
   description: "From expert visa processing to end-to-end tour planning, we take the stress out of travel with our comprehensive international services.",
 
   keywords: [
@@ -16,7 +16,7 @@ export const metadata = {
     "air ticketing",
     "hotel booking",
     "travel insurance",
-    "SMOT VISA"
+    "SmotVisa"
   ],
 
   alternates: {
@@ -28,21 +28,21 @@ export const metadata = {
     follow: true,
   },
 
-  authors: [{ name: "SMOT VISA Team" }],
-  publisher: "SMOT VISA",
+  authors: [{ name: "SmotVisa Team" }],
+  publisher: "SmotVisa",
 
   openGraph: {
-    title: "Premium Travel & Visa Services | SMOT VISA",
+    title: "Premium Travel & Visa Services | SmotVisa",
     description: "From expert visa processing to end-to-end tour planning, we take the stress out of travel with our comprehensive international services.",
     url: "https://smotvisa.com/services",
-    siteName: "SMOT VISA",
+    siteName: "SmotVisa",
     images: ["/images/hero-travel-CJWf8Tv1.jpg"],
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Premium Travel & Visa Services | SMOT VISA",
+    title: "Premium Travel & Visa Services | SmotVisa",
     description: "From expert visa processing to end-to-end tour planning, we take the stress out of travel with our comprehensive international services.",
   }
 };

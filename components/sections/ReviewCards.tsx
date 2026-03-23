@@ -21,7 +21,7 @@ const ReviewCards = async () => {
                         Client Testimonials
                     </h2>
                     <p className="text-muted-foreground font-body max-w-2xl mx-auto">
-                        Hear from our satisfied clients about their experiences with SMOT VISA.
+                        Hear from our satisfied clients about their experiences with SmotVisa.
                     </p>
                 </MotionDiv>
 

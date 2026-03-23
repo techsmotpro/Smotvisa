@@ -6,41 +6,41 @@ import { Metadata } from 'next';
 
 const faqs = [
     {
-        question: "How can I book international flights from India with SMOT VISA?",
-        answer: "You can contact SMOT VISA’s travel consultants who will help you choose the best flight options based on your destination, travel dates, and budget. Our team will assist you with the entire booking process and confirm your tickets quickly."
+        question: "How can I book international flights from India with SmotVisa?",
+        answer: "You can contact SmotVisa’s travel consultants who will help you choose the best flight options based on your destination, travel dates, and budget. Our team will assist you with the entire booking process and confirm your tickets quickly."
     },
     {
         question: "What are the best airlines for international flights from India?",
-        answer: "The best airlines depend on your destination and travel preferences. SMOT VISA helps travelers choose reliable airlines that offer comfortable travel, convenient routes, and competitive pricing."
+        answer: "The best airlines depend on your destination and travel preferences. SmotVisa helps travelers choose reliable airlines that offer comfortable travel, convenient routes, and competitive pricing."
     },
     {
         question: "When is the best time to book international flights from India?",
-        answer: "Booking flights several weeks in advance often helps travelers secure better prices. However, flight prices depend on travel demand, season, and airline availability. SMOT VISA helps you find the best booking time for your trip."
+        answer: "Booking flights several weeks in advance often helps travelers secure better prices. However, flight prices depend on travel demand, season, and airline availability. SmotVisa helps you find the best booking time for your trip."
     },
     {
-        question: "Can SMOT VISA help with both flight booking and visa assistance?",
-        answer: "Yes. SMOT VISA specializes in both international flight booking and visa assistance, which makes it easier for travelers to plan their international journeys with proper travel timelines."
+        question: "Can SmotVisa help with both flight booking and visa assistance?",
+        answer: "Yes. SmotVisa specializes in both international flight booking and visa assistance, which makes it easier for travelers to plan their international journeys with proper travel timelines."
     },
     {
         question: "Do you provide group flight booking services?",
-        answer: "Yes. SMOT VISA assists with family travel, corporate travel, and group flight bookings, ensuring convenient travel schedules and competitive fares for multiple travelers."
+        answer: "Yes. SmotVisa assists with family travel, corporate travel, and group flight bookings, ensuring convenient travel schedules and competitive fares for multiple travelers."
     },
     {
         question: "Can I change my flight after booking?",
-        answer: "Flight change options depend on the airline’s policy and ticket type. SMOT VISA helps travelers choose tickets that offer flexible options whenever possible."
+        answer: "Flight change options depend on the airline’s policy and ticket type. SmotVisa helps travelers choose tickets that offer flexible options whenever possible."
     }
 ];
 
 export const metadata: Metadata = {
-    title: "Best International Flights from India | Premium Air Ticketing | SMOT VISA",
-    description: "Book the Best International Flights from India with SMOT VISA. Expert assistance for competitive fares, visa-aligned travel planning, and global destinations.",
+    title: "Best International Flights from India | Premium Air Ticketing | SmotVisa",
+    description: "Book the Best International Flights from India with SmotVisa. Expert assistance for competitive fares, visa-aligned travel planning, and global destinations.",
     
     keywords: [
         "international flights from India",
         "air ticketing services",
         "flight booking India",
         "cheap international flights",
-        "SMOT VISA air ticketing"
+        "SmotVisa air ticketing"
     ],
 
     alternates: {
@@ -52,22 +52,22 @@ export const metadata: Metadata = {
         follow: true,
     },
 
-    authors: [{ name: "SMOT VISA Team" }],
-    publisher: "SMOT VISA",
+    authors: [{ name: "SmotVisa Team" }],
+    publisher: "SmotVisa",
 
     openGraph: {
-        title: "Best International Flights from India | Premium Air Ticketing | SMOT VISA",
-        description: "Book the Best International Flights from India with SMOT VISA. Expert assistance for competitive fares, visa-aligned travel planning, and global destinations.",
+        title: "Best International Flights from India | Premium Air Ticketing | SmotVisa",
+        description: "Book the Best International Flights from India with SmotVisa. Expert assistance for competitive fares, visa-aligned travel planning, and global destinations.",
         url: "https://smotvisa.com/services/air-ticketing",
-        siteName: "SMOT VISA",
+        siteName: "SmotVisa",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
         type: "website",
     },
 
     twitter: {
         card: "summary_large_image",
-        title: "Best International Flights from India | Premium Air Ticketing | SMOT VISA",
-        description: "Book the Best International Flights from India with SMOT VISA. Expert assistance for competitive fares, visa-aligned travel planning, and global destinations.",
+        title: "Best International Flights from India | Premium Air Ticketing | SmotVisa",
+        description: "Book the Best International Flights from India with SmotVisa. Expert assistance for competitive fares, visa-aligned travel planning, and global destinations.",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
     },
 
@@ -96,12 +96,12 @@ const features = [
     {
         icon: Ticket,
         title: "Competitive International Airfares",
-        description: "Air ticket prices change frequently. SMOT VISA helps travelers secure competitive international flight fares by identifying the best options available at the time of booking."
+        description: "Air ticket prices change frequently. SmotVisa helps travelers secure competitive international flight fares by identifying the best options available at the time of booking."
     },
     {
         icon: Clock,
         title: "Smooth Booking Experience",
-        description: "From flight selection to ticket confirmation, SMOT VISA manages the entire process with a focus on simplicity and efficiency."
+        description: "From flight selection to ticket confirmation, SmotVisa manages the entire process with a focus on simplicity and efficiency."
     },
     {
         icon: Shield,
@@ -116,7 +116,7 @@ const features = [
     {
         icon: Globe,
         title: "Complete Travel Support",
-        description: "SMOT VISA offers more than just flight booking. We support travelers with visa assistance, tour packages, travel documentation, and travel insurance."
+        description: "SmotVisa offers more than just flight booking. We support travelers with visa assistance, tour packages, travel documentation, and travel insurance."
     }
 ];
 
@@ -143,7 +143,7 @@ export default function AirTicketingPage() {
         <main className="bg-background">
             <PageHeader
                 title="Best International Flights from India"
-                description="Book the Best International Flights from India with SMOT VISA. Finding the right flights can be challenging, but our experts simplify the process by helping you find the most convenient and affordable options."
+                description="Book the Best International Flights from India with SmotVisa. Finding the right flights can be challenging, but our experts simplify the process by helping you find the most convenient and affordable options."
                 breadcrumbs={[{ label: "Air Ticketing" }]}
             />
 
@@ -156,11 +156,11 @@ export default function AirTicketingPage() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-8">
-                            Why Choose SMOT VISA for International Flight Booking?
+                            Why Choose SmotVisa for International Flight Booking?
                         </h2>
                         <p className="text-lg text-muted-foreground font-body leading-relaxed max-w-3xl mx-auto">
                             Booking international flights online can sometimes be confusing due to fluctuating prices, multiple airline
-                            options, and travel restrictions. SMOT VISA helps travelers navigate these challenges by providing expert
+                            options, and travel restrictions. SmotVisa helps travelers navigate these challenges by providing expert
                             assistance and personalized flight recommendations.
                         </p>
                     </MotionDiv>
@@ -206,7 +206,7 @@ export default function AirTicketingPage() {
                             Popular International Destinations
                         </h2>
                         <p className="text-muted-foreground font-body max-w-2xl mx-auto text-lg">
-                            SMOT VISA offers international air ticket booking services from India to popular global destinations
+                            SmotVisa offers international air ticket booking services from India to popular global destinations
                         </p>
                     </MotionDiv>
                     <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
@@ -236,7 +236,7 @@ export default function AirTicketingPage() {
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-                            Complete Travel Support from SMOT VISA
+                            Complete Travel Support from SmotVisa
                         </h2>
                         <p className="text-secondary font-body max-w-2xl mx-auto text-lg font-semibold italic">
                             Beyond just booking flights, we support you from documentation to destination.
@@ -314,7 +314,7 @@ export default function AirTicketingPage() {
                             Book Your Flight Today!
                         </h3>
                         <p className="text-xl font-body text-primary-foreground/70 max-w-2xl mx-auto mb-10 leading-relaxed">
-                            Finding the right flight can make a huge difference in your travel experience. With SMOT VISA, you receive
+                            Finding the right flight can make a huge difference in your travel experience. With SmotVisa, you receive
                             expert support, professional travel guidance, and a smooth booking process.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
