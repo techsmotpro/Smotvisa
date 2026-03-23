@@ -1,6 +1,51 @@
 import PageHeader from "@/components/ui/PageHeader";
 import VisaClient from "@/components/visa/VisaClient";
 
+export const metadata = {
+  title: "Global Visa Destinations | Visa Services for 50+ Countries",
+  description: "Explore visa requirements and processing details for over 50+ countries worldwide. Your journey starts here.",
+
+  keywords: [
+    "visa services India",
+    "global visa destinations",
+    "visa requirements",
+    "visa processing",
+    "US visa",
+    "UK visa",
+    "Canada visa",
+    "Australia visa",
+    "Schengen visa",
+    "SMOT VISA"
+  ],
+
+  alternates: {
+    canonical: "https://smotvisa.com/visa",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  authors: [{ name: "SMOT VISA Team" }],
+  publisher: "SMOT VISA",
+
+  openGraph: {
+    title: "Global Visa Destinations | Visa Services for 50+ Countries",
+    description: "Explore visa requirements and processing details for over 50+ countries worldwide. Your journey starts here.",
+    url: "https://smotvisa.com/visa",
+    siteName: "SMOT VISA",
+    images: ["/images/visa-services-MHOtW-3U.jpg"],
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Global Visa Destinations | Visa Services for 50+ Countries",
+    description: "Explore visa requirements and processing details for over 50+ countries worldwide. Your journey starts here.",
+  }
+};
+
 const destinations = [
     {
         id: "uae",

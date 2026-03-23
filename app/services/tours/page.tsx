@@ -8,6 +8,42 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
     title: "International Tour Packages | Bespoke Adventures | SMOT VISA",
     description: "Discover curated international tour packages with SMOT VISA. From exotic destinations to cultural adventures, we orchestrate every detail for an unforgettable travel experience.",
+
+    keywords: [
+        "international tour packages",
+        "bespoke travel packages",
+        "custom tour packages India",
+        "SMOT VISA tours",
+        "travel packages from India"
+    ],
+
+    alternates: {
+        canonical: "https://smotvisa.com/services/tours",
+    },
+
+    robots: {
+        index: true,
+        follow: true,
+    },
+
+    authors: [{ name: "SMOT VISA Team" }],
+    publisher: "SMOT VISA",
+
+    openGraph: {
+        title: "International Tour Packages | Bespoke Adventures | SMOT VISA",
+        description: "Discover curated international tour packages with SMOT VISA. From exotic destinations to cultural adventures, we orchestrate every detail for an unforgettable travel experience.",
+        url: "https://smotvisa.com/services/tours",
+        siteName: "SMOT VISA",
+        images: ["/images/australia-tour.png"],
+        type: "website",
+    },
+
+    twitter: {
+        card: "summary_large_image",
+        title: "International Tour Packages | Bespoke Adventures | SMOT VISA",
+        description: "Discover curated international tour packages with SMOT VISA. From exotic destinations to cultural adventures, we orchestrate every detail for an unforgettable travel experience.",
+        images: ["/images/australia-tour.png"],
+    }
 };
 
 export default function TourPackagesPage() {

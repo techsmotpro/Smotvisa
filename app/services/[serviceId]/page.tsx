@@ -50,11 +50,50 @@ export async function generateMetadata({ params }: { params: Promise<{ serviceId
     const { serviceId } = await params;
     const data = serviceData[serviceId];
     
-    if (!data) return { title: 'Service Not Found | SMOT VISA' };
+    if (!data) {
+        return { 
+            title: 'Service Not Found | SMOT VISA',
+            description: 'Sorry, we couldn\'t find the service you\'re looking for.'
+        };
+    }
 
     return {
         title: `${data.title} | Premium Travel Solutions | SMOT VISA`,
         description: data.description,
+        keywords: [
+            data.title.toLowerCase(),
+            "travel services India",
+            "SMOT VISA services",
+            "premium travel solutions"
+        ],
+
+        alternates: {
+            canonical: `https://smotvisa.com/services/${serviceId}`,
+        },
+
+        robots: {
+            index: true,
+            follow: true,
+        },
+
+        authors: [{ name: "SMOT VISA Team" }],
+        publisher: "SMOT VISA",
+
+        openGraph: {
+            title: `${data.title} | Premium Travel Solutions`,
+            description: data.description,
+            url: `https://smotvisa.com/services/${serviceId}`,
+            siteName: "SMOT VISA",
+            images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+            type: "website",
+        },
+
+        twitter: {
+            card: "summary_large_image",
+            title: `${data.title} | Premium Travel Solutions`,
+            description: data.description,
+            images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        }
     };
 }
 

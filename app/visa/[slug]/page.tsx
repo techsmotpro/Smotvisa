@@ -2,6 +2,60 @@ import { visaData } from "@/data/visaData";
 import PageHeader from "@/components/ui/PageHeader";
 import Link from "next/link";
 import VisaDetailClient from "@/components/visa/VisaDetailClient";
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const id = slug.replace("-visa", "");
+    const visa = (visaData as any)[id];
+
+    if (!visa) {
+        return {
+            title: "Visa Information Not Found | SMOT VISA",
+            description: "Sorry, we couldn't find information for this destination."
+        };
+    }
+
+    return {
+        title: `${visa.name} Visa Services ${visa.flag || ""} | SMOT VISA`,
+        description: visa.description,
+        keywords: [
+            `${visa.name} visa`,
+            "visa services India",
+            `${visa.name} visa requirements`,
+            `${visa.name} visa processing`,
+            "SMOT VISA"
+        ],
+
+        alternates: {
+            canonical: `https://smotvisa.com/visa/${slug}`,
+        },
+
+        robots: {
+            index: true,
+            follow: true,
+        },
+
+        authors: [{ name: "SMOT VISA Team" }],
+        publisher: "SMOT VISA",
+
+        openGraph: {
+            title: `${visa.name} Visa Services ${visa.flag || ""}`,
+            description: visa.description,
+            url: `https://smotvisa.com/visa/${slug}`,
+            siteName: "SMOT VISA",
+            images: [visa.image || "/images/visa-services-MHOtW-3U.jpg"],
+            type: "website",
+        },
+
+        twitter: {
+            card: "summary_large_image",
+            title: `${visa.name} Visa Services ${visa.flag || ""}`,
+            description: visa.description,
+            images: [visa.image || "/images/visa-services-MHOtW-3U.jpg"],
+        }
+    };
+}
 
 export default async function VisaDetailPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;

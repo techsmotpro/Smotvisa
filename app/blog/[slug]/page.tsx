@@ -16,13 +16,46 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
     if (!blog) return {};
 
+    const plainExcerpt = blog.excerpt.replace(/<[^>]*>/g, '').substring(0, 160);
+    const image = blog.image.startsWith('http') ? blog.image : 'https://picsum.photos/seed/' + blog.id + '/1200/800';
+
     return {
         title: `${blog.title} | SMOT VISA Blog`,
-        description: blog.excerpt.replace(/<[^>]*>/g, '').substring(0, 160),
+        description: plainExcerpt,
+        keywords: [
+            "SMOT VISA blog",
+            "visa guides",
+            "travel tips",
+            blog.category.toLowerCase(),
+            "travel blog India"
+        ],
+
+        alternates: {
+            canonical: `https://smotvisa.com/blog/${slug}`,
+        },
+
+        robots: {
+            index: true,
+            follow: true,
+        },
+
+        authors: [{ name: blog.author || "SMOT VISA Team" }],
+        publisher: "SMOT VISA",
+
         openGraph: {
             title: blog.title,
-            description: blog.excerpt.replace(/<[^>]*>/g, '').substring(0, 160),
-            images: [blog.image.startsWith('http') ? blog.image : 'https://picsum.photos/seed/' + blog.id + '/1200/800'],
+            description: plainExcerpt,
+            url: `https://smotvisa.com/blog/${slug}`,
+            siteName: "SMOT VISA",
+            images: [image],
+            type: "article",
+        },
+
+        twitter: {
+            card: "summary_large_image",
+            title: blog.title,
+            description: plainExcerpt,
+            images: [image],
         }
     };
 }

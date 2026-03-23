@@ -5,6 +5,48 @@ import { servicesData } from "@/data/servicesData";
 import PageHeader from "@/components/ui/PageHeader";
 import { MotionDiv } from "@/components/ui/MotionWrapper";
 
+export const metadata = {
+  title: "Premium Travel & Visa Services | SMOT VISA",
+  description: "From expert visa processing to end-to-end tour planning, we take the stress out of travel with our comprehensive international services.",
+
+  keywords: [
+    "travel services India",
+    "visa processing services",
+    "tour planning",
+    "air ticketing",
+    "hotel booking",
+    "travel insurance",
+    "SMOT VISA"
+  ],
+
+  alternates: {
+    canonical: "https://smotvisa.com/services",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  authors: [{ name: "SMOT VISA Team" }],
+  publisher: "SMOT VISA",
+
+  openGraph: {
+    title: "Premium Travel & Visa Services | SMOT VISA",
+    description: "From expert visa processing to end-to-end tour planning, we take the stress out of travel with our comprehensive international services.",
+    url: "https://smotvisa.com/services",
+    siteName: "SMOT VISA",
+    images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Premium Travel & Visa Services | SMOT VISA",
+    description: "From expert visa processing to end-to-end tour planning, we take the stress out of travel with our comprehensive international services.",
+  }
+};
+
 export default function ServicesPage() {
     return (
         <main className="min-h-screen bg-background pb-20">

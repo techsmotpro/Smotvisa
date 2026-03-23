@@ -7,6 +7,49 @@ import DestinationsSection from "@/components/sections/DestinationsSection";
 import ReviewCards from "@/components/sections/ReviewCards";
 import BlogSection from "@/components/sections/BlogSection";
 
+export const metadata = {
+  title: "SMOT VISA | Visa and Travel Agency",
+  description:
+    "SMOT VISA helps you travel hassle-free with expert visa processing for US, UK, Canada, Australia & 50+ countries.",
+
+  keywords: [
+    "visa services India",
+    "US visa processing",
+    "UK visa agency",
+    "Canada visa help",
+    "Australia visa consultants",
+    "travel visa services",
+    "SMOT VISA"
+  ],
+
+  alternates: {
+    canonical: "https://smotvisa.com/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  authors: [{ name: "SMOT VISA Team" }],
+  publisher: "SMOT VISA",
+
+  openGraph: {
+    title: "SMOT VISA | Visa and Travel Agency",
+    description: "SMOT VISA helps you travel hassle-free with expert visa processing for US, UK, Canada, Australia & 50+ countries.",
+    url: "https://smotvisa.com",
+    siteName: "SMOT VISA",
+    images: ["/images/visa-services-MHOtW-3U.jpg"],
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "SMOT VISA | Visa and Travel Agency",
+    description: "SMOT VISA helps you travel hassle-free with expert visa processing for US, UK, Canada, Australia & 50+ countries.",
+  }
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">

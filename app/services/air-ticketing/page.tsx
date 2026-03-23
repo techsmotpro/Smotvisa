@@ -34,6 +34,43 @@ const faqs = [
 export const metadata: Metadata = {
     title: "Best International Flights from India | Premium Air Ticketing | SMOT VISA",
     description: "Book the Best International Flights from India with SMOT VISA. Expert assistance for competitive fares, visa-aligned travel planning, and global destinations.",
+    
+    keywords: [
+        "international flights from India",
+        "air ticketing services",
+        "flight booking India",
+        "cheap international flights",
+        "SMOT VISA air ticketing"
+    ],
+
+    alternates: {
+        canonical: "https://smotvisa.com/services/air-ticketing",
+    },
+
+    robots: {
+        index: true,
+        follow: true,
+    },
+
+    authors: [{ name: "SMOT VISA Team" }],
+    publisher: "SMOT VISA",
+
+    openGraph: {
+        title: "Best International Flights from India | Premium Air Ticketing | SMOT VISA",
+        description: "Book the Best International Flights from India with SMOT VISA. Expert assistance for competitive fares, visa-aligned travel planning, and global destinations.",
+        url: "https://smotvisa.com/services/air-ticketing",
+        siteName: "SMOT VISA",
+        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        type: "website",
+    },
+
+    twitter: {
+        card: "summary_large_image",
+        title: "Best International Flights from India | Premium Air Ticketing | SMOT VISA",
+        description: "Book the Best International Flights from India with SMOT VISA. Expert assistance for competitive fares, visa-aligned travel planning, and global destinations.",
+        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+    },
+
     other: {
         "script:ld+json": JSON.stringify({
             "@context": "https://schema.org",
