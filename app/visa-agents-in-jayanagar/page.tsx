@@ -6,21 +6,21 @@ import { offices } from "@/data/officeData";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Best Visa Services in Indiranagar | Expert Visa Consultants | SmotVisa",
-    description: "Premium visa processing services in Indiranagar, Bangalore. SmotVisa provides specialized assistance for business visas, work permits, and family immigration for urban professionals.",
+    title: "Best Visa Agents in Jayanagar | Expert Visa Consultants | SmotVisa",
+    description: "Expert visa agents and consultants in Jayanagar, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
     
     keywords: [
-        "visa services in Indiranagar",
-        "visa agents in Indiranagar",
-        "Indiranagar visa consultants",
-        "SmotVisa Indiranagar",
-        "Indiranagar visa processing",
-        "best visa agents Indiranagar",
-        "visa consultants in Indiranagar"
+        "visa agents in Jayanagar",
+        "best visa agents Jayanagar",
+        "Jayanagar visa consultants",
+        "SmotVisa Jayanagar",
+        "Jayanagar visa processing",
+        "visa services in Jayanagar",
+        "visa consultants in Jayanagar"
     ],
 
     alternates: {
-        canonical: "https://smotvisa.com/visa-services-in-indiranagar",
+        canonical: "https://smotvisa.com/visa-agents-in-jayanagar",
     },
 
     robots: {
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     publisher: "SmotVisa",
 
     openGraph: {
-        title: "Best Visa Services in Indiranagar | Expert Visa Consultants | SmotVisa",
-        description: "Premium visa processing services in Indiranagar, Bangalore. SmotVisa provides specialized assistance for business visas, work permits, and family immigration for urban professionals.",
-        url: "https://smotvisa.com/visa-services-in-indiranagar",
+        title: "Best Visa Agents in Jayanagar | Expert Visa Consultants | SmotVisa",
+        description: "Expert visa agents and consultants in Jayanagar, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
+        url: "https://smotvisa.com/visa-agents-in-jayanagar",
         siteName: "SmotVisa",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
         type: "website",
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
 
     twitter: {
         card: "summary_large_image",
-        title: "Best Visa Services in Indiranagar | Expert Visa Consultants | SmotVisa",
-        description: "Premium visa processing services in Indiranagar, Bangalore. SmotVisa provides specialized assistance for business visas, work permits, and family immigration for urban professionals.",
+        title: "Best Visa Agents in Jayanagar | Expert Visa Consultants | SmotVisa",
+        description: "Expert visa agents and consultants in Jayanagar, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
     },
 
@@ -51,22 +51,22 @@ export const metadata: Metadata = {
         "script:ld+json": JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "SmotVisa Indiranagar",
+            "name": "SmotVisa Jayanagar",
             "image": "https://www.smotvisa.com/logo.png",
-            "@id": "https://www.smotvisa.com/visa-services-in-indiranagar",
-            "url": "https://www.smotvisa.com/visa-services-in-indiranagar",
+            "@id": "https://www.smotvisa.com/visa-agents-in-jayanagar",
+            "url": "https://www.smotvisa.com/visa-agents-in-jayanagar",
             "telephone": "+91-9380957448",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "No. 456, 100 Feet Road, 2nd Stage, Indiranagar",
+                "streetAddress": "No. 56, 4th Block, Jayanagar",
                 "addressLocality": "Bangalore",
-                "postalCode": "560038",
+                "postalCode": "560041",
                 "addressCountry": "IN"
             },
             "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 12.9719,
-                "longitude": 77.6412
+                "latitude": 12.9250,
+                "longitude": 77.5833
             },
             "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
@@ -89,17 +89,15 @@ export const metadata: Metadata = {
     }
 };
 
-export default function VisaServicesInIndiranagar() {
-    const indiranagarOffice = offices.find(o => o.id === "indiranagar-bangalore");
-
+export default function VisaServicesInJayanagar() {
     return (
         <main className="bg-background">
             <PageHeader
-                title="Visa Services in Indiranagar"
-                description="Premium visa processing services for urban professionals and corporate clientele in Indiranagar, Bangalore. SmotVisa is your trusted partner for business and corporate visa solutions."
+                title="Visa Agents in Jayanagar"
+                description="Expert visa agents for tech professionals and expatriates in Jayanagar, Bangalore. SmotVisa is your trusted partner for premium travel consultancy."
                 breadcrumbs={[
                     { label: "Visa Services", href: "/visa" },
-                    { label: "Indiranagar" }
+                    { label: "Jayanagar" }
                 ]}
             />
 
@@ -108,21 +106,21 @@ export default function VisaServicesInIndiranagar() {
                     <div className="space-y-8">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full">
                             <Star className="h-4 w-4 text-secondary fill-secondary" />
-                            <span className="text-xs font-display font-bold text-secondary uppercase tracking-widest">Corporate Visa Solutions</span>
+                            <span className="text-xs font-display font-bold text-secondary uppercase tracking-widest">Premium Visa Agents</span>
                         </div>
                         <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight">
-                            Premium Visa Services for Indiranagar's Urban Professionals.
+                            Expert Visa Agents for Jayanagar's Tech Community.
                         </h2>
                         <p className="text-lg font-body text-muted-foreground italic leading-relaxed">
-                            Located in the trendy Indiranagar area, SmotVisa provides premium visa services tailored for the urban professionals and corporate clientele in this vibrant neighborhood. We specialize in business visas, work permits, and family immigration solutions.
+                            Strategically located in Jayanagar, SmotVisa provides specialized visa assistance tailored for the vibrant tech professionals and expatriate community in this premier IT hub of Bangalore.
                         </p>
 
                         <div className="grid sm:grid-cols-2 gap-6">
                             {[
-                                { title: "Corporate Visa Specialization", desc: "Expert assistance for business visas, work permits, and corporate travel solutions." },
-                                { title: "Executive Consultation", desc: "Personalized one-on-one sessions for senior professionals and executives." },
-                                { title: "Corporate Bulk Filings", desc: "Streamlined visa processing for entire teams and corporate groups." },
-                                { title: "Priority Processing", desc: "Express visa services with dedicated case managers." }
+                                { title: "Tech Professional Specialization", desc: "Expert guidance for IT professionals seeking US, UK, Canada, and Schengen visas." },
+                                { title: "Doorstep Services", desc: "Convenient document pickup & delivery across Jayanagar blocks." },
+                                { title: "24/7 IT Support", desc: "Dedicated case managers for every Jayanagar client." },
+                                { title: "High Success Rate", desc: "Proven track record with Bangalore's global workforce." }
                             ].map((item, i) => (
                                 <div key={i} className="flex gap-4">
                                     <div className="w-10 h-10 bg-primary/5 rounded-xl flex items-center justify-center shrink-0">
@@ -144,8 +142,8 @@ export default function VisaServicesInIndiranagar() {
                             <div className="space-y-6">
                                 <div className="p-6 bg-card rounded-2xl border border-border group hover:border-secondary transition-colors shadow-sm">
                                     <p className="text-sm font-body text-muted-foreground italic leading-relaxed mb-4">
-                                        Our dedicated team provides expert visa services tailored for Indiranagar residents. 
-                                        Whether you're a corporate professional, entrepreneur, or family traveler, we're here to assist you.
+                                        Our expert agents provide comprehensive visa assistance tailored for Jayanagar residents. 
+                                        Whether you're a tech professional, entrepreneur, or family traveler, we're here to assist you.
                                     </p>
                                 </div>
                             </div>
@@ -160,14 +158,14 @@ export default function VisaServicesInIndiranagar() {
             <section className="py-24 bg-gradient-to-b from-background to-secondary/5 border-t border-b border-border">
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                        <h2 className="text-4xl font-display font-bold text-foreground">Visa Services We Offer</h2>
-                        <p className="text-muted-foreground italic tracking-wide">Specialized visa solutions for Indiranagar's corporate and professional community.</p>
+                        <h2 className="text-4xl font-display font-bold text-foreground">Visa Agents & Services We Offer</h2>
+                        <p className="text-muted-foreground italic tracking-wide">Specialized visa agents and solutions for Jayanagar's diverse community.</p>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
-                            { icon: ShieldCheck, title: "Business Visa Solutions", desc: "Comprehensive support for business visas across major global destinations." },
-                            { icon: Clock, title: "Work Permit Processing", desc: "Expert guidance for work permit applications and employment visa procedures." },
-                            { icon: CheckCircle2, title: "Family Immigration", desc: "Complete assistance for family reunification and dependent visa applications." }
+                            { icon: ShieldCheck, title: "US B1/B2 & H1B Visas", desc: "Specialized assistance for tech professionals seeking US work and business visas." },
+                            { icon: Clock, title: "Express UK Processing", desc: "Priority services for leisure and business visitors to the United Kingdom." },
+                            { icon: CheckCircle2, title: "Schengen Group Filings", desc: "Hassle-free group applications for corporate and family trips to Europe." }
                         ].map((s, i) => (
                             <div key={i} className="p-10 bg-card rounded-[2.5rem] shadow-card border border-border hover:shadow-elevated transition-all text-center">
                                 <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -184,14 +182,14 @@ export default function VisaServicesInIndiranagar() {
             <section className="py-24 container mx-auto px-4 text-center">
                 <div className="max-w-4xl mx-auto space-y-10">
                     <h2 className="text-4xl md:text-7xl font-display font-bold text-foreground leading-tight">
-                        Your Corporate Visa Partner in Indiranagar.
+                        Your Trusted Visa Agents in Jayanagar.
                     </h2>
                     <p className="text-xl font-body text-muted-foreground max-w-2xl mx-auto italic leading-relaxed">
-                        Trust SmotVisa for all your corporate and professional visa needs in Indiranagar. Our expert team ensures seamless processing and personalized support.
+                        Don't let complex visa regulations stand in the way of your international career. Connect with our Jayanagar experts today.
                     </p>
                     <div className="flex flex-col md:flex-row gap-6 justify-center">
                         <Link href="/contact" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-secondary text-secondary-foreground font-display font-bold text-lg rounded-2xl hover:translate-y-[-2px] transition-all shadow-gold group">
-                            Contact Indiranagar Desk <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                            Contact Jayanagar Desk <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
                         </Link>
                         <Link href="/visa-checker" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-transparent border-2 border-primary text-primary font-display font-bold text-lg rounded-2xl hover:bg-primary/5 transition-all">
                             Check Eligibility

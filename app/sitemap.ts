@@ -11,7 +11,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // 1. Core Static Pages
     const staticPages: MetadataRoute.Sitemap = [
         "/", "/about", "/services", "/visa", "/blog", "/contact", "/visa-checker",
-        "/visa-agents-in-bangalore", "/visa-services-in-hsr-layout", "/visa-services-in-indiranagar"
+        "/visa-agents-in-bangalore", "/visa-agents-in-hsr-layout", "/visa-agents-in-indiranagar",
+        "/visa-agents-in-jayanagar", "/visa-agents-in-koramangala", "/visa-agents-in-kr-puram",
+        "/visa-agents-in-marathahalli", "/visa-agents-in-whitefield", "/visa-agents-in-electronic-city"
     ].map(path => ({
         url: `${baseUrl}${path}`,
         lastModified: lastMod,

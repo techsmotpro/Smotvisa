@@ -6,21 +6,21 @@ import { offices } from "@/data/officeData";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Best Visa Services in Electronic City | Expert Visa Consultants | SmotVisa",
-    description: "Professional visa processing services in Electronic City, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
+    title: "Best Visa Agents in HSR Layout | Expert Visa Consultants | SmotVisa",
+    description: "Expert visa agents and consultants in HSR Layout, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
     
     keywords: [
-        "visa services in Electronic City",
-        "visa agents in Electronic City",
-        "Electronic City visa consultants",
-        "SmotVisa Electronic City",
-        "Electronic City visa processing",
-        "best visa agents Electronic City",
-        "visa consultants in Electronic City"
+        "visa agents in HSR Layout",
+        "best visa agents HSR Layout",
+        "HSR Layout visa consultants",
+        "SmotVisa HSR Layout",
+        "HSR Layout visa processing",
+        "visa services in HSR Layout",
+        "visa consultants in HSR Layout"
     ],
 
     alternates: {
-        canonical: "https://smotvisa.com/visa-services-in-electronic-city",
+        canonical: "https://smotvisa.com/visa-agents-in-hsr-layout",
     },
 
     robots: {
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     publisher: "SmotVisa",
 
     openGraph: {
-        title: "Best Visa Services in Electronic City | Expert Visa Consultants | SmotVisa",
-        description: "Professional visa processing services in Electronic City, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
-        url: "https://smotvisa.com/visa-services-in-electronic-city",
+        title: "Best Visa Agents in HSR Layout | Expert Visa Consultants | SmotVisa",
+        description: "Expert visa agents and consultants in HSR Layout, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas.",
+        url: "https://smotvisa.com/visa-agents-in-hsr-layout",
         siteName: "SmotVisa",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
         type: "website",
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
 
     twitter: {
         card: "summary_large_image",
-        title: "Best Visa Services in Electronic City | Expert Visa Consultants | SmotVisa",
-        description: "Professional visa processing services in Electronic City, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
+        title: "Best Visa Agents in HSR Layout | Expert Visa Consultants | SmotVisa",
+        description: "Expert visa agents and consultants in HSR Layout, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas .",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
     },
 
@@ -51,22 +51,22 @@ export const metadata: Metadata = {
         "script:ld+json": JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "SmotVisa Electronic City",
+            "name": "SmotVisa HSR Layout",
             "image": "https://www.smotvisa.com/logo.png",
-            "@id": "https://www.smotvisa.com/visa-services-in-electronic-city",
-            "url": "https://www.smotvisa.com/visa-services-in-electronic-city",
+            "@id": "https://www.smotvisa.com/visa-agents-in-hsr-layout",
+            "url": "https://www.smotvisa.com/visa-agents-in-hsr-layout",
             "telephone": "+91-9380957448",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "No. 72, Hosur Road, Electronic City Phase 1",
+                "streetAddress": "No. 123, 19th Main Road, Sector 4, HSR Layout",
                 "addressLocality": "Bangalore",
-                "postalCode": "560100",
+                "postalCode": "560102",
                 "addressCountry": "IN"
             },
             "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 12.8456,
-                "longitude": 77.6843
+                "latitude": 12.9121,
+                "longitude": 77.6446
             },
             "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
@@ -89,15 +89,17 @@ export const metadata: Metadata = {
     }
 };
 
-export default function VisaServicesInElectronicCity() {
+export default function VisaServicesInHSRLayout() {
+    const hsrOffice = offices.find(o => o.id === "hsr-layout-bangalore");
+
     return (
         <main className="bg-background">
             <PageHeader
-                title="Visa Services in Electronic City"
-                description="Expert visa processing services for tech professionals and expatriates in Electronic City, Bangalore. SmotVisa is your trusted partner for premium travel consultancy."
+                title="Visa Agents in HSR Layout"
+                description="Expert visa agents in HSR Layout, Bangalore. SmotVisa is your trusted partner for premium travel consultancy."
                 breadcrumbs={[
                     { label: "Visa Services", href: "/visa" },
-                    { label: "Electronic City" }
+                    { label: "HSR Layout" }
                 ]}
             />
 
@@ -106,20 +108,20 @@ export default function VisaServicesInElectronicCity() {
                     <div className="space-y-8">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full">
                             <Star className="h-4 w-4 text-secondary fill-secondary" />
-                            <span className="text-xs font-display font-bold text-secondary uppercase tracking-widest">Premium Visa Services</span>
+                            <span className="text-xs font-display font-bold text-secondary uppercase tracking-widest">Premium Visa Agents</span>
                         </div>
                         <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight">
-                            Expert Visa Services for Electronic City's Tech Community.
+                            Expert Visa Agents for HSR Layout's Tech Community.
                         </h2>
                         <p className="text-lg font-body text-muted-foreground italic leading-relaxed">
-                            Strategically located in Electronic City, SmotVisa provides specialized visa assistance tailored for the vibrant tech professionals and expatriate community in this premier IT hub of Bangalore.
+                            Strategically located in the heart of HSR Layout, SmotVisa provides specialized visa assistance tailored for the  community in this premier IT hub of Bangalore.
                         </p>
 
                         <div className="grid sm:grid-cols-2 gap-6">
                             {[
-                                { title: "Tech Professional Specialization", desc: "Expert guidance for IT professionals seeking US, UK, Canada, and Schengen visas." },
-                                { title: "Doorstep Services", desc: "Convenient document pickup & delivery across Electronic City phases." },
-                                { title: "24/7 IT Support", desc: "Dedicated case managers for every Electronic City client." },
+                                { title: "Professional Specialization", desc: "Expert guidance for community seeking US, UK, Canada, and Schengen visas." },
+                                { title: "Doorstep Services", desc: "Convenient document pickup & delivery across HSR Layout sectors." },
+                                { title: "24/7 Support", desc: "Dedicated case managers for every HSR Layout client." },
                                 { title: "High Success Rate", desc: "Proven track record with Bangalore's global workforce." }
                             ].map((item, i) => (
                                 <div key={i} className="flex gap-4">
@@ -142,7 +144,7 @@ export default function VisaServicesInElectronicCity() {
                             <div className="space-y-6">
                                 <div className="p-6 bg-card rounded-2xl border border-border group hover:border-secondary transition-colors shadow-sm">
                                     <p className="text-sm font-body text-muted-foreground italic leading-relaxed mb-4">
-                                        Our dedicated team provides expert visa services tailored for Electronic City residents. 
+                                        Our expert agents provide comprehensive visa assistance tailored for HSR Layout residents. 
                                         Whether you're a tech professional, entrepreneur, or family traveler, we're here to assist you.
                                     </p>
                                 </div>
@@ -158,14 +160,14 @@ export default function VisaServicesInElectronicCity() {
             <section className="py-24 bg-gradient-to-b from-background to-secondary/5 border-t border-b border-border">
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                        <h2 className="text-4xl font-display font-bold text-foreground">Visa Services We Offer</h2>
-                        <p className="text-muted-foreground italic tracking-wide">Specialized visa solutions for Electronic City's diverse community.</p>
+                        <h2 className="text-4xl font-display font-bold text-foreground">Visa Agents & Services We Offer</h2>
+                        <p className="text-muted-foreground italic tracking-wide">Specialized visa agents and solutions for HSR Layout's diverse community.</p>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
-                            { icon: ShieldCheck, title: "US B1/B2 & H1B Visas", desc: "Specialized assistance for tech professionals seeking US work and business visas." },
+                            { icon: ShieldCheck, title: "US Visa", desc: "Specialized assistance for us visas." },
                             { icon: Clock, title: "Express UK Processing", desc: "Priority services for leisure and business visitors to the United Kingdom." },
-                            { icon: CheckCircle2, title: "Schengen Group Filings", desc: "Hassle-free group applications for corporate and family trips to Europe." }
+                            { icon: CheckCircle2, title: "Schengen Visa", desc: "Hassle-free group applications for corporate and family trips to Europe." }
                         ].map((s, i) => (
                             <div key={i} className="p-10 bg-card rounded-[2.5rem] shadow-card border border-border hover:shadow-elevated transition-all text-center">
                                 <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -182,14 +184,14 @@ export default function VisaServicesInElectronicCity() {
             <section className="py-24 container mx-auto px-4 text-center">
                 <div className="max-w-4xl mx-auto space-y-10">
                     <h2 className="text-4xl md:text-7xl font-display font-bold text-foreground leading-tight">
-                        Your Trusted Visa Partner in Electronic City.
+                        Your Trusted Visa Agents in HSR Layout.
                     </h2>
                     <p className="text-xl font-body text-muted-foreground max-w-2xl mx-auto italic leading-relaxed">
-                        Don't let complex visa regulations stand in the way of your international career. Connect with our Electronic City experts today.
+                        Don't let complex visa regulations stand in the way of your international career. Connect with our HSR Layout experts today.
                     </p>
                     <div className="flex flex-col md:flex-row gap-6 justify-center">
                         <Link href="/contact" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-secondary text-secondary-foreground font-display font-bold text-lg rounded-2xl hover:translate-y-[-2px] transition-all shadow-gold group">
-                            Contact Electronic City Desk <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                            Contact HSR Layout Desk <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
                         </Link>
                         <Link href="/visa-checker" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-transparent border-2 border-primary text-primary font-display font-bold text-lg rounded-2xl hover:bg-primary/5 transition-all">
                             Check Eligibility

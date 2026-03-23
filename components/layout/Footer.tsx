@@ -116,10 +116,10 @@ const Footer = () => {
               {seoLocations.map((loc) => (
                 <Link
                   key={loc}
-                  href={`/visa-services-in-${loc.toLowerCase().replace(/\s+/g, "-")}`}
+                  href={`/visa-agents-in-${loc.toLowerCase().replace(/\s+/g, "-")}`}
                   className="text-xs font-body text-primary-foreground/50 hover:text-secondary transition-colors"
                 >
-                  Visa Services in {loc}
+                  Visa Agents in {loc}
                 </Link>
               ))}
             </div>

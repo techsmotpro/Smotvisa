@@ -6,21 +6,21 @@ import { offices } from "@/data/officeData";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Best Visa Services in Whitefield | Expert Visa Consultants | SmotVisa",
-    description: "Professional visa processing services in Whitefield, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
+    title: "Best Visa Agents in Indiranagar | Expert Visa Consultants | SmotVisa",
+    description: "Expert visa agents and consultants in Indiranagar, Bangalore. SmotVisa provides specialized assistance for business visas, work permits, and family immigration for urban professionals.",
     
     keywords: [
-        "visa services in Whitefield",
-        "visa agents in Whitefield",
-        "Whitefield visa consultants",
-        "SmotVisa Whitefield",
-        "Whitefield visa processing",
-        "best visa agents Whitefield",
-        "visa consultants in Whitefield"
+        "visa agents in Indiranagar",
+        "best visa agents Indiranagar",
+        "Indiranagar visa consultants",
+        "SmotVisa Indiranagar",
+        "Indiranagar visa processing",
+        "visa services in Indiranagar",
+        "visa consultants in Indiranagar"
     ],
 
     alternates: {
-        canonical: "https://smotvisa.com/visa-services-in-whitefield",
+        canonical: "https://smotvisa.com/visa-agents-in-indiranagar",
     },
 
     robots: {
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     publisher: "SmotVisa",
 
     openGraph: {
-        title: "Best Visa Services in Whitefield | Expert Visa Consultants | SmotVisa",
-        description: "Professional visa processing services in Whitefield, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
-        url: "https://smotvisa.com/visa-services-in-whitefield",
+        title: "Best Visa Agents in Indiranagar | Expert Visa Consultants | SmotVisa",
+        description: "Expert visa agents and consultants in Indiranagar, Bangalore. SmotVisa provides specialized assistance for business visas, work permits, and family immigration for urban professionals.",
+        url: "https://smotvisa.com/visa-agents-in-indiranagar",
         siteName: "SmotVisa",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
         type: "website",
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
 
     twitter: {
         card: "summary_large_image",
-        title: "Best Visa Services in Whitefield | Expert Visa Consultants | SmotVisa",
-        description: "Professional visa processing services in Whitefield, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
+        title: "Best Visa Agents in Indiranagar | Expert Visa Consultants | SmotVisa",
+        description: "Expert visa agents and consultants in Indiranagar, Bangalore. SmotVisa provides specialized assistance for business visas, work permits, and family immigration for urban professionals.",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
     },
 
@@ -51,22 +51,22 @@ export const metadata: Metadata = {
         "script:ld+json": JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "SmotVisa Whitefield",
+            "name": "SmotVisa Indiranagar",
             "image": "https://www.smotvisa.com/logo.png",
-            "@id": "https://www.smotvisa.com/visa-services-in-whitefield",
-            "url": "https://www.smotvisa.com/visa-services-in-whitefield",
+            "@id": "https://www.smotvisa.com/visa-agents-in-indiranagar",
+            "url": "https://www.smotvisa.com/visa-agents-in-indiranagar",
             "telephone": "+91-9380957448",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "No. 92, ITPL Main Road, Whitefield",
+                "streetAddress": "No. 456, 100 Feet Road, 2nd Stage, Indiranagar",
                 "addressLocality": "Bangalore",
-                "postalCode": "560066",
+                "postalCode": "560038",
                 "addressCountry": "IN"
             },
             "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 12.9667,
-                "longitude": 77.7500
+                "latitude": 12.9719,
+                "longitude": 77.6412
             },
             "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
@@ -89,15 +89,17 @@ export const metadata: Metadata = {
     }
 };
 
-export default function VisaServicesInWhitefield() {
+export default function VisaServicesInIndiranagar() {
+    const indiranagarOffice = offices.find(o => o.id === "indiranagar-bangalore");
+
     return (
         <main className="bg-background">
             <PageHeader
-                title="Visa Services in Whitefield"
-                description="Expert visa processing services for tech professionals and expatriates in Whitefield, Bangalore. SmotVisa is your trusted partner for premium travel consultancy."
+                title="Visa Agents in Indiranagar"
+                description="Expert visa agents for urban professionals and corporate clientele in Indiranagar, Bangalore. SmotVisa is your trusted partner for business and corporate visa solutions."
                 breadcrumbs={[
                     { label: "Visa Services", href: "/visa" },
-                    { label: "Whitefield" }
+                    { label: "Indiranagar" }
                 ]}
             />
 
@@ -106,21 +108,21 @@ export default function VisaServicesInWhitefield() {
                     <div className="space-y-8">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full">
                             <Star className="h-4 w-4 text-secondary fill-secondary" />
-                            <span className="text-xs font-display font-bold text-secondary uppercase tracking-widest">Premium Visa Services</span>
+                            <span className="text-xs font-display font-bold text-secondary uppercase tracking-widest">Corporate Visa Agents</span>
                         </div>
                         <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight">
-                            Expert Visa Services for Whitefield's Tech Community.
+                            Premium Visa Agents for Indiranagar's Urban Professionals.
                         </h2>
                         <p className="text-lg font-body text-muted-foreground italic leading-relaxed">
-                            Strategically located in Whitefield, SmotVisa provides specialized visa assistance tailored for the vibrant tech professionals and expatriate community in this premier IT hub of Bangalore.
+                            Located in the trendy Indiranagar area, SmotVisa provides premium visa agents tailored for the urban professionals and corporate clientele in this vibrant neighborhood. We specialize in business visas, work permits, and family immigration solutions.
                         </p>
 
                         <div className="grid sm:grid-cols-2 gap-6">
                             {[
-                                { title: "Tech Professional Specialization", desc: "Expert guidance for IT professionals seeking US, UK, Canada, and Schengen visas." },
-                                { title: "Doorstep Services", desc: "Convenient document pickup & delivery across Whitefield and ITPL area." },
-                                { title: "24/7 IT Support", desc: "Dedicated case managers for every Whitefield client." },
-                                { title: "High Success Rate", desc: "Proven track record with Bangalore's global workforce." }
+                                { title: "Corporate Visa Specialization", desc: "Expert assistance for business visas, work permits, and corporate travel solutions." },
+                                { title: "Executive Consultation", desc: "Personalized one-on-one sessions for senior professionals and executives." },
+                                { title: "Corporate Bulk Filings", desc: "Streamlined visa processing for entire teams and corporate groups." },
+                                { title: "Priority Processing", desc: "Express visa services with dedicated case managers." }
                             ].map((item, i) => (
                                 <div key={i} className="flex gap-4">
                                     <div className="w-10 h-10 bg-primary/5 rounded-xl flex items-center justify-center shrink-0">
@@ -142,8 +144,8 @@ export default function VisaServicesInWhitefield() {
                             <div className="space-y-6">
                                 <div className="p-6 bg-card rounded-2xl border border-border group hover:border-secondary transition-colors shadow-sm">
                                     <p className="text-sm font-body text-muted-foreground italic leading-relaxed mb-4">
-                                        Our dedicated team provides expert visa services tailored for Whitefield residents. 
-                                        Whether you're a tech professional, entrepreneur, or family traveler, we're here to assist you.
+                                        Our expert agents provide comprehensive visa assistance tailored for Indiranagar residents. 
+                                        Whether you're a corporate professional, entrepreneur, or family traveler, we're here to assist you.
                                     </p>
                                 </div>
                             </div>
@@ -158,14 +160,14 @@ export default function VisaServicesInWhitefield() {
             <section className="py-24 bg-gradient-to-b from-background to-secondary/5 border-t border-b border-border">
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                        <h2 className="text-4xl font-display font-bold text-foreground">Visa Services We Offer</h2>
-                        <p className="text-muted-foreground italic tracking-wide">Specialized visa solutions for Whitefield's diverse community.</p>
+                        <h2 className="text-4xl font-display font-bold text-foreground">Visa Agents & Services We Offer</h2>
+                        <p className="text-muted-foreground italic tracking-wide">Specialized visa agents and solutions for Indiranagar's corporate and professional community.</p>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
-                            { icon: ShieldCheck, title: "US B1/B2 & H1B Visas", desc: "Specialized assistance for tech professionals seeking US work and business visas." },
-                            { icon: Clock, title: "Express UK Processing", desc: "Priority services for leisure and business visitors to the United Kingdom." },
-                            { icon: CheckCircle2, title: "Schengen Group Filings", desc: "Hassle-free group applications for corporate and family trips to Europe." }
+                            { icon: ShieldCheck, title: "Business Visa Solutions", desc: "Comprehensive support for business visas across major global destinations." },
+                            { icon: Clock, title: "Work Permit Processing", desc: "Expert guidance for work permit applications and employment visa procedures." },
+                            { icon: CheckCircle2, title: "Family Immigration", desc: "Complete assistance for family reunification and dependent visa applications." }
                         ].map((s, i) => (
                             <div key={i} className="p-10 bg-card rounded-[2.5rem] shadow-card border border-border hover:shadow-elevated transition-all text-center">
                                 <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -182,14 +184,14 @@ export default function VisaServicesInWhitefield() {
             <section className="py-24 container mx-auto px-4 text-center">
                 <div className="max-w-4xl mx-auto space-y-10">
                     <h2 className="text-4xl md:text-7xl font-display font-bold text-foreground leading-tight">
-                        Your Trusted Visa Partner in Whitefield.
+                        Your Corporate Visa Agents in Indiranagar.
                     </h2>
                     <p className="text-xl font-body text-muted-foreground max-w-2xl mx-auto italic leading-relaxed">
-                        Don't let complex visa regulations stand in the way of your international career. Connect with our Whitefield experts today.
+                        Trust SmotVisa for all your corporate and professional visa needs in Indiranagar. Our expert team ensures seamless processing and personalized support.
                     </p>
                     <div className="flex flex-col md:flex-row gap-6 justify-center">
                         <Link href="/contact" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-secondary text-secondary-foreground font-display font-bold text-lg rounded-2xl hover:translate-y-[-2px] transition-all shadow-gold group">
-                            Contact Whitefield Desk <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                            Contact Indiranagar Desk <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
                         </Link>
                         <Link href="/visa-checker" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-transparent border-2 border-primary text-primary font-display font-bold text-lg rounded-2xl hover:bg-primary/5 transition-all">
                             Check Eligibility

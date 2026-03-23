@@ -6,21 +6,21 @@ import { offices } from "@/data/officeData";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Best Visa Services in KR Puram | Expert Visa Consultants | SmotVisa",
-    description: "Professional visa processing services in KR Puram, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
+    title: "Best Visa Agents in Koramangala | Expert Visa Consultants | SmotVisa",
+    description: "Expert visa agents and consultants in Koramangala, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
     
     keywords: [
-        "visa services in KR Puram",
-        "visa agents in KR Puram",
-        "KR Puram visa consultants",
-        "SmotVisa KR Puram",
-        "KR Puram visa processing",
-        "best visa agents KR Puram",
-        "visa consultants in KR Puram"
+        "visa agents in Koramangala",
+        "best visa agents Koramangala",
+        "Koramangala visa consultants",
+        "SmotVisa Koramangala",
+        "Koramangala visa processing",
+        "visa services in Koramangala",
+        "visa consultants in Koramangala"
     ],
 
     alternates: {
-        canonical: "https://smotvisa.com/visa-services-in-kr-puram",
+        canonical: "https://smotvisa.com/visa-agents-in-koramangala",
     },
 
     robots: {
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     publisher: "SmotVisa",
 
     openGraph: {
-        title: "Best Visa Services in KR Puram | Expert Visa Consultants | SmotVisa",
-        description: "Professional visa processing services in KR Puram, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
-        url: "https://smotvisa.com/visa-services-in-kr-puram",
+        title: "Best Visa Agents in Koramangala | Expert Visa Consultants | SmotVisa",
+        description: "Expert visa agents and consultants in Koramangala, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
+        url: "https://smotvisa.com/visa-agents-in-koramangala",
         siteName: "SmotVisa",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
         type: "website",
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
 
     twitter: {
         card: "summary_large_image",
-        title: "Best Visa Services in KR Puram | Expert Visa Consultants | SmotVisa",
-        description: "Professional visa processing services in KR Puram, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
+        title: "Best Visa Agents in Koramangala | Expert Visa Consultants | SmotVisa",
+        description: "Expert visa agents and consultants in Koramangala, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
     },
 
@@ -51,22 +51,22 @@ export const metadata: Metadata = {
         "script:ld+json": JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "SmotVisa KR Puram",
+            "name": "SmotVisa Koramangala",
             "image": "https://www.smotvisa.com/logo.png",
-            "@id": "https://www.smotvisa.com/visa-services-in-kr-puram",
-            "url": "https://www.smotvisa.com/visa-services-in-kr-puram",
+            "@id": "https://www.smotvisa.com/visa-agents-in-koramangala",
+            "url": "https://www.smotvisa.com/visa-agents-in-koramangala",
             "telephone": "+91-9380957448",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "No. 45, 8th Main Road, 2nd Phase, KR Puram",
+                "streetAddress": "No. 78, 8th Block, Koramangala",
                 "addressLocality": "Bangalore",
-                "postalCode": "560036",
+                "postalCode": "560095",
                 "addressCountry": "IN"
             },
             "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 12.9800,
-                "longitude": 77.6900
+                "latitude": 12.9280,
+                "longitude": 77.6270
             },
             "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
@@ -89,15 +89,15 @@ export const metadata: Metadata = {
     }
 };
 
-export default function VisaServicesInKRPuram() {
+export default function VisaServicesInKoramangala() {
     return (
         <main className="bg-background">
             <PageHeader
-                title="Visa Services in KR Puram"
-                description="Expert visa processing services for tech professionals and expatriates in KR Puram, Bangalore. SmotVisa is your trusted partner for premium travel consultancy."
+                title="Visa Agents in Koramangala"
+                description="Expert visa agents for tech professionals and expatriates in Koramangala, Bangalore. SmotVisa is your trusted partner for premium travel consultancy."
                 breadcrumbs={[
                     { label: "Visa Services", href: "/visa" },
-                    { label: "KR Puram" }
+                    { label: "Koramangala" }
                 ]}
             />
 
@@ -106,20 +106,20 @@ export default function VisaServicesInKRPuram() {
                     <div className="space-y-8">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full">
                             <Star className="h-4 w-4 text-secondary fill-secondary" />
-                            <span className="text-xs font-display font-bold text-secondary uppercase tracking-widest">Premium Visa Services</span>
+                            <span className="text-xs font-display font-bold text-secondary uppercase tracking-widest">Premium Visa Agents</span>
                         </div>
                         <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight">
-                            Expert Visa Services for KR Puram's Tech Community.
+                            Expert Visa Agents for Koramangala's Tech Community.
                         </h2>
                         <p className="text-lg font-body text-muted-foreground italic leading-relaxed">
-                            Strategically located in KR Puram, SmotVisa provides specialized visa assistance tailored for the vibrant tech professionals and expatriate community in this growing IT hub of Bangalore.
+                            Strategically located in Koramangala, SmotVisa provides specialized visa assistance tailored for the vibrant tech professionals and expatriate community in this premier IT hub of Bangalore.
                         </p>
 
                         <div className="grid sm:grid-cols-2 gap-6">
                             {[
                                 { title: "Tech Professional Specialization", desc: "Expert guidance for IT professionals seeking US, UK, Canada, and Schengen visas." },
-                                { title: "Doorstep Services", desc: "Convenient document pickup & delivery across KR Puram and surrounding areas." },
-                                { title: "24/7 IT Support", desc: "Dedicated case managers for every KR Puram client." },
+                                { title: "Doorstep Services", desc: "Convenient document pickup & delivery across Koramangala blocks." },
+                                { title: "24/7 IT Support", desc: "Dedicated case managers for every Koramangala client." },
                                 { title: "High Success Rate", desc: "Proven track record with Bangalore's global workforce." }
                             ].map((item, i) => (
                                 <div key={i} className="flex gap-4">
@@ -142,7 +142,7 @@ export default function VisaServicesInKRPuram() {
                             <div className="space-y-6">
                                 <div className="p-6 bg-card rounded-2xl border border-border group hover:border-secondary transition-colors shadow-sm">
                                     <p className="text-sm font-body text-muted-foreground italic leading-relaxed mb-4">
-                                        Our dedicated team provides expert visa services tailored for KR Puram residents. 
+                                        Our expert agents provide comprehensive visa assistance tailored for Koramangala residents. 
                                         Whether you're a tech professional, entrepreneur, or family traveler, we're here to assist you.
                                     </p>
                                 </div>
@@ -158,8 +158,8 @@ export default function VisaServicesInKRPuram() {
             <section className="py-24 bg-gradient-to-b from-background to-secondary/5 border-t border-b border-border">
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                        <h2 className="text-4xl font-display font-bold text-foreground">Visa Services We Offer</h2>
-                        <p className="text-muted-foreground italic tracking-wide">Specialized visa solutions for KR Puram's diverse community.</p>
+                        <h2 className="text-4xl font-display font-bold text-foreground">Visa Agents & Services We Offer</h2>
+                        <p className="text-muted-foreground italic tracking-wide">Specialized visa agents and solutions for Koramangala's diverse community.</p>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
@@ -182,14 +182,14 @@ export default function VisaServicesInKRPuram() {
             <section className="py-24 container mx-auto px-4 text-center">
                 <div className="max-w-4xl mx-auto space-y-10">
                     <h2 className="text-4xl md:text-7xl font-display font-bold text-foreground leading-tight">
-                        Your Trusted Visa Partner in KR Puram.
+                        Your Trusted Visa Agents in Koramangala.
                     </h2>
                     <p className="text-xl font-body text-muted-foreground max-w-2xl mx-auto italic leading-relaxed">
-                        Don't let complex visa regulations stand in the way of your international career. Connect with our KR Puram experts today.
+                        Don't let complex visa regulations stand in the way of your international career. Connect with our Koramangala experts today.
                     </p>
                     <div className="flex flex-col md:flex-row gap-6 justify-center">
                         <Link href="/contact" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-secondary text-secondary-foreground font-display font-bold text-lg rounded-2xl hover:translate-y-[-2px] transition-all shadow-gold group">
-                            Contact KR Puram Desk <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                            Contact Koramangala Desk <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
                         </Link>
                         <Link href="/visa-checker" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-transparent border-2 border-primary text-primary font-display font-bold text-lg rounded-2xl hover:bg-primary/5 transition-all">
                             Check Eligibility
