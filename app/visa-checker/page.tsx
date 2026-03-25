@@ -160,7 +160,7 @@ const VisaEligibilityPage = () => {
         const resultText = getResult(calculatedBreakdown.total);
 
         try {
-            const response = await fetch("https://smotvisa-pro-backend-visa.vercel.app/api/send-email", {
+            const response = await fetch("https://smotvisa-backend-visa.vercel.app/api/send-email", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

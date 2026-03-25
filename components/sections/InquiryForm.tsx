@@ -14,7 +14,7 @@ const InquiryForm = () => {
         setIsLoading(true);
 
         try {
-            const response = await fetch("https://smot-pro-backend-visa.vercel.app/api/send-email", {
+            const response = await fetch("https://smotvisa-backend-visa.vercel.app/api/send-email", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

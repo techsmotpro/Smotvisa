@@ -56,7 +56,7 @@ const fallbackBlogs: BlogPost[] = [
 // Fetch blogs from Smot Pro backend API
 export const fetchBlogs = async (): Promise<BlogPost[]> => {
     try {
-        const response = await fetch('https://smot-pro-backend-visa.vercel.app/api/blogs', {
+        const response = await fetch('https://smotvisa-backend-visa.vercel.app/api/blogs', {
             next: { revalidate: 3600 } // Cache for 1 hour
         });
         if (!response.ok) {
@@ -81,7 +81,7 @@ export const fetchBlogs = async (): Promise<BlogPost[]> => {
 // Helper function to fetch a single blog by slug
 export const fetchBlogBySlug = async (slug: string): Promise<BlogPost | undefined> => {
     try {
-        const response = await fetch(`https://smot-pro-backend-visa.vercel.app/api/blogs/${slug}`, {
+        const response = await fetch(`https://smotvisa-backend-visa.vercel.app/api/blogs/${slug}`, {
             next: { revalidate: 3600 } // Cache for 1 hour
         });
         if (!response.ok) {
