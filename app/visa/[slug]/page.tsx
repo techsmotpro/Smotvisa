@@ -16,9 +16,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         };
     }
 
+    // Set specific metadata for US, UK, and Canada
+    let metaTitle = `${visa.name} Visa Services ${visa.flag || ""} | SmotVisa`;
+    let metaDescription = visa.description;
+    
+    if (id === "us") {
+        metaTitle = "Apply Online Tourist and Business US Visa | SmotVisa";
+        metaDescription = "Apply for a US tourist or business visa with expert consultants. Includes documentation & interview prep.";
+    } else if (id === "uk") {
+        metaTitle = "Apply UK Tourist & Business Visa | SmotVisa";
+        metaDescription = "Expert UK visa consultants offering document verification and complete application support.";
+    } else if (id === "canada") {
+        metaTitle = "Apply Canada Tourist & Business Visa | SmotVisa";
+        metaDescription = "Get Canada visitor visa assistance with documentation, biometrics, and expert guidance.";
+    }
+
     return {
-        title: `${visa.name} Visa Services ${visa.flag || ""} | SmotVisa`,
-        description: visa.description,
+        title: metaTitle,
+        description: metaDescription,
         keywords: [
             `${visa.name} visa`,
             "visa services India",
@@ -40,8 +55,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         publisher: "SmotVisa",
 
         openGraph: {
-            title: `${visa.name} Visa Services ${visa.flag || ""}`,
-            description: visa.description,
+            title: metaTitle,
+            description: metaDescription,
             url: `https://smotvisa.com/visa/${slug}`,
             siteName: "SmotVisa",
             images: [visa.image || "/images/visa-services-MHOtW-3U.jpg"],
@@ -50,8 +65,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
         twitter: {
             card: "summary_large_image",
-            title: `${visa.name} Visa Services ${visa.flag || ""}`,
-            description: visa.description,
+            title: metaTitle,
+            description: metaDescription,
             images: [visa.image || "/images/visa-services-MHOtW-3U.jpg"],
         }
     };
@@ -72,10 +87,21 @@ export default async function VisaDetailPage({ params }: { params: Promise<{ slu
         );
     }
 
+    // Set specific H1 for US, UK, and Canada
+    let pageTitle = `${visa.name} Visa Services ${visa.flag || ""}`;
+    
+    if (id === "us") {
+        pageTitle = "US Tourist & Business Visa Services";
+    } else if (id === "uk") {
+        pageTitle = "UK Tourist & Business Visa Services";
+    } else if (id === "canada") {
+        pageTitle = "Canada Tourist & Business Visa Services";
+    }
+
     return (
         <main className="bg-background">
             <PageHeader
-                title={`${visa.name} Visa Services ${visa.flag || ""}`}
+                title={pageTitle}
                 description={visa.description}
                 breadcrumbs={[
                     { label: "Visa Services", href: "/visa" },

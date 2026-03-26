@@ -6,9 +6,9 @@ import HeroContent from "@/components/sections/HeroContent";
 
 const HeroSection = () => {
     return (
-        <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-40 pb-20 lg:pt-28 lg:pb-0">
+        <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20 pb-20 lg:pt-28 lg:pb-0 z-[1000]">
             {/* Background image */}
-            <div className="absolute inset-0">
+            <div className="absolute inset-0 z-[-1]">
                 <Image
                     src="/images/hero-travel-CJWf8Tv1.jpg"
                     alt="Travel destination"

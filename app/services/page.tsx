@@ -6,8 +6,8 @@ import PageHeader from "@/components/ui/PageHeader";
 import { MotionDiv } from "@/components/ui/MotionWrapper";
 
 export const metadata = {
-  title: "Premium Travel & Visa Services | SmotVisa",
-  description: "From expert visa processing to end-to-end tour planning, we take the stress out of travel with our comprehensive international services.",
+  title: "Explore Our Comprehensive Service Solution | SmotVisa",
+  description: "Experience hassle-free visa applications with expert support, documentation help, and end-to-end services.",
 
   keywords: [
     "travel services India",
@@ -32,8 +32,8 @@ export const metadata = {
   publisher: "SmotVisa",
 
   openGraph: {
-    title: "Premium Travel & Visa Services | SmotVisa",
-    description: "From expert visa processing to end-to-end tour planning, we take the stress out of travel with our comprehensive international services.",
+    title: "Explore Our Comprehensive Service Solution | SmotVisa",
+    description: "Experience hassle-free visa applications with expert support, documentation help, and end-to-end services.",
     url: "https://smotvisa.com/services",
     siteName: "SmotVisa",
     images: ["/images/hero-travel-CJWf8Tv1.jpg"],
@@ -42,8 +42,8 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Premium Travel & Visa Services | SmotVisa",
-    description: "From expert visa processing to end-to-end tour planning, we take the stress out of travel with our comprehensive international services.",
+    title: "Explore Our Comprehensive Service Solution | SmotVisa",
+    description: "Experience hassle-free visa applications with expert support, documentation help, and end-to-end services.",
   }
 };
 

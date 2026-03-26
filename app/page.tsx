@@ -8,9 +8,9 @@ import ReviewCards from "@/components/sections/ReviewCards";
 import BlogSection from "@/components/sections/BlogSection";
 
 export const metadata = {
-  title: "SmotVisa | Visa and Travel Agency",
+  title: "Ultimate Visa and Travel Consultants in India | SmotVisa",
   description:
-    "SmotVisa helps you travel hassle-free with expert visa processing for US, UK, Canada, Australia & 50+ countries.",
+    "Experience expert visa assistance for US, UK, Canada, Singapore, Dubai. Our expert team ensures seamless travel support.",
 
   keywords: [
     "visa services India",
@@ -35,8 +35,8 @@ export const metadata = {
   publisher: "SmotVisa",
 
   openGraph: {
-    title: "SmotVisa | Visa and Travel Agency",
-    description: "SmotVisa helps you travel hassle-free with expert visa processing for US, UK, Canada, Australia & 50+ countries.",
+    title: "Ultimate Visa and Travel Consultants in India | SmotVisa",
+    description: "Experience expert visa assistance for US, UK, Canada, Singapore, Dubai. Our expert team ensures seamless travel support.",
     url: "https://smotvisa.com",
     siteName: "SmotVisa",
     images: ["/images/visa-services-MHOtW-3U.jpg"],
@@ -45,8 +45,8 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "SmotVisa | Visa and Travel Agency",
-    description: "SmotVisa helps you travel hassle-free with expert visa processing for US, UK, Canada, Australia & 50+ countries.",
+    title: "Ultimate Visa and Travel Consultants in India | SmotVisa",
+    description: "Experience expert visa assistance for US, UK, Canada, Singapore, Dubai. Our expert team ensures seamless travel support.",
   }
 };
 

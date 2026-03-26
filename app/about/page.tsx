@@ -2,8 +2,8 @@ import AboutSection from "@/components/sections/AboutSection";
 import PageHeader from "@/components/ui/PageHeader";
 
 export const metadata = {
-  title: "About SmotVisa | Trusted Visa & Travel Experts",
-  description: "Simplifying global travel with expert visa assistance and personalized support for over a decade.",
+  title: "Learn About Smotvisa in This Comprehensive Guide | SmotVisa",
+  description: "Explore Smotvisa team, mission, and vision in the travel domain. Get inspired to plan your dream trips.",
 
   keywords: [
     "about SmotVisa",
@@ -26,8 +26,8 @@ export const metadata = {
   publisher: "SmotVisa",
 
   openGraph: {
-    title: "About SmotVisa | Trusted Visa & Travel Experts",
-    description: "Simplifying global travel with expert visa assistance and personalized support for over a decade.",
+    title: "Learn About Smotvisa in This Comprehensive Guide | SmotVisa",
+    description: "Explore Smotvisa team, mission, and vision in the travel domain. Get inspired to plan your dream trips.",
     url: "https://smotvisa.com/about",
     siteName: "SmotVisa",
     images: ["/images/hero-travel-CJWf8Tv1.jpg"],
@@ -36,8 +36,8 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "About SmotVisa | Trusted Visa & Travel Experts",
-    description: "Simplifying global travel with expert visa assistance and personalized support for over a decade.",
+    title: "Learn About Smotvisa in This Comprehensive Guide | SmotVisa",
+    description: "Explore Smotvisa team, mission, and vision in the travel domain. Get inspired to plan your dream trips.",
     images: ["/images/hero-travel-CJWf8Tv1.jpg"],
   }
 };

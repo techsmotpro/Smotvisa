@@ -187,6 +187,20 @@
     @apply bg-background text-foreground;
   }
 
+  /* Logo dancing issue fix */
+  .navbar-logo-container {
+    position: relative !important;
+    z-index: 10000 !important;
+  }
+
+  .navbar-logo-container img {
+    position: relative !important;
+    z-index: 10000 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
   /* Vite-inspired Branding Utilities */
   .logo-vite {
     @apply transition-[filter] duration-300;
