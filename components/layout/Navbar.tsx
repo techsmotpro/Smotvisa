@@ -58,16 +58,12 @@ const Navbar = () => {
                 <div className="container mx-auto flex items-center justify-between px-4 py-5">
                     <Link href="/" onClick={handleLinkClick} className="flex items-center gap-2 navbar-logo-container">
                         <Image 
-                            src="/assets/small--Y9qzfea.png" 
+                            src="/assets/logo.png" 
                             alt="SmotVisa" 
-                            width={70} 
-                            height={70} 
-                            className="w-auto h-14"
+                            width={80} 
+                            height={80} 
+                            className="w-auto h-16"
                         />
-                        <div className="flex flex-col">
-                            <span className="font-display font-bold text-xl text-primary-foreground leading-none">SmotVisa</span>
-                            <span className="text-[10px] font-body text-primary-foreground/60 uppercase tracking-widest mt-1">Visa and Travel Agency</span>
-                        </div>
                     </Link>
 
                     {/* Desktop nav */}
