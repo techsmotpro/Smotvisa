@@ -120,7 +120,14 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                                     </div>
                                     <div>
                                         <p className="text-[10px] text-muted-foreground font-display font-bold uppercase tracking-[0.2em] mb-2">Location Address</p>
-                                        <p className="text-sm font-body font-bold leading-relaxed text-foreground">{office.address}</p>
+                                        <a
+                                            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(office.address)}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-sm font-body font-bold leading-relaxed text-foreground hover:text-secondary transition-colors"
+                                        >
+                                            {office.address}
+                                        </a>
                                     </div>
                                 </div>
 
@@ -131,7 +138,13 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                                     <div>
                                         <p className="text-[10px] text-muted-foreground font-display font-bold uppercase tracking-[0.2em] mb-2">Primary Hotline</p>
                                         {office.phone.map((p, i) => (
-                                            <p key={i} className="text-base font-body font-bold text-foreground mb-1">{p}</p>
+                                            <a
+                                                key={i}
+                                                href={`tel:${p.replace(/\D/g, '')}`}
+                                                className="text-base font-body font-bold text-foreground mb-1 hover:text-secondary transition-colors block"
+                                            >
+                                                {p}
+                                            </a>
                                         ))}
                                     </div>
                                 </div>
@@ -143,7 +156,12 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                                         </div>
                                         <div>
                                             <p className="text-[10px] text-muted-foreground font-display font-bold uppercase tracking-[0.2em] mb-2">Email Desk</p>
-                                            <p className="text-base font-body font-bold text-foreground">{office.email}</p>
+                                            <a
+                                                href={`mailto:${office.email}`}
+                                                className="text-base font-body font-bold text-foreground hover:text-secondary transition-colors"
+                                            >
+                                                {office.email}
+                                            </a>
                                         </div>
                                     </div>
                                 )}
@@ -167,7 +185,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
 
                             <div className="mt-10">
                                 <Link
-                                    href="/contact"
+                                    href="/reachout"
                                     className="w-full flex items-center justify-center gap-3 px-8 py-5 bg-secondary text-secondary-foreground font-display font-bold text-base rounded-2xl shadow-gold hover:translate-y-[-2px] transition-all"
                                 >
                                     Book Personal Consultation

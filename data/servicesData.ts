@@ -31,7 +31,7 @@ export const servicesData = [
         title: "International Tour Packages",
         description: "Complete travel solutions including flights, accommodation, sightseeing, and visa assistance. Choose from our handpicked packages or create your custom itinerary.",
         features: ["Flight + Hotel Combos", "Guided Tours", "Visa Assistance", "24/7 Support"],
-        href: "/#tour-packages"
+        href: "/contact"
     },
     {
         id: "premium-travel",
@@ -39,7 +39,7 @@ export const servicesData = [
         title: "Premium Travel",
         description: "Luxury travel experience with business and first-class flights, 5-star accommodations, and exclusive sightseeing tours.",
         features: ["Business/First Class", "Lounge Access", "Private Transfers", "Concierge Service"],
-        href: "/#tour-packages"
+        href: "/contact"
     },
     {
         id: "group-travel",
@@ -47,6 +47,6 @@ export const servicesData = [
         title: "Group Travel",
         description: "Special rates and dedicated support for group travel bookings. Perfect for families, friends, corporate groups, and educational tours.",
         features: ["Custom Itineraries", "Best Group Rates", "Visa Coordination", "Group Transfers"],
-        href: "/#tour-packages"
+        href: "/contact"
     }
 ];

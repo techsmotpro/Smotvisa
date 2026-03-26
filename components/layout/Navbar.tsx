@@ -56,14 +56,18 @@ const Navbar = () => {
             {/* Main nav */}
             <nav className="fixed top-0 left-0 w-full z-[9999] bg-primary/95 backdrop-blur-md shadow-card border-b border-primary-foreground/10">
                 <div className="container mx-auto flex items-center justify-between px-4 py-5">
-                    <Link href="/" onClick={handleLinkClick} className="flex items-center gap-2 navbar-logo-container">
+                    <Link href="/" onClick={handleLinkClick} className="flex items-center gap-3 navbar-logo-container">
                         <Image 
-                            src="/assets/logo.png" 
+                            src="/assets/small--Y9qzfea.png" 
                             alt="SmotVisa" 
-                            width={80} 
-                            height={80} 
+                            width={60} 
+                            height={60} 
                             className="w-auto h-16"
                         />
+                        <div className="flex flex-col">
+                            <span className="font-display font-bold text-xl text-primary-foreground tracking-tight">SMOTVISA</span>
+                            <span className="text-xs font-body text-primary-foreground/70 uppercase tracking-wider">Visa & Travel Agents</span>
+                        </div>
                     </Link>
 
                     {/* Desktop nav */}

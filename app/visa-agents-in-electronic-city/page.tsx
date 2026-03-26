@@ -1,4 +1,4 @@
-import PageHeader from "@/components/ui/PageHeader";
+ import PageHeader from "@/components/ui/PageHeader";
 import { MapPin, CheckCircle2, Star, ShieldCheck, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -147,9 +147,11 @@ export default function VisaServicesInElectronicCity() {
                                     </p>
                                 </div>
                             </div>
-                            <Button className="w-full bg-primary text-primary-foreground py-8 rounded-2xl font-display font-bold text-lg shadow-gold group">
-                                Contact Our Team <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                            </Button>
+                            <Link href="/contact" className="w-full">
+                                <Button className="w-full bg-primary text-primary-foreground py-8 rounded-2xl font-display font-bold text-lg shadow-gold group">
+                                    Contact Our Team <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </div>

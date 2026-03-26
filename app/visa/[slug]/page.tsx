@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
-    const id = slug.replace("-visa-consultants", "");
+    const id = slug.replace("-visa-consultant", "");
     const visa = (visaData as any)[id];
 
     if (!visa) {
@@ -74,7 +74,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function VisaDetailPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
-    const id = slug.replace("-visa-consultants", "");
+    const id = slug.replace("-visa-consultant", "");
     const visa = (visaData as any)[id];
 
     if (!visa) {

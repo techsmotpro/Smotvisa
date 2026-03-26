@@ -52,7 +52,7 @@ const ServicesSection = () => {
 
                 {/* SmotVisa SERVICES */}
                 <div className="mb-8">
-                    <h3 className="text-3xl font-display font-bold text-foreground mb-6 text-center text-gradient-gold">SmotVisa SERVICES</h3>
+                    <h3 className="text-3xl font-display font-bold text-foreground mb-6 text-center text-gradient-gold">SmotVisa Services</h3>
                     <div className="grid md:grid-cols-3 gap-5">
                         {servicesData.map((service, idx) => (
                             <MotionDiv
