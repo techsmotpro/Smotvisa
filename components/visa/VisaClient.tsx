@@ -51,7 +51,7 @@ const VisaClient = ({ destinations, moreCountries }: VisaClientProps) => {
                                 transition={{ delay: idx * 0.1 }}
                                 className="group relative rounded-3xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 bg-card border border-border"
                             >
-                                <Link href={`/visa/${dest.id}-visa`}>
+                                <Link href={`/visa/${dest.id}-visa-consultants`}>
                                     <div className="aspect-[3/4] relative overflow-hidden">
                                         <img
                                             src={dest.image}

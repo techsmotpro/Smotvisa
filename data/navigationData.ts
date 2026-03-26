@@ -2,22 +2,22 @@
 import { offices } from "./officeData";
 
 export const visaCountries = [
-    { id: "us", name: "United States", flag: "🇺🇸", href: "/visa/us-visa" },
-    { id: "uk", name: "United Kingdom", flag: "🇬🇧", href: "/visa/uk-visa" },
-    { id: "canada", name: "Canada", flag: "🇨🇦", href: "/visa/canada-visa" },
-    { id: "australia", name: "Australia", flag: "🇦🇺", href: "/visa/australia-visa" },
-    { id: "uae", name: "UAE", flag: "🇦🇪", href: "/visa/uae-visa" },
-    { id: "schengen", name: "Schengen", flag: "🇪🇺", href: "/visa/schengen-visa" },
+    { id: "us", name: "United States", flag: "🇺🇸", href: "/visa/us-visa-consultants" },
+    { id: "uk", name: "United Kingdom", flag: "🇬🇧", href: "/visa/uk-visa-consultants" },
+    { id: "canada", name: "Canada", flag: "🇨🇦", href: "/visa/canada-visa-consultants" },
+    { id: "australia", name: "Australia", flag: "🇦🇺", href: "/visa/australia-visa-consultants" },
+    { id: "uae", name: "UAE", flag: "🇦🇪", href: "/visa/uae-visa-consultants" },
+    { id: "schengen", name: "Schengen", flag: "🇪🇺", href: "/visa/schengen-visa-consultants" },
 ];
 
 export const services = [
     {
-        id: "visa-services",
-        name: "Visa Services",
+        id: "visa",
+        name: "Visa",
         href: "/services",
-        submenu: visaCountries.map(c => ({ id: c.id, name: `${c.name} Visa`, flag: c.flag, href: c.href }))
+        submenu: visaCountries.map(c => ({ id: c.id, name: c.name, flag: c.flag, href: c.href }))
     },
-    { id: "tours", name: "Tours & Packages", href: "/services/tours" },
+    { id: "tours", name: "Tours", href: "/services/tours" },
     { id: "air-ticketing", name: "Air Ticketing", href: "/services/air-ticketing" }
 ];
 
