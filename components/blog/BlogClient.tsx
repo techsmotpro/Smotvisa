@@ -10,13 +10,49 @@ export default function BlogClient({ blogs }: { blogs: BlogPost[] }) {
     const [search, setSearch] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("All");
 
-    const categories = ["All", ...new Set(blogs.map(b => b.category))];
+    // Extract all possible categories from all fields (category, category_names, tagname)
+    const extractCategories = (blog: BlogPost): string[] => {
+        const categories: string[] = [];
+        
+        if (blog.category) {
+            categories.push(blog.category);
+        }
+        
+        if (blog.category_names) {
+            if (typeof blog.category_names === 'string') {
+                categories.push(blog.category_names);
+            } else {
+                categories.push(...blog.category_names);
+            }
+        }
+        
+        if (blog.tagname) {
+            if (typeof blog.tagname === 'string') {
+                categories.push(blog.tagname);
+            } else {
+                categories.push(...blog.tagname);
+            }
+        }
+        
+        return categories.filter(Boolean);
+    };
+
+    // Get unique categories from all blogs
+    const categories = ["All", ...new Set(blogs.flatMap(extractCategories))];
 
     const filteredBlogs = blogs.filter(b => {
         const matchesSearch = b.title.toLowerCase().includes(search.toLowerCase()) ||
             b.excerpt.toLowerCase().includes(search.toLowerCase());
-        const matchesCategory = selectedCategory === "All" || b.category === selectedCategory;
-        return matchesSearch && matchesCategory;
+        
+        if (selectedCategory === "All") {
+            return matchesSearch;
+        }
+        
+        // Check if blog matches selected category in any of the category fields
+        const blogCategories = extractCategories(b);
+        return matchesSearch && blogCategories.some(cat => 
+            cat.toLowerCase() === selectedCategory.toLowerCase()
+        );
     });
 
     return (

@@ -3,6 +3,8 @@ export interface BlogPost {
     slug: string;
     image: string;
     category: string;
+    category_names?: string | string[];
+    tagname?: string | string[];
     title: string;
     excerpt: string;
     content: string;
@@ -69,7 +71,13 @@ export const fetchBlogs = async (): Promise<BlogPost[]> => {
         return results.map(b => ({
             ...b,
             slug: b.slug || b.id,
-            excerpt: b.excerpt ? b.excerpt.replace(/<[^>]*>/g, '').replace(/&hellip;/g, '...') : ''
+            excerpt: b.excerpt ? b.excerpt.replace(/<[^>]*>/g, '').replace(/&hellip;/g, '...') : '',
+            // Ensure category fields are properly handled
+            category: b.category || b.category_names?.[0] || b.tagname?.[0] || 'Travel',
+            category_names: b.category_names || (b.category ? [b.category] : []),
+            tagname: b.tagname || [],
+            // Convert plain text content to HTML with paragraphs
+            content: b.content ? convertPlainTextToHtml(b.content) : ''
         }));
     } catch (error) {
         console.error('Error fetching blogs:', error);
@@ -94,11 +102,30 @@ export const fetchBlogBySlug = async (slug: string): Promise<BlogPost | undefine
         return {
             ...blog,
             slug: blog.slug || blog.id,
-            excerpt: blog.excerpt ? blog.excerpt.replace(/<[^>]*>/g, '').replace(/&hellip;/g, '...') : ''
+            excerpt: blog.excerpt ? blog.excerpt.replace(/<[^>]*>/g, '').replace(/&hellip;/g, '...') : '',
+            // Ensure category fields are properly handled
+            category: blog.category || blog.category_names?.[0] || blog.tagname?.[0] || 'Travel',
+            category_names: blog.category_names || (blog.category ? [blog.category] : []),
+            tagname: blog.tagname || [],
+            // Convert plain text content to HTML with paragraphs
+            content: blog.content ? convertPlainTextToHtml(blog.content) : ''
         };
     } catch (error) {
         console.error('Error fetching blog by slug:', error);
         // Find blog from fallback data if API fails
         return fallbackBlogs.find(b => b.slug === slug || b.id === slug);
     }
+};
+
+// Helper function to convert plain text to HTML with paragraphs
+const convertPlainTextToHtml = (text: string): string => {
+    // Split text into paragraphs based on double newlines
+    const paragraphs = text.split(/\n\n+/).filter(p => p.trim());
+    
+    // Convert each paragraph to HTML
+    return paragraphs.map(paragraph => {
+        // Replace single newlines with <br> tags within paragraphs
+        const formatted = paragraph.replace(/\n/g, '<br>');
+        return `<p>${formatted}</p>`;
+    }).join('');
 };
