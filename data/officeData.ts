@@ -108,7 +108,7 @@ export const offices: Office[] = [
         id: "ahmedabad",
         city: "Ahmedabad",
         name: "SmotVisa",
-        address: "1st Floor, East Wing, Privilon, Ambli Road, Sarkhej, Gandhinagar Highway, Ahmedabad, Gujarat 380058",
+        address: "1st Floor, East Wing, Privilon, Ambli Road, Sarkhej - Gandhinagar Hwy, Ahmedabad, Gujarat 380058",
         phone: ["+91-8951697588"],
         email: "info@smotvisa.com",
         mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.739429860393!2d72.8543!3d19.0544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8d8d8d8d8d8%3A0x1234567890abcdef!2sAhmedabad!5e0!3m2!1sen!2sin!4v1710000000000",
