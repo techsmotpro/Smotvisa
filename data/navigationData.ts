@@ -28,6 +28,7 @@ export const branches = [
         submenu: [
             { id: "bandra-east-mumbai", name: "Bandra East, Mumbai", href: "/contact/mumbai/visa-agents-in-bandra-east" },
             { id: "kandivali-mumbai", name: "Kandivali, Mumbai", href: "/contact/mumbai/visa-agents-in-kandivali" },
+            { id: "goregaon-east-mumbai", name: "Goregaon East, Mumbai", href: "/contact/mumbai/visa-agents-in-goregaon-east" },
             { id: "shivaji-nagar-pune", name: "Shivaji Nagar, Pune", href: "/contact/pune/visa-agents-in-shivaji-nagar" },
             { id: "yerwada-pune", name: "Yerwada, Pune", href: "/contact/pune/visa-agents-in-yerwada" }
         ]

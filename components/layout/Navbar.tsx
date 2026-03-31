@@ -58,7 +58,7 @@ const Navbar = () => {
                 <div className="container mx-auto flex items-center justify-between px-4 py-5">
                     <Link href="/" onClick={handleLinkClick} className="flex items-center gap-3 navbar-logo-container">
                         <Image 
-                            src="/assets/small--Y9qzfea.png" 
+                        src="/assets/small--Y9qzfea.png" 
                             alt="SmotVisa" 
                             width={60} 
                             height={60} 
