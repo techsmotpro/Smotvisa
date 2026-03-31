@@ -6,8 +6,8 @@ import PageHeader from "@/components/ui/PageHeader";
 import { MotionDiv } from "@/components/ui/MotionWrapper";
 
 export const metadata = {
-  title: "Explore Our Comprehensive Service Solution | SmotVisa",
-  description: "Experience hassle-free visa applications with expert support, documentation help, and end-to-end services.",
+  title: "Explore Our Comprehensive Visa, Tour Packages and Airline ticket Services | SmotVisaExplore Our Comprehensive Service Solution | SmotVisa",
+  description: "Experience hassle free visa application with Smotvisa's professional services. Our team provides a wide range of solutions for all your visa needs. Learn more on our website now!",
 
   keywords: [
     "travel services India",
@@ -32,8 +32,8 @@ export const metadata = {
   publisher: "SmotVisa",
 
   openGraph: {
-    title: "Explore Our Comprehensive Service Solution | SmotVisa",
-    description: "Experience hassle-free visa applications with expert support, documentation help, and end-to-end services.",
+    title: "Explore Our Comprehensive Visa, Tour Packages and Airline ticket Services | SmotVisa",
+    description: "Experience hassle free visa application with Smotvisa's professional services. Our team provides a wide range of solutions for all your visa needs. Learn more on our website now!",
     url: "https://smotvisa.com/services",
     siteName: "SmotVisa",
     images: ["/images/hero-travel-CJWf8Tv1.jpg"],
@@ -42,8 +42,8 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Explore Our Comprehensive Service Solution | SmotVisa",
-    description: "Experience hassle-free visa applications with expert support, documentation help, and end-to-end services.",
+    title: "Explore Our Comprehensive Visa, Tour Packages and Airline ticket Services | SmotVisa",
+    description: "Experience hassle free visa application with Smotvisa's professional services. Our team provides a wide range of solutions for all your visa needs. Learn more on our website now!",
   }
 };
 

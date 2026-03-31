@@ -10,7 +10,7 @@ import BlogSection from "@/components/sections/BlogSection";
 export const metadata = {
   title: "Ultimate Visa and Travel Consultants in India | SmotVisa",
   description:
-    "Experience expert visa assistance for US, UK, Canada, Singapore, Dubai. Our expert team ensures seamless travel support.",
+    "Experience expert visa assistance for US, UK, Canada, Singapore, Dubai, the leading visa and travel agency. Our expert team will handle all your visa and travel needs, ensuring a seamless and enjoyable trip.",
 
   keywords: [
     "visa services India",
@@ -36,7 +36,7 @@ export const metadata = {
 
   openGraph: {
     title: "Ultimate Visa and Travel Consultants in India | SmotVisa",
-    description: "Experience expert visa assistance for US, UK, Canada, Singapore, Dubai. Our expert team ensures seamless travel support.",
+    description: "Experience expert visa assistance for US, UK, Canada, Singapore, Dubai, the leading visa and travel agency. Our expert team will handle all your visa and travel needs, ensuring a seamless and enjoyable trip.",
     url: "https://smotvisa.com",
     siteName: "SmotVisa",
     images: ["/images/visa-services-MHOtW-3U.jpg"],
@@ -46,7 +46,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Ultimate Visa and Travel Consultants in India | SmotVisa",
-    description: "Experience expert visa assistance for US, UK, Canada, Singapore, Dubai. Our expert team ensures seamless travel support.",
+    description: "Experience expert visa assistance for US, UK, Canada, Singapore, Dubai, the leading visa and travel agency. Our expert team will handle all your visa and travel needs, ensuring a seamless and enjoyable trip.",
   }
 };
 

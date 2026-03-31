@@ -16,19 +16,28 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         };
     }
 
-    // Set specific metadata for US, UK, and Canada
+    // Set specific metadata for US, UK, Canada, Australia, UAE, and Schengen
     let metaTitle = `${visa.name} Visa Services ${visa.flag || ""} | SmotVisa`;
     let metaDescription = visa.description;
     
     if (id === "us") {
-        metaTitle = "Apply Online Tourist and Business US Visa | SmotVisa";
-        metaDescription = "Apply for a US tourist or business visa with expert consultants. Includes documentation & interview prep.";
+        metaTitle = "Get your USA visa approval within days of applying. Our service ensures you get your visa on time through helping you in the application process and reliable support.";
+        metaDescription = "Looking for a reliable US Visa Consultant? Get expert guidance for tourist, student, and work visas. Increase your chances of approval with professional visa assistance.";
     } else if (id === "uk") {
-        metaTitle = "Apply UK Tourist & Business Visa | SmotVisa";
-        metaDescription = "Expert UK visa consultants offering document verification and complete application support.";
+        metaTitle = "Best UK Visa Consultant for Fast & Successful Approval | SmotVisa";
+        metaDescription = "Apply for a UK tourist or business visa with SmotVisa. We our UK visa consultant provide expert guidance, document verification, and end-to-end visa application support.";
     } else if (id === "canada") {
-        metaTitle = "Apply Canada Tourist & Business Visa | SmotVisa";
-        metaDescription = "Get Canada visitor visa assistance with documentation, biometrics, and expert guidance.";
+        metaTitle = "Best Canada Visa Consultant service in India | Smotvisa";
+        metaDescription = "Apply for Canada Business, Tourist visa, visitor visa with the help of experienced Canada visa consultants. Get step-by-step support today.";
+    } else if (id === "australia") {
+        metaTitle = "Trusted Australian Visa Consultant for Business & Tourist Visas in India | SmotVisa";
+        metaDescription = "Apply for Australia Tourist or Business Visa with SmotVisa. Get expert guidance, document verification, and end-to-end visa application support.";
+    } else if (id === "uae") {
+        metaTitle = "Best Dubai Visa Consultant | Expert Dubai Visa Agency | SmotVisa";
+        metaDescription = "We are Professional Dubai visa consultant offering tourist and business visa services across India. Get yours quick visa approval and hassle-free travel to the UAE from Smotvisa.";
+    } else if (id === "schengen") {
+        metaTitle = "Best Schengen Visa Consultant in India | SmotVisa";
+        metaDescription = "Looking for a reliable Schengen visa consultant in India? SmotVisa offers expert assistance for Schengen tourist and business visas with complete documentation support and smooth visa processing.";
     }
 
     return {
@@ -87,7 +96,7 @@ export default async function VisaDetailPage({ params }: { params: Promise<{ slu
         );
     }
 
-    // Set specific H1 for US, UK, and Canada
+    // Set specific H1 for US, UK, Canada, Australia, UAE, and Schengen
     let pageTitle = `${visa.name} Visa Services ${visa.flag || ""}`;
     
     if (id === "us") {
@@ -96,6 +105,12 @@ export default async function VisaDetailPage({ params }: { params: Promise<{ slu
         pageTitle = "UK Tourist & Business Visa Services";
     } else if (id === "canada") {
         pageTitle = "Canada Tourist & Business Visa Services";
+    } else if (id === "australia") {
+        pageTitle = "Australia Tourist & Business Visa Services";
+    } else if (id === "uae") {
+        pageTitle = "UAE Tourist Visa Services";
+    } else if (id === "schengen") {
+        pageTitle = "Schengen Visa Services";
     }
 
     return (

@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Visa Eligibility Calculator | Check Your Visa Chances | SmotVisa",
-    description: "Calculate your visa eligibility for Canada PR, UK visitor visa, and USA B1/B2 in seconds using our advanced visa checker.",
+    title: "Visa Checker Status tool | Smotvisa",
+    description: "Check your visa status quickly with the Smotvisa Visa Checker Status Tool. Get real-time updates and track your visa application easily and securely online.",
 
     keywords: [
         "visa eligibility calculator",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     publisher: "SmotVisa",
 
     openGraph: {
-        title: "Visa Eligibility Calculator | Check Your Visa Chances | SmotVisa",
-        description: "Calculate your visa eligibility for Canada PR, UK visitor visa, and USA B1/B2 in seconds using our advanced visa checker.",
+        title: "Visa Checker Status tool | Smotvisa",
+        description: "Check your visa status quickly with the Smotvisa Visa Checker Status Tool. Get real-time updates and track your visa application easily and securely online.",
         url: "https://smotvisa.com/visa-checker",
         siteName: "SmotVisa",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
 
     twitter: {
         card: "summary_large_image",
-        title: "Visa Eligibility Calculator | Check Your Visa Chances | SmotVisa",
-        description: "Calculate your visa eligibility for Canada PR, UK visitor visa, and USA B1/B2 in seconds using our advanced visa checker.",
+        title: "Visa Checker Status tool | Smotvisa",
+        description: "Check your visa status quickly with the Smotvisa Visa Checker Status Tool. Get real-time updates and track your visa application easily and securely online.",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
     }
 };

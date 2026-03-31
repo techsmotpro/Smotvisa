@@ -6,8 +6,8 @@ import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "International Tour Packages | Bespoke Adventures | SmotVisa",
-    description: "Discover curated international tour packages with SmotVisa. From exotic destinations to cultural adventures, we orchestrate every detail for an unforgettable travel experience.",
+    title: "Best Domestic and International Travel Packages | Smotvisa",
+    description: "Explore the world with SmotVisa domestic and international tours. We offer travel packages, tourist visa assistance, and complete travel support for a hassle-free holiday experience.",
 
     keywords: [
         "international tour packages",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     publisher: "SmotVisa",
 
     openGraph: {
-        title: "International Tour Packages | Bespoke Adventures | SmotVisa",
-        description: "Discover curated international tour packages with SmotVisa. From exotic destinations to cultural adventures, we orchestrate every detail for an unforgettable travel experience.",
+        title: "Best Domestic and International Travel Packages | Smotvisa",
+        description: "Explore the world with SmotVisa domestic and international tours. We offer travel packages, tourist visa assistance, and complete travel support for a hassle-free holiday experience.",
         url: "https://smotvisa.com/services/tours",
         siteName: "SmotVisa",
         images: ["/images/australia-tour.png"],
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
 
     twitter: {
         card: "summary_large_image",
-        title: "International Tour Packages | Bespoke Adventures | SmotVisa",
-        description: "Discover curated international tour packages with SmotVisa. From exotic destinations to cultural adventures, we orchestrate every detail for an unforgettable travel experience.",
+        title: "Best Domestic and International Travel Packages | Smotvisa",
+        description: "Explore the world with SmotVisa domestic and international tours. We offer travel packages, tourist visa assistance, and complete travel support for a hassle-free holiday experience.",
         images: ["/images/australia-tour.png"],
     }
 };

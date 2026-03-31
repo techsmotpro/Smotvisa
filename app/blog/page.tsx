@@ -4,8 +4,8 @@ import { fetchBlogs } from "@/data/blogData";
 import BlogClient from "@/components/blog/BlogClient";
 
 export const metadata = {
-  title: "SmotVisa Travel Blog | Expert Visa Guides & Travel Tips",
-  description: "Expert insights, visa guides, and travel inspiration to help you navigate the world with confidence.",
+  title: "Blog for Visa, International Travel Tips Flight Booking | Smotvisa",
+  description: "Smotvisa blog for visa guides, international travel tips, and air ticket booking advice to help you plan smooth, affordable, and stress-free trips worldwide.",
 
   keywords: [
     "travel blog India",
@@ -29,8 +29,8 @@ export const metadata = {
   publisher: "SmotVisa",
 
   openGraph: {
-    title: "SmotVisa Travel Blog | Expert Visa Guides & Travel Tips",
-    description: "Expert insights, visa guides, and travel inspiration to help you navigate the world with confidence.",
+    title: "Blog for Visa, International Travel Tips Flight Booking | Smotvisa",
+    description: "Smotvisa blog for visa guides, international travel tips, and air ticket booking advice to help you plan smooth, affordable, and stress-free trips worldwide.",
     url: "https://smotvisa.com/blog",
     siteName: "SmotVisa",
     images: ["/images/hero-travel-CJWf8Tv1.jpg"],
@@ -39,8 +39,8 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "SmotVisa Travel Blog | Expert Visa Guides & Travel Tips",
-    description: "Expert insights, visa guides, and travel inspiration to help you navigate the world with confidence.",
+    title: "Blog for Visa, International Travel Tips Flight Booking | Smotvisa",
+    description: "Smotvisa blog for visa guides, international travel tips, and air ticket booking advice to help you plan smooth, affordable, and stress-free trips worldwide.",
   }
 };
 

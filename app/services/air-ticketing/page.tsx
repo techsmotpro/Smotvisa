@@ -32,8 +32,8 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-    title: "Best International Flights from India | Premium Air Ticketing | SmotVisa",
-    description: "Book the Best International Flights from India with SmotVisa. Expert assistance for competitive fares, visa-aligned travel planning, and global destinations.",
+    title: " Fast & Easy Air Ticket Booking | Smotvisa",
+    description: "Fast & easy Air Ticket booking with Smotvisa. Book domestic and international flights at the best prices with quick confirmation and reliable travel support.",
     
     keywords: [
         "international flights from India",
@@ -56,8 +56,8 @@ export const metadata: Metadata = {
     publisher: "SmotVisa",
 
     openGraph: {
-        title: "Best International Flights from India | Premium Air Ticketing | SmotVisa",
-        description: "Book the Best International Flights from India with SmotVisa. Expert assistance for competitive fares, visa-aligned travel planning, and global destinations.",
+        title: " Fast & Easy Air Ticket Booking | Smotvisa",
+        description: "Fast & easy Air Ticket booking with Smotvisa. Book domestic and international flights at the best prices with quick confirmation and reliable travel support.",
         url: "https://smotvisa.com/services/air-ticketing",
         siteName: "SmotVisa",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
@@ -66,8 +66,8 @@ export const metadata: Metadata = {
 
     twitter: {
         card: "summary_large_image",
-        title: "Best International Flights from India | Premium Air Ticketing | SmotVisa",
-        description: "Book the Best International Flights from India with SmotVisa. Expert assistance for competitive fares, visa-aligned travel planning, and global destinations.",
+        title: "Fast & Easy Air Ticket Booking | Smotvisa",
+        description: "Fast & easy Air Ticket booking with Smotvisa. Book domestic and international flights at the best prices with quick confirmation and reliable travel support.",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
     },
 
