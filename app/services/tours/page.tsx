@@ -111,7 +111,7 @@ export default function TourPackagesPage() {
                                         </div>
                                     </div>
 
-                                    <Link href={`/contact?package=${pkg.id}`}>
+                                    <Link href="/contact">
                                         <button className="w-full py-5 bg-muted hover:bg-secondary hover:text-secondary-foreground transition-all rounded-2xl font-display font-bold text-foreground flex items-center justify-center gap-3 group/btn">
                                             Book this Experience <ArrowRight className="h-5 w-5 group-hover/btn:translate-x-1 transition-transform" />
                                         </button>
