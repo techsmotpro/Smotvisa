@@ -18,27 +18,89 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                     <Globe className="w-96 h-96 text-white" />
                 </div>
                 <div className="container mx-auto px-4 relative z-10">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        <Link
-                            href="/contact"
-                            className="inline-flex items-center gap-2 text-white/70 hover:text-secondary mb-8 transition-colors text-sm font-bold tracking-widest uppercase"
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        {/* Left Side: Existing Content */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
                         >
-                            <ArrowLeft className="h-4 w-4" /> Back to Contact
-                        </Link>
-                        <div className="flex items-center gap-3 text-secondary font-display font-bold uppercase tracking-[0.2em] text-xs mb-6">
-                            <MapPin className="h-4 w-4" /> {office.city} Office
-                        </div>
-                        <h1 className="text-4xl md:text-7xl font-display font-bold text-white mb-6 leading-tight">
-                            {office.name}
-                        </h1>
-                        <p className="text-lg md:text-xl text-white/70 font-body max-w-2xl leading-relaxed">
-                            Serving travelers across {office.city} with professional visa consulting, passport services, and international flight bookings.
-                        </p>
-                    </motion.div>
+                            <Link
+                                href="/contact"
+                                className="inline-flex items-center gap-2 text-white/70 hover:text-secondary mb-8 transition-colors text-sm font-bold tracking-widest uppercase"
+                            >
+                                <ArrowLeft className="h-4 w-4" /> Back to Contact
+                            </Link>
+                            <div className="flex items-center gap-3 text-secondary font-display font-bold uppercase tracking-[0.2em] text-xs mb-6">
+                                <MapPin className="h-4 w-4" /> {office.city} Office
+                            </div>
+                            <h1 className="text-4xl md:text-7xl font-display font-bold text-white mb-6 leading-tight">
+                                {office.name}
+                            </h1>
+                            <p className="text-lg md:text-xl text-white/70 font-body max-w-2xl leading-relaxed">
+                                Serving travelers across {office.city} with professional visa consulting, passport services, and international flight bookings.
+                            </p>
+                            
+                            <div className="mt-6">
+                                <Link
+                                    href={`tel:${office.phone[0].replace(/\D/g, '')}`}
+                                    className="inline-flex items-center gap-3 px-6 py-4 bg-secondary text-secondary-foreground font-display font-bold text-base rounded-2xl shadow-gold hover:translate-y-[-2px] transition-all"
+                                >
+                                    <Phone className="h-5 w-5" />
+                                    Reach us : {office.phone[0]}
+                                </Link>
+                            </div>
+                        </motion.div>
+
+                        {/* Right Side: Contact Form */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 0.3 }}
+                            className="bg-card/90 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/10 p-4 md:p-6 text-black"
+                        >
+                            <form className="space-y-3 text-black" onSubmit={(e) => e.preventDefault()}>
+                                <h3 className="text-xl font-display font-bold text-foreground mb-4">Contact Us</h3>
+                                
+                                <div className="space-y-1">
+                                    <label className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Full Name</label>
+                                    <input
+                                        type="text"
+                                        required
+                                        className="w-full px-3 py-2 rounded-lg border border-border bg-muted/30 text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all placeholder:text-muted-foreground/50"
+                                        placeholder="Enter your name"
+                                    />
+                                </div>
+
+                                <div className="space-y-1">
+                                    <label className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Email Address</label>
+                                    <input
+                                        type="email"
+                                        required
+                                        className="w-full px-3 py-2 rounded-lg border border-border bg-muted/30 text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all placeholder:text-muted-foreground/50"
+                                        placeholder="name@example.com"
+                                    />
+                                </div>
+
+                                <div className="space-y-1">
+                                    <label className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Message</label>
+                                    <textarea
+                                        rows={3}
+                                        required
+                                        className="w-full px-3 py-2 rounded-lg border border-border bg-muted/30 text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all resize-none placeholder:text-muted-foreground/50"
+                                        placeholder="Tell us about your requirements..."
+                                    />
+                                </div>
+
+                                <button
+                                    type="submit"
+                                    className="w-full px-4 py-3 bg-secondary text-secondary-foreground font-display font-bold text-sm rounded-lg shadow-gold hover:translate-y-[-2px] transition-all text-center"
+                                >
+                                    Send Message
+                                </button>
+                            </form>
+                        </motion.div>
+                    </div>
                 </div>
             </section>
 
@@ -172,7 +234,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                                 <p className="text-[10px] text-muted-foreground font-display font-bold uppercase tracking-[0.2em] mb-6">Visual Pin</p>
                                 <div className="rounded-3xl overflow-hidden h-60 border border-border shadow-inner relative ring-4 ring-muted/10">
                                     <iframe
-                                        src={office.mapUrl}
+                                        src={`https://www.google.com/maps/embed/v1/place?q=${encodeURIComponent(office.address)}&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8`}
                                         width="100%"
                                         height="100%"
                                         style={{ border: 0 }}
