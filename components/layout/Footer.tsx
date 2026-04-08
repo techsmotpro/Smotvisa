@@ -142,9 +142,8 @@ const Footer = () => {
           </div>
 
           <div className="flex gap-8 text-[11px] font-body text-primary-foreground/40">
-            <Link href="#" className="hover:text-secondary transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-secondary transition-colors">Terms of Service</Link>
-            <Link href="#" className="hover:text-secondary transition-colors">Cookies Settings</Link>
+            <Link href="/privacy-policy" className="hover:text-secondary transition-colors">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-secondary transition-colors">Terms of Service</Link>
           </div>
 
           <button
