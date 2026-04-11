@@ -44,7 +44,7 @@ export const offices: Office[] = [
         city: "Goregaon East, Mumbai",
         name: "SmotVisa",
         address: "2nd floor, Building 4, North Wing, NESCO IT Park, Western Express Hwy, Goregaon East, Mumbai, Maharashtra 400063",
-        phone: ["+91-94823 86529"],
+        phone: ["+91-89040 08843"],
         email: "info@smotvisa.com",
         mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.739429860393!2d72.8543!3d19.0544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8d8d8d8d8d8%3A0x1234567890abcdef!2sGoregaon%20East%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1710000000000",
         description: "Located in NESCO IT Park, our Goregaon East office serves the vibrant business and tech community in Mumbai's western suburbs.",
