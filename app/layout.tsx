@@ -26,7 +26,14 @@ export const metadata: Metadata = {
     images: ["/assets/small--Y9qzfea.png"],
   },
   icons: {
-    icon: "/assets/small--Y9qzfea.png",
+    icon: [
+      { url: "/Fevicon.png", sizes: "16x16", type: "image/png" },
+      { url: "/Fevicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/Fevicon.png", sizes: "48x48", type: "image/png" },
+      { url: "/Fevicon.png", sizes: "64x64", type: "image/png" },
+      { url: "/Fevicon.png", sizes: "128x128", type: "image/png" },
+      { url: "/Fevicon.png", sizes: "256x256", type: "image/png" },
+    ],
   },
 };
 

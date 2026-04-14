@@ -24,9 +24,7 @@ const Footer = () => {
           {/* Brand & Tagline */}
           <div className="space-y-6">
             <Link href="/" className="block">
-              <Image src="/assets/small--Y9qzfea.png" alt="SmotVisa" width={100} height={100} className="w-auto h-20 mb-4 brightness-200 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-500 hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]" />
-              <h2 className="font-display font-bold text-2xl text-primary-foreground tracking-tight">SmotVisa</h2>
-              <p className="text-[10px] font-body text-primary-foreground/60 uppercase tracking-widest mt-1 font-bold">Visa & Travel Agents</p>
+                <Image src="/logo.png" alt="SmotVisa" width={200} height={85} className="w-auto h-20 mb-4 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-500 hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]" />
             </Link>
             <p className="text-sm font-body text-primary-foreground/70 leading-relaxed italic">
               "The status of the customer needs is monitored online with the help of our state of technology."
