@@ -112,7 +112,7 @@ export default function ContactClient({ offices, initialBranchId }: ContactClien
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeOffice.id}
-                                initial={{ opacity: 0, y: 30 }}
+                                initial={{ opacity: 1, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -30 }}
                                 transition={{ duration: 0.4 }}
@@ -177,7 +177,7 @@ export default function ContactClient({ offices, initialBranchId }: ContactClien
                         {/* Map Box */}
                         <motion.div
                             key={`map-${activeOffice.id}`}
-                            initial={{ opacity: 0 }}
+                            initial={{ opacity: 1 }}
                             animate={{ opacity: 1 }}
                             className="rounded-[2rem] overflow-hidden shadow-card border border-border h-64 relative ring-4 ring-white"
                         >
@@ -195,7 +195,7 @@ export default function ContactClient({ offices, initialBranchId }: ContactClien
 
                     {/* Form Section */}
                     <motion.div
-                        initial={{ opacity: 0, x: 20 }}
+                        initial={{ opacity: 1, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         className="lg:col-span-7"
                     >

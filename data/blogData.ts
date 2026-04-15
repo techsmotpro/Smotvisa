@@ -58,16 +58,13 @@ const fallbackBlogs: BlogPost[] = [
 // Fetch blogs from Smot Pro backend API
 export const fetchBlogs = async (): Promise<BlogPost[]> => {
     try {
-        console.log('Fetching blogs from API...');
         const response = await fetch('https://smotvisa-backend-visa.vercel.app/api/blogs', {
-            cache: 'no-store' // Disable caching for real-time updates
+            next: { revalidate: 3600 }
         });
-        console.log('API response status:', response.status);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const blogs: BlogPost[] = await response.json();
-        console.log('Blogs fetched:', blogs);
 
         // Return blogs if we get valid data, otherwise return fallbacks
         const results = blogs && blogs.length > 0 ? blogs : fallbackBlogs;
@@ -93,7 +90,7 @@ export const fetchBlogs = async (): Promise<BlogPost[]> => {
 export const fetchBlogBySlug = async (slug: string): Promise<BlogPost | undefined> => {
     try {
         const response = await fetch(`https://smotvisa-backend-visa.vercel.app/api/blogs/${slug}`, {
-            cache: 'no-store' // Disable caching for real-time updates
+            next: { revalidate: 3600 }
         });
         if (!response.ok) {
             if (response.status === 404) {

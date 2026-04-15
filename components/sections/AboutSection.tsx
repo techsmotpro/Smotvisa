@@ -19,7 +19,7 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
             <div className="container mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <MotionDiv
-                        initial={{ opacity: 0, x: -30 }}
+                        initial={{ opacity: 1, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
@@ -40,7 +40,7 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                     </MotionDiv>
 
                     <MotionDiv
-                        initial={{ opacity: 0, x: 30 }}
+                        initial={{ opacity: 1, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
@@ -133,7 +133,7 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                         ].map((item, i) => (
                             <MotionDiv
                                 key={i}
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 1, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}

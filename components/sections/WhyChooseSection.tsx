@@ -39,7 +39,7 @@ const WhyChooseSection = () => {
         <section className="py-24 bg-muted/30 overflow-hidden">
             <div className="container mx-auto px-4">
                 <MotionDiv
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 1, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-20"
@@ -55,7 +55,7 @@ const WhyChooseSection = () => {
                     {reasons.map((reason, idx) => (
                         <MotionDiv
                             key={idx}
-                            initial={{ opacity: 0, scale: 0.95 }}
+                            initial={{ opacity: 1, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}

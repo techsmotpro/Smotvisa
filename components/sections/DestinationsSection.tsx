@@ -61,7 +61,7 @@ const DestinationsSection = () => {
         <section id="destinations" className="py-8 bg-muted/50">
             <div className="container mx-auto px-4">
                 <MotionDiv
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 1, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-10"
@@ -79,7 +79,7 @@ const DestinationsSection = () => {
                     {destinations.map((dest, idx) => (
                         <MotionDiv
                             key={dest.name}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 1, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
@@ -113,7 +113,7 @@ const DestinationsSection = () => {
 
                 {/* More countries */}
                 <MotionDiv
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 1, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="bg-card rounded-2xl shadow-card border border-border p-6"

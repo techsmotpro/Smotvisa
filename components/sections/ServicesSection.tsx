@@ -9,7 +9,7 @@ const ServicesSection = () => {
         <section id="services" className="py-6 bg-background">
             <div className="container mx-auto px-4">
                 <MotionDiv
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 1, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-8"
@@ -30,7 +30,7 @@ const ServicesSection = () => {
                         {visaCountries.map((country, idx) => (
                             <MotionDiv
                                 key={country.name}
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 1, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
@@ -57,7 +57,7 @@ const ServicesSection = () => {
                         {servicesData.map((service, idx) => (
                             <MotionDiv
                                 key={service.id}
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 1, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}

@@ -21,7 +21,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left Side: Existing Content */}
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 1, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                         >
@@ -54,7 +54,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
 
                         {/* Right Side: Contact Form */}
                         <motion.div
-                            initial={{ opacity: 0, x: 20 }}
+                            initial={{ opacity: 1, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 0.3 }}
                             className="bg-card/90 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/10 p-4 md:p-6 text-black"
@@ -110,7 +110,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                     <div className="lg:col-span-8 space-y-16">
                         {/* Overview Section */}
                         <motion.section
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 1, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             className="space-y-8"
@@ -137,7 +137,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
 
                         {/* About the Organization Box */}
                         <motion.section
-                            initial={{ opacity: 0, scale: 0.98 }}
+                            initial={{ opacity: 1, scale: 0.98 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             className="bg-primary rounded-[3rem] p-10 md:p-16 text-primary-foreground relative overflow-hidden shadow-elevated border border-white/10"
@@ -166,7 +166,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                     {/* Sidebar: Location & Contact */}
                     <div className="lg:col-span-4 space-y-8">
                         <motion.div
-                            initial={{ opacity: 0, x: 20 }}
+                            initial={{ opacity: 1, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             className="bg-card rounded-[2.5rem] border border-border p-10 shadow-elevated sticky top-32 hover:border-secondary/20 transition-all"

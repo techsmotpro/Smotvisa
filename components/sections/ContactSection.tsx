@@ -54,7 +54,7 @@ const ContactSection = () => {
         <section id="contact" className="py-24 bg-muted/30">
             <div className="container mx-auto px-4">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 1, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-16"
@@ -90,7 +90,7 @@ const ContactSection = () => {
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeOffice.id}
-                                initial={{ opacity: 0, x: -20 }}
+                                initial={{ opacity: 1, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: 20 }}
                                 className="bg-primary rounded-3xl p-8 text-primary-foreground shadow-card relative overflow-hidden"
@@ -151,7 +151,7 @@ const ContactSection = () => {
                         {/* Map embed */}
                         <motion.div
                             key={`map-${activeOffice.id}`}
-                            initial={{ opacity: 0 }}
+                            initial={{ opacity: 1 }}
                             animate={{ opacity: 1 }}
                             className="rounded-3xl overflow-hidden shadow-card border border-border h-64 relative"
                         >
@@ -169,7 +169,7 @@ const ContactSection = () => {
 
                     {/* Form */}
                     <motion.div
-                        initial={{ opacity: 0, x: 20 }}
+                        initial={{ opacity: 1, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         className="lg:col-span-3"

@@ -51,7 +51,25 @@ export default function RootLayout({
     <html lang="en" className={cn("font-sans", geist.variable)}>
       <body className="antialiased">
         <TooltipProvider>
-          <Suspense fallback={<div className="h-16 bg-primary" />}>
+          <Suspense fallback={
+            <nav className="fixed top-0 left-0 w-full z-[9999] bg-primary/95 shadow-card border-b border-primary-foreground/10">
+              <div className="container mx-auto flex items-center justify-between px-4 py-5">
+                <a href="/" className="flex items-center gap-3">
+                  <span className="text-xl font-bold text-primary-foreground">SmotVisa</span>
+                </a>
+                <div className="hidden lg:flex items-center gap-2 font-body">
+                  <a href="/" className="px-4 py-2 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground rounded-lg hover:bg-primary-foreground/10 transition-all">Home</a>
+                  <a href="/about" className="px-4 py-2 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground rounded-lg hover:bg-primary-foreground/10 transition-all">About</a>
+                  <a href="/services" className="px-4 py-2 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground rounded-lg hover:bg-primary-foreground/10 transition-all">Services</a>
+                  <a href="/visa" className="px-4 py-2 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground rounded-lg hover:bg-primary-foreground/10 transition-all">Destinations</a>
+                  <a href="/contact" className="px-4 py-2 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground rounded-lg hover:bg-primary-foreground/10 transition-all">Branches</a>
+                  <a href="/blog" className="px-4 py-2 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground rounded-lg hover:bg-primary-foreground/10 transition-all">Blog</a>
+                  <a href="/visa-checker" className="px-4 py-2 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground rounded-lg hover:bg-primary-foreground/10 transition-all">Visa Checker</a>
+                </div>
+                <a href="/contact" className="hidden xl:block px-6 py-2.5 bg-secondary text-secondary-foreground font-body font-bold rounded-full hover:opacity-90 transition-all shadow-gold whitespace-nowrap">Get a Quote</a>
+              </div>
+            </nav>
+          }>
             <Navbar />
           </Suspense>
           <main className="pt-20">

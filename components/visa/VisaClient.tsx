@@ -45,7 +45,7 @@ const VisaClient = ({ destinations, moreCountries }: VisaClientProps) => {
                         {destinations.map((dest, idx) => (
                             <motion.div
                                 key={dest.name}
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 1, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
@@ -119,7 +119,7 @@ const VisaClient = ({ destinations, moreCountries }: VisaClientProps) => {
                         {filteredCountries.map((country, idx) => (
                             <motion.div
                                 key={country.name}
-                                initial={{ opacity: 0 }}
+                                initial={{ opacity: 1 }}
                                 whileInView={{ opacity: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.03 }}

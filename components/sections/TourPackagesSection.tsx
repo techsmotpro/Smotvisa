@@ -11,7 +11,7 @@ const TourPackagesSection = () => {
             <div className="container mx-auto px-4">
                 {/* Section Header */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 1, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-12"
@@ -33,7 +33,7 @@ const TourPackagesSection = () => {
                     {tourPackagesData.map((pkg, idx) => (
                         <motion.div
                             key={pkg.id}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 1, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
@@ -111,7 +111,7 @@ const TourPackagesSection = () => {
                 {/* Flight Packages Section */}
                 <div className="bg-gradient-to-br from-secondary/5 to-primary/5 rounded-3xl p-8 mb-12 border border-secondary/10">
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 1, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         className="text-center mb-8"
@@ -132,7 +132,7 @@ const TourPackagesSection = () => {
                         {popularRoutes.map((route, idx) => (
                             <motion.div
                                 key={idx}
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 1, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
@@ -170,7 +170,7 @@ const TourPackagesSection = () => {
                 {/* Travel Tips Section */}
                 <div className="bg-card rounded-3xl shadow-card border border-border p-8 mb-12 bg-gradient-to-br from-background to-muted/50">
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 1, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         className="text-center mb-6"
@@ -185,7 +185,7 @@ const TourPackagesSection = () => {
                         {travelTips.map((tip, idx) => (
                             <motion.div
                                 key={idx}
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 1, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
@@ -202,7 +202,7 @@ const TourPackagesSection = () => {
 
                 {/* CTA Section */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 1, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="bg-gradient-to-r from-primary via-primary-light to-secondary rounded-3xl p-12 text-center text-white shadow-elevated"

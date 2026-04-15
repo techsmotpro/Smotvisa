@@ -4,6 +4,17 @@ import Link from "next/link";
 import VisaDetailClient from "@/components/visa/VisaDetailClient";
 import type { Metadata } from "next";
 
+export function generateStaticParams() {
+    return [
+        { slug: "us-visa-consultant" },
+        { slug: "uk-visa-consultant" },
+        { slug: "canada-visa-consultant" },
+        { slug: "australia-visa-consultant" },
+        { slug: "uae-visa-consultant" },
+        { slug: "schengen-visa-consultant" },
+    ];
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
     const id = slug.replace("-visa-consultant", "");

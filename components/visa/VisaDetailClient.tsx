@@ -58,7 +58,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                 <section className="py-24 bg-muted/10 border-b border-border">
                     <div className="container mx-auto px-4">
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 1, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             className="max-w-4xl mx-auto space-y-16"
@@ -102,7 +102,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                 <section className="py-24 bg-muted/10 border-b border-border">
                     <div className="container mx-auto px-4">
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 1, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             className="max-w-4xl mx-auto space-y-12"
@@ -153,7 +153,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                 <section className="py-24 bg-muted/10 border-b border-border">
                     <div className="container mx-auto px-4">
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 1, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             className="max-w-4xl mx-auto space-y-12"
@@ -193,7 +193,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                 <section className="py-24 bg-muted/10 border-b border-border">
                     <div className="container mx-auto px-4">
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 1, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             className="max-w-4xl mx-auto space-y-16"
@@ -231,7 +231,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                     <div className="grid lg:grid-cols-2 gap-16">
                         {/* Requirements */}
                         <motion.div
-                            initial={{ opacity: 0, x: -20 }}
+                            initial={{ opacity: 1, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                         >
@@ -251,7 +251,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
 
                         {/* Steps */}
                         <motion.div
-                            initial={{ opacity: 0, x: 20 }}
+                            initial={{ opacity: 1, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                         >
@@ -302,7 +302,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
             {/* CTA */}
             <section className="py-24 container mx-auto px-4">
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.98 }}
+                    initial={{ opacity: 1, scale: 0.98 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     className="bg-primary p-12 md:p-24 rounded-[3.5rem] shadow-elevated relative overflow-hidden text-center border border-white/10"

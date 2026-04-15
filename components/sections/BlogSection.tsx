@@ -12,7 +12,7 @@ const BlogSection = async () => {
         <section id="blog" className="py-12 bg-background">
             <div className="container mx-auto px-4">
                 <MotionDiv
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 1, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-16"
@@ -30,7 +30,7 @@ const BlogSection = async () => {
                     {blogs.map((blog, idx) => (
                         <MotionDiv
                             key={blog.id}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 1, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}

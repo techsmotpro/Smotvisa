@@ -18,7 +18,7 @@ export default function HeroContent() {
     return (
         <div>
             <MotionDiv
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 1, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
             >
@@ -29,7 +29,7 @@ export default function HeroContent() {
             </MotionDiv>
 
             <MotionH1
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 1, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1 }}
                 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-primary-foreground leading-tight mb-6"
@@ -39,7 +39,7 @@ export default function HeroContent() {
             </MotionH1>
 
             <MotionP
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 1, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
                 className="text-lg sm:text-xl text-primary-foreground/80 font-body leading-relaxed mb-8 max-w-xl"
@@ -49,7 +49,7 @@ export default function HeroContent() {
             </MotionP>
 
             <MotionDiv
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 1, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.3 }}
                 className="flex flex-wrap gap-4 mb-12"
@@ -69,7 +69,7 @@ export default function HeroContent() {
             </MotionDiv>
 
             <MotionDiv
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 1, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.35 }}
                 className="mb-8"
@@ -83,7 +83,7 @@ export default function HeroContent() {
             </MotionDiv>
 
             <MotionDiv
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 1, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
                 className="flex gap-8"
