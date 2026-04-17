@@ -1,8 +1,5 @@
-"use client";
-
 import { ChevronRight, Home } from "lucide-react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 interface Breadcrumb {
     label: string;
@@ -25,14 +22,9 @@ const PageHeader = ({ title, breadcrumbs, description }: PageHeaderProps) => {
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
-                <motion.div
-                    initial={{ opacity: 1, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="max-w-4xl"
-                >
+                <div className="max-w-4xl">
                     {/* Breadcrumbs */}
-                    <nav className="flex items-center gap-2 mb-6 text-sm font-body">
+                    <nav className="flex items-center gap-2 mb-6 text-sm font-body" aria-label="Breadcrumb">
                         <Link
                             href="/"
                             className="text-primary-foreground/60 hover:text-secondary transition-colors flex items-center gap-1.5"
@@ -68,7 +60,7 @@ const PageHeader = ({ title, breadcrumbs, description }: PageHeaderProps) => {
                             {description}
                         </p>
                     )}
-                </motion.div>
+                </div>
             </div>
         </section>
     );

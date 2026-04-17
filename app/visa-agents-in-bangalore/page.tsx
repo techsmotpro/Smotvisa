@@ -3,6 +3,7 @@ import { MapPin, CheckCircle2, Star, ShieldCheck, Clock, ArrowRight } from "luci
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { offices } from "@/data/officeData";
+import JsonLd from "@/components/ui/JsonLd";
 import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { Metadata } from 'next';
 
@@ -46,72 +47,56 @@ export const metadata: Metadata = {
         title: "Best Visa Agents in Bangalore | Expert Visa Consultancy | SmotVisa",
         description: "Expert visa processing services in HSR Layout, Indiranagar, Koramangala and across Bangalore. SmotVisa is the best visa agency in Bangalore for US, UK, Canada, and Schengen visas.",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
-    },
-
-    other: {
-        "script:ld+json": JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "SmotVisa Bangalore",
-            "image": "https://www.smotvisa.com/logo.png", // Replace with actual logo URL
-            "@id": "https://www.smotvisa.com/visa-agents-in-bangalore",
-            "url": "https://www.smotvisa.com/visa-agents-in-bangalore",
-            "telephone": "+91 80 1234 5678", // Replace with actual phone
-            "address": [
-                {
-                    "@type": "PostalAddress",
-                    "streetAddress": "No.123, 19th Main Rd, Sector 4, HSR Layout",
-                    "addressLocality": "Bangalore",
-                    "postalCode": "560102",
-                    "addressCountry": "IN"
-                },
-                {
-                    "@type": "PostalAddress",
-                    "streetAddress": "No.456, 100 Feet Rd, Indiranagar",
-                    "addressLocality": "Bangalore",
-                    "postalCode": "560038",
-                    "addressCountry": "IN"
-                }
-            ],
-            "geo": [
-                {
-                    "@type": "GeoCoordinates",
-                    "latitude": 12.9121,
-                    "longitude": 77.6446
-                },
-                {
-                    "@type": "GeoCoordinates",
-                    "latitude": 12.9719,
-                    "longitude": 77.6412
-                }
-            ],
-            "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday"
-                ],
-                "opens": "09:00",
-                "closes": "18:00"
-            },
-            "sameAs": [
-                "https://www.facebook.com/smotvisa",
-                "https://www.instagram.com/smotvisa",
-                "https://www.linkedin.com/company/smotvisa"
-            ]
-        })
     }
 };
 
 export default function VisaAgentsInBangalore() {
     // Filter for Bangalore offices specifically
     const bangaloreOffices = offices.filter(o => o.city === "Bangalore" || o.address.includes("Bangalore"));
+    const bangaloreOffice = offices.find(o => o.id === "cv-raman-nagar-bangalore");
 
     return (
         <main className="bg-background">
+            {bangaloreOffice && (
+                <>
+                    <JsonLd data={{
+                        "@context": "https://schema.org",
+                        "@type": "LocalBusiness",
+                        "@id": "https://smotvisa.com/visa-agents-in-bangalore",
+                        "name": "SmotVisa Bangalore",
+                        "description": bangaloreOffice.description,
+                        "url": "https://smotvisa.com/visa-agents-in-bangalore",
+                        "telephone": bangaloreOffice.phone[0],
+                        "email": bangaloreOffice.email,
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": bangaloreOffice.address,
+                            "addressLocality": "Bangalore",
+                            "addressRegion": "Karnataka",
+                            "addressCountry": "IN"
+                        },
+                        "openingHoursSpecification": {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                            "opens": "09:00",
+                            "closes": "18:00"
+                        },
+                        "sameAs": [
+                            "https://www.facebook.com/smotvisa",
+                            "https://www.instagram.com/smotvisa",
+                            "https://www.linkedin.com/company/smotvisa"
+                        ]
+                    }} />
+                    <JsonLd data={{
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smotvisa.com/" },
+                            { "@type": "ListItem", "position": 2, "name": "Visa Agents in Bangalore", "item": "https://smotvisa.com/visa-agents-in-bangalore" }
+                        ]
+                    }} />
+                </>
+            )}
             <PageHeader
                 title="Best Visa Agents in Bangalore"
                 description="Expert visa processing services in HSR Layout, Indiranagar, Koramangala and across Bangalore. SmotVisa is your trusted partner for premium travel consultancy."

@@ -40,6 +40,7 @@ export const metadata: Metadata = {
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Suspense } from "react";
+import JsonLd from "@/components/ui/JsonLd";
 
 
 export default function RootLayout({
@@ -50,6 +51,26 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("font-sans", geist.variable)}>
       <body className="antialiased">
+        <JsonLd data={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "SmotVisa",
+          "url": "https://smotvisa.com",
+          "logo": "https://smotvisa.com/logo.png",
+          "description": "Expert visa processing for US, UK, Canada, Australia & 50+ countries. Your trusted partner for global mobility.",
+          "sameAs": [
+            "https://www.facebook.com/smotvisa",
+            "https://www.instagram.com/smotvisa",
+            "https://www.linkedin.com/company/smotvisa"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-80-4567-8901",
+            "contactType": "customer service",
+            "areaServed": "IN",
+            "availableLanguage": ["English", "Hindi"]
+          }
+        }} />
         <TooltipProvider>
           <Suspense fallback={
             <nav className="fixed top-0 left-0 w-full z-[9999] bg-primary/95 shadow-card border-b border-primary-foreground/10">

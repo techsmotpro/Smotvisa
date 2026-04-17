@@ -1,6 +1,7 @@
 import PageHeader from "@/components/ui/PageHeader";
-import ContactListClient from "@/components/contact/ContactListClient";
+import ContactListClient from "@/components/contact/ContactFilterClient";
 import { offices } from "@/data/officeData";
+import JsonLd from "@/components/ui/JsonLd";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -41,6 +42,14 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <main className="bg-background min-h-screen">
+            <JsonLd data={{
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smotvisa.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://smotvisa.com/contact" }
+                ]
+            }} />
             <PageHeader
                 title="Contact Our Experts"
                 description="Connect with India's leading visa and travel consultants. We provide personalized support for all your international journeys."

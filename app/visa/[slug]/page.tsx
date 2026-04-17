@@ -2,6 +2,7 @@ import { visaData } from "@/data/visaData";
 import PageHeader from "@/components/ui/PageHeader";
 import Link from "next/link";
 import VisaDetailClient from "@/components/visa/VisaDetailClient";
+import JsonLd from "@/components/ui/JsonLd";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -32,8 +33,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     let metaDescription = visa.description;
     
     if (id === "us") {
-        metaTitle = "Get your USA visa approval within days of applying. Our service ensures you get your visa on time through helping you in the application process and reliable support.";
-        metaDescription = "Looking for a reliable US Visa Consultant? Get expert guidance for tourist, student, and work visas. Increase your chances of approval with professional visa assistance.";
+        metaTitle = "Best US Visa Consultant for Fast & Successful Approval | SmotVisa";
+        metaDescription = "Looking for a reliable US Visa Consultant? Get expert guidance for B1/B2 tourist, student, and work visas. Increase your chances of approval with professional visa assistance.";
     } else if (id === "uk") {
         metaTitle = "Best UK Visa Consultant for Fast & Successful Approval | SmotVisa";
         metaDescription = "Apply for a UK tourist or business visa with SmotVisa. We our UK visa consultant provide expert guidance, document verification, and end-to-end visa application support.";
@@ -126,6 +127,28 @@ export default async function VisaDetailPage({ params }: { params: Promise<{ slu
 
     return (
         <main className="bg-background">
+            <JsonLd data={{
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smotvisa.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "Visa Services", "item": "https://smotvisa.com/visa" },
+                    { "@type": "ListItem", "position": 3, "name": visa.name, "item": `https://smotvisa.com/visa/${slug}` }
+                ]
+            }} />
+            <JsonLd data={{
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "name": `${visa.name} Visa Services`,
+                "description": visa.description,
+                "provider": {
+                    "@type": "Organization",
+                    "name": "SmotVisa",
+                    "url": "https://smotvisa.com"
+                },
+                "areaServed": "India",
+                "serviceType": "Visa Consulting"
+            }} />
             <PageHeader
                 title={pageTitle}
                 description={visa.description}

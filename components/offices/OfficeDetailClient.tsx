@@ -1,9 +1,8 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { Office } from "@/data/officeData";
 import { MapPin, Phone, Mail, Globe, ArrowLeft, CheckCircle2, Building2, Info, ArrowRight } from "lucide-react";
+import { MotionDiv } from "@/components/ui/MotionWrapper";
+import OfficeContactForm from "./OfficeContactForm";
 
 interface OfficeDetailClientProps {
     office: Office;
@@ -12,15 +11,14 @@ interface OfficeDetailClientProps {
 export default function OfficeDetailClient({ office }: OfficeDetailClientProps) {
     return (
         <main className="min-h-screen bg-background pb-20">
-            {/* Hero Section - Branded */}
+            {/* Hero Section */}
             <section className="bg-primary pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-20 opacity-10 pointer-events-none">
                     <Globe className="w-96 h-96 text-white" />
                 </div>
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        {/* Left Side: Existing Content */}
-                        <motion.div
+                        <MotionDiv
                             initial={{ opacity: 1, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
@@ -40,7 +38,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                             <p className="text-lg md:text-xl text-white/70 font-body max-w-2xl leading-relaxed">
                                 Serving travelers across {office.city} with professional visa consulting, passport services, and international flight bookings.
                             </p>
-                            
+
                             <div className="mt-6">
                                 <Link
                                     href={`tel:${office.phone[0].replace(/\D/g, '')}`}
@@ -50,56 +48,16 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                                     Reach us : {office.phone[0]}
                                 </Link>
                             </div>
-                        </motion.div>
+                        </MotionDiv>
 
-                        {/* Right Side: Contact Form */}
-                        <motion.div
+                        <MotionDiv
                             initial={{ opacity: 1, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 0.3 }}
                             className="bg-card/90 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/10 p-4 md:p-6 text-black"
                         >
-                            <form className="space-y-3 text-black" onSubmit={(e) => e.preventDefault()}>
-                                <h3 className="text-xl font-display font-bold text-foreground mb-4">Contact Us</h3>
-                                
-                                <div className="space-y-1">
-                                    <label className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Full Name</label>
-                                    <input
-                                        type="text"
-                                        required
-                                        className="w-full px-3 py-2 rounded-lg border border-border bg-muted/30 text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all placeholder:text-muted-foreground/50"
-                                        placeholder="Enter your name"
-                                    />
-                                </div>
-
-                                <div className="space-y-1">
-                                    <label className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Email Address</label>
-                                    <input
-                                        type="email"
-                                        required
-                                        className="w-full px-3 py-2 rounded-lg border border-border bg-muted/30 text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all placeholder:text-muted-foreground/50"
-                                        placeholder="name@example.com"
-                                    />
-                                </div>
-
-                                <div className="space-y-1">
-                                    <label className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Message</label>
-                                    <textarea
-                                        rows={3}
-                                        required
-                                        className="w-full px-3 py-2 rounded-lg border border-border bg-muted/30 text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all resize-none placeholder:text-muted-foreground/50"
-                                        placeholder="Tell us about your requirements..."
-                                    />
-                                </div>
-
-                                <button
-                                    type="submit"
-                                    className="w-full px-4 py-3 bg-secondary text-secondary-foreground font-display font-bold text-sm rounded-lg shadow-gold hover:translate-y-[-2px] transition-all text-center"
-                                >
-                                    Send Message
-                                </button>
-                            </form>
-                        </motion.div>
+                            <OfficeContactForm />
+                        </MotionDiv>
                     </div>
                 </div>
             </section>
@@ -109,7 +67,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                     {/* Main Content Area */}
                     <div className="lg:col-span-8 space-y-16">
                         {/* Overview Section */}
-                        <motion.section
+                        <MotionDiv
                             initial={{ opacity: 1, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -133,10 +91,10 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                                     </div>
                                 ))}
                             </div>
-                        </motion.section>
+                        </MotionDiv>
 
                         {/* About the Organization Box */}
-                        <motion.section
+                        <MotionDiv
                             initial={{ opacity: 1, scale: 0.98 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
@@ -160,12 +118,12 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                                     </Link>
                                 </div>
                             </div>
-                        </motion.section>
+                        </MotionDiv>
                     </div>
 
-                    {/* Sidebar: Location & Contact */}
+                    {/* Sidebar */}
                     <div className="lg:col-span-4 space-y-8">
-                        <motion.div
+                        <MotionDiv
                             initial={{ opacity: 1, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -227,14 +185,13 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                                         </div>
                                     </div>
                                 )}
-
                             </div>
 
                             <div className="mt-12 pt-10 border-t border-border">
                                 <p className="text-[10px] text-muted-foreground font-display font-bold uppercase tracking-[0.2em] mb-6">Visual Pin</p>
                                 <div className="rounded-3xl overflow-hidden h-60 border border-border shadow-inner relative ring-4 ring-muted/10">
                                     <iframe
-                                        src={`https://www.google.com/maps/embed/v1/place?q=${encodeURIComponent(office.address)}&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8`}
+                                        src={office.mapUrl}
                                         width="100%"
                                         height="100%"
                                         style={{ border: 0 }}
@@ -253,7 +210,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                                     Book Personal Consultation
                                 </Link>
                             </div>
-                        </motion.div>
+                        </MotionDiv>
                     </div>
                 </div>
             </div>

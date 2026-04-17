@@ -1,17 +1,14 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { 
-    CheckCircle2, 
-    Clock, 
-    ShieldCheck, 
-    Globe, 
-    ArrowRight, 
+import {
+    CheckCircle2,
+    Clock,
+    ShieldCheck,
+    Globe,
+    ArrowRight,
     CircleDollarSign,
-    Plus,
 } from "lucide-react";
 import Link from "next/link";
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { MotionDiv } from "@/components/ui/MotionWrapper";
+import VisaFAQClient from "./VisaFAQClient";
 
 interface Visa {
     name: string;
@@ -57,7 +54,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
             {id === "australia" && (
                 <section className="py-24 bg-muted/10 border-b border-border">
                     <div className="container mx-auto px-4">
-                        <motion.div
+                        <MotionDiv
                             initial={{ opacity: 1, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -92,7 +89,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                                     </ul>
                                 </div>
                             </div>
-                        </motion.div>
+                        </MotionDiv>
                     </div>
                 </section>
             )}
@@ -101,7 +98,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
             {id === "uk" && (
                 <section className="py-24 bg-muted/10 border-b border-border">
                     <div className="container mx-auto px-4">
-                        <motion.div
+                        <MotionDiv
                             initial={{ opacity: 1, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -143,7 +140,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                                     </div>
                                 </div>
                             </div>
-                        </motion.div>
+                        </MotionDiv>
                     </div>
                 </section>
             )}
@@ -152,7 +149,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
             {id === "canada" && (
                 <section className="py-24 bg-muted/10 border-b border-border">
                     <div className="container mx-auto px-4">
-                        <motion.div
+                        <MotionDiv
                             initial={{ opacity: 1, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -183,7 +180,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                                     </div>
                                 </div>
                             </div>
-                        </motion.div>
+                        </MotionDiv>
                     </div>
                 </section>
             )}
@@ -192,7 +189,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
             {id === "us" && (
                 <section className="py-24 bg-muted/10 border-b border-border">
                     <div className="container mx-auto px-4">
-                        <motion.div
+                        <MotionDiv
                             initial={{ opacity: 1, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -220,7 +217,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                                 <h3 className="text-2xl font-display font-bold mb-4 relative z-10">High Success Rate Advocacy</h3>
                                 <p className="text-lg font-body text-primary-foreground/70 max-w-2xl mx-auto relative z-10 italic leading-relaxed">Trusted by thousands of applicants across India, SmotVisa provides step-by-step appointment scheduling and real-time monitoring of consulate availability.</p>
                             </div>
-                        </motion.div>
+                        </MotionDiv>
                     </div>
                 </section>
             )}
@@ -230,7 +227,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                 <div className="container mx-auto px-4">
                     <div className="grid lg:grid-cols-2 gap-16">
                         {/* Requirements */}
-                        <motion.div
+                        <MotionDiv
                             initial={{ opacity: 1, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -247,10 +244,10 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                                     </li>
                                 ))}
                             </ul>
-                        </motion.div>
+                        </MotionDiv>
 
                         {/* Steps */}
-                        <motion.div
+                        <MotionDiv
                             initial={{ opacity: 1, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -272,7 +269,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                                     </div>
                                 ))}
                             </div>
-                        </motion.div>
+                        </MotionDiv>
                     </div>
                 </div>
             </section>
@@ -282,26 +279,15 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="text-center mb-16 space-y-4">
                         <h2 className="text-4xl font-display font-bold text-foreground">Frequently Asked Intel</h2>
-                        <p className="text-muted-foreground font-body text-lg italic italic-tracking-wide">Expert insights on {visa.name} visa processing.</p>
+                        <p className="text-muted-foreground font-body text-lg italic">Expert insights on {visa.name} visa processing.</p>
                     </div>
-                    <Accordion type="single" collapsible className="space-y-4">
-                        {visa.faqs.map((faq, idx) => (
-                            <AccordionItem key={idx} value={`item-${idx}`} className="bg-card rounded-[2rem] shadow-card border border-border overflow-hidden px-8 py-2">
-                                <AccordionTrigger className="text-left hover:no-underline">
-                                    <span className="text-lg font-display font-bold text-foreground tracking-tight">{faq.question}</span>
-                                </AccordionTrigger>
-                                <AccordionContent className="pt-4 pb-6 border-t border-border/50 mt-2">
-                                    <p className="text-sm font-body text-muted-foreground leading-[1.8] italic">{faq.answer}</p>
-                                </AccordionContent>
-                            </AccordionItem>
-                        ))}
-                    </Accordion>
+                    <VisaFAQClient faqs={visa.faqs} />
                 </div>
             </section>
 
             {/* CTA */}
             <section className="py-24 container mx-auto px-4">
-                <motion.div
+                <MotionDiv
                     initial={{ opacity: 1, scale: 0.98 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
@@ -324,7 +310,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                             </Link>
                         </div>
                     </div>
-                </motion.div>
+                </MotionDiv>
             </section>
         </>
     );

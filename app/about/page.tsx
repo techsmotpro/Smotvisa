@@ -2,8 +2,8 @@ import AboutSection from "@/components/sections/AboutSection";
 import PageHeader from "@/components/ui/PageHeader";
 
 export const metadata = {
-  title: "Know About Us | Smotvisa  ",
-  description: "Explore Smotvisa Team, Their Mission and Vission in travel domain. Get inspired to travel and learn how to make your dream trips a reality.",
+  title: "Know About Us | Smotvisa",
+  description: "Explore Smotvisa Team, Their Mission and Vision in travel domain. Get inspired to travel and learn how to make your dream trips a reality.",
 
   keywords: [
     "about SmotVisa",
@@ -26,8 +26,8 @@ export const metadata = {
   publisher: "SmotVisa",
 
   openGraph: {
-    title: "Know About Us | Smotvisa  ",
-    description: "Explore Smotvisa Team, Their Mission and Vission in travel domain. Get inspired to travel and learn how to make your dream trips a reality.",
+    title: "Know About Us | Smotvisa",
+    description: "Explore Smotvisa Team, Their Mission and Vision in travel domain. Get inspired to travel and learn how to make your dream trips a reality.",
     url: "https://smotvisa.com/about",
     siteName: "SmotVisa",
     images: ["/images/hero-travel-CJWf8Tv1.jpg"],
@@ -36,8 +36,8 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Know About Us | Smotvisa  ",
-    description: "Explore Smotvisa Team, Their Mission and Vission in travel domain. Get inspired to travel and learn how to make your dream trips a reality.",
+    title: "Know About Us | Smotvisa",
+    description: "Explore Smotvisa Team, Their Mission and Vision in travel domain. Get inspired to travel and learn how to make your dream trips a reality.",
     images: ["/images/hero-travel-CJWf8Tv1.jpg"],
   }
 };

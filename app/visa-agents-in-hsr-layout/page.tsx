@@ -3,6 +3,7 @@ import { MapPin, CheckCircle2, Star, ShieldCheck, Clock, ArrowRight } from "luci
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { offices } from "@/data/officeData";
+import JsonLd from "@/components/ui/JsonLd";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -45,55 +46,56 @@ export const metadata: Metadata = {
         title: "Best Visa Agents in HSR Layout | Expert Visa Consultants | SmotVisa",
         description: "Expert visa agents and consultants in HSR Layout, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas .",
         images: ["/images/hero-travel-CJWf8Tv1.jpg"],
-    },
-
-    other: {
-        "script:ld+json": JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "SmotVisa HSR Layout",
-            "image": "https://www.smotvisa.com/logo.png",
-            "@id": "https://www.smotvisa.com/visa-agents-in-hsr-layout",
-            "url": "https://www.smotvisa.com/visa-agents-in-hsr-layout",
-            "telephone": "+91-9380957448",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "No. 123, 19th Main Road, Sector 4, HSR Layout",
-                "addressLocality": "Bangalore",
-                "postalCode": "560102",
-                "addressCountry": "IN"
-            },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 12.9121,
-                "longitude": 77.6446
-            },
-            "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday"
-                ],
-                "opens": "09:00",
-                "closes": "18:00"
-            },
-            "sameAs": [
-                "https://www.facebook.com/smotvisa",
-                "https://www.instagram.com/smotvisa",
-                "https://www.linkedin.com/company/smotvisa"
-            ]
-        })
     }
 };
 
 export default function VisaServicesInHSRLayout() {
     const hsrOffice = offices.find(o => o.id === "hsr-layout-bangalore");
+    const bangaloreOffice = offices.find(o => o.id === "cv-raman-nagar-bangalore");
 
     return (
         <main className="bg-background">
+            {bangaloreOffice && (
+                <>
+                    <JsonLd data={{
+                        "@context": "https://schema.org",
+                        "@type": "LocalBusiness",
+                        "@id": "https://smotvisa.com/visa-agents-in-hsr-layout",
+                        "name": "SmotVisa HSR Layout",
+                        "description": bangaloreOffice.description,
+                        "url": "https://smotvisa.com/visa-agents-in-hsr-layout",
+                        "telephone": bangaloreOffice.phone[0],
+                        "email": bangaloreOffice.email,
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": bangaloreOffice.address,
+                            "addressLocality": "Bangalore",
+                            "addressRegion": "Karnataka",
+                            "addressCountry": "IN"
+                        },
+                        "openingHoursSpecification": {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                            "opens": "09:00",
+                            "closes": "18:00"
+                        },
+                        "sameAs": [
+                            "https://www.facebook.com/smotvisa",
+                            "https://www.instagram.com/smotvisa",
+                            "https://www.linkedin.com/company/smotvisa"
+                        ]
+                    }} />
+                    <JsonLd data={{
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smotvisa.com/" },
+                            { "@type": "ListItem", "position": 2, "name": "Visa Agents in Bangalore", "item": "https://smotvisa.com/visa-agents-in-bangalore" },
+                            { "@type": "ListItem", "position": 3, "name": "HSR Layout", "item": "https://smotvisa.com/visa-agents-in-hsr-layout" }
+                        ]
+                    }} />
+                </>
+            )}
             <PageHeader
                 title="Visa Agents in HSR Layout"
                 description="Expert visa agents in HSR Layout, Bangalore. SmotVisa is your trusted partner for premium travel consultancy."

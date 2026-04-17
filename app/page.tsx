@@ -1,3 +1,4 @@
+import JsonLd from "@/components/ui/JsonLd";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import WhyChooseSection from "@/components/sections/WhyChooseSection";
@@ -53,6 +54,17 @@ export const metadata = {
 export default function Home() {
   return (
     <>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SmotVisa",
+        "url": "https://smotvisa.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://smotvisa.com/visa?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }} />
       <HeroSection />
       <AboutSection />
       <WhyChooseSection />

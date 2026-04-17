@@ -1,5 +1,7 @@
 import PageHeader from "@/components/ui/PageHeader";
 import VisaClient from "@/components/visa/VisaClient";
+import VisaFeaturedGrid from "@/components/visa/VisaFeaturedGrid";
+import JsonLd from "@/components/ui/JsonLd";
 
 export const metadata = {
   title: "Global Visa Destinations | Visa Services for 50+ Countries",
@@ -107,13 +109,26 @@ const moreCountries = [
 export default function DestinationsPage() {
     return (
         <main className="bg-background min-h-screen">
+            <JsonLd data={{
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smotvisa.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "Visa Services", "item": "https://smotvisa.com/visa" }
+                ]
+            }} />
             <PageHeader
                 title="Global Visa Destinations"
                 description="Explore visa requirements and processing details for over 50+ countries worldwide. Your journey starts here."
                 breadcrumbs={[{ label: "Visa Services" }]}
             />
 
-            <VisaClient destinations={destinations} moreCountries={moreCountries} />
+            <div className="py-24">
+                <div className="container mx-auto px-4">
+                    <VisaFeaturedGrid destinations={destinations} />
+                    <VisaClient moreCountries={moreCountries} />
+                </div>
+            </div>
         </main>
     );
 }

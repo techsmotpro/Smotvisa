@@ -3,10 +3,11 @@ import { ArrowRight, Globe, Search, Plane, MapPin, Ticket, Headphones, CheckCirc
 import { visaCountries } from "@/data/navigationData";
 import { servicesData } from "@/data/servicesData";
 import PageHeader from "@/components/ui/PageHeader";
+import JsonLd from "@/components/ui/JsonLd";
 import { MotionDiv } from "@/components/ui/MotionWrapper";
 
 export const metadata = {
-  title: "Explore Our Comprehensive Visa, Tour Packages and Airline ticket Services | SmotVisaExplore Our Comprehensive Service Solution | SmotVisa",
+  title: "Explore Our Comprehensive Visa, Tour Packages and Airline Ticket Services | SmotVisa",
   description: "Experience hassle free visa application with Smotvisa's professional services. Our team provides a wide range of solutions for all your visa needs. Learn more on our website now!",
 
   keywords: [
@@ -32,7 +33,7 @@ export const metadata = {
   publisher: "SmotVisa",
 
   openGraph: {
-    title: "Explore Our Comprehensive Visa, Tour Packages and Airline ticket Services | SmotVisa",
+    title: "Explore Our Comprehensive Visa, Tour Packages and Airline Ticket Services | SmotVisa",
     description: "Experience hassle free visa application with Smotvisa's professional services. Our team provides a wide range of solutions for all your visa needs. Learn more on our website now!",
     url: "https://smotvisa.com/services",
     siteName: "SmotVisa",
@@ -42,7 +43,7 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Explore Our Comprehensive Visa, Tour Packages and Airline ticket Services | SmotVisa",
+    title: "Explore Our Comprehensive Visa, Tour Packages and Airline Ticket Services | SmotVisa",
     description: "Experience hassle free visa application with Smotvisa's professional services. Our team provides a wide range of solutions for all your visa needs. Learn more on our website now!",
   }
 };
@@ -50,6 +51,14 @@ export const metadata = {
 export default function ServicesPage() {
     return (
         <main className="min-h-screen bg-background pb-20">
+            <JsonLd data={{
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smotvisa.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://smotvisa.com/services" }
+                ]
+            }} />
             <PageHeader
                 title="Premium Travel & Visa Services"
                 description="From expert visa processing to end-to-end tour planning, we take the stress out of travel with our comprehensive international services."
