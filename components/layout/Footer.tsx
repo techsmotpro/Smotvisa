@@ -125,6 +125,15 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Disclaimer */}
+      <div className="border-t border-primary-foreground/10 bg-black/10">
+        <div className="container mx-auto px-4 py-3 text-center">
+          <p className="text-sm font-body text-primary-foreground/60">
+            Note: Smotvisa is a private visa consultancy and is not affiliated with any embassy, consulate, or government authority. Visa decisions are made solely by respective authorities.
+          </p>
+        </div>
+      </div>
+
       {/* Bottom bar */}
       <div className="border-t border-primary-foreground/10 bg-black/20">
         <div className="container mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">

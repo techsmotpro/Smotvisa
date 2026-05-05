@@ -50,6 +50,13 @@ export default function About() {
         description="Simplifying global travel with expert visa assistance and personalized support for over a decade."
         breadcrumbs={[{ label: "About Us" }]}
       />
+      <div className="bg-yellow-50 border-b border-yellow-200">
+        <div className="container mx-auto px-4 py-3 text-center">
+          <p className="text-sm font-body font-semibold text-yellow-800">
+            Disclaimer — We are a private visa consultancy and not affiliated with any embassy or government authority.
+          </p>
+        </div>
+      </div>
       <div className="bg-background">
         <AboutSection isFull={true} />
       </div>
