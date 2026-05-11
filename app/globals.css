@@ -225,6 +225,14 @@
   background-clip: text !important;
 }
 
+/* Reset Tailwind preflight border for tawk.to widget */
+div[id^="tawk"], div[id^="tawk"] * {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
 /* Hero section - protect against extension overrides */
 #home {
   background-color: hsl(217, 72%, 18%) !important;
