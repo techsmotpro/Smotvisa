@@ -22,7 +22,7 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost }) {
             {/* Hero Section */}
             <section className="relative h-[65vh] min-h-[500px] overflow-hidden">
                 <Image
-                    src={blog.image || `/images/blog-${blog.id}.jpg`}
+                    src={blog.image || "/images/hero-travel-CJWf8Tv1.webp"}
                     alt={blog.title}
                     fill
                     className="object-cover"
