@@ -221,3 +221,62 @@
     }
   }
 }
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #d4a843, #f0d078, #c9952a) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Hero section - protect against extension overrides */
+#home {
+  background-color: hsl(217, 72%, 18%) !important;
+}
+
+.hero-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  background: linear-gradient(to right, hsla(217, 72%, 18%, 0.95), hsla(217, 72%, 18%, 0.80), hsla(217, 72%, 18%, 0.40)) !important;
+}
+
+.hero-badge {
+  background-color: hsla(42, 85%, 55%, 0.2) !important;
+  border: 1px solid hsla(42, 85%, 55%, 0.3) !important;
+  color: hsl(42, 100%, 95%) !important;
+}
+
+.hero-heading {
+  color: hsl(42, 100%, 95%) !important;
+}
+
+.hero-text {
+  color: hsla(42, 100%, 95%, 0.8) !important;
+}
+
+.hero-btn-primary {
+  background-color: hsl(42, 85%, 55%) !important;
+  color: hsl(220, 30%, 12%) !important;
+}
+
+.hero-btn-secondary {
+  border: 2px solid hsla(42, 100%, 95%, 0.3) !important;
+  color: hsl(42, 100%, 95%) !important;
+}
+
+.hero-stat-value {
+  color: hsl(42, 100%, 95%) !important;
+}
+
+.hero-stat-label {
+  color: hsla(42, 100%, 95%, 0.6) !important;
+}
+
+.hero-stat-icon-bg {
+  background-color: hsla(42, 85%, 55%, 0.2) !important;
+}
+
+.hero-stat-icon {
+  color: hsl(42, 85%, 55%) !important;
+}

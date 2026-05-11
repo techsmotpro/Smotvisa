@@ -5,46 +5,46 @@ export interface Review {
     location: string;
     rating: number;
     comment: string;
-    avatar: string;
+    date: string;
 }
 
 export const fetchReviews = async (): Promise<Review[]> => {
     return [
         {
             id: "1",
-            name: "Priya Sharma",
+            name: "Baki Hanma",
             role: "Tourist",
-            location: "Dubai, UAE",
+            location: "Schengen Visa",
             rating: 5,
-            comment: "The process was incredibly smooth. I got my Schengen visa in record time without any hassle.",
-            avatar: "/images/small--Y9qzfea.webp"
+            comment: "Getting my Schengen tourist visa was easy with Smotvisa's support. They guided me in choosing the correct embassy and prepared all required documents properly.",
+            date: "2025-01-15"
         },
         {
             id: "2",
-            name: "Rahul Mehta",
-            role: "Business Traveler",
-            location: "London, UK",
+            name: "Bindu Rajesh",
+            role: "Tourist",
+            location: "Australia Visa",
             rating: 5,
-            comment: "Highly professional service. They handled my US B1/B2 visa application perfectly.",
-            avatar: "/images/small--Y9qzfea.webp"
+            comment: "I applied for an Australia tourist visa through Smotvisa and received great support. Their team assisted with financial documentation and the entire process was smooth.",
+            date: "2025-01-20"
         },
         {
             id: "3",
-            name: "Ananya Iyer",
-            role: "Student",
-            location: "Toronto, Canada",
-            rating: 4,
-            comment: "Great support throughout the student visa process. They answered all my queries patiently.",
-            avatar: "/images/small--Y9qzfea.webp"
+            name: "Amal Raj",
+            role: "Tourist",
+            location: "Schengen Visa",
+            rating: 5,
+            comment: "Thanks to Smotvisa, I got my Schengen tourist visa without any complications. They helped select the correct embassy and prepared all documents properly. The consultants were professional and supportive throughout the process. I highly recommend Smotvisa for Schengen visa assistance.",
+            date: "2025-01-25"
         },
         {
             id: "4",
-            name: "Vikram Patel",
-            role: "Tourist",
-            location: "Sydney, Australia",
+            name: "Santhosh P",
+            role: "Business Traveler",
+            location: "US Visa",
             rating: 5,
-            comment: "Excellent service! The entire process was hassle-free and the support team was very helpful.",
-            avatar: "/images/small--Y9qzfea.webp"
+            comment: "I applied for my US B1 visa through Smotvisa's Hari and had a smooth experience. The team guided me through documentation and interview preparation. Very professional and responsive staff. I highly recommend Smotvisa for reliable US visa assistance for Indian citizens.",
+            date: "2025-02-01"
         }
     ];
 };
