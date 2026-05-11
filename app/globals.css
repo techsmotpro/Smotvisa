@@ -179,10 +179,6 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-
   body {
     @apply bg-background text-foreground;
   }
@@ -227,13 +223,6 @@
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
-}
-
-/* Prevent site global styles from affecting tawk.to widget */
-#tawk-bubble-container,
-#tawk-bubble-container * {
-  border-color: transparent !important;
-  outline: none !important;
 }
 
 /* Hero section - protect against extension overrides */
