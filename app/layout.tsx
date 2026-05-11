@@ -4,10 +4,10 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import dynamic from "next/dynamic";
 import { Toaster } from "@/components/ui/toaster";
-import Script from "next/script";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import JsonLd from "@/components/ui/JsonLd";
+import TawkTo from "@/components/ui/TawkTo";
 
 const FloatingCTA = dynamic(() => import("@/components/ui/FloatingCTA"));
 
@@ -167,23 +167,7 @@ export default function RootLayout({
                 </TooltipProvider>
                 <Toaster />
                 <Sonner />
-                <Script
-                    id="tawk"
-                    strategy="lazyOnload"
-                    dangerouslySetInnerHTML={{
-                        __html: `
-              var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-              (function(){
-              var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-              s1.async=true;
-              s1.src='https://embed.tawk.to/69c2446229e9681c3d64dff1/1jkfdm932';
-              s1.charset='UTF-8';
-              s1.setAttribute('crossorigin','*');
-              s0.parentNode.insertBefore(s1,s0);
-              })();
-            `,
-                    }}
-                />
+                <TawkTo />
             </body>
         </html>
     );
