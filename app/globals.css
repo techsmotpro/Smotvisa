@@ -179,7 +179,7 @@
 }
 
 @layer base {
-  * {
+  *:not([id^="tawk"]):not([class*="tawk"]):not([class*="Tawk"]) {
     @apply border-border outline-ring/50;
   }
 
@@ -227,14 +227,6 @@
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
-}
-
-/* Reset tawk.to widget styles from site globals */
-#tawk-bubble, #tawk-bubble *, [id^="tawk"], [class^="tawk"], [class*="tawk-"] {
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  background-image: none !important;
 }
 
 /* Hero section - protect against extension overrides */
