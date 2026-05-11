@@ -1,8 +1,9 @@
 import AboutSection from "@/components/sections/AboutSection";
 import PageHeader from "@/components/ui/PageHeader";
+import JsonLd from "@/components/ui/JsonLd";
 
 export const metadata = {
-  title: "Know About Us | Smotvisa",
+  title: "Know About Us | SmotVisa",
   description: "Explore Smotvisa Team, Their Mission and Vision in travel domain. Get inspired to travel and learn how to make your dream trips a reality.",
 
   keywords: [
@@ -26,25 +27,33 @@ export const metadata = {
   publisher: "SmotVisa",
 
   openGraph: {
-    title: "Know About Us | Smotvisa",
-    description: "Explore Smotvisa Team, Their Mission and Vision in travel domain. Get inspired to travel and learn how to make your dream trips a reality.",
+    title: "About SmotVisa | Trusted Visa & Travel Consultants in India",
+    description: "Explore SmotVisa Team, Their Mission and Vision in travel domain. Get inspired to travel and learn how to make your dream trips a reality.",
     url: "https://smotvisa.com/about",
     siteName: "SmotVisa",
-    images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+    images: ["/images/hero-travel-CJWf8Tv1.webp"],
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Know About Us | Smotvisa",
-    description: "Explore Smotvisa Team, Their Mission and Vision in travel domain. Get inspired to travel and learn how to make your dream trips a reality.",
-    images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+    title: "About SmotVisa | Trusted Visa & Travel Consultants in India",
+    description: "Explore SmotVisa Team, Their Mission and Vision in travel domain. Get inspired to travel and learn how to make your dream trips a reality.",
+    images: ["/images/hero-travel-CJWf8Tv1.webp"],
   }
 };
 
 export default function About() {
   return (
     <main>
+      <JsonLd data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smotvisa.com/" },
+              { "@type": "ListItem", "position": 2, "name": "About", "item": "https://smotvisa.com/about" }
+          ]
+      }} />
       <PageHeader
         title="About Us"
         description="Simplifying global travel with expert visa assistance and personalized support for over a decade."

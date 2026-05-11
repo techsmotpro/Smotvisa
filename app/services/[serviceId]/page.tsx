@@ -60,13 +60,7 @@ export async function generateMetadata({ params }: { params: Promise<{ serviceId
     return {
         title: `${data.title} | Premium Travel Solutions | SmotVisa`,
         description: data.description,
-        keywords: [
-            data.title.toLowerCase(),
-            "travel services India",
-            "SmotVisa services",
-            "premium travel solutions"
-        ],
-
+        keywords: [data.title, "SmotVisa services", "travel services India", "visa consultancy", serviceId === "air-ticketing" ? "flight booking" : serviceId === "tours" ? "tour packages" : "visa consulting"],
         alternates: {
             canonical: `https://smotvisa.com/services/${serviceId}`,
         },
@@ -84,7 +78,7 @@ export async function generateMetadata({ params }: { params: Promise<{ serviceId
             description: data.description,
             url: `https://smotvisa.com/services/${serviceId}`,
             siteName: "SmotVisa",
-            images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+            images: ["/images/hero-travel-CJWf8Tv1.webp"],
             type: "website",
         },
 
@@ -92,7 +86,7 @@ export async function generateMetadata({ params }: { params: Promise<{ serviceId
             card: "summary_large_image",
             title: `${data.title} | Premium Travel Solutions`,
             description: data.description,
-            images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+            images: ["/images/hero-travel-CJWf8Tv1.webp"],
         }
     };
 }

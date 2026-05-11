@@ -9,8 +9,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
     title: "Best Visa Agents in HSR Layout | Expert Visa Consultants | SmotVisa",
     description: "Expert visa agents and consultants in HSR Layout, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
-    
-    keywords: [
+  keywords: [
         "visa agents in HSR Layout",
         "best visa agents HSR Layout",
         "HSR Layout visa consultants",
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
         "visa services in HSR Layout",
         "visa consultants in HSR Layout"
     ],
-
+    
     alternates: {
         canonical: "https://smotvisa.com/visa-agents-in-hsr-layout",
     },
@@ -37,7 +36,7 @@ export const metadata: Metadata = {
         description: "Expert visa agents and consultants in HSR Layout, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas.",
         url: "https://smotvisa.com/visa-agents-in-hsr-layout",
         siteName: "SmotVisa",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
         type: "website",
     },
 
@@ -45,7 +44,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Best Visa Agents in HSR Layout | Expert Visa Consultants | SmotVisa",
         description: "Expert visa agents and consultants in HSR Layout, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas .",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
     }
 };
 
@@ -73,6 +72,7 @@ export default function VisaServicesInHSRLayout() {
                             "addressRegion": "Karnataka",
                             "addressCountry": "IN"
                         },
+                        "areaServed": { "@type": "City", "name": "HSR Layout, Bangalore" },
                         "openingHoursSpecification": {
                             "@type": "OpeningHoursSpecification",
                             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -116,7 +116,7 @@ export default function VisaServicesInHSRLayout() {
                             Expert Visa Agents for HSR Layout's Tech Community.
                         </h2>
                         <p className="text-lg font-body text-muted-foreground italic leading-relaxed">
-                            Strategically located in the heart of HSR Layout, SmotVisa provides specialized visa assistance tailored for the  community in this premier IT hub of Bangalore.
+                            Strategically located in the heart of HSR Layout, SmotVisa provides specialized visa assistance tailored for the tech community in this premier IT hub of Bangalore.
                         </p>
 
                         <div className="grid sm:grid-cols-2 gap-6">
@@ -197,7 +197,7 @@ export default function VisaServicesInHSRLayout() {
                         <Link href="/contact" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-secondary text-secondary-foreground font-display font-bold text-lg rounded-2xl hover:translate-y-[-2px] transition-all shadow-gold group">
                             Contact HSR Layout Desk <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
                         </Link>
-                        <Link href="/visa-checker" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-transparent border-2 border-primary text-primary font-display font-bold text-lg rounded-2xl hover:bg-primary/5 transition-all">
+                        <Link href="/visa" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-transparent border-2 border-primary text-primary font-display font-bold text-lg rounded-2xl hover:bg-primary/5 transition-all">
                             Check Eligibility
                         </Link>
                     </div>

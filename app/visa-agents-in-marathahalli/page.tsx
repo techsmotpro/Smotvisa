@@ -9,8 +9,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
     title: "Best Visa Agents in Marathahalli | Expert Visa Consultants | SmotVisa",
     description: "Expert visa agents and consultants in Marathahalli, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
-    
-    keywords: [
+  keywords: [
         "visa agents in Marathahalli",
         "best visa agents Marathahalli",
         "Marathahalli visa consultants",
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
         "visa services in Marathahalli",
         "visa consultants in Marathahalli"
     ],
-
+    
     alternates: {
         canonical: "https://smotvisa.com/visa-agents-in-marathahalli",
     },
@@ -37,7 +36,7 @@ export const metadata: Metadata = {
         description: "Expert visa agents and consultants in Marathahalli, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
         url: "https://smotvisa.com/visa-agents-in-marathahalli",
         siteName: "SmotVisa",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
         type: "website",
     },
 
@@ -45,7 +44,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Best Visa Agents in Marathahalli | Expert Visa Consultants | SmotVisa",
         description: "Expert visa agents and consultants in Marathahalli, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
     }
 };
 
@@ -72,6 +71,7 @@ export default function VisaServicesInMarathahalli() {
                             "addressRegion": "Karnataka",
                             "addressCountry": "IN"
                         },
+                        "areaServed": { "@type": "City", "name": "Marathahalli, Bangalore" },
                         "openingHoursSpecification": {
                             "@type": "OpeningHoursSpecification",
                             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -196,7 +196,7 @@ export default function VisaServicesInMarathahalli() {
                         <Link href="/contact" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-secondary text-secondary-foreground font-display font-bold text-lg rounded-2xl hover:translate-y-[-2px] transition-all shadow-gold group">
                             Contact Marathahalli Desk <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
                         </Link>
-                        <Link href="/visa-checker" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-transparent border-2 border-primary text-primary font-display font-bold text-lg rounded-2xl hover:bg-primary/5 transition-all">
+                        <Link href="/visa" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-transparent border-2 border-primary text-primary font-display font-bold text-lg rounded-2xl hover:bg-primary/5 transition-all">
                             Check Eligibility
                         </Link>
                     </div>

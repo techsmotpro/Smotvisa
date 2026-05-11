@@ -37,16 +37,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         metaDescription = "Looking for a reliable US Visa Consultant? Get expert guidance for B1/B2 tourist, student, and work visas. Increase your chances of approval with professional visa assistance.";
     } else if (id === "uk") {
         metaTitle = "Best UK Visa Consultant for Fast & Successful Approval | SmotVisa";
-        metaDescription = "Apply for a UK tourist or business visa with SmotVisa. We our UK visa consultant provide expert guidance, document verification, and end-to-end visa application support.";
+        metaDescription = "Apply for a UK tourist or business visa with SmotVisa. Expert UK visa consultants providing tourist and business visa processing, document verification, and end-to-end visa application support.";
     } else if (id === "canada") {
-        metaTitle = "Best Canada Visa Consultant service in India | Smotvisa";
+        metaTitle = "Best Canada Visa Consultant service in India | SmotVisa";
         metaDescription = "Apply for Canada Business, Tourist visa, visitor visa with the help of experienced Canada visa consultants. Get step-by-step support today.";
     } else if (id === "australia") {
         metaTitle = "Trusted Australian Visa Consultant for Business & Tourist Visas in India | SmotVisa";
         metaDescription = "Apply for Australia Tourist or Business Visa with SmotVisa. Get expert guidance, document verification, and end-to-end visa application support.";
     } else if (id === "uae") {
         metaTitle = "Best Dubai Visa Consultant | Expert Dubai Visa Agency | SmotVisa";
-        metaDescription = "We are Professional Dubai visa consultant offering tourist and business visa services across India. Get yours quick visa approval and hassle-free travel to the UAE from Smotvisa.";
+        metaDescription = "We are Professional Dubai visa consultant offering tourist and business visa services across India. Get quick visa approval and hassle-free travel to the UAE from SmotVisa.";
     } else if (id === "schengen") {
         metaTitle = "Best Schengen Visa Consultant in India | SmotVisa";
         metaDescription = "Looking for a reliable Schengen visa consultant in India? SmotVisa offers expert assistance for Schengen tourist and business visas with complete documentation support and smooth visa processing.";
@@ -55,14 +55,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
         title: metaTitle,
         description: metaDescription,
-        keywords: [
-            `${visa.name} visa`,
-            "visa services India",
-            `${visa.name} visa requirements`,
-            `${visa.name} visa processing`,
-            "SmotVisa"
-        ],
-
+        keywords: [`${visa.name} visa`, `${visa.name} visa consultant`, `${visa.name} visa services`, "SmotVisa", "visa consultant India"],
         alternates: {
             canonical: `https://smotvisa.com/visa/${slug}`,
         },
@@ -80,7 +73,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             description: metaDescription,
             url: `https://smotvisa.com/visa/${slug}`,
             siteName: "SmotVisa",
-            images: [visa.image || "/images/visa-services-MHOtW-3U.jpg"],
+            images: [visa.image || "/images/visa-services-MHOtW-3U.webp"],
             type: "website",
         },
 
@@ -88,7 +81,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             card: "summary_large_image",
             title: metaTitle,
             description: metaDescription,
-            images: [visa.image || "/images/visa-services-MHOtW-3U.jpg"],
+            images: [visa.image || "/images/visa-services-MHOtW-3U.webp"],
         }
     };
 }
@@ -149,6 +142,20 @@ export default async function VisaDetailPage({ params }: { params: Promise<{ slu
                 "areaServed": "India",
                 "serviceType": "Visa Consulting"
             }} />
+            {visa.faqs && visa.faqs.length > 0 && (
+                <JsonLd data={{
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": visa.faqs.map((faq: { question: string; answer: string }) => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": faq.answer
+                        }
+                    }))
+                }} />
+            )}
             <PageHeader
                 title={pageTitle}
                 description={visa.description}

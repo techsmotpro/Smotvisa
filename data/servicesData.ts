@@ -7,7 +7,7 @@ export const servicesData = [
         title: "Tourist Visa Assistance",
         description: "Turn your travel dreams into reality. SmotVisa helps you secure your tourist visa quickly and confidently — whether you’re planning a family vacation, honeymoon, or solo trip abroad.",
         features: ["Documentation Support", "Embassy Appointments", "Travel Insurance", "Fast Processing"],
-        href: "/services/visa-services"
+        href: "/visa"
     },
     {
         id: "business-visa",
@@ -15,7 +15,7 @@ export const servicesData = [
         title: "Business Visa Assistance",
         description: "Travel abroad for meetings, conferences, or trade events without the stress of visa paperwork. Our experts prepare your business visa application precisely as per embassy standards.",
         features: ["Invitation Letters", "Travel Plans", "Financial Documents", "Professional Support"],
-        href: "/services/visa-services"
+        href: "/visa"
     },
     {
         id: "air-ticketing",

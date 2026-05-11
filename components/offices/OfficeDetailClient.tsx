@@ -197,6 +197,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                                         style={{ border: 0 }}
                                         allowFullScreen
                                         loading="lazy"
+                                        sandbox="allow-scripts allow-same-origin allow-popups"
                                         title={`${office.city} Office Map`}
                                     />
                                 </div>

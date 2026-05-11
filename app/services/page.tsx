@@ -33,18 +33,19 @@ export const metadata = {
   publisher: "SmotVisa",
 
   openGraph: {
-    title: "Explore Our Comprehensive Visa, Tour Packages and Airline Ticket Services | SmotVisa",
-    description: "Experience hassle free visa application with Smotvisa's professional services. Our team provides a wide range of solutions for all your visa needs. Learn more on our website now!",
+    title: "Visa, Tours & Air Ticketing Services | SmotVisa",
+    description: "Experience hassle free visa application with SmotVisa's professional services. Our team provides a wide range of solutions for all your visa needs. Learn more on our website now!",
     url: "https://smotvisa.com/services",
     siteName: "SmotVisa",
-    images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+    images: ["/images/hero-travel-CJWf8Tv1.webp"],
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Explore Our Comprehensive Visa, Tour Packages and Airline Ticket Services | SmotVisa",
-    description: "Experience hassle free visa application with Smotvisa's professional services. Our team provides a wide range of solutions for all your visa needs. Learn more on our website now!",
+    title: "Visa, Tours & Air Ticketing Services | SmotVisa",
+    description: "Experience hassle free visa application with SmotVisa's professional services. Our team provides a wide range of solutions for all your visa needs. Learn more on our website now!",
+    images: ["/images/hero-travel-CJWf8Tv1.webp"],
   }
 };
 

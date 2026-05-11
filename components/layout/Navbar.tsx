@@ -77,7 +77,14 @@ const Navbar = () => {
                                         onMouseEnter={() => setActiveDropdown(link.label)}
                                         onMouseLeave={() => setActiveDropdown(null)}
                                     >
-                                        <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground rounded-lg hover:bg-primary-foreground/10 transition-all">
+                                        <button aria-expanded={activeDropdown === link.label} aria-haspopup="true" className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground rounded-lg hover:bg-primary-foreground/10 transition-all" onKeyDown={(e) => {
+                                            if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
+                                                e.preventDefault();
+                                                setActiveDropdown(link.label);
+                                            } else if (e.key === 'Escape') {
+                                                setActiveDropdown(null);
+                                            }
+                                        }}>
                                             {link.label} <ChevronDown className="h-3 w-3" />
                                         </button>
                                         <AnimatePresence>
@@ -175,6 +182,8 @@ const Navbar = () => {
                     {/* Mobile toggle */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
+                        aria-label={isOpen ? "Close menu" : "Open menu"}
+                        aria-expanded={isOpen}
                         className="lg:hidden p-2 rounded-lg hover:bg-primary-foreground/10 transition-colors text-primary-foreground"
                     >
                         {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -197,6 +206,11 @@ const Navbar = () => {
                                             <div key={link.label} className="border-b border-primary-foreground/5 last:border-0 pb-1">
                                                 <button
                                                     onClick={() => setActiveMobileCategory(activeMobileCategory === link.label ? null : link.label)}
+                                                    onKeyDown={(e) => {
+                                                        if (e.key === 'Escape') {
+                                                            setIsOpen(false);
+                                                        }
+                                                    }}
                                                     className="flex items-center justify-between w-full px-4 py-4 text-sm font-bold uppercase tracking-wider text-primary-foreground/90 hover:bg-primary-foreground/5 transition-colors"
                                                 >
                                                     <span>{link.label}</span>

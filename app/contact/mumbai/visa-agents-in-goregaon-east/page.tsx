@@ -6,13 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Visa Agents in Goregaon East, Mumbai | SmotVisa",
     description: "Expert visa consultants in Goregaon East, Mumbai. Get professional visa assistance for all countries at SmotVisa Goregaon East office.",
-    keywords: [
-        "visa agents in Goregaon East",
-        "visa consultants Goregaon East",
-        "Goregaon East visa services",
-        "SmotVisa Goregaon East",
-        "visa agents Mumbai"
-    ],
+    keywords: ["visa agents Goregaon East", "visa consultancy Mumbai", "SmotVisa Goregaon East", "visa services Mumbai", "travel agents Mumbai"],
     alternates: {
         canonical: "https://smotvisa.com/contact/mumbai/visa-agents-in-goregaon-east",
     },
@@ -27,14 +21,14 @@ export const metadata: Metadata = {
         description: "Expert visa consultants in Goregaon East, Mumbai. Get professional visa assistance for all countries at SmotVisa Goregaon East office.",
         url: "https://smotvisa.com/contact/mumbai/visa-agents-in-goregaon-east",
         siteName: "SmotVisa",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
         title: "Visa Agents in Goregaon East, Mumbai | SmotVisa",
         description: "Expert visa consultants in Goregaon East, Mumbai. Get professional visa assistance for all countries at SmotVisa Goregaon East office.",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
     }
 };
 

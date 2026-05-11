@@ -2,6 +2,7 @@ import { ArrowRight, Plane, Users, Ticket, Clock, Shield, Globe, ChevronRight } 
 import Link from "next/link";
 import PageHeader from "@/components/ui/PageHeader";
 import { MotionDiv } from "@/components/ui/MotionWrapper";
+import JsonLd from "@/components/ui/JsonLd";
 import { Metadata } from 'next';
 
 const faqs = [
@@ -32,17 +33,9 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-    title: " Fast & Easy Air Ticket Booking | Smotvisa",
-    description: "Fast & easy Air Ticket booking with Smotvisa. Book domestic and international flights at the best prices with quick confirmation and reliable travel support.",
-    
-    keywords: [
-        "international flights from India",
-        "air ticketing services",
-        "flight booking India",
-        "cheap international flights",
-        "SmotVisa air ticketing"
-    ],
-
+    title: "Fast & Easy Air Ticket Booking | SmotVisa",
+    description: "Fast & easy Air Ticket booking with SmotVisa. Book domestic and international flights at the best prices with quick confirmation and reliable travel support.",
+    keywords: ["air ticketing", "flight booking", "airline tickets", "SmotVisa air ticketing", "cheap flights India"],
     alternates: {
         canonical: "https://smotvisa.com/services/air-ticketing",
     },
@@ -56,34 +49,19 @@ export const metadata: Metadata = {
     publisher: "SmotVisa",
 
     openGraph: {
-        title: " Fast & Easy Air Ticket Booking | Smotvisa",
-        description: "Fast & easy Air Ticket booking with Smotvisa. Book domestic and international flights at the best prices with quick confirmation and reliable travel support.",
+        title: "Fast & Easy Air Ticket Booking | SmotVisa",
+        description: "Fast & easy Air Ticket booking with SmotVisa. Book domestic and international flights at the best prices with quick confirmation and reliable travel support.",
         url: "https://smotvisa.com/services/air-ticketing",
         siteName: "SmotVisa",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
         type: "website",
     },
 
     twitter: {
         card: "summary_large_image",
-        title: "Fast & Easy Air Ticket Booking | Smotvisa",
-        description: "Fast & easy Air Ticket booking with Smotvisa. Book domestic and international flights at the best prices with quick confirmation and reliable travel support.",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
-    },
-
-    other: {
-        "script:ld+json": JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqs.map(faq => ({
-                "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": faq.answer
-                }
-            }))
-        })
+        title: "Fast & Easy Air Ticket Booking | SmotVisa",
+        description: "Fast & easy Air Ticket booking with SmotVisa. Book domestic and international flights at the best prices with quick confirmation and reliable travel support.",
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
     }
 };
 
@@ -141,6 +119,18 @@ const services = [
 export default function AirTicketingPage() {
     return (
         <main className="bg-background">
+            <JsonLd data={{
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": faqs.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer
+                    }
+                }))
+            }} />
             <PageHeader
                 title="Best International Flights from India"
                 description="Book the Best International Flights from India with SmotVisa. Finding the right flights can be challenging, but our experts simplify the process by helping you find the most convenient and affordable options."

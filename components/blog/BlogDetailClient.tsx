@@ -1,18 +1,33 @@
 import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { ArrowLeft, Calendar, User, Clock } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import { useMemo } from "react";
+import DOMPurify from "dompurify";
 import type { BlogPost } from "@/data/blogData";
+import { blogCtaMapping } from "@/data/blogCtaMapping";
 import ShareButton from "./ShareButton";
+import BlogCtaSection from "./BlogCtaSection";
 
 export default function BlogDetailClient({ blog }: { blog: BlogPost }) {
+    const sanitizedContent = useMemo(() => {
+        if (typeof window !== "undefined") {
+            return DOMPurify.sanitize(blog.content);
+        }
+        return blog.content;
+    }, [blog.content]);
+
     return (
         <div className="bg-background min-h-screen">
             {/* Hero Section */}
             <section className="relative h-[65vh] min-h-[500px] overflow-hidden">
-                <img
-                    src={blog.image || 'https://picsum.photos/seed/' + blog.id + '/1200/800'}
+                <Image
+                    src={blog.image || `/images/blog-${blog.id}.jpg`}
                     alt={blog.title}
-                    className="absolute inset-0 w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="100vw"
+                    priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
                 <div className="absolute inset-0 bg-primary/20" />
@@ -70,8 +85,12 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost }) {
                                       prose-strong:font-semibold prose-strong:text-foreground/80
                                       prose-a:text-secondary prose-a:font-bold hover:prose-a:underline
                                       prose-img:rounded-[2rem] prose-img:shadow-elevated prose-img:mt-12 prose-img:mb-12"
-                            dangerouslySetInnerHTML={{ __html: blog.content }}
+                            dangerouslySetInnerHTML={{ __html: sanitizedContent }}
                         />
+
+                        {blogCtaMapping[blog.slug || blog.id] && (
+                            <BlogCtaSection cta={blogCtaMapping[blog.slug || blog.id]} />
+                        )}
 
                         <div className="mt-20 pt-10 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-6">
                             <div className="flex items-center gap-4">

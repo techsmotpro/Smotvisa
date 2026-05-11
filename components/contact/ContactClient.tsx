@@ -22,7 +22,6 @@ export default function ContactClient({ offices, initialBranchId }: ContactClien
     const [activeOffice, setActiveOffice] = useState<Office>(
         offices.find(o => o.id === initialBranchId) || offices[0]
     );
-    const [isLoading, setIsLoading] = useState(false);
 
     // Redirect from query parameter to SEO-friendly URL
     useEffect(() => {
@@ -48,43 +47,11 @@ export default function ContactClient({ offices, initialBranchId }: ContactClien
         router.push(`/contact/${office.id}`);
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        setIsLoading(true);
-
-        try {
-            const response = await fetch("https://smotvisa-backend-visa.vercel.app/api/send-email", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (response.ok) {
-                toast({
-                    title: "Success Check!",
-                    description: "Your inquiry has been sent. Our travel consultants will get back to you soon.",
-                    variant: "default",
-                });
-                setFormData({ name: "", email: "", phone: "", service: "", message: "" });
-            } else {
-                toast({
-                    title: "Error occurred",
-                    description: "Failed to send your inquiry. Please try again later.",
-                    variant: "destructive",
-                });
-            }
-        } catch (error) {
-            console.error("Error sending inquiry:", error);
-            toast({
-                title: "Connection Error",
-                description: "Failed to send your inquiry. Please check your internet connection.",
-                variant: "destructive",
-            });
-        }
-
-        setIsLoading(false);
+        const message = `Hi SmotVisa, I'd like to inquire about your services.%0A%0AName: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AService: ${formData.service || 'Not specified'}%0AMessage: ${formData.message || 'No additional details'}`;
+        window.open(`https://wa.me/919036329410?text=${message}`, "_blank", "noopener,noreferrer");
+        setFormData({ name: "", email: "", phone: "", service: "", message: "" });
     };
 
     return (
@@ -188,6 +155,7 @@ export default function ContactClient({ offices, initialBranchId }: ContactClien
                                 style={{ border: 0 }}
                                 allowFullScreen
                                 loading="lazy"
+                                sandbox="allow-scripts allow-same-origin allow-popups"
                                 title={`${activeOffice.city} Office Location`}
                             />
                         </motion.div>
@@ -207,8 +175,9 @@ export default function ContactClient({ offices, initialBranchId }: ContactClien
 
                             <div className="grid sm:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-display font-bold text-muted-foreground uppercase tracking-[0.1em]">Full Name</label>
+                                    <label htmlFor="cc-name" className="text-[10px] font-display font-bold text-muted-foreground uppercase tracking-[0.1em]">Full Name</label>
                                     <input
+                                        id="cc-name"
                                         type="text"
                                         required
                                         value={formData.name}
@@ -218,8 +187,9 @@ export default function ContactClient({ offices, initialBranchId }: ContactClien
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-display font-bold text-muted-foreground uppercase tracking-[0.1em]">Email Address</label>
+                                    <label htmlFor="cc-email" className="text-[10px] font-display font-bold text-muted-foreground uppercase tracking-[0.1em]">Email Address</label>
                                     <input
+                                        id="cc-email"
                                         type="email"
                                         required
                                         value={formData.email}
@@ -231,8 +201,9 @@ export default function ContactClient({ offices, initialBranchId }: ContactClien
                             </div>
                             <div className="grid sm:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-display font-bold text-muted-foreground uppercase tracking-[0.1em]">Phone Number</label>
+                                    <label htmlFor="cc-phone" className="text-[10px] font-display font-bold text-muted-foreground uppercase tracking-[0.1em]">Phone Number</label>
                                     <input
+                                        id="cc-phone"
                                         type="tel"
                                         value={formData.phone}
                                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -241,8 +212,9 @@ export default function ContactClient({ offices, initialBranchId }: ContactClien
                                     />
                                 </div>
                                 <div className="space-y-2 relative">
-                                    <label className="text-[10px] font-display font-bold text-muted-foreground uppercase tracking-[0.1em]">Service Needed</label>
+                                    <label htmlFor="cc-service" className="text-[10px] font-display font-bold text-muted-foreground uppercase tracking-[0.1em]">Service Needed</label>
                                     <select
+                                        id="cc-service"
                                         value={formData.service}
                                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                                         className="w-full px-6 py-4 rounded-2xl border border-border bg-muted/20 text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/30 focus:border-secondary outline-none transition-all appearance-none cursor-pointer"
@@ -259,8 +231,9 @@ export default function ContactClient({ offices, initialBranchId }: ContactClien
                                 </div>
                             </div>
                             <div className="space-y-2">
-                                <label className="text-[10px] font-display font-bold text-muted-foreground uppercase tracking-[0.1em]">Detail Message</label>
+                                <label htmlFor="cc-message" className="text-[10px] font-display font-bold text-muted-foreground uppercase tracking-[0.1em]">Detail Message</label>
                                 <textarea
+                                    id="cc-message"
                                     rows={4}
                                     value={formData.message}
                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -270,17 +243,10 @@ export default function ContactClient({ offices, initialBranchId }: ContactClien
                             </div>
                             <button
                                 type="submit"
-                                disabled={isLoading}
-                                className="w-full flex items-center justify-center gap-3 px-8 py-5 bg-secondary text-secondary-foreground font-display font-bold text-base rounded-2xl shadow-gold hover:translate-y-[-2px] transition-all group disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none"
+                                className="w-full flex items-center justify-center gap-3 px-8 py-5 bg-secondary text-secondary-foreground font-display font-bold text-base rounded-2xl shadow-gold hover:translate-y-[-2px] transition-all group"
                             >
-                                {isLoading ? (
-                                    <div className="w-5 h-5 border-2 border-secondary-foreground border-t-transparent rounded-full animate-spin"></div>
-                                ) : (
-                                    <>
-                                        <Send className="h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                                        Submit Your Inquiry
-                                    </>
-                                )}
+                                <Send className="h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                Submit Your Inquiry
                             </button>
                         </form>
                     </motion.div>

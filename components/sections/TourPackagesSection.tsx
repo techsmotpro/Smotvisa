@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Star, Clock, Users, MapPin, Camera, Heart, Plane } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { tourPackagesData, popularRoutes, travelTips } from "@/data/tourPackagesData";
 
 const TourPackagesSection = () => {
@@ -40,10 +41,12 @@ const TourPackagesSection = () => {
                             className="group relative rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 bg-card border border-border"
                         >
                             <div className="aspect-[4/3] relative overflow-hidden">
-                                <img
+                                <Image
                                     src={pkg.image}
                                     alt={pkg.name}
-                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    fill
+                                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                                 <div className="absolute top-4 right-4">

@@ -24,7 +24,7 @@ export const tourPackagesData: TourPackage[] = [
         flag: "🇪🇺",
         duration: "14 Days",
         price: "From $2,999",
-        image: "/images/europe-tour.png",
+        image: "/images/europe-tour.webp",
         description: "Experience the best of Europe with our Grand Tour package. Visit iconic cities, historic landmarks, and scenic countryside across 5 countries.",
         highlights: [
             "Paris - Eiffel Tower & Louvre Museum",
@@ -54,7 +54,7 @@ export const tourPackagesData: TourPackage[] = [
         flag: "🇦🇪",
         duration: "5 Days",
         price: "From $1,299",
-        image: "/images/dubai-tour.png",
+        image: "/images/dubai-tour.webp",
         description: "Indulge in luxury and adventure with our Dubai Escape package. Experience the perfect mix of modern attractions and desert adventures.",
         highlights: [
             "Burj Khalifa - At the Top Observatory",
@@ -84,7 +84,7 @@ export const tourPackagesData: TourPackage[] = [
         flag: "🇦🇺",
         duration: "10 Days",
         price: "From $2,499",
-        image: "/images/australia-tour.png",
+        image: "/images/australia-tour.webp",
         description: "Explore the stunning landscapes and unique wildlife of Australia. From Sydney's iconic landmarks to the Great Barrier Reef.",
         highlights: [
             "Sydney Opera House & Harbour Bridge",
@@ -114,7 +114,7 @@ export const tourPackagesData: TourPackage[] = [
         flag: "🇬🇧",
         duration: "8 Days",
         price: "From $1,899",
-        image: "/images/uk-tour.png",
+        image: "/images/uk-tour.webp",
         description: "Immerse yourself in British culture and royalty. Visit London's historic landmarks and explore the charming countryside.",
         highlights: [
             "London City Tour - Big Ben, Buckingham Palace",
@@ -174,7 +174,7 @@ export const tourPackagesData: TourPackage[] = [
         flag: "🇹🇭",
         duration: "7 Days",
         price: "From $999",
-        image: "/images/thailand-tour.png",
+        image: "/images/thailand-tour.webp",
         description: "Discover the rich culture and stunning landscapes of Thailand. From bustling cities to ancient temples and beautiful beaches.",
         highlights: [
             "Bangkok Grand Palace & Wat Phra Kaew",

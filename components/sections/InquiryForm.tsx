@@ -7,45 +7,12 @@ import { toast } from "../../hooks/use-toast";
 
 const InquiryForm = () => {
     const [formData, setFormData] = useState({ name: "", email: "", phone: "", service: "", message: "" });
-    const [isLoading, setIsLoading] = useState(false);
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        setIsLoading(true);
-
-        try {
-            const response = await fetch("https://smotvisa-backend-visa.vercel.app/api/send-email", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (response.ok) {
-                toast({
-                    title: "Success!",
-                    description: "Your inquiry has been sent. We'll get back to you soon.",
-                    variant: "default",
-                });
-                setFormData({ name: "", email: "", phone: "", service: "", message: "" });
-            } else {
-                toast({
-                    title: "Error",
-                    description: "Failed to send your inquiry. Please try again later.",
-                    variant: "destructive",
-                });
-            }
-        } catch (error) {
-            console.error("Error sending inquiry:", error);
-            toast({
-                title: "Error",
-                description: "Failed to send your inquiry. Please check your internet connection.",
-                variant: "destructive",
-            });
-        }
-
-        setIsLoading(false);
+        const message = `Hi SmotVisa, I'd like to inquire about your services.%0A%0AName: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AService: ${formData.service || 'Not specified'}%0AMessage: ${formData.message || 'No additional details'}`;
+        window.open(`https://wa.me/919036329410?text=${message}`, "_blank", "noopener,noreferrer");
+        setFormData({ name: "", email: "", phone: "", service: "", message: "" });
     };
 
     return (
@@ -59,8 +26,9 @@ const InquiryForm = () => {
                 <h3 className="text-xl font-display font-bold text-foreground">Send an Inquiry</h3>
 
                 <div className="space-y-1">
-                    <label className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Full Name</label>
+                    <label htmlFor="inquiry-name" className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Full Name</label>
                     <input
+                        id="inquiry-name"
                         type="text"
                         required
                         value={formData.name}
@@ -72,8 +40,9 @@ const InquiryForm = () => {
 
                 <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-1">
-                        <label className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Email Address</label>
+                        <label htmlFor="inquiry-email" className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Email Address</label>
                         <input
+                            id="inquiry-email"
                             type="email"
                             required
                             value={formData.email}
@@ -83,8 +52,9 @@ const InquiryForm = () => {
                         />
                     </div>
                     <div className="space-y-1">
-                        <label className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Phone Number</label>
+                        <label htmlFor="inquiry-phone" className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Phone Number</label>
                         <input
+                            id="inquiry-phone"
                             type="tel"
                             value={formData.phone}
                             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -95,8 +65,9 @@ const InquiryForm = () => {
                 </div>
 
                 <div className="space-y-1">
-                    <label className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Service Needed</label>
+                    <label htmlFor="inquiry-service" className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Service Needed</label>
                     <select
+                        id="inquiry-service"
                         value={formData.service}
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all appearance-none cursor-pointer"
@@ -111,8 +82,9 @@ const InquiryForm = () => {
                 </div>
 
                 <div className="space-y-1">
-                    <label className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Detail Message</label>
+                    <label htmlFor="inquiry-message" className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Detail Message</label>
                     <textarea
+                        id="inquiry-message"
                         rows={2}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -123,17 +95,10 @@ const InquiryForm = () => {
 
                 <button
                     type="submit"
-                    disabled={isLoading}
-                    className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-body font-bold text-sm rounded-xl shadow-gold hover:opacity-90 transition-all group mt-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                    className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-body font-bold text-sm rounded-xl shadow-gold hover:opacity-90 transition-all group mt-2"
                 >
-                    {isLoading ? (
-                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                    ) : (
-                        <>
-                            <Send className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                            Submit Inquiry
-                        </>
-                    )}
+                    <Send className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    Submit Inquiry
                 </button>
             </form>
         </motion.div>

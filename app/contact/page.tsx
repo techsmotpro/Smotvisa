@@ -1,8 +1,10 @@
 import PageHeader from "@/components/ui/PageHeader";
-import ContactListClient from "@/components/contact/ContactFilterClient";
+import dynamic from "next/dynamic";
 import { offices } from "@/data/officeData";
 import JsonLd from "@/components/ui/JsonLd";
 import type { Metadata } from "next";
+
+const ContactListClient = dynamic(() => import("@/components/contact/ContactFilterClient"));
 
 export const metadata: Metadata = {
     title: "Contact Our Experts | SmotVisa",
@@ -24,18 +26,18 @@ export const metadata: Metadata = {
     authors: [{ name: "SmotVisa Team" }],
     publisher: "SmotVisa",
     openGraph: {
-        title: "Contact Our Experts | SmotVisa",
+        title: "Contact SmotVisa | Visa Agents & Travel Consultants in India",
         description: "Connect with India's leading visa and travel consultants. We provide personalized support for all your international journeys.",
         url: "https://smotvisa.com/contact",
         siteName: "SmotVisa",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Contact Our Experts | SmotVisa",
+        title: "Contact SmotVisa | Visa Agents & Travel Consultants in India",
         description: "Connect with India's leading visa and travel consultants. We provide personalized support for all your international journeys.",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
     }
 };
 

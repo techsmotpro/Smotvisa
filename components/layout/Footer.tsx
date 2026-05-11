@@ -30,16 +30,42 @@ const Footer = () => {
               "The status of the customer needs is monitored online with the help of our state of technology."
             </p>
             <div className="flex gap-4">
-              {[Facebook, Instagram, Twitter, Youtube].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  aria-label={`Social Media Link ${i}`}
-                  className="p-2.5 bg-primary-foreground/10 rounded-xl hover:bg-secondary hover:text-secondary-foreground transition-all duration-300"
-                >
-                  <Icon className="h-5 w-5" />
-                </a>
-              ))}
+              <a
+                href="https://www.facebook.com/smotvisa"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="p-2.5 bg-primary-foreground/10 rounded-xl hover:bg-secondary hover:text-secondary-foreground transition-all duration-300"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.instagram.com/smotvisa"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="p-2.5 bg-primary-foreground/10 rounded-xl hover:bg-secondary hover:text-secondary-foreground transition-all duration-300"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href="https://twitter.com/smotvisa"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                className="p-2.5 bg-primary-foreground/10 rounded-xl hover:bg-secondary hover:text-secondary-foreground transition-all duration-300"
+              >
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.youtube.com/@smotvisa"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="p-2.5 bg-primary-foreground/10 rounded-xl hover:bg-secondary hover:text-secondary-foreground transition-all duration-300"
+              >
+                <Youtube className="h-5 w-5" />
+              </a>
             </div>
           </div>
 
@@ -86,16 +112,16 @@ const Footer = () => {
             <h4 className="text-xs font-body font-bold uppercase tracking-[0.2em] text-secondary mb-6">Our Presence</h4>
             <ul className="space-y-3">
               {[
-                { name: "Maharashtra", href: "/contact" },
-                { name: "Delhi", href: "/contact" },
-                { name: "Andhra Pradesh", href: "/contact" },
-                { name: "Karnataka", href: "/contact" },
-                { name: "Ahmedabad", href: "/contact" },
-                { name: "Jaipur", href: "/contact" },
+                { name: "Mumbai" },
+                { name: "Delhi" },
+                { name: "Bangalore" },
+                { name: "Pune" },
+                { name: "Ahmedabad" },
+                { name: "Jaipur" },
               ].map((loc) => (
                 <li key={loc.name}>
                   <Link
-                    href={loc.href}
+                    href="/contact"
                     className="text-sm font-body text-primary-foreground/70 hover:text-secondary transition-colors flex items-center gap-2"
                     onClick={() => window.scrollTo(0, 0)}
                   >
@@ -129,7 +155,7 @@ const Footer = () => {
       <div className="border-t border-primary-foreground/10 bg-black/10">
         <div className="container mx-auto px-4 py-3 text-center">
           <p className="text-sm font-body text-primary-foreground/60">
-            Note: Smotvisa is a private visa consultancy and is not affiliated with any embassy, consulate, or government authority. Visa decisions are made solely by respective authorities.
+            Note: SmotVisa is a private visa consultancy and is not affiliated with any embassy, consulate, or government authority. Visa decisions are made solely by respective authorities.
           </p>
         </div>
       </div>
@@ -155,6 +181,7 @@ const Footer = () => {
 
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            aria-label="Scroll to top"
             className="group flex flex-col items-center gap-1 text-[10px] font-body text-primary-foreground/30 hover:text-secondary transition-colors cursor-pointer"
           >
             <div className="p-2 bg-primary-foreground/10 rounded-full group-hover:bg-secondary transition-colors">

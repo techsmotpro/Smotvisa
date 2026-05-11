@@ -1,11 +1,14 @@
 import PageHeader from "@/components/ui/PageHeader";
-import InquiryForm from "@/components/sections/InquiryForm";
+import dynamic from "next/dynamic";
+import JsonLd from "@/components/ui/JsonLd";
 import type { Metadata } from "next";
 
+const InquiryForm = dynamic(() => import("@/components/sections/InquiryForm"));
+
 export const metadata: Metadata = {
-    title: "Reach Out to Us | SmotVisa",
+    title: "Get Free Visa Consultation | SmotVisa",
     description: "Have questions? Reach out to SmotVisa's expert team for personalized visa and travel assistance. We're here to help you plan your international journey.",
-    keywords: [
+  keywords: [
         "reach out SmotVisa",
         "contact visa experts",
         "travel assistance",
@@ -22,24 +25,32 @@ export const metadata: Metadata = {
     authors: [{ name: "SmotVisa Team" }],
     publisher: "SmotVisa",
     openGraph: {
-        title: "Reach Out to Us | SmotVisa",
+        title: "Get Free Visa Consultation | SmotVisa",
         description: "Have questions? Reach out to SmotVisa's expert team for personalized visa and travel assistance. We're here to help you plan your international journey.",
         url: "https://smotvisa.com/reachout",
         siteName: "SmotVisa",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Reach Out to Us | SmotVisa",
+        title: "Get Free Visa Consultation | SmotVisa",
         description: "Have questions? Reach out to SmotVisa's expert team for personalized visa and travel assistance. We're here to help you plan your international journey.",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
     }
 };
 
 export default function ReachOutPage() {
     return (
         <main className="bg-background min-h-screen">
+            <JsonLd data={{
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smotvisa.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "Get a Quote", "item": "https://smotvisa.com/reachout" }
+                ]
+            }} />
             <PageHeader
                 title="Reach Out to Us"
                 description="Have questions? Reach out to SmotVisa's expert team for personalized visa and travel assistance. We're here to help you plan your international journey."

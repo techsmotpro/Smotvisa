@@ -12,39 +12,39 @@ export const fetchReviews = async (): Promise<Review[]> => {
     return [
         {
             id: "1",
-            name: "Sarah Jenkins",
+            name: "Priya Sharma",
             role: "Tourist",
             location: "Dubai, UAE",
             rating: 5,
             comment: "The process was incredibly smooth. I got my Schengen visa in record time without any hassle.",
-            avatar: "https://i.pravatar.cc/150?u=sarah"
+            avatar: "/images/small--Y9qzfea.webp"
         },
         {
             id: "2",
-            name: "Michael Chen",
+            name: "Rahul Mehta",
             role: "Business Traveler",
             location: "London, UK",
             rating: 5,
             comment: "Highly professional service. They handled my US B1/B2 visa application perfectly.",
-            avatar: "https://i.pravatar.cc/150?u=michael"
+            avatar: "/images/small--Y9qzfea.webp"
         },
         {
             id: "3",
-            name: "Priya Sharma",
+            name: "Ananya Iyer",
             role: "Student",
             location: "Toronto, Canada",
             rating: 4,
             comment: "Great support throughout the student visa process. They answered all my queries patiently.",
-            avatar: "https://i.pravatar.cc/150?u=priya"
+            avatar: "/images/small--Y9qzfea.webp"
         },
         {
             id: "4",
-            name: "David Smith",
+            name: "Vikram Patel",
             role: "Tourist",
             location: "Sydney, Australia",
             rating: 5,
             comment: "Excellent service! The entire process was hassle-free and the support team was very helpful.",
-            avatar: "https://i.pravatar.cc/150?u=david"
+            avatar: "/images/small--Y9qzfea.webp"
         }
     ];
 };

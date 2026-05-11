@@ -1,22 +1,15 @@
 import { ArrowRight, Star, Clock, Users, MapPin, Plane, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import PageHeader from "@/components/ui/PageHeader";
 import { tourPackagesData, popularRoutes, travelTips } from "@/data/tourPackagesData";
 import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Best Domestic and International Travel Packages | Smotvisa",
+    title: "Best Domestic and International Travel Packages | SmotVisa",
     description: "Explore the world with SmotVisa domestic and international tours. We offer travel packages, tourist visa assistance, and complete travel support for a hassle-free holiday experience.",
-
-    keywords: [
-        "international tour packages",
-        "bespoke travel packages",
-        "custom tour packages India",
-        "SmotVisa tours",
-        "travel packages from India"
-    ],
-
+    keywords: ["tour packages", "international tours", "domestic tours", "SmotVisa tours", "travel packages India"],
     alternates: {
         canonical: "https://smotvisa.com/services/tours",
     },
@@ -30,19 +23,19 @@ export const metadata: Metadata = {
     publisher: "SmotVisa",
 
     openGraph: {
-        title: "Best Domestic and International Travel Packages | Smotvisa",
+        title: "Best Domestic and International Travel Packages | SmotVisa",
         description: "Explore the world with SmotVisa domestic and international tours. We offer travel packages, tourist visa assistance, and complete travel support for a hassle-free holiday experience.",
         url: "https://smotvisa.com/services/tours",
         siteName: "SmotVisa",
-        images: ["/images/australia-tour.png"],
+        images: ["/images/australia-tour.webp"],
         type: "website",
     },
 
     twitter: {
         card: "summary_large_image",
-        title: "Best Domestic and International Travel Packages | Smotvisa",
+        title: "Best Domestic and International Travel Packages | SmotVisa",
         description: "Explore the world with SmotVisa domestic and international tours. We offer travel packages, tourist visa assistance, and complete travel support for a hassle-free holiday experience.",
-        images: ["/images/australia-tour.png"],
+        images: ["/images/australia-tour.webp"],
     }
 };
 
@@ -74,10 +67,12 @@ export default function TourPackagesPage() {
                                 className="group bg-card rounded-[2.5rem] overflow-hidden border border-border shadow-card hover:shadow-elevated transition-all"
                             >
                                 <div className="relative h-80 overflow-hidden">
-                                    <img
+                                    <Image
                                         src={pkg.image}
                                         alt={pkg.name}
-                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                        fill
+                                        className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     />
                                     <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-5 py-2.5 rounded-full flex items-center gap-2 shadow-sm">
                                         <span className="text-xl">{pkg.flag}</span>

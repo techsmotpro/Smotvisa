@@ -27,7 +27,7 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                     >
                         <div className="rounded-3xl overflow-hidden shadow-elevated relative h-[500px] md:h-[600px]">
                             <Image
-                                src="/images/travelers-9_2z2QtE.jpg"
+                                src="/images/travelers-9_2z2QtE.webp"
                                 alt="Happy travelers"
                                 fill
                                 className="object-cover"

@@ -1,11 +1,12 @@
 import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
-const dubaiImg = "/images/dubai-DCaS6AeM.jpg";
-const londonImg = "/images/london-DVffmt_1.jpg";
+const dubaiImg = "/images/dubai-DCaS6AeM.webp";
+const londonImg = "/images/london-DVffmt_1.webp";
 const usImg = "/images/us-DVU4VGkG.webp";
-const visaImg = "/images/visa-services-MHOtW-3U.jpg";
+const visaImg = "/images/visa-services-MHOtW-3U.webp";
 
 const destinations = [
     {
@@ -87,7 +88,7 @@ const DestinationsSection = () => {
                         >
                             <Link href={`/visa/${dest.id}-visa-consultant`}>
                                 <div className="aspect-[3/4] relative">
-                                    <img src={dest.image} alt={dest.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                    <Image src={dest.image} alt={dest.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 25vw" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/10 to-transparent" />
                                     <div className="absolute bottom-0 left-0 right-0 p-4">
                                         <div className="flex items-center gap-2 mb-2">

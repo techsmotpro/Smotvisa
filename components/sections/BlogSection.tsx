@@ -2,11 +2,10 @@ import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { Calendar, ArrowRight, User, Clock } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { fetchBlogs } from "@/data/blogData";
+import { getBlogSummaries } from "@/data/blogData";
 
-const BlogSection = async () => {
-    const fetchedBlogs = await fetchBlogs();
-    const blogs = fetchedBlogs.slice(0, 3); // Show only 3 blogs in the section
+const BlogSection = () => {
+    const blogs = getBlogSummaries().slice(0, 3);
 
     return (
         <section id="blog" className="py-12 bg-background">
@@ -39,7 +38,7 @@ const BlogSection = async () => {
                             <div className="relative overflow-hidden aspect-video">
                                 <Link href={`/blog/${blog.slug || blog.id}`} className="block w-full h-full">
                                     <Image
-                                        src={blog.image || 'https://picsum.photos/seed/' + blog.id + '/800/450'}
+                                        src={blog.image || "/images/hero-travel-CJWf8Tv1.webp"}
                                         alt={blog.title}
                                         fill
                                         className="object-cover group-hover:scale-105 transition-transform duration-500"

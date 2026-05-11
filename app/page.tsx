@@ -40,7 +40,7 @@ export const metadata = {
     description: "Experience expert visa assistance for US, UK, Canada, Singapore, Dubai, the leading visa and travel agency. Our expert team will handle all your visa and travel needs, ensuring a seamless and enjoyable trip.",
     url: "https://smotvisa.com",
     siteName: "SmotVisa",
-    images: ["/images/visa-services-MHOtW-3U.jpg"],
+    images: ["/images/visa-services-MHOtW-3U.webp"],
     type: "website",
   },
 
@@ -48,6 +48,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Ultimate Visa and Travel Consultants in India | SmotVisa",
     description: "Experience expert visa assistance for US, UK, Canada, Singapore, Dubai, the leading visa and travel agency. Our expert team will handle all your visa and travel needs, ensuring a seamless and enjoyable trip.",
+    images: ["/images/hero-travel-CJWf8Tv1.webp"],
   }
 };
 

@@ -10,8 +10,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
     title: "Best Visa Agents in Bangalore | Expert Visa Consultancy | SmotVisa",
     description: "Expert visa processing services in HSR Layout, Indiranagar, Koramangala and across Bangalore. SmotVisa is the best visa agency in Bangalore for US, UK, Canada, and Schengen visas.",
-    
-    keywords: [
+  keywords: [
         "visa agents in Bangalore",
         "best visa consultants Bangalore",
         "Bangalore visa services",
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
         "Koramangala visa services",
         "SmotVisa Bangalore"
     ],
-
+    
     alternates: {
         canonical: "https://smotvisa.com/visa-agents-in-bangalore",
     },
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
         description: "Expert visa processing services in HSR Layout, Indiranagar, Koramangala and across Bangalore. SmotVisa is the best visa agency in Bangalore for US, UK, Canada, and Schengen visas.",
         url: "https://smotvisa.com/visa-agents-in-bangalore",
         siteName: "SmotVisa",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
         type: "website",
     },
 
@@ -46,7 +45,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Best Visa Agents in Bangalore | Expert Visa Consultancy | SmotVisa",
         description: "Expert visa processing services in HSR Layout, Indiranagar, Koramangala and across Bangalore. SmotVisa is the best visa agency in Bangalore for US, UK, Canada, and Schengen visas.",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
     }
 };
 
@@ -75,6 +74,7 @@ export default function VisaAgentsInBangalore() {
                             "addressRegion": "Karnataka",
                             "addressCountry": "IN"
                         },
+                        "areaServed": { "@type": "City", "name": "Bangalore" },
                         "openingHoursSpecification": {
                             "@type": "OpeningHoursSpecification",
                             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -220,7 +220,7 @@ export default function VisaAgentsInBangalore() {
                         <Link href="/contact" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-secondary text-secondary-foreground font-display font-bold text-lg rounded-2xl hover:translate-y-[-2px] transition-all shadow-gold group">
                             Contact our Bangalore Desk <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
                         </Link>
-                        <Link href="/visa-checker" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-transparent border-2 border-primary text-primary font-display font-bold text-lg rounded-2xl hover:bg-primary/5 transition-all">
+                        <Link href="/visa" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-transparent border-2 border-primary text-primary font-display font-bold text-lg rounded-2xl hover:bg-primary/5 transition-all">
                             Check Eligibility
                         </Link>
                     </div>

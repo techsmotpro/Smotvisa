@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { MotionDiv } from "@/components/ui/MotionWrapper";
 
@@ -32,10 +33,12 @@ export default function VisaFeaturedGrid({ destinations }: { destinations: Desti
                     >
                         <Link href={`/visa/${dest.id}-visa-consultant`}>
                             <div className="aspect-[3/4] relative overflow-hidden">
-                                <img
+                                <Image
                                     src={dest.image}
                                     alt={dest.name}
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    fill
+                                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                    sizes="(max-width: 768px) 100vw, 25vw"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/10 to-transparent" />
                                 <div className="absolute top-4 left-4">

@@ -56,7 +56,7 @@ const ReviewCards = async () => {
                                     {/* Client Info */}
                                     <div className="flex items-center gap-4">
                                         <Avatar className="h-12 w-12">
-                                            <AvatarImage src={review.avatar} alt={review.name} />
+                                            <AvatarImage src={review.avatar} alt={review.name} width={48} height={48} />
                                             <AvatarFallback>{review.name.charAt(0)}</AvatarFallback>
                                         </Avatar>
                                         <div className="flex-1 min-w-0">

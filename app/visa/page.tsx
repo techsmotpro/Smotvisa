@@ -4,7 +4,7 @@ import VisaFeaturedGrid from "@/components/visa/VisaFeaturedGrid";
 import JsonLd from "@/components/ui/JsonLd";
 
 export const metadata = {
-  title: "Global Visa Destinations | Visa Services for 50+ Countries",
+  title: "Visa Services for 50+ Countries | SmotVisa",
   description: "Explore visa requirements and processing details for over 50+ countries worldwide. Your journey starts here.",
 
   keywords: [
@@ -33,18 +33,19 @@ export const metadata = {
   publisher: "SmotVisa",
 
   openGraph: {
-    title: "Global Visa Destinations | Visa Services for 50+ Countries",
+    title: "Visa Services for 50+ Countries | SmotVisa",
     description: "Explore visa requirements and processing details for over 50+ countries worldwide. Your journey starts here.",
     url: "https://smotvisa.com/visa",
     siteName: "SmotVisa",
-    images: ["/images/visa-services-MHOtW-3U.jpg"],
+    images: ["/images/visa-services-MHOtW-3U.webp"],
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Global Visa Destinations | Visa Services for 50+ Countries",
+    title: "Visa Services for 50+ Countries | SmotVisa",
     description: "Explore visa requirements and processing details for over 50+ countries worldwide. Your journey starts here.",
+    images: ["/images/hero-travel-CJWf8Tv1.webp"],
   }
 };
 
@@ -53,7 +54,7 @@ const destinations = [
         id: "uae",
         name: "United Arab Emirates",
         flag: "🇦🇪",
-        image: "/images/dubai-DCaS6AeM.jpg",
+        image: "/images/dubai-DCaS6AeM.webp",
         category: "Middle East",
         visaType: "Tourist / Business Visa",
         processing: "3-5 Days",
@@ -63,7 +64,7 @@ const destinations = [
         id: "uk",
         name: "United Kingdom",
         flag: "🇬🇧",
-        image: "/images/london-DVffmt_1.jpg",
+        image: "/images/london-DVffmt_1.webp",
         category: "Europe",
         visaType: "Standard Visitor Visa",
         processing: "15-20 Days",
@@ -83,7 +84,7 @@ const destinations = [
         id: "schengen",
         name: "Schengen (Europe)",
         flag: "🇪🇺",
-        image: "/images/visa-services-MHOtW-3U.jpg",
+        image: "/images/visa-services-MHOtW-3U.webp",
         category: "Europe",
         visaType: "Schengen Visa",
         processing: "10-15 Days",

@@ -10,7 +10,7 @@ const HeroSection = () => {
             {/* Background image */}
             <div className="absolute inset-0 z-[-1]">
                 <Image
-                    src="/images/hero-travel-CJWf8Tv1.jpg"
+                    src="/images/hero-travel-CJWf8Tv1.webp"
                     alt="Travel destination"
                     fill
                     className="object-cover"

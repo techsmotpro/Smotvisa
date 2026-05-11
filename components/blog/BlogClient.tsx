@@ -4,55 +4,52 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Calendar, ArrowRight, User, Clock, Search, Star } from "lucide-react";
 import Link from "next/link";
-import type { BlogPost } from "@/data/blogData";
+import Image from "next/image";
+import type { BlogPostSummary } from "@/data/blogData";
 
-export default function BlogClient({ blogs }: { blogs: BlogPost[] }) {
+export default function BlogClient({ blogs }: { blogs: BlogPostSummary[] }) {
     const [search, setSearch] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("All");
 
-    // Extract all possible categories from all fields (category, category_names, tagname)
-    const extractCategories = (blog: BlogPost): string[] => {
+    const extractCategories = (blog: BlogPostSummary): string[] => {
         const categories: string[] = [];
-        
+
         if (blog.category) {
             categories.push(blog.category);
         }
-        
+
         if (blog.category_names) {
-            if (typeof blog.category_names === 'string') {
+            if (typeof blog.category_names === "string") {
                 categories.push(blog.category_names);
             } else {
                 categories.push(...blog.category_names);
             }
         }
-        
+
         if (blog.tagname) {
-            if (typeof blog.tagname === 'string') {
+            if (typeof blog.tagname === "string") {
                 categories.push(blog.tagname);
             } else {
                 categories.push(...blog.tagname);
             }
         }
-        
+
         return categories.filter(Boolean);
     };
 
-    // Get unique categories from all blogs
     const categories = ["All", ...new Set(blogs.flatMap(extractCategories))];
 
-    const filteredBlogs = blogs.filter(b => {
-        const matchesSearch = b.title.toLowerCase().includes(search.toLowerCase()) ||
+    const filteredBlogs = blogs.filter((b) => {
+        const matchesSearch =
+            b.title.toLowerCase().includes(search.toLowerCase()) ||
             b.excerpt.toLowerCase().includes(search.toLowerCase());
-        
+
         if (selectedCategory === "All") {
             return matchesSearch;
         }
-        
-        // Check if blog matches selected category in any of the category fields
+
         const blogCategories = extractCategories(b);
-        return matchesSearch && blogCategories.some(cat => 
-            cat.toLowerCase() === selectedCategory.toLowerCase()
-        );
+        return matchesSearch && blogCategories.some((cat) => cat.toLowerCase() === selectedCategory.toLowerCase());
     });
 
     return (
@@ -65,10 +62,11 @@ export default function BlogClient({ blogs }: { blogs: BlogPost[] }) {
                             <button
                                 key={cat}
                                 onClick={() => setSelectedCategory(cat)}
-                                className={`px-8 py-3 rounded-full text-xs font-display font-bold transition-all border ${selectedCategory === cat
-                                    ? "bg-secondary text-secondary-foreground border-secondary shadow-gold"
-                                    : "bg-card text-muted-foreground border-border hover:border-secondary/30 hover:text-secondary"
-                                    }`}
+                                className={`px-8 py-3 rounded-full text-xs font-display font-bold transition-all border ${
+                                    selectedCategory === cat
+                                        ? "bg-secondary text-secondary-foreground border-secondary shadow-gold"
+                                        : "bg-card text-muted-foreground border-border hover:border-secondary/30 hover:text-secondary"
+                                }`}
                             >
                                 {cat}
                             </button>
@@ -98,10 +96,12 @@ export default function BlogClient({ blogs }: { blogs: BlogPost[] }) {
                             className="group bg-card rounded-3xl overflow-hidden shadow-card border border-border hover:shadow-elevated transition-all duration-300 flex flex-col h-full"
                         >
                             <Link href={`/blog/${blog.slug || blog.id}`} className="block overflow-hidden h-64 relative">
-                                <img
-                                    src={blog.image || 'https://picsum.photos/seed/' + blog.id + '/800/600'}
+                                <Image
+                                    src={blog.image || "/images/hero-travel-CJWf8Tv1.webp"}
                                     alt={blog.title}
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    fill
+                                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 />
                                 <div className="absolute top-4 left-4 bg-secondary text-secondary-foreground text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-gold">
                                     {blog.category}
@@ -150,9 +150,14 @@ export default function BlogClient({ blogs }: { blogs: BlogPost[] }) {
 
                 {filteredBlogs.length === 0 && (
                     <div className="text-center py-32 bg-secondary/5 rounded-[3rem] border-2 border-dashed border-border/50">
-                        <p className="text-xl text-muted-foreground font-display font-bold italic">No articles match your criteria. Try another search!</p>
+                        <p className="text-xl text-muted-foreground font-display font-bold italic">
+                            No articles match your criteria. Try another search!
+                        </p>
                         <button
-                            onClick={() => { setSearch(""); setSelectedCategory("All") }}
+                            onClick={() => {
+                                setSearch("");
+                                setSelectedCategory("All");
+                            }}
                             className="mt-6 text-secondary font-bold underline"
                         >
                             Clear all filters

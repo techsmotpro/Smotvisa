@@ -6,13 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Visa Agents in Bandra East, Mumbai | SmotVisa",
     description: "Expert visa consultants in Bandra East, Mumbai. Get professional visa assistance for all countries at SmotVisa Bandra East office.",
-    keywords: [
-        "visa agents in Bandra East",
-        "visa consultants Bandra East",
-        "Bandra East visa services",
-        "SmotVisa Bandra East",
-        "visa agents Mumbai"
-    ],
+    keywords: ["visa agents Bandra East", "visa consultancy Mumbai", "SmotVisa Bandra East", "visa services Mumbai", "travel agents Mumbai"],
     alternates: {
         canonical: "https://smotvisa.com/contact/mumbai/visa-agents-in-bandra-east",
     },
@@ -27,14 +21,14 @@ export const metadata: Metadata = {
         description: "Expert visa consultants in Bandra East, Mumbai. Get professional visa assistance for all countries at SmotVisa Bandra East office.",
         url: "https://smotvisa.com/contact/mumbai/visa-agents-in-bandra-east",
         siteName: "SmotVisa",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
         title: "Visa Agents in Bandra East, Mumbai | SmotVisa",
         description: "Expert visa consultants in Bandra East, Mumbai. Get professional visa assistance for all countries at SmotVisa Bandra East office.",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
     }
 };
 

@@ -6,13 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Visa Agents in Jaipur | SmotVisa",
     description: "Expert visa consultants in Jaipur. Get professional visa assistance for all countries at SmotVisa Jaipur office.",
-    keywords: [
-        "visa agents in Jaipur",
-        "visa consultants Jaipur",
-        "Jaipur visa services",
-        "SmotVisa Jaipur",
-        "visa agents Rajasthan"
-    ],
+    keywords: ["visa agents Jaipur", "visa consultancy Jaipur", "SmotVisa Jaipur", "visa services Jaipur", "travel agents Jaipur"],
     alternates: {
         canonical: "https://smotvisa.com/contact/jaipur/visa-agents-in-jaipur",
     },
@@ -27,14 +21,14 @@ export const metadata: Metadata = {
         description: "Expert visa consultants in Jaipur. Get professional visa assistance for all countries at SmotVisa Jaipur office.",
         url: "https://smotvisa.com/contact/jaipur/visa-agents-in-jaipur",
         siteName: "SmotVisa",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
         title: "Visa Agents in Jaipur | SmotVisa",
         description: "Expert visa consultants in Jaipur. Get professional visa assistance for all countries at SmotVisa Jaipur office.",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
     }
 };
 

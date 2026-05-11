@@ -1,10 +1,11 @@
-import { fetchBlogBySlug, fetchBlogs } from "@/data/blogData";
+import { getBlogs, getBlogBySlug } from "@/data/blogData";
 import { notFound } from "next/navigation";
 import BlogDetailClient from "@/components/blog/BlogDetailClient";
+import JsonLd from "@/components/ui/JsonLd";
 import type { Metadata } from "next";
 
-export async function generateStaticParams() {
-    const blogs = await fetchBlogs();
+export function generateStaticParams() {
+    const blogs = getBlogs();
     return blogs.map((blog) => ({
         slug: blog.slug || blog.id,
     }));
@@ -12,36 +13,24 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
-    const blog = await fetchBlogBySlug(slug);
+    const blog = getBlogBySlug(slug);
 
     if (!blog) return {};
 
-    const plainExcerpt = blog.excerpt.replace(/<[^>]*>/g, '').substring(0, 160);
-    const image = blog.image.startsWith('http') ? blog.image : 'https://picsum.photos/seed/' + blog.id + '/1200/800';
+    const plainExcerpt = blog.excerpt.replace(/<[^>]*>/g, "").substring(0, 160);
+    const image = blog.image.startsWith("http") ? blog.image : `https://smotvisa.com${blog.image}`;
 
     return {
         title: `${blog.title} | SmotVisa Blog`,
         description: plainExcerpt,
-        keywords: [
-            "SmotVisa blog",
-            "visa guides",
-            "travel tips",
-            blog.category.toLowerCase(),
-            "travel blog India"
-        ],
-
+        keywords: [blog.title, blog.category || "visa blog", "SmotVisa blog", "visa tips", "travel guide"].filter(Boolean),
         alternates: {
             canonical: `https://smotvisa.com/blog/${slug}`,
         },
-
         robots: {
             index: true,
             follow: true,
         },
-
-        authors: [{ name: blog.author || "SmotVisa Team" }],
-        publisher: "SmotVisa",
-
         openGraph: {
             title: blog.title,
             description: plainExcerpt,
@@ -49,24 +38,58 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             siteName: "SmotVisa",
             images: [image],
             type: "article",
+            publishedTime: blog.date,
+            authors: [blog.author || "SmotVisa Team"],
         },
-
         twitter: {
             card: "summary_large_image",
             title: blog.title,
             description: plainExcerpt,
             images: [image],
-        }
+        },
     };
 }
 
 export default async function BlogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
-    const blog = await fetchBlogBySlug(slug);
+    const blog = getBlogBySlug(slug);
 
     if (!blog) {
         notFound();
     }
 
-    return <BlogDetailClient blog={blog} />;
+    const image = blog.image.startsWith("http") ? blog.image : `https://smotvisa.com${blog.image}`;
+
+    return (
+        <>
+            <JsonLd
+                data={{
+                    "@context": "https://schema.org",
+                    "@type": "BlogPosting",
+                    headline: blog.title,
+                    description: blog.excerpt.replace(/<[^>]*>/g, ""),
+                    image: image,
+                    author: {
+                        "@type": "Person",
+                        name: blog.author || "SmotVisa Team",
+                    },
+                    publisher: {
+                        "@type": "Organization",
+                        name: "SmotVisa",
+                        logo: {
+                            "@type": "ImageObject",
+                            url: "https://smotvisa.com/logo.png",
+                        },
+                    },
+                    datePublished: blog.date,
+                    dateModified: blog.updatedAt || blog.date,
+                    mainEntityOfPage: {
+                        "@type": "WebPage",
+                        "@id": `https://smotvisa.com/blog/${slug}`,
+                    },
+                }}
+            />
+            <BlogDetailClient blog={blog} />
+        </>
+    );
 }

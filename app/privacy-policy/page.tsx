@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/ui/JsonLd";
 
 export const metadata: Metadata = {
     title: "Privacy Policy - SmotVisa",
@@ -24,20 +25,28 @@ export const metadata: Metadata = {
         description: "SmotVisa Privacy Policy - Learn how we collect, use, and protect your personal information when using our visa and travel services.",
         url: "https://smotvisa.com/privacy-policy",
         siteName: "SmotVisa",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
         title: "Privacy Policy - SmotVisa",
         description: "SmotVisa Privacy Policy - Learn how we collect, use, and protect your personal information when using our visa and travel services.",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
     }
 };
 
 export default function PrivacyPolicyPage() {
     return (
         <main className="min-h-screen bg-background pb-20">
+            <JsonLd data={{
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smotvisa.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://smotvisa.com/privacy-policy" }
+                ]
+            }} />
             {/* Hero Section */}
             <section className="bg-primary pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
                 <div className="container mx-auto px-4 relative z-10">
@@ -46,7 +55,7 @@ export default function PrivacyPolicyPage() {
                             Privacy Policy
                         </h1>
                         <p className="text-lg md:text-xl text-white/70 font-body leading-relaxed">
-                            At Smotvisa, we are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner.
+                            At SmotVisa, we are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner.
                         </p>
                         <div className="mt-8 flex items-center gap-4 text-white/60">
                             <span className="text-sm">Effective Date:</span>
@@ -152,7 +161,7 @@ export default function PrivacyPolicyPage() {
                             <section>
                                 <h2 className="text-2xl font-display font-bold text-foreground mb-4">3. Cookies and Tracking Technologies</h2>
                                 <p className="text-muted-foreground font-body leading-relaxed mb-4">
-                                    Smotvisa uses cookies and similar tracking technologies to:
+                                    SmotVisa uses cookies and similar tracking technologies to:
                                 </p>
                                 <ul className="space-y-2 text-muted-foreground">
                                     <li className="flex items-start gap-2">
@@ -273,7 +282,7 @@ export default function PrivacyPolicyPage() {
                                     </p>
                                     <p className="flex items-start gap-2">
                                         <span className="text-secondary font-bold">Phone:</span>
-                                        <span>+91-9482386529</span>
+                                        <span>+91-90363-29410</span>
                                     </p>
                                 </div>
                             </section>

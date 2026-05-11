@@ -4,50 +4,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Send, Globe, Star } from "lucide-react";
 import { useState } from "react";
 import { offices, Office } from "@/data/officeData";
-import { toast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
     const [formData, setFormData] = useState({ name: "", email: "", phone: "", service: "", message: "" });
     const [activeOffice, setActiveOffice] = useState<Office>(offices[0]);
-    const [isLoading, setIsLoading] = useState(false);
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        setIsLoading(true);
-
-        try {
-            const response = await fetch("https://smotvisa-backend-visa.vercel.app/api/send-email", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (response.ok) {
-                toast({
-                    title: "Success!",
-                    description: "Your inquiry has been sent. We'll get back to you soon.",
-                    variant: "default",
-                });
-                setFormData({ name: "", email: "", phone: "", service: "", message: "" });
-            } else {
-                toast({
-                    title: "Error",
-                    description: "Failed to send your inquiry. Please try again later.",
-                    variant: "destructive",
-                });
-            }
-        } catch (error) {
-            console.error("Error sending inquiry:", error);
-            toast({
-                title: "Error",
-                description: "Failed to send your inquiry. Please check your internet connection.",
-                variant: "destructive",
-            });
-        }
-
-        setIsLoading(false);
+        const message = `Hi SmotVisa, I'd like to inquire about your services.%0A%0AName: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AService: ${formData.service || 'Not specified'}%0AMessage: ${formData.message || 'No additional details'}`;
+        window.open(`https://wa.me/919036329410?text=${message}`, "_blank", "noopener,noreferrer");
+        setFormData({ name: "", email: "", phone: "", service: "", message: "" });
     };
 
     return (
@@ -138,7 +104,9 @@ const ContactSection = () => {
 
                                     <div className="pt-4">
                                         <a
-                                            href="#"
+                                            href={`https://wa.me/919036329410?text=${encodeURIComponent("Hi SmotVisa! I'd like to leave a review.")}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="inline-flex items-center gap-2 px-6 py-2 bg-secondary/20 hover:bg-secondary/30 text-secondary text-xs font-bold rounded-lg transition-colors border border-secondary/30"
                                         >
                                             <Star className="h-3 w-3 fill-secondary" /> Add Review
@@ -162,6 +130,7 @@ const ContactSection = () => {
                                 style={{ border: 0 }}
                                 allowFullScreen
                                 loading="lazy"
+                                sandbox="allow-scripts allow-same-origin allow-popups"
                                 title={`${activeOffice.city} Office Location`}
                             />
                         </motion.div>
@@ -178,8 +147,9 @@ const ContactSection = () => {
                             <h3 className="text-2xl font-display font-bold text-foreground">Send an Inquiry</h3>
                             <div className="grid sm:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-xs font-body font-bold text-muted-foreground uppercase tracking-wider">Full Name</label>
+                                    <label htmlFor="contact-name" className="text-xs font-body font-bold text-muted-foreground uppercase tracking-wider">Full Name</label>
                                     <input
+                                        id="contact-name"
                                         type="text"
                                         required
                                         value={formData.name}
@@ -189,8 +159,9 @@ const ContactSection = () => {
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-xs font-body font-bold text-muted-foreground uppercase tracking-wider">Email Address</label>
+                                    <label htmlFor="contact-email" className="text-xs font-body font-bold text-muted-foreground uppercase tracking-wider">Email Address</label>
                                     <input
+                                        id="contact-email"
                                         type="email"
                                         required
                                         value={formData.email}
@@ -202,8 +173,9 @@ const ContactSection = () => {
                             </div>
                             <div className="grid sm:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-xs font-body font-bold text-muted-foreground uppercase tracking-wider">Phone Number</label>
+                                    <label htmlFor="contact-phone" className="text-xs font-body font-bold text-muted-foreground uppercase tracking-wider">Phone Number</label>
                                     <input
+                                        id="contact-phone"
                                         type="tel"
                                         value={formData.phone}
                                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -212,8 +184,9 @@ const ContactSection = () => {
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-xs font-body font-bold text-muted-foreground uppercase tracking-wider">Service Needed</label>
+                                    <label htmlFor="contact-service" className="text-xs font-body font-bold text-muted-foreground uppercase tracking-wider">Service Needed</label>
                                     <select
+                                        id="contact-service"
                                         value={formData.service}
                                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                                         className="w-full px-5 py-4 rounded-2xl border border-border bg-muted/30 text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all appearance-none"
@@ -229,8 +202,9 @@ const ContactSection = () => {
                                 </div>
                             </div>
                             <div className="space-y-2">
-                                <label className="text-xs font-body font-bold text-muted-foreground uppercase tracking-wider">Detail Message</label>
+                                <label htmlFor="contact-message" className="text-xs font-body font-bold text-muted-foreground uppercase tracking-wider">Detail Message</label>
                                 <textarea
+                                    id="contact-message"
                                     rows={4}
                                     value={formData.message}
                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -240,17 +214,10 @@ const ContactSection = () => {
                             </div>
                             <button
                                 type="submit"
-                                disabled={isLoading}
-                                className="w-full flex items-center justify-center gap-3 px-8 py-5 bg-secondary text-secondary-foreground font-body font-bold text-base rounded-2xl shadow-gold hover:opacity-90 transition-all group disabled:opacity-70 disabled:cursor-not-allowed"
+                                className="w-full flex items-center justify-center gap-3 px-8 py-5 bg-secondary text-secondary-foreground font-body font-bold text-base rounded-2xl shadow-gold hover:opacity-90 transition-all group"
                             >
-                                {isLoading ? (
-                                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                ) : (
-                                    <>
-                                        <Send className="h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                                        Submit Inquiry
-                                    </>
-                                )}
+                                <Send className="h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                Submit Inquiry
                             </button>
                         </form>
                     </motion.div>

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/ui/JsonLd";
 
 export const metadata: Metadata = {
     title: "Terms & Conditions - SmotVisa",
     description: "SmotVisa Terms & Conditions - Read our terms of service and refund policy for visa and travel services.",
-    keywords: [
+  keywords: [
         "SmotVisa terms and conditions",
         "terms of service",
         "refund policy",
@@ -24,20 +25,28 @@ export const metadata: Metadata = {
         description: "SmotVisa Terms & Conditions - Read our terms of service and refund policy for visa and travel services.",
         url: "https://smotvisa.com/terms-of-service",
         siteName: "SmotVisa",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
         title: "Terms & Conditions - SmotVisa",
         description: "SmotVisa Terms & Conditions - Read our terms of service and refund policy for visa and travel services.",
-        images: ["/images/hero-travel-CJWf8Tv1.jpg"],
+        images: ["/images/hero-travel-CJWf8Tv1.webp"],
     }
 };
 
 export default function TermsOfServicePage() {
     return (
         <main className="min-h-screen bg-background pb-20">
+            <JsonLd data={{
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smotvisa.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "Terms of Service", "item": "https://smotvisa.com/terms-of-service" }
+                ]
+            }} />
             {/* Hero Section */}
             <section className="bg-primary pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
                 <div className="container mx-auto px-4 relative z-10">
@@ -64,7 +73,7 @@ export default function TermsOfServicePage() {
                             <section>
                                 <h2 className="text-2xl font-display font-bold text-foreground mb-4">1. Services Overview</h2>
                                 <p className="text-muted-foreground font-body leading-relaxed mb-4">
-                                    Smotvisa provides:
+                                    SmotVisa provides:
                                 </p>
                                 <ul className="space-y-2 text-muted-foreground">
                                     <li className="flex items-start gap-2">
@@ -162,14 +171,14 @@ export default function TermsOfServicePage() {
                             <section>
                                 <h2 className="text-2xl font-display font-bold text-foreground mb-4">6. Intellectual Property</h2>
                                 <p className="text-muted-foreground font-body leading-relaxed">
-                                    All website content (text, logos, design) belongs to Smotvisa and cannot be copied, reproduced, or distributed without permission.
+                                    All website content (text, logos, design) belongs to SmotVisa and cannot be copied, reproduced, or distributed without permission.
                                 </p>
                             </section>
 
                             <section>
                                 <h2 className="text-2xl font-display font-bold text-foreground mb-4">7. Limitation of Liability</h2>
                                 <p className="text-muted-foreground font-body leading-relaxed mb-4">
-                                    Smotvisa shall not be liable for:
+                                    SmotVisa shall not be liable for:
                                 </p>
                                 <ul className="space-y-2 text-muted-foreground">
                                     <li className="flex items-start gap-2">
@@ -245,7 +254,7 @@ export default function TermsOfServicePage() {
                                     </p>
                                     <p className="flex items-start gap-2">
                                         <span className="text-secondary font-bold">Phone:</span>
-                                        <span>+91-9482386529</span>
+                                        <span>+91-90363-29410</span>
                                     </p>
                                 </div>
                             </section>
@@ -260,7 +269,7 @@ export default function TermsOfServicePage() {
                                 </div>
                                 
                                 <p className="text-muted-foreground font-body leading-relaxed mb-4">
-                                    At Smotvisa, we maintain a transparent and fair refund policy for our customers.
+                                    At SmotVisa, we maintain a transparent and fair refund policy for our customers.
                                 </p>
 
                                 <h3 className="text-xl font-bold text-foreground mb-3">1. General Refund Policy</h3>
@@ -352,7 +361,7 @@ export default function TermsOfServicePage() {
                                 <ul className="space-y-2 text-muted-foreground mb-6">
                                     <li className="flex items-start gap-2">
                                         <span className="text-secondary font-bold">•</span>
-                                        <span>Customers must contact Smotvisa before initiating chargebacks</span>
+                                        <span>Customers must contact SmotVisa before initiating chargebacks</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <span className="text-secondary font-bold">•</span>
@@ -383,7 +392,7 @@ export default function TermsOfServicePage() {
                                     </p>
                                     <p className="flex items-start gap-2">
                                         <span className="text-secondary font-bold">Phone:</span>
-                                        <span>+91-9482386529</span>
+                                        <span>+91-90363-29410</span>
                                     </p>
                                     <p className="flex items-start gap-2">
                                         <span className="text-secondary font-bold">Website:</span>
