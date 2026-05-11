@@ -229,6 +229,14 @@
   background-clip: text !important;
 }
 
+/* Reset tawk.to widget styles from site globals */
+#tawk-bubble, #tawk-bubble *, [id^="tawk"], [class^="tawk"], [class*="tawk-"] {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
 /* Hero section - protect against extension overrides */
 #home {
   background-color: hsl(217, 72%, 18%) !important;
