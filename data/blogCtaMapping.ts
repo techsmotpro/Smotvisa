@@ -12,6 +12,18 @@ export interface BlogCta {
 }
 
 export const blogCtaMapping: Record<string, BlogCta> = {
+    "schengen-visa-for-indians-2026-complete-guide": {
+        primaryCta: {
+            ctaText: "Apply for Schengen Visa",
+            ctaUrl: "/visa",
+            ctaDescription: "Planning a trip to Europe? Our visa experts will guide you through the entire Schengen Visa process from documentation to approval.",
+        },
+        secondaryCta: {
+            ctaText: "Talk to a Consultant",
+            ctaUrl: "/contact",
+            ctaDescription: "Unsure which Schengen country to apply through? Our consultants can help you decide and prepare your application.",
+        },
+    },
     "visa-to-uk-2026-complete-guide": {
         primaryCta: {
             ctaText: "Apply for UK Visa",
