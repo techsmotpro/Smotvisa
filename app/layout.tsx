@@ -66,6 +66,15 @@ export default function RootLayout({
     return (
         <html lang="en" className={cn("font-sans", geist.variable)}>
             <head>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WVZ8TS5C');`
+                    }}
+                />
                 <link rel="preconnect" href="https://embed.tawk.to" />
                 <script
                     dangerouslySetInnerHTML={{
@@ -75,6 +84,14 @@ export default function RootLayout({
                 <script async src="https://embed.tawk.to/69c2446229e9681c3d64dff1/1jkfdm932" />
             </head>
             <body className="antialiased">
+                <noscript>
+                    <iframe
+                        src="https://www.googletagmanager.com/ns.html?id=GTM-WVZ8TS5C"
+                        height="0"
+                        width="0"
+                        style={{ display: 'none', visibility: 'hidden' }}
+                    />
+                </noscript>
                 <a
                     href="#main"
                     className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-[9999] focus:bg-secondary focus:text-secondary-foreground focus:px-4 focus:py-2"
