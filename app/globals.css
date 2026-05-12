@@ -225,12 +225,39 @@
   background-clip: text !important;
 }
 
-/* Reset Tailwind preflight border for tawk.to widget */
+/* Reset Tailwind preflight for tawk.to widget */
+/* Preflight applies: border: 0 solid; margin: 0; padding: 0 on *
+   and border-radius: 0; background-color: transparent on buttons.
+   These break the tawk.to widget, so we undo them inside the widget. */
 div[id^="tawk"], div[id^="tawk"] * {
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  background-image: none !important;
+  border-color: unset !important;
+  border-style: unset !important;
+}
+
+div[id^="tawk"] button,
+div[id^="tawk"] [type="button"],
+div[id^="tawk"] [type="submit"],
+div[id^="tawk"] [type="reset"],
+div[id^="tawk"] input,
+div[id^="tawk"] select,
+div[id^="tawk"] textarea {
+  border-radius: unset !important;
+  background-color: unset !important;
+  font: unset !important;
+  color: unset !important;
+  letter-spacing: unset !important;
+}
+
+div[id^="tawk"] ol,
+div[id^="tawk"] ul,
+div[id^="tawk"] menu {
+  list-style: unset !important;
+}
+
+div[id^="tawk"] img,
+div[id^="tawk"] svg,
+div[id^="tawk"] video {
+  display: unset !important;
 }
 
 /* Hero section - protect against extension overrides */
