@@ -226,41 +226,48 @@
 }
 
 /* Reset Tailwind preflight for tawk.to widget
-   Preflight applies to *, ::before, ::after:
-     border: 0 solid; margin: 0; padding: 0; box-sizing: border-box
-   And to buttons/inputs:
-     border-radius: 0; background-color: transparent; font: inherit; color: inherit
-   We must reset ALL of these including pseudo-elements, or tawk.to renders as plain boxes. */
-div[id^="tawk"], div[id^="tawk"] *,
-div[id^="tawk"] ::before, div[id^="tawk"] ::after {
-  border-color: unset !important;
-  border-style: unset !important;
+   Using :where() to keep specificity at 0,0,0 — same as Tailwind's * selector.
+   Since our rules come after Tailwind's in source, we win over preflight.
+   tawk.to's own class-based styles (0,1,0) beat our (0,0,0), so the widget
+   can apply its own styling without us overriding it. */
+:where(div[id^="tawk"]), :where(div[id^="tawk"]) * {
+  border-color: revert;
+  border-style: revert;
+  border-width: revert;
+  margin: revert;
+  padding: revert;
 }
 
-div[id^="tawk"] button,
-div[id^="tawk"] [type="button"],
-div[id^="tawk"] [type="submit"],
-div[id^="tawk"] [type="reset"],
-div[id^="tawk"] input,
-div[id^="tawk"] select,
-div[id^="tawk"] textarea {
-  border-radius: unset !important;
-  background-color: unset !important;
-  font: unset !important;
-  color: unset !important;
-  letter-spacing: unset !important;
+:where(div[id^="tawk"]) ::before,
+:where(div[id^="tawk"]) ::after {
+  border-color: revert;
+  border-style: revert;
+  border-width: revert;
+  margin: revert;
+  padding: revert;
 }
 
-div[id^="tawk"] ol,
-div[id^="tawk"] ul,
-div[id^="tawk"] menu {
-  list-style: unset !important;
+:where(div[id^="tawk"]) button,
+:where(div[id^="tawk"]) input,
+:where(div[id^="tawk"]) select,
+:where(div[id^="tawk"]) textarea {
+  border-radius: revert;
+  background-color: revert;
+  font: revert;
+  color: revert;
+  letter-spacing: revert;
 }
 
-div[id^="tawk"] img,
-div[id^="tawk"] svg,
-div[id^="tawk"] video {
-  display: unset !important;
+:where(div[id^="tawk"]) ol,
+:where(div[id^="tawk"]) ul,
+:where(div[id^="tawk"]) menu {
+  list-style: revert;
+}
+
+:where(div[id^="tawk"]) img,
+:where(div[id^="tawk"]) svg,
+:where(div[id^="tawk"]) video {
+  display: revert;
 }
 
 /* Hero section - protect against extension overrides */
