@@ -8,10 +8,6 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "X-XSS-Protection", "value": "1; mode=block" },
         {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.tawk.to https://wa.me https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.tawk.to; img-src 'self' data: https://smotvisa.com https://i.pravatar.cc https://picsum.photos https://fastly.picsum.photos https://images.unsplash.com https://drive.google.com https://*.tawk.to https://s3.amazonaws.com/tawk-to-pi https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' https://fonts.gstatic.com https://*.tawk.to; connect-src 'self' https://*.tawk.to wss://*.tawk.to https://tawk.link https://www.google-analytics.com https://www.googletagmanager.com; frame-src https://www.google.com https://maps.google.com https://*.tawk.to; media-src https://*.tawk.to; object-src 'none'"
-        },
-        {
           "key": "Permissions-Policy",
           "value": "camera=(), microphone=(), geolocation=()"
         }
