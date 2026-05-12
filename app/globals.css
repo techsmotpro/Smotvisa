@@ -256,6 +256,7 @@
   font: revert;
   color: revert;
   letter-spacing: revert;
+  appearance: revert;
 }
 
 :where(div[id^="tawk"]) ol,
@@ -266,8 +267,14 @@
 
 :where(div[id^="tawk"]) img,
 :where(div[id^="tawk"]) svg,
-:where(div[id^="tawk"]) video {
+:where(div[id^="tawk"]) video,
+:where(div[id^="tawk"]) iframe,
+:where(div[id^="tawk"]) embed,
+:where(div[id^="tawk"]) object,
+:where(div[id^="tawk"]) canvas,
+:where(div[id^="tawk"]) audio {
   display: revert;
+  vertical-align: revert;
 }
 
 /* Hero section - protect against extension overrides */
