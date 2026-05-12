@@ -225,11 +225,14 @@
   background-clip: text !important;
 }
 
-/* Reset Tailwind preflight for tawk.to widget */
-/* Preflight applies: border: 0 solid; margin: 0; padding: 0 on *
-   and border-radius: 0; background-color: transparent on buttons.
-   These break the tawk.to widget, so we undo them inside the widget. */
-div[id^="tawk"], div[id^="tawk"] * {
+/* Reset Tailwind preflight for tawk.to widget
+   Preflight applies to *, ::before, ::after:
+     border: 0 solid; margin: 0; padding: 0; box-sizing: border-box
+   And to buttons/inputs:
+     border-radius: 0; background-color: transparent; font: inherit; color: inherit
+   We must reset ALL of these including pseudo-elements, or tawk.to renders as plain boxes. */
+div[id^="tawk"], div[id^="tawk"] *,
+div[id^="tawk"] ::before, div[id^="tawk"] ::after {
   border-color: unset !important;
   border-style: unset !important;
 }
