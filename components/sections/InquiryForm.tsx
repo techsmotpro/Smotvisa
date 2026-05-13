@@ -1,108 +1,180 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Send } from "lucide-react";
+import { Send, Loader2, MessageCircle } from "lucide-react";
 import { useState } from "react";
-import { toast } from "../../hooks/use-toast";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { toast } from "sonner";
+
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { submitForm } from "@/lib/submitForm";
+
+const inquirySchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email"),
+  phone: z.string().optional(),
+  service: z.string().optional(),
+  message: z.string().optional(),
+});
+
+type InquiryValues = z.infer<typeof inquirySchema>;
+
+const serviceOptions = [
+  { value: "Visa Consulting", label: "Visa Consulting" },
+  { value: "Tourist Visa", label: "Tourist Visa" },
+  { value: "Business Visa", label: "Business Visa" },
+  { value: "Flight Booking", label: "Flight Booking" },
+  { value: "Other", label: "Other" },
+];
+
+const inputClasses =
+  "w-full px-4 py-3 rounded-xl border border-border bg-muted/30 text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all placeholder:text-muted-foreground/50";
+const labelClasses = "text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1";
 
 const InquiryForm = () => {
-    const [formData, setFormData] = useState({ name: "", email: "", phone: "", service: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        const message = `Hi SmotVisa, I'd like to inquire about your services.%0A%0AName: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AService: ${formData.service || 'Not specified'}%0AMessage: ${formData.message || 'No additional details'}`;
-        window.open(`https://wa.me/919036329410?text=${message}`, "_blank", "noopener,noreferrer");
-        setFormData({ name: "", email: "", phone: "", service: "", message: "" });
-    };
+  const form = useForm<InquiryValues>({
+    resolver: zodResolver(inquirySchema),
+    defaultValues: { name: "", email: "", phone: "", service: "", message: "" },
+  });
 
-    return (
-        <motion.div
-            initial={{ opacity: 1, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="w-full max-w-lg lg:ml-auto"
+  const onSubmit = async (values: InquiryValues) => {
+    setIsSubmitting(true);
+    const result = await submitForm({
+      name: values.name,
+      email: values.email,
+      phone: values.phone,
+      service: values.service || "Not specified",
+      message: values.message || "No additional details",
+    });
+    setIsSubmitting(false);
+
+    if (result.success) {
+      toast.success(result.message);
+      form.reset();
+    } else {
+      toast.error(result.message);
+    }
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 1, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.7, delay: 0.2 }}
+      className="w-full max-w-lg lg:ml-auto"
+    >
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="bg-card/90 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/10 p-5 md:p-6 space-y-4">
+          <h3 className="text-xl font-display font-bold text-foreground">Send an Inquiry</h3>
+
+          <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+              <FormItem className="space-y-1">
+                <FormLabel className={labelClasses}>Full Name</FormLabel>
+                <FormControl>
+                  <input {...field} className={inputClasses} placeholder="Enter your name" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem className="space-y-1">
+                  <FormLabel className={labelClasses}>Email Address</FormLabel>
+                  <FormControl>
+                    <input {...field} type="email" className={inputClasses} placeholder="name@example.com" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem className="space-y-1">
+                  <FormLabel className={labelClasses}>Phone Number</FormLabel>
+                  <FormControl>
+                    <input {...field} type="tel" className={inputClasses} placeholder="+91 00000 00000" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+
+          <FormField
+            control={form.control}
+            name="service"
+            render={({ field }) => (
+              <FormItem className="space-y-1">
+                <FormLabel className={labelClasses}>Service Needed</FormLabel>
+                <FormControl>
+                  <select {...field} className={`${inputClasses} appearance-none cursor-pointer`}>
+                    <option value="">Select a service</option>
+                    {serviceOptions.map((opt) => (
+                      <option key={opt.value} value={opt.value}>{opt.label}</option>
+                    ))}
+                  </select>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="message"
+            render={({ field }) => (
+              <FormItem className="space-y-1">
+                <FormLabel className={labelClasses}>Detail Message</FormLabel>
+                <FormControl>
+                  <textarea {...field} rows={2} className={`${inputClasses} resize-none`} placeholder="Tell us about your requirements..." />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-body font-bold text-sm rounded-xl shadow-gold hover:opacity-90 transition-all group mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
+          >
+            {isSubmitting ? (
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : (
+              <Send className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            )}
+            {isSubmitting ? "Sending..." : "Submit Inquiry"}
+          </button>
+        </form>
+      </Form>
+
+      <div className="mt-4 text-center">
+        <a
+          href="https://wa.me/919036329410?text=Hi%20SmotVisa%2C%20I%27d%20like%20to%20inquire%20about%20your%20services."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
-            <form onSubmit={handleSubmit} className="bg-card/90 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/10 p-5 md:p-6 space-y-4">
-                <h3 className="text-xl font-display font-bold text-foreground">Send an Inquiry</h3>
-
-                <div className="space-y-1">
-                    <label htmlFor="inquiry-name" className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Full Name</label>
-                    <input
-                        id="inquiry-name"
-                        type="text"
-                        required
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all placeholder:text-muted-foreground/50"
-                        placeholder="Enter your name"
-                    />
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-4">
-                    <div className="space-y-1">
-                        <label htmlFor="inquiry-email" className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Email Address</label>
-                        <input
-                            id="inquiry-email"
-                            type="email"
-                            required
-                            value={formData.email}
-                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                            className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all placeholder:text-muted-foreground/50"
-                            placeholder="name@example.com"
-                        />
-                    </div>
-                    <div className="space-y-1">
-                        <label htmlFor="inquiry-phone" className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Phone Number</label>
-                        <input
-                            id="inquiry-phone"
-                            type="tel"
-                            value={formData.phone}
-                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                            className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all placeholder:text-muted-foreground/50"
-                            placeholder="+91 00000 00000"
-                        />
-                    </div>
-                </div>
-
-                <div className="space-y-1">
-                    <label htmlFor="inquiry-service" className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Service Needed</label>
-                    <select
-                        id="inquiry-service"
-                        value={formData.service}
-                        onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all appearance-none cursor-pointer"
-                    >
-                        <option value="">Select a service</option>
-                        <option value="visa-consulting">Visa Consulting</option>
-                        <option value="tourist-visa">Tourist Visa</option>
-                        <option value="business-visa">Business Visa</option>
-                        <option value="flight">Flight Booking</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-
-                <div className="space-y-1">
-                    <label htmlFor="inquiry-message" className="text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1">Detail Message</label>
-                    <textarea
-                        id="inquiry-message"
-                        rows={2}
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all resize-none placeholder:text-muted-foreground/50"
-                        placeholder="Tell us about your requirements..."
-                    />
-                </div>
-
-                <button
-                    type="submit"
-                    className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-body font-bold text-sm rounded-xl shadow-gold hover:opacity-90 transition-all group mt-2"
-                >
-                    <Send className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    Submit Inquiry
-                </button>
-            </form>
-        </motion.div>
-    );
+          <MessageCircle className="h-4 w-4" />
+          Prefer WhatsApp? Click here to chat
+        </a>
+      </div>
+    </motion.div>
+  );
 };
 
 export default InquiryForm;
