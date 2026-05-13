@@ -1,4 +1,4 @@
-const FORMSUBMIT_URL = "https://formsubmit.co/ajax/info@smotvisa.com";
+const FORMSUBMIT_URL = "https://formsubmit.co/ajax/dm@smotpro.com";
 
 export interface FormSubmitData {
   name: string;
