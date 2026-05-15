@@ -215,4 +215,28 @@ export const blogCtaMapping: Record<string, BlogCta> = {
             ctaDescription: "Want to ensure your visa application has the right supporting documents? Our consultants can help.",
         },
     },
+    "twenty-years-in-the-visa-industry-why-indians-get-rejected": {
+        primaryCta: {
+            ctaText: "Get Expert Visa Help",
+            ctaUrl: "/visa",
+            ctaDescription: "Avoid costly mistakes on your visa application. Our consultants bring 20 years of experience to your case.",
+        },
+        secondaryCta: {
+            ctaText: "Corporate Visa Solutions",
+            ctaUrl: "/contact",
+            ctaDescription: "Need a structured visa program for your company? Let us build one with you.",
+        },
+    },
+    "india-eu-mobility-pact-2026-european-work-visas": {
+        primaryCta: {
+            ctaText: "Explore European Work Visas",
+            ctaUrl: "/visa",
+            ctaDescription: "Considering a European career move? Our consultants track the latest policy changes and can guide your application.",
+        },
+        secondaryCta: {
+            ctaText: "Talk to a Consultant",
+            ctaUrl: "/contact",
+            ctaDescription: "Unsure which EU country is right for your profile? Book a consultation with our team.",
+        },
+    },
 };
