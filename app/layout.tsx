@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "../components/layout/Footer";
@@ -11,6 +11,13 @@ import JsonLd from "@/components/ui/JsonLd";
 const FloatingCTA = dynamic(() => import("@/components/ui/FloatingCTA"));
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
+
+export const viewport: Viewport = {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+};
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://smotvisa.com"),
@@ -170,10 +177,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         </a>
                                     </div>
                                     <a
-                                        href="/contact"
+                                        href="tel:+919380957448"
                                         className="hidden xl:block px-6 py-2.5 bg-secondary text-secondary-foreground font-body font-bold rounded-full hover:opacity-90 transition-all shadow-gold whitespace-nowrap"
                                     >
-                                        Get a Quote
+                                        CALL NOW : +91-9380957448
                                     </a>
                                 </div>
                             </nav>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Send, Loader2, MessageCircle } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -162,17 +162,6 @@ const InquiryForm = () => {
         </form>
       </Form>
 
-      <div className="mt-4 text-center">
-        <a
-          href="https://wa.me/919036329410?text=Hi%20SmotVisa%2C%20I%27d%20like%20to%20inquire%20about%20your%20services."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <MessageCircle className="h-4 w-4" />
-          Prefer WhatsApp? Click here to chat
-        </a>
-      </div>
     </motion.div>
   );
 };

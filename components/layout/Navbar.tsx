@@ -171,12 +171,12 @@ const Navbar = () => {
                     </div>
 
                     <div className="hidden xl:block">
-                        <Link
-                            href="/contact"
+                        <a
+                            href="tel:+919380957448"
                             className="px-6 py-2.5 bg-secondary text-secondary-foreground font-body font-bold rounded-full hover:opacity-90 transition-all shadow-gold whitespace-nowrap"
                         >
-                            Get a Quote
-                        </Link>
+                            CALL NOW : +91-9380957448
+                        </a>
                     </div>
 
                     {/* Mobile toggle */}

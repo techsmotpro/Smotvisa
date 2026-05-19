@@ -1,6 +1,5 @@
 import { MotionDiv, MotionH1, MotionP } from "@/components/ui/MotionWrapper";
-import { ArrowRight, Globe, Shield, Clock } from "lucide-react";
-import Link from "next/link";
+import { Globe, Shield, Clock } from "lucide-react";
 
 interface Stat {
     icon: any;
@@ -16,7 +15,7 @@ const stats: Stat[] = [
 
 export default function HeroContent() {
     return (
-        <div>
+        <div className="w-full max-w-full overflow-hidden">
             <MotionDiv
                 initial={{ opacity: 1, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -32,11 +31,11 @@ export default function HeroContent() {
                 initial={{ opacity: 1, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1 }}
-                className="hero-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6"
+                className="hero-heading text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6 break-words max-w-full"
                 style={{ color: "hsl(42, 100%, 95%)" }}
             >
-                Your Journey{" "}
-                <span className="text-gradient-gold">Starts Here</span>
+                Visa &amp;{" "}
+                <span className="text-gradient-gold">Travel Consultant</span>
             </MotionH1>
 
             <MotionP
@@ -56,27 +55,20 @@ export default function HeroContent() {
                 transition={{ duration: 0.7, delay: 0.3 }}
                 className="flex flex-wrap gap-4 mb-12"
             >
-                <Link
-                    href="#services"
+                <a
+                    href="tel:+919380957448"
                     className="hero-btn-primary inline-flex items-center gap-2 px-8 py-4 font-body font-bold text-sm rounded-full shadow-gold hover:opacity-90 transition-all"
                     style={{ backgroundColor: "hsl(42, 85%, 55%)", color: "hsl(220, 30%, 12%)" }}
                 >
-                    Explore Our Services <ArrowRight className="h-4 w-4" />
-                </Link>
-                <Link
-                    href="/contact?branch=cv-raman-nagar-bangalore"
-                    className="hero-btn-secondary inline-flex items-center gap-2 px-8 py-4 font-body font-semibold text-sm rounded-full transition-all"
-                    style={{ border: "2px solid hsla(42, 100%, 95%, 0.3)", color: "hsl(42, 100%, 95%)" }}
-                >
-                    Contact Us
-                </Link>
+                    CALL NOW : +91-9380957448
+                </a>
             </MotionDiv>
 
             <MotionDiv
                 initial={{ opacity: 1, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
-                className="flex gap-8"
+                className="flex flex-wrap gap-4 sm:gap-8"
             >
                 {stats.map((stat) => (
                     <div key={stat.label} className="flex items-center gap-3">

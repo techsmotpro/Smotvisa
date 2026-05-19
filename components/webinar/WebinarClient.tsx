@@ -5,7 +5,6 @@ import {
   GraduationCap,
   Handshake,
   TrendingUp,
-  Video,
   ExternalLink,
   CheckCircle,
 } from "lucide-react";
@@ -59,7 +58,7 @@ export default function WebinarClient() {
     <>
       {/* ═══════ HEADER WITH HERO IMAGE ═══════ */}
       <section className="bg-primary">
-        <div className="w-full pt-8">
+        <div className="w-full pt-16 md:pt-8">
           <Image
             src="/images/banner.jpeg"
             alt="Passionate about football, tennis, or basketball? Discover your pathway to Europe in our free webinar with Mr. Shaji Kandambeth, CEO SmotPro — 13th June, 11 AM to 12 PM, live on Zoom"
@@ -71,27 +70,31 @@ export default function WebinarClient() {
         </div>
         <div className="container mx-auto px-4 pt-12 pb-16">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="w-16 h-16 rounded-2xl bg-secondary/15 flex items-center justify-center mx-auto mb-6">
-              <Video className="h-8 w-8 text-secondary" />
-            </div>
+            <a
+              href={ZOOM_REG_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 px-10 py-5 bg-secondary text-secondary-foreground font-body font-bold rounded-xl shadow-gold hover:shadow-lg hover:-translate-y-0.5 hover:opacity-95 transition-all text-base mb-4"
+            >
+              Register for the Free Webinar
+              <ExternalLink className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+            </a>
+
+            <p className="font-body font-semibold text-secondary text-sm md:text-base mb-8">
+              Registrations Closing Soon &mdash; Don&rsquo;t Miss This FREE Football Webinar!
+            </p>
 
             <h1 className="text-3xl md:text-5xl font-display font-bold text-primary-foreground mb-4 leading-tight">
               Your Path to <span className="text-gradient-gold">Spain Football</span> Starts Here
             </h1>
 
-            <p className="text-lg font-body text-primary-foreground/60 leading-relaxed max-w-xl mx-auto mb-8">
+            <p className="text-lg font-body text-primary-foreground/60 leading-relaxed max-w-xl mx-auto">
               Discover how aspiring players can train in Spain, experience professional coaching, and explore real football career pathways.
             </p>
 
-            <a
-              href={ZOOM_REG_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-secondary text-secondary-foreground font-body font-bold rounded-xl shadow-gold hover:opacity-90 transition-all text-sm"
-            >
-              Register Now
-              <ExternalLink className="h-4 w-4" />
-            </a>
+            <p className="text-xs font-body text-primary-foreground/40 mt-6 uppercase tracking-[0.2em]">
+              Live on Zoom &middot; Limited Seats
+            </p>
           </div>
         </div>
       </section>
@@ -263,7 +266,10 @@ export default function WebinarClient() {
               Register Now
               <ExternalLink className="h-4 w-4" />
             </a>
-            <p className="text-sm font-body text-white/40 mt-4">Spots are limited.</p>
+            <p className="font-body font-semibold text-secondary text-sm md:text-base mt-4">
+              Registrations Closing Soon &mdash; Don&rsquo;t Miss This FREE Football Webinar!
+            </p>
+            <p className="text-sm font-body text-white/40 mt-2">Spots are limited.</p>
           </div>
         </div>
       </section>

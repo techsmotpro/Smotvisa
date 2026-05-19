@@ -33,9 +33,9 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                                 className="object-cover"
                             />
                         </div>
-                        <div className="absolute -bottom-8 -right-8 bg-secondary text-secondary-foreground p-10 rounded-3xl shadow-gold font-body border-4 border-card">
-                            <div className="text-5xl font-display font-bold mb-1">10+</div>
-                            <div className="text-sm font-bold uppercase tracking-widest text-secondary-foreground/80">Years of Excellence</div>
+                        <div className="absolute bottom-4 right-4 md:-bottom-8 md:-right-8 bg-secondary text-secondary-foreground p-6 md:p-10 rounded-2xl md:rounded-3xl shadow-gold font-body border-4 border-card">
+                            <div className="text-3xl md:text-5xl font-display font-bold mb-1">10+</div>
+                            <div className="text-xs md:text-sm font-bold uppercase tracking-widest text-secondary-foreground/80">Years of Excellence</div>
                         </div>
                     </MotionDiv>
 
@@ -46,7 +46,7 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                         transition={{ duration: 0.6 }}
                     >
                         <span className="text-sm font-body font-semibold text-secondary uppercase tracking-widest">About SmotVisa</span>
-                        <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-6 leading-tight">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-6 leading-tight break-words">
                             India’s Trusted <span className="text-secondary">Visa Experts</span>
                         </h2>
 
