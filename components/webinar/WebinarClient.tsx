@@ -59,14 +59,22 @@ export default function WebinarClient() {
       {/* ═══════ HEADER WITH HERO IMAGE ═══════ */}
       <section className="bg-primary">
         <div className="w-full pt-16 md:pt-8">
-          <Image
-            src="/images/banner.jpeg"
-            alt="Passionate about football, tennis, or basketball? Discover your pathway to Europe in our free webinar with Mr. Shaji Kandambeth, CEO SmotPro — 13th June, 11 AM to 12 PM, live on Zoom"
-            width={1600}
-            height={679}
-            className="w-full h-auto"
-            priority
-          />
+          <a
+            href={ZOOM_REG_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Register for the Free Webinar on Zoom"
+            className="block w-full cursor-pointer"
+          >
+            <Image
+              src="/images/banner.jpeg"
+              alt="Passionate about football, tennis, or basketball? Discover your pathway to Europe in our free webinar with Mr. Shaji Kandambeth, CEO SmotPro — 13th June, 11 AM to 12 PM, live on Zoom"
+              width={1600}
+              height={679}
+              className="w-full h-auto"
+              priority
+            />
+          </a>
         </div>
         <div className="container mx-auto px-4 pt-12 pb-16">
           <div className="max-w-3xl mx-auto text-center">
