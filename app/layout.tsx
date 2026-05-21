@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import JsonLd from "@/components/ui/JsonLd";
+import TawkChat from "@/components/TawkChat";
 
 const FloatingCTA = dynamic(() => import("@/components/ui/FloatingCTA"));
 
@@ -82,13 +83,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WVZ8TS5C');`
                     }}
                 />
-                <link rel="preconnect" href="https://embed.tawk.to" />
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();`
-                    }}
-                />
-                <script async src="https://embed.tawk.to/69c2446229e9681c3d64dff1/1jkfdm932" />
             </head>
             <body className="antialiased">
                 <noscript>
@@ -196,6 +190,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </TooltipProvider>
                 <Toaster />
                 <Sonner />
+                <TawkChat />
             </body>
         </html>
     );
