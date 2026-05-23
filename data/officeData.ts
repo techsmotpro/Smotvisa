@@ -153,5 +153,7 @@ export const seoLocations = [
     "Whitefield",
     "Jayanagar",
     "Marathahalli",
-    "Electronic City"
+    "Electronic City",
+    "Bellandur",
+    "JP Nagar"
 ];
