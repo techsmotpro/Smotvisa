@@ -172,10 +172,10 @@ const Navbar = () => {
 
                     <div className="hidden xl:block">
                         <a
-                            href="tel:+919380957448"
+                            href="tel:+918904008843"
                             className="px-6 py-2.5 bg-secondary text-secondary-foreground font-body font-bold rounded-full hover:opacity-90 transition-all shadow-gold whitespace-nowrap"
                         >
-                            CALL NOW : +91-9380957448
+                            CALL NOW : +91-8904008843
                         </a>
                     </div>
 

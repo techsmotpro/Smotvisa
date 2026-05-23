@@ -115,7 +115,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         ],
                         contactPoint: {
                             "@type": "ContactPoint",
-                            telephone: "+91-90363-29410",
+                            telephone: "+91-8904008843",
                             contactType: "customer service",
                             areaServed: "IN",
                             availableLanguage: ["English", "Hindi"],
@@ -171,10 +171,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         </a>
                                     </div>
                                     <a
-                                        href="tel:+919380957448"
+                                        href="tel:+918904008843"
                                         className="hidden xl:block px-6 py-2.5 bg-secondary text-secondary-foreground font-body font-bold rounded-full hover:opacity-90 transition-all shadow-gold whitespace-nowrap"
                                     >
-                                        CALL NOW : +91-9380957448
+                                        CALL NOW : +91-8904008843
                                     </a>
                                 </div>
                             </nav>

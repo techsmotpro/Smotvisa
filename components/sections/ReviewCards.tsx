@@ -14,7 +14,7 @@ const ReviewCards = async () => {
         "name": "SmotVisa",
         "url": "https://smotvisa.com",
         "image": "https://smotvisa.com/logo.png",
-        "telephone": "+91-90363-29410",
+        "telephone": "+91-8904008843",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Bangalore",

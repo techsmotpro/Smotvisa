@@ -56,11 +56,11 @@ export default function HeroContent() {
                 className="flex flex-wrap gap-4 mb-12"
             >
                 <a
-                    href="tel:+919380957448"
+                    href="tel:+918904008843"
                     className="hero-btn-primary inline-flex items-center gap-2 px-8 py-4 font-body font-bold text-sm rounded-full shadow-gold hover:opacity-90 transition-all"
                     style={{ backgroundColor: "hsl(42, 85%, 55%)", color: "hsl(220, 30%, 12%)" }}
                 >
-                    CALL NOW : +91-9380957448
+                    CALL NOW : +91-8904008843
                 </a>
             </MotionDiv>
 
