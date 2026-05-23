@@ -4,7 +4,7 @@ import { Facebook, Instagram, Twitter, Youtube, ArrowUp, MapPin } from "lucide-r
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { Fragment, useEffect } from "react";
 import { navLinks, services } from "@/data/navigationData";
 import { offices, seoLocations } from "@/data/officeData";
 
@@ -138,13 +138,15 @@ const Footer = () => {
             <h4 className="text-xs font-body font-bold uppercase tracking-[0.2em] text-secondary mb-6">Popular Locations</h4>
             <div className="flex flex-wrap gap-x-4 gap-y-2">
               {seoLocations.map((loc) => (
-                <Link
-                  key={loc}
-                  href={`/visa-agents-in-${loc.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="text-xs font-body text-primary-foreground/50 hover:text-secondary transition-colors"
-                >
-                  Visa Agents in {loc}
-                </Link>
+                <Fragment key={loc}>
+                  {loc === "JP Nagar" && <div className="basis-full h-0" />}
+                  <Link
+                    href={`/visa-agents-in-${loc.toLowerCase().replace(/\s+/g, "-")}`}
+                    className="text-xs font-body text-primary-foreground/50 hover:text-secondary transition-colors"
+                  >
+                    Visa Agents in {loc}
+                  </Link>
+                </Fragment>
               ))}
             </div>
           </div>
