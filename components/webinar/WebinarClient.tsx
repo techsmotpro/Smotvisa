@@ -34,10 +34,6 @@ const faqs = [
     q: "Will visa guidance be discussed?",
     a: "Yes, the webinar will cover general guidance on visa requirements, documentation, and the support SmotPro provides throughout the process.",
   },
-  {
-    q: "Will I receive the recording?",
-    a: "Registered participants will receive a recording link after the webinar. However, we recommend attending live for the interactive Q&A session.",
-  },
 ];
 
 function FAQItem({ q, a }: { q: string; a: string }) {
