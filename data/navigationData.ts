@@ -70,6 +70,5 @@ export const navLinks = [
     { label: "Services", href: "/services", dropdown: services },
     { label: "Destinations", href: "/visa" },
     { label: "Branches", href: "/contact", dropdown: branches },
-    { label: "Webinar", href: "/webinar" },
     { label: "Blog", href: "/blog" },
 ];

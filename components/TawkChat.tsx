@@ -1,14 +1,8 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import Script from "next/script";
 
-const EXCLUDED_ROUTES = ["/webinar"];
-
 export default function TawkChat() {
-    const pathname = usePathname();
-    if (EXCLUDED_ROUTES.includes(pathname)) return null;
-
     return (
         <>
             <Script

@@ -1,6 +1,6 @@
 "use client";
 
-import { Facebook, Instagram, Twitter, Youtube, ArrowUp, MapPin } from "lucide-react";
+import { Facebook, Instagram, Twitter, ArrowUp, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -56,15 +56,6 @@ const Footer = () => {
                 className="p-2.5 bg-primary-foreground/10 rounded-xl hover:bg-secondary hover:text-secondary-foreground transition-all duration-300"
               >
                 <Twitter className="h-5 w-5" />
-              </a>
-              <a
-                href="https://www.youtube.com/@smotvisa"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube"
-                className="p-2.5 bg-primary-foreground/10 rounded-xl hover:bg-secondary hover:text-secondary-foreground transition-all duration-300"
-              >
-                <Youtube className="h-5 w-5" />
               </a>
             </div>
           </div>
