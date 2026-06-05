@@ -35,7 +35,7 @@ export default function HeroContent() {
                 style={{ color: "hsl(42, 100%, 95%)" }}
             >
                 Visa &amp;{" "}
-                <span className="text-gradient-gold">Travel Consultants in India</span>
+                <span className="text-gradient-gold">Travel Consultant in India</span>
             </MotionH1>
 
             <MotionP
