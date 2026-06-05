@@ -3,6 +3,7 @@
 import { Search, Star, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useState, useMemo } from "react";
+import CountryFlag from "@/components/ui/CountryFlag";
 
 interface Country {
     id: string;
@@ -60,7 +61,7 @@ const VisaClient = ({ moreCountries }: VisaClientProps) => {
                         href="/contact"
                         className="flex flex-col items-center gap-3 p-8 bg-muted/10 rounded-2xl border border-border/50 hover:border-secondary/30 hover:bg-secondary/5 hover:shadow-card transition-all text-center group"
                     >
-                        <span className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300">{country.flag}</span>
+                        <CountryFlag emoji={country.flag} className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300" />
                         <span className="text-sm font-display font-bold text-foreground group-hover:text-secondary transition-colors">{country.name}</span>
                         <span className="text-[10px] font-display font-bold text-muted-foreground uppercase tracking-widest">{country.category}</span>
                     </Link>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Star, Clock, Users, MapPin, Camera, Heart, Plane } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import CountryFlag from "@/components/ui/CountryFlag";
 import { tourPackagesData, popularRoutes, travelTips } from "@/data/tourPackagesData";
 
 const TourPackagesSection = () => {
@@ -56,7 +57,7 @@ const TourPackagesSection = () => {
                                 </div>
                                 <div className="absolute bottom-4 left-4">
                                     <div className="flex items-center gap-2 mb-2">
-                                        <span className="text-2xl">{pkg.flag}</span>
+                                        <CountryFlag emoji={pkg.flag} className="text-2xl" />
                                         <h3 className="text-lg font-display font-bold text-white">{pkg.destination}</h3>
                                     </div>
                                 </div>

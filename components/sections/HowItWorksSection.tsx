@@ -45,10 +45,10 @@ const HowItWorksSection = () => {
                             transition={{ delay: idx * 0.1 }}
                             className="relative"
                         >
-                            <div className="absolute -top-12 -left-4 w-20 h-20 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-display font-bold text-2xl shadow-gold">
-                                {step.number}
-                            </div>
-                            <div className="p-8 bg-card rounded-2xl shadow-card border border-border relative z-10">
+                            <div className="p-8 bg-card rounded-2xl shadow-card border border-border relative z-10 h-full text-center">
+                                <div className="w-16 h-16 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-display font-bold text-2xl shadow-gold mb-6 mx-auto">
+                                    {step.number}
+                                </div>
                                 <h3 className="text-xl font-display font-bold text-foreground mb-4">{step.title}</h3>
                                 <p className="text-sm font-body text-muted-foreground leading-relaxed">
                                     {step.description}

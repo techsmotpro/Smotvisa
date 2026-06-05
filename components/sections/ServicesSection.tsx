@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { visaCountries } from "@/data/navigationData";
 import { servicesData } from "@/data/servicesData";
+import CountryFlag from "@/components/ui/CountryFlag";
 
 const ServicesSection = () => {
     return (
@@ -36,7 +37,7 @@ const ServicesSection = () => {
                                 transition={{ delay: idx * 0.1 }}
                                 className="group p-2.5 bg-card rounded-xl shadow-card border border-border hover:shadow-elevated hover:-translate-y-1 transition-all duration-300 text-center relative overflow-hidden"
                             >
-                                <div className="text-4xl mb-2">{country.flag}</div>
+                                <div className="text-4xl mb-2"><CountryFlag emoji={country.flag} /></div>
                                 <h4 className="text-lg font-display font-bold text-foreground mb-1">{country.name}</h4>
                                 <p className="text-sm font-body text-muted-foreground mb-2.5">Visa Services</p>
                                 <Link

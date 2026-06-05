@@ -6,6 +6,7 @@ import { Menu, X, ChevronDown, Phone, Mail } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import Image from "next/image";
+import CountryFlag from "@/components/ui/CountryFlag";
 
 import { navLinks } from "@/data/navigationData";
 
@@ -57,11 +58,11 @@ const Navbar = () => {
             <nav className="fixed top-0 left-0 w-full z-[9999] bg-primary/95 backdrop-blur-md shadow-card border-b border-primary-foreground/10">
                 <div className="container mx-auto flex items-center justify-between px-4 py-5">
                     <Link href="/" onClick={handleLinkClick} className="flex items-center gap-3 navbar-logo-container">
-                        <Image 
-                            src="/logo.png" 
-                            alt="SmotVisa" 
-                            width={200} 
-                            height={85} 
+                        <Image
+                            src="/logo.png"
+                            alt="SmotVisa"
+                            width={200}
+                            height={85}
                             className="w-auto h-20"
                         />
                     </Link>
@@ -139,7 +140,7 @@ const Navbar = () => {
                                                                                     : "text-foreground hover:bg-muted"
                                                                                     }`}
                                                                             >
-                                                                                <span className="text-lg">{sub.flag}</span>
+                                                                                <CountryFlag emoji={sub.flag} className="text-lg" />
                                                                                 <span>{sub.name}</span>
                                                                             </Link>
                                                                         ))}
@@ -211,7 +212,7 @@ const Navbar = () => {
                                                             setIsOpen(false);
                                                         }
                                                     }}
-                                                    className="flex items-center justify-between w-full px-4 py-4 text-sm font-bold uppercase tracking-wider text-primary-foreground/90 hover:bg-primary-foreground/5 transition-colors"
+                                                    className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium rounded-lg text-primary-foreground hover:bg-primary-foreground/10 transition-colors"
                                                 >
                                                     <span>{link.label}</span>
                                                     <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${activeMobileCategory === link.label ? "rotate-180 text-secondary" : "text-primary-foreground/40"}`} />
@@ -237,7 +238,7 @@ const Navbar = () => {
                                                                                     <ChevronDown className={`h-3 w-3 transition-transform ${activeSubmenu === item.id ? "rotate-180" : ""}`} />
                                                                                 </button>
                                                                                 {activeSubmenu === item.id && (
-                                                                                    <div className="pl-8 mt-1 grid grid-cols-2 gap-1 pb-2">
+                                                                                    <div className="pl-8 mt-1 grid grid-cols-2 gap-1 pb-2 max-h-64 overflow-y-auto">
                                                                                         {item.submenu.map((sub: any) => (
                                                                                             <Link
                                                                                                 key={sub.id}
@@ -248,7 +249,7 @@ const Navbar = () => {
                                                                                                     : "text-primary-foreground/60 hover:text-primary-foreground hover:bg-primary-foreground/10"
                                                                                                     }`}
                                                                                             >
-                                                                                                <span>{sub.flag}</span>
+                                                                                                <CountryFlag emoji={sub.flag} />
                                                                                                 <span>{sub.name.replace(" Visa", "")}</span>
                                                                                             </Link>
                                                                                         ))}

@@ -8,7 +8,7 @@ const HeroSection = () => {
     return (
         <section
             id="home"
-            className="relative lg:min-h-screen lg:flex lg:items-center overflow-hidden pt-20 lg:pt-28 lg:pb-0"
+            className="relative lg:min-h-screen lg:flex lg:items-center overflow-x-hidden pt-20 lg:pt-28 pb-12 lg:pb-16"
             style={{ zIndex: 1000, backgroundColor: "hsl(217, 72%, 18%)" }}
         >
             {/* Hero background image — single image, CSS handles mobile/desktop */}

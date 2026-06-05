@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { MotionDiv } from "@/components/ui/MotionWrapper";
+import CountryFlag from "@/components/ui/CountryFlag";
 
 interface Destination {
     id: string;
@@ -48,7 +49,7 @@ export default function VisaFeaturedGrid({ destinations }: { destinations: Desti
                                 </div>
                                 <div className="absolute bottom-0 left-0 right-0 p-8">
                                     <div className="flex items-center gap-2 mb-3">
-                                        <span className="text-3xl">{dest.flag}</span>
+                                        <CountryFlag emoji={dest.flag} className="text-3xl" />
                                         <h3 className="text-2xl font-display font-bold text-white">{dest.name}</h3>
                                     </div>
                                     <p className="text-xs font-body text-white/70 mb-6 leading-relaxed">{dest.visaType}</p>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import PageHeader from "@/components/ui/PageHeader";
 import { tourPackagesData, popularRoutes, travelTips } from "@/data/tourPackagesData";
 import { MotionDiv } from "@/components/ui/MotionWrapper";
+import CountryFlag from "@/components/ui/CountryFlag";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -75,7 +76,7 @@ export default function TourPackagesPage() {
                                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     />
                                     <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-5 py-2.5 rounded-full flex items-center gap-2 shadow-sm">
-                                        <span className="text-xl">{pkg.flag}</span>
+                                        <CountryFlag emoji={pkg.flag} className="text-xl" />
                                         <span className="text-sm font-display font-bold text-foreground tracking-wide">{pkg.destination}</span>
                                     </div>
                                     <div className="absolute bottom-6 right-6 bg-secondary text-secondary-foreground px-5 py-2.5 rounded-2xl font-display font-bold shadow-gold transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">

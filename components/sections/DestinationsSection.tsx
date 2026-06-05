@@ -2,6 +2,7 @@ import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import CountryFlag from "@/components/ui/CountryFlag";
 
 const dubaiImg = "/images/dubai-DCaS6AeM.webp";
 const londonImg = "/images/london-DVffmt_1.webp";
@@ -92,7 +93,7 @@ const DestinationsSection = () => {
                                     <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/10 to-transparent" />
                                     <div className="absolute bottom-0 left-0 right-0 p-4">
                                         <div className="flex items-center gap-2 mb-2">
-                                            <span className="text-2xl">{dest.flag}</span>
+                                            <CountryFlag emoji={dest.flag} className="text-2xl" />
                                             <h3 className="text-lg font-display font-bold text-primary-foreground">{dest.name}</h3>
                                         </div>
                                         <p className="text-xs font-body text-primary-foreground/70 mb-2">{dest.visaType}</p>
@@ -129,7 +130,7 @@ const DestinationsSection = () => {
                                 href={country.id === "#" ? "/contact" : `/visa/${country.id}-visa-consultant`}
                                 className="inline-flex items-center gap-2 px-3.5 py-2 bg-muted rounded-full text-sm font-body font-medium hover:bg-secondary/10 hover:shadow-card transition-all cursor-pointer"
                             >
-                                <span className="text-lg">{country.flag}</span>
+                                <CountryFlag emoji={country.flag} className="text-lg" />
                                 {country.name}
                             </Link>
                         ))}

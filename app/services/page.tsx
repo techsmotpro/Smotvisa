@@ -5,6 +5,7 @@ import { servicesData } from "@/data/servicesData";
 import PageHeader from "@/components/ui/PageHeader";
 import JsonLd from "@/components/ui/JsonLd";
 import { MotionDiv } from "@/components/ui/MotionWrapper";
+import CountryFlag from "@/components/ui/CountryFlag";
 
 export const metadata = {
   title: "Explore Our Comprehensive Visa, Tour Packages and Airline Ticket Services | SmotVisa",
@@ -141,7 +142,7 @@ export default function ServicesPage() {
                                     transition={{ delay: idx * 0.05 }}
                                     className="group p-6 bg-card rounded-3xl shadow-sm border border-border hover:shadow-card hover:-translate-y-1 transition-all duration-300 text-center flex flex-col items-center"
                                 >
-                                    <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform filter drop-shadow-sm">{country.flag}</div>
+                                    <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform filter drop-shadow-sm"><CountryFlag emoji={country.flag} /></div>
                                     <h4 className="text-base font-display font-bold text-foreground mb-1">{country.name}</h4>
                                     <p className="text-[10px] font-display font-bold text-muted-foreground mb-4 uppercase tracking-[0.1em]">Visa Intel</p>
                                     <Link
