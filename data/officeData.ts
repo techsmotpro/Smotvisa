@@ -155,5 +155,7 @@ export const seoLocations = [
     "Marathahalli",
     "Electronic City",
     "Bellandur",
-    "JP Nagar"
+    "JP Nagar",
+    "Sarjapur Road",
+    "BTM Layout"
 ];
