@@ -16,8 +16,7 @@ const destinations = [
         flag: "🇦🇪",
         image: dubaiImg,
         visaType: "Tourist / Business Visa",
-        processing: "3-5 Days",
-        price: "From $89",
+        processing: "3–5 working days",
     },
     {
         id: "uk",
@@ -25,8 +24,7 @@ const destinations = [
         flag: "🇬🇧",
         image: londonImg,
         visaType: "Standard Visitor Visa",
-        processing: "15-20 Days",
-        price: "From $199",
+        processing: "3–6 weeks",
     },
     {
         id: "us",
@@ -34,8 +32,7 @@ const destinations = [
         flag: "🇺🇸",
         image: usImg,
         visaType: "B1/B2 Visitor Visa",
-        processing: "Appointment Based",
-        price: "From $249",
+        processing: "Appointment based",
     },
     {
         id: "schengen",
@@ -43,19 +40,21 @@ const destinations = [
         flag: "🇪🇺",
         image: visaImg,
         visaType: "Schengen Visa",
-        processing: "10-15 Days",
-        price: "From $179",
+        processing: "15–30 working days",
     },
 ];
 
 const moreCountries = [
     { id: "canada", name: "Canada", flag: "🇨🇦" },
     { id: "australia", name: "Australia", flag: "🇦🇺" },
-    { id: "#", name: "Malaysia", flag: "🇲🇾" },
     { id: "#", name: "Singapore", flag: "🇸🇬" },
-    { id: "#", name: "Thailand", flag: "🇹🇭" },
-    { id: "#", name: "Turkey", flag: "🇹🇷" },
     { id: "#", name: "Japan", flag: "🇯🇵" },
+    { id: "#", name: "Thailand", flag: "🇹🇭" },
+    { id: "#", name: "Malaysia", flag: "🇲🇾" },
+    { id: "#", name: "Vietnam", flag: "🇻🇳" },
+    { id: "#", name: "Sri Lanka", flag: "🇱🇰" },
+    { id: "#", name: "Turkey", flag: "🇹🇷" },
+    { id: "#", name: "New Zealand", flag: "🇳🇿" },
 ];
 
 const DestinationsSection = () => {
@@ -68,12 +67,12 @@ const DestinationsSection = () => {
                     viewport={{ once: true }}
                     className="text-center mb-10"
                 >
-                    <span className="text-sm font-body font-semibold text-secondary uppercase tracking-widest">Destinations</span>
+                    <span className="text-sm font-body font-semibold text-secondary uppercase tracking-widest">By Destination</span>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-4">
-                        Popular Visa Destinations
+                        Tourist &amp; Business Visas We Assist With
                     </h2>
                     <p className="text-muted-foreground font-body max-w-2xl mx-auto">
-                        We process visas for 50+ countries. Here are some of our most popular destinations.
+                        We assist with tourist and business visas for 50+ destinations and keep up with the requirements as they change.
                     </p>
                 </MotionDiv>
 
@@ -99,11 +98,11 @@ const DestinationsSection = () => {
                                         <p className="text-xs font-body text-primary-foreground/70 mb-2">{dest.visaType}</p>
                                         <div className="flex items-center justify-between">
                                             <div>
-                                                <span className="text-xs font-body text-primary-foreground/60">Processing</span>
+                                                <span className="text-xs font-body text-primary-foreground/60">Typical processing</span>
                                                 <p className="text-sm font-body font-semibold text-primary-foreground">{dest.processing}</p>
                                             </div>
                                             <span className="px-3 py-1 bg-secondary text-secondary-foreground text-xs font-body font-bold rounded-full">
-                                                {dest.price}
+                                                Tourist &amp; Business
                                             </span>
                                         </div>
                                     </div>

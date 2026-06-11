@@ -4,13 +4,21 @@ import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-const highlights = [
-    "10+ Years of Experience in Visa Processing",
-    "Trusted by 5000+ Happy Travelers",
-    "99% Visa Approval Success Rate",
-    "Dedicated Support Team Available 24/7",
-    "Specialization in US, Schengen, Australia, UK, Dubai Visa & OCI",
-    "Transparent Pricing with No Hidden Fees",
+const whatWeDo = [
+    "Free case assessment and the right visa type for your trip",
+    "A personalised document checklist for your exact destination",
+    "Accurate, complete application forms",
+    "Tailored cover letters and day-by-day travel itineraries",
+    "A full review for gaps, mismatches and red flags before you submit",
+    "Help booking your visa appointment and preparing for it",
+    "Rejection guidance to turn a refusal into a stronger fresh attempt",
+];
+
+const aboutStats = [
+    { value: "2019", label: "Trusted Since" },
+    { value: "98%", label: "Visa Success Rate" },
+    { value: "5,000+", label: "Applications" },
+    { value: "50+", label: "Countries" },
 ];
 
 const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
@@ -28,14 +36,14 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                         <div className="rounded-3xl overflow-hidden shadow-elevated relative h-[500px] md:h-[600px]">
                             <Image
                                 src="/images/travelers-9_2z2QtE.webp"
-                                alt="Happy travelers"
+                                alt="Travellers assisted by SmotVisa"
                                 fill
                                 className="object-cover"
                             />
                         </div>
                         <div className="absolute bottom-4 right-4 md:-bottom-8 md:-right-8 bg-secondary text-secondary-foreground p-6 md:p-10 rounded-2xl md:rounded-3xl shadow-gold font-body border-4 border-card">
-                            <div className="text-3xl md:text-5xl font-display font-bold mb-1">10+</div>
-                            <div className="text-xs md:text-sm font-bold uppercase tracking-widest text-secondary-foreground/80">Years of Excellence</div>
+                            <div className="text-3xl md:text-5xl font-display font-bold mb-1">98%</div>
+                            <div className="text-xs md:text-sm font-bold uppercase tracking-widest text-secondary-foreground/80">Visa Success Rate</div>
                         </div>
                     </MotionDiv>
 
@@ -47,48 +55,59 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                     >
                         <span className="text-sm font-body font-semibold text-secondary uppercase tracking-widest">About SmotVisa</span>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-6 leading-tight break-words">
-                            India’s Trusted <span className="text-secondary">Visa Experts</span>
+                            Visas Are <span className="text-secondary">All We Do</span>
                         </h2>
 
                         <div className="space-y-6 text-muted-foreground font-body text-lg leading-relaxed mb-8">
                             <p>
-                                At SmotVisa, we simplify your international travel dreams with expert visa assistance trusted across India.
-                                Whether you’re traveling for business, tourism, or family visits, our mission is to make your visa experience
-                                smooth, fast, and stress-free.
+                                SmotVisa is a specialist visa assistance and travel documentation consultancy based in India,
+                                helping travellers across the country secure tourist and business visas without the stress,
+                                confusion and costly mistakes that derail so many applications.
+                            </p>
+                            <p>
+                                We are not a general travel agency and we are not an immigration firm. Visas are all we do —
+                                and that single-minded focus is exactly why travellers trust us with one of the most important
+                                parts of their trip.
                             </p>
 
                             {isFull && (
                                 <>
                                     <p>
-                                        With a pan-India presence and a decade of proven expertise, we’ve helped thousands of travelers successfully
-                                        secure visas for destinations around the world. Our specialization includes US B1/B2 Visa, Schengen Visa,
-                                        Australia Visa, UK Visa, Dubai Visa, and OCI (Overseas Citizen of India) services.
+                                        We take complete ownership of your visa paperwork, from the first question to the day you
+                                        submit. A visa officer reads your application in minutes and looks for one thing: does
+                                        this all make sense? We make sure your purpose of travel, your dates, your bookings, your
+                                        finances and your ties to India tell one clear, consistent and honest story.
                                     </p>
                                     <p>
-                                        Led by <strong>Mr. Shaji Kandambeth</strong>, a seasoned professional with over 2 decades of experience,
-                                        our dedicated team of 10 visa experts brings deep knowledge and personalized care to every application.
-                                        From understanding your travel purpose to handling documentation and interview preparation, we guide you at every step.
+                                        SmotVisa is led by its CEO, <strong>Mr. Shaji Kandambeth</strong>, who brings over two
+                                        decades of experience across visas, OCI, FRRO and travel documentation. The company was
+                                        established in 2019, but the expertise guiding every application goes back much further —
+                                        and it is that depth of knowledge that sets our work apart.
                                     </p>
                                     <p>
-                                        At SmotVisa, we believe in a <strong>"human-first"</strong> approach. We listen, understand, and deliver solutions that fit
-                                        your specific travel needs, not just templates. Our clients appreciate our transparency, quick turnaround time,
-                                        and the peace of mind that comes with expert guidance.
+                                        Because we prepare files carefully and turn away shortcuts, the applications we assist
+                                        enjoy a 98% approval rate across more than 5,000 successful visa applications. With offices
+                                        in Mumbai and Bengaluru, we support travellers right across India — Delhi, Chennai,
+                                        Hyderabad, Pune, Ahmedabad and beyond — over WhatsApp, phone and email.
                                     </p>
                                 </>
                             )}
-
-                            {!isFull && (
-                                <p>
-                                    Led by seasoned professional Mr. Shaji Kandambeth with over 2 decades of experience, we guide you
-                                    through documentation, interview prep, and submission with absolute precision.
-                                </p>
-                            )}
                         </div>
 
-                        <div className="grid sm:grid-cols-2 gap-y-4 gap-x-8 mb-10">
-                            {highlights.map((item) => (
-                                <div key={item} className="flex items-center gap-3">
-                                    <CheckCircle2 className="h-5 w-5 text-secondary flex-shrink-0" />
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+                            {aboutStats.map((stat) => (
+                                <div key={stat.label} className="text-center sm:text-left">
+                                    <div className="text-2xl md:text-3xl font-display font-bold text-secondary">{stat.value}</div>
+                                    <div className="text-xs font-body text-muted-foreground">{stat.label}</div>
+                                </div>
+                            ))}
+                        </div>
+
+                        <h3 className="text-lg font-display font-bold text-foreground mb-4">What we do</h3>
+                        <div className="grid gap-y-3 mb-10">
+                            {whatWeDo.map((item) => (
+                                <div key={item} className="flex items-start gap-3">
+                                    <CheckCircle2 className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
                                     <span className="text-sm font-body text-foreground font-medium">{item}</span>
                                 </div>
                             ))}
@@ -115,20 +134,20 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                 </div>
 
                 {isFull && (
-                    /* Vision/Mission Section */
+                    /* How We Do It — three pillars */
                     <div className="mt-32 grid md:grid-cols-3 gap-8">
                         {[
                             {
-                                title: "Our Mission",
-                                desc: "To provide hassle-free and transparent travel solutions to every client, ensuring their travel dreams translate into reality with zero stress."
+                                title: "Every file is a story that adds up",
+                                desc: "We make sure your purpose of travel, dates, bookings, finances and ties to India tell one clear, consistent and honest story — with no loose ends to raise doubt."
                             },
                             {
-                                title: "Our Vision",
-                                desc: "To be the most trusted name in international travel and visa consultancy globally, recognized for our integrity and success rate."
+                                title: "Experience paired with a careful checklist",
+                                desc: "Every application is prepared against the latest, destination-specific requirements and then reviewed a second time by an experienced team member."
                             },
                             {
-                                title: "Our Values",
-                                desc: "Integrity, transparency, and a customer-first approach. we believe in building relationships through successful travel stories."
+                                title: "Honest at every step",
+                                desc: "We tell you upfront what your case needs, quote our fee transparently, and never promise an approval we can't control — the final decision always rests with the embassy."
                             }
                         ].map((item, i) => (
                             <MotionDiv

@@ -1,17 +1,25 @@
-import AboutSection from "@/components/sections/AboutSection";
 import PageHeader from "@/components/ui/PageHeader";
 import JsonLd from "@/components/ui/JsonLd";
+import AboutIntro from "@/components/sections/about/AboutIntro";
+import AboutStory from "@/components/sections/about/AboutStory";
+import AboutMissionWork from "@/components/sections/about/AboutMissionWork";
+import AboutWhatWeDo from "@/components/sections/about/AboutWhatWeDo";
+import AboutScopePromise from "@/components/sections/about/AboutScopePromise";
+import AboutFaq from "@/components/sections/about/AboutFaq";
+import AboutCta from "@/components/sections/about/AboutCta";
 
 export const metadata = {
-  title: "Know About Us | SmotVisa",
-  description: "Explore Smotvisa Team, Their Mission and Vision in travel domain. Get inspired to travel and learn how to make your dream trips a reality.",
+  title: "About SmotVisa | Trusted Tourist & Business Visa Consultants in India",
+  description:
+    "Learn about SmotVisa — India's specialist tourist and business visa consultancy. Trusted since 2019, with a 98% success rate and 5,000+ successful visa applications across 50+ countries. Honest, expert visa assistance.",
 
   keywords: [
     "about SmotVisa",
-    "visa experts India",
-    "travel agency India",
-    "SmotVisa team",
-    "visa services history"
+    "trusted visa consultants in India",
+    "visa assistance company India",
+    "tourist visa experts",
+    "business visa consultants",
+    "visa documentation specialists",
   ],
 
   alternates: {
@@ -27,8 +35,9 @@ export const metadata = {
   publisher: "SmotVisa",
 
   openGraph: {
-    title: "About SmotVisa | Trusted Visa & Travel Consultants in India",
-    description: "Explore SmotVisa Team, Their Mission and Vision in travel domain. Get inspired to travel and learn how to make your dream trips a reality.",
+    title: "About SmotVisa | Trusted Tourist & Business Visa Consultants in India",
+    description:
+      "India's specialist tourist and business visa consultancy — trusted since 2019, 98% success rate, 5,000+ successful applications across 50+ countries.",
     url: "https://smotvisa.com/about",
     siteName: "SmotVisa",
     images: ["/images/hero-travel-CJWf8Tv1.webp"],
@@ -37,10 +46,11 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "About SmotVisa | Trusted Visa & Travel Consultants in India",
-    description: "Explore SmotVisa Team, Their Mission and Vision in travel domain. Get inspired to travel and learn how to make your dream trips a reality.",
+    title: "About SmotVisa | Trusted Tourist & Business Visa Consultants in India",
+    description:
+      "India's specialist tourist and business visa consultancy — trusted since 2019, 98% success rate, 5,000+ successful applications.",
     images: ["/images/hero-travel-CJWf8Tv1.webp"],
-  }
+  },
 };
 
 export default function About() {
@@ -55,8 +65,8 @@ export default function About() {
           ]
       }} />
       <PageHeader
-        title="About Us"
-        description="Simplifying global travel with expert visa assistance and personalized support for over a decade."
+        title="About SmotVisa"
+        description="India's specialist tourist & business visa consultancy — trusted since 2019, with a 98% success rate across 50+ countries."
         breadcrumbs={[{ label: "About Us" }]}
       />
       <div className="bg-yellow-50 border-b border-yellow-200">
@@ -66,9 +76,13 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="bg-background">
-        <AboutSection isFull={true} />
-      </div>
+      <AboutIntro />
+      <AboutStory />
+      <AboutMissionWork />
+      <AboutWhatWeDo />
+      <AboutScopePromise />
+      <AboutFaq />
+      <AboutCta />
     </main>
   );
 }

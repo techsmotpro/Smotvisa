@@ -1,26 +1,34 @@
 import JsonLd from "@/components/ui/JsonLd";
 import HeroSection from "@/components/sections/HeroSection";
+import WhyTravellersSection from "@/components/sections/WhyTravellersSection";
 import AboutSection from "@/components/sections/AboutSection";
 import WhyChooseSection from "@/components/sections/WhyChooseSection";
-import ServicesSection from "@/components/sections/ServicesSection";
-import HowItWorksSection from "@/components/sections/HowItWorksSection";
+import VisaAssistanceSection from "@/components/sections/VisaAssistanceSection";
 import DestinationsSection from "@/components/sections/DestinationsSection";
+import HowItWorksSection from "@/components/sections/HowItWorksSection";
+import DocumentsSection from "@/components/sections/DocumentsSection";
+import WhoCanApplySection from "@/components/sections/WhoCanApplySection";
+import ProcessingTimesSection from "@/components/sections/ProcessingTimesSection";
+import RejectionReasonsSection from "@/components/sections/RejectionReasonsSection";
 import ReviewCards from "@/components/sections/ReviewCards";
+import FaqSection from "@/components/sections/FaqSection";
 import BlogSection from "@/components/sections/BlogSection";
+import FinalCtaSection from "@/components/sections/FinalCtaSection";
 
 export const metadata = {
-  title: "Ultimate Visa and Travel Consultants in India | SmotVisa",
+  title: "Visa Consultants in India | Tourist & Business Visa Assistance — Smotvisa",
   description:
-    "Experience expert visa assistance for US, UK, Canada, Singapore, Dubai, the leading visa and travel agency. Our expert team will handle all your visa and travel needs, ensuring a seamless and enjoyable trip.",
+    "Smotvisa helps Indian travellers get tourist and business visas with expertly prepared documents, application review and appointment support. Schengen, UK, USA, Dubai, Singapore & more.",
 
   keywords: [
-    "visa services India",
-    "US visa processing",
-    "UK visa agency",
-    "Canada visa help",
-    "Australia visa consultants",
-    "travel visa services",
-    "SmotVisa"
+    "visa consultants in India",
+    "tourist visa assistance",
+    "business visa assistance",
+    "Schengen visa consultants",
+    "UK visa assistance",
+    "USA visitor visa",
+    "Dubai visa agents",
+    "visa documentation support",
   ],
 
   alternates: {
@@ -36,8 +44,9 @@ export const metadata = {
   publisher: "SmotVisa",
 
   openGraph: {
-    title: "Ultimate Visa and Travel Consultants in India | SmotVisa",
-    description: "Experience expert visa assistance for US, UK, Canada, Singapore, Dubai, the leading visa and travel agency. Our expert team will handle all your visa and travel needs, ensuring a seamless and enjoyable trip.",
+    title: "Visa Consultants in India | Tourist & Business Visa Assistance — Smotvisa",
+    description:
+      "Tourist and business visa assistance for Indian travellers — expertly prepared documents, application review and appointment support for Schengen, UK, USA, Dubai, Singapore and 50+ countries.",
     url: "https://smotvisa.com",
     siteName: "SmotVisa",
     images: ["/images/visa-services-MHOtW-3U.webp"],
@@ -46,10 +55,11 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Ultimate Visa and Travel Consultants in India | SmotVisa",
-    description: "Experience expert visa assistance for US, UK, Canada, Singapore, Dubai, the leading visa and travel agency. Our expert team will handle all your visa and travel needs, ensuring a seamless and enjoyable trip.",
+    title: "Visa Consultants in India | Tourist & Business Visa Assistance — Smotvisa",
+    description:
+      "Tourist and business visa assistance for Indian travellers — documents prepared, reviewed and submission supported. Schengen, UK, USA, Dubai, Singapore & more.",
     images: ["/images/visa-services-MHOtW-3U.webp"],
-  }
+  },
 };
 
 export default function Home() {
@@ -67,13 +77,20 @@ export default function Home() {
         }
       }} />
       <HeroSection />
+      <WhyTravellersSection />
       <AboutSection />
       <WhyChooseSection />
-      <ServicesSection />
-      <HowItWorksSection />
+      <VisaAssistanceSection />
       <DestinationsSection />
+      <HowItWorksSection />
+      <DocumentsSection />
+      <WhoCanApplySection />
+      <ProcessingTimesSection />
+      <RejectionReasonsSection />
       <ReviewCards />
+      <FaqSection />
       <BlogSection />
+      <FinalCtaSection />
     </>
   );
 }

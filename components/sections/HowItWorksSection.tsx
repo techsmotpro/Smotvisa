@@ -5,18 +5,23 @@ const HowItWorksSection = () => {
     const steps = [
         {
             number: "01",
-            title: "Consultation & Profile Review",
-            description: "Tell us your destination and travel purpose. We’ll guide you on the right visa category and requirements."
+            title: "Free Consultation",
+            description: "Tell us your destination, travel dates and purpose. We confirm the right visa type and give you an honest read on your case."
         },
         {
             number: "02",
-            title: "Document Preparation & Submission",
-            description: "We review, verify, and organize your documents to ensure 100% compliance."
+            title: "Document Checklist & Collection",
+            description: "You receive a clear, personalised checklist. We tell you exactly what to gather and how each document should look."
         },
         {
             number: "03",
-            title: "Tracking & Support Until Approval",
-            description: "Stay updated at every stage — from embassy submission to visa stamping."
+            title: "Preparation & Review",
+            description: "We prepare your cover letter, itinerary and forms, then review your complete file against the embassy's current requirements."
+        },
+        {
+            number: "04",
+            title: "Appointment & Submission",
+            description: "We help you book your appointment slot and brief you on what to expect, so you walk in prepared and calm."
         }
     ];
 
@@ -29,13 +34,16 @@ const HowItWorksSection = () => {
                     viewport={{ once: true }}
                     className="text-center mb-12"
                 >
-                    <span className="text-sm font-body font-semibold text-secondary uppercase tracking-widest">How It Works</span>
+                    <span className="text-sm font-body font-semibold text-secondary uppercase tracking-widest">How Our Visa Assistance Works</span>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-4">
-                        Simple 3 Steps
+                        A Simple, Four-Step Process
                     </h2>
+                    <p className="text-muted-foreground font-body max-w-2xl mx-auto">
+                        Designed to remove the stress and guesswork from your application.
+                    </p>
                 </MotionDiv>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {steps.map((step, idx) => (
                         <MotionDiv
                             key={step.number}
@@ -62,6 +70,10 @@ const HowItWorksSection = () => {
                         </MotionDiv>
                     ))}
                 </div>
+
+                <p className="text-center text-muted-foreground font-body mt-12 max-w-2xl mx-auto">
+                    Throughout, you have a single point of contact who knows your case from start to finish.
+                </p>
             </div>
         </section>
     );

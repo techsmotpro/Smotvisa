@@ -6,6 +6,7 @@ import "flag-icons/css/flag-icons.min.css";
  * each mapping to a letter A–Z, so the conversion is purely arithmetic.
  */
 function emojiToCode(emoji: string): string {
+    if (typeof emoji !== "string" || !emoji) return "";
     const letters = [...emoji]
         .map((ch) => ch.codePointAt(0) ?? 0)
         .filter((cp) => cp >= 0x1f1e6 && cp <= 0x1f1ff)

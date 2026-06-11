@@ -1,36 +1,36 @@
 import { MotionDiv } from "@/components/ui/MotionWrapper";
-import { ShieldCheck, Zap, Headphones, DollarSign, Award, Users } from "lucide-react";
+import { ShieldCheck, Target, FileText, Receipt, Headphones, Award } from "lucide-react";
 
 const reasons = [
     {
-        icon: Award,
-        title: "10+ Years Experience",
-        description: "Expertise in complex visa cases and multi-country travel planning."
-    },
-    {
-        icon: Users,
-        title: "5000+ Happy Travelers",
-        description: "A growing community of satisfied customers who trust our services."
+        icon: Target,
+        title: "We focus only on visas",
+        description: "Not a travel agency or an immigration firm. We specialise in tourist and business visa assistance, so we know exactly what each consulate looks for."
     },
     {
         icon: ShieldCheck,
-        title: "99% Success Rate",
-        description: "Our meticulous documentation process ensures the highest approval odds."
+        title: "Every file gets a human review",
+        description: "An experienced team member checks your documents against the latest checklist for your destination — catching gaps an applicant would never spot."
+    },
+    {
+        icon: FileText,
+        title: "Cover letters that actually help",
+        description: "We draft a tailored cover letter, day-by-day itinerary and supporting explanation that give the visa officer a complete, consistent picture."
+    },
+    {
+        icon: Receipt,
+        title: "Straight answers, transparent fees",
+        description: "We quote our fee upfront and explain what's included. If your case is weak, we tell you what to strengthen rather than take your money and hope."
     },
     {
         icon: Headphones,
-        title: "24/7 Dedicated Support",
-        description: "We're here for you whenever you need us, across all time zones."
+        title: "Support in your language",
+        description: "Reach us on WhatsApp, phone or email. You get a real person who knows your case from start to finish — not a ticket number."
     },
     {
-        icon: Zap,
-        title: "Express Processing",
-        description: "Fast-track options for urgent travel needs and time-sensitive visas."
-    },
-    {
-        icon: DollarSign,
-        title: "Transparent Pricing",
-        description: "No hidden fees or surprise costs. Clear, upfront pricing every time."
+        icon: Award,
+        title: "Hands-on experience since 2019",
+        description: "Thousands of tourist and business visa applications across 50+ destinations. We put the patterns behind approvals to work on every single file."
     }
 ];
 
@@ -44,10 +44,10 @@ const WhyChooseSection = () => {
                     viewport={{ once: true }}
                     className="text-center mb-20"
                 >
-                    <span className="text-sm font-display font-bold text-secondary uppercase tracking-[0.2em] mb-4 block">Our Advantage</span>
-                    <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold text-foreground mb-6 break-words">Why Choose SmotVisa?</h2>
+                    <span className="text-sm font-display font-bold text-secondary uppercase tracking-[0.2em] mb-4 block">Why Choose SmotVisa</span>
+                    <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold text-foreground mb-6 break-words">The Visa Is Where Most People Get Stuck</h2>
                     <p className="text-base sm:text-lg md:text-xl font-body text-muted-foreground max-w-2xl mx-auto">
-                        Experience the gold standard in visa consulting and international travel management.
+                        Booking a flight is easy. The embassy doesn&apos;t see your excitement for the trip — it sees your paperwork. Our entire job is to make that paperwork tell a clear, honest and convincing story.
                     </p>
                 </MotionDiv>
 

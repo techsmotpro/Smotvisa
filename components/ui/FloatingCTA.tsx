@@ -4,7 +4,7 @@ import { Phone } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const PHONE_NUMBER = "+919380957448";
+const PHONE_NUMBER = "+918904008843";
 
 export default function FloatingCTA() {
     const [isVisible, setIsVisible] = useState(false);
