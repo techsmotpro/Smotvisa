@@ -77,31 +77,18 @@ export default function HeroContent() {
                 </a>
             </MotionDiv>
 
-            <MotionP
-                initial={{ opacity: 1, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.35 }}
-                className="text-sm font-body mb-10"
-                style={{ color: "hsla(42, 100%, 95%, 0.7)" }}
-            >
-                Free eligibility check. Transparent fees. No false promises. · Email{" "}
-                <a href="mailto:dm@smotvisa.com" className="underline hover:opacity-90">dm@smotvisa.com</a>
-            </MotionP>
-
             <MotionDiv
                 initial={{ opacity: 1, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
-                className="flex flex-wrap gap-4 sm:gap-8"
+                className="flex flex-nowrap items-center gap-3 sm:gap-5 mt-10 overflow-x-auto"
             >
-                {stats.map((stat) => (
-                    <div key={stat.label} className="flex items-center gap-3">
-                        <div className="hero-stat-icon-bg p-2 rounded-lg">
-                            <stat.icon className="hero-stat-icon h-5 w-5" />
-                        </div>
-                        <div>
-                            <div className="hero-stat-value text-2xl font-display font-bold">{stat.value}</div>
-                            <div className="hero-stat-label text-xs font-body">{stat.label}</div>
+                {stats.map((stat, i) => (
+                    <div key={stat.label} className="flex items-center gap-3 sm:gap-5 whitespace-nowrap">
+                        {i > 0 && <span className="hero-stat-label opacity-30">|</span>}
+                        <div className="leading-tight">
+                            <span className="hero-stat-value text-sm sm:text-base font-display font-bold">{stat.value}</span>
+                            <span className="hero-stat-label text-[10px] sm:text-xs font-body ml-1.5">{stat.label}</span>
                         </div>
                     </div>
                 ))}
