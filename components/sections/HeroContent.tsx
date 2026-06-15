@@ -81,15 +81,15 @@ export default function HeroContent() {
                 initial={{ opacity: 1, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
-                className="flex flex-nowrap items-center gap-3 sm:gap-5 mt-10 overflow-x-auto"
+                className="grid grid-cols-4 gap-1 mt-10 max-w-md"
             >
                 {stats.map((stat, i) => (
-                    <div key={stat.label} className="flex items-center gap-3 sm:gap-5 whitespace-nowrap">
-                        {i > 0 && <span className="hero-stat-label opacity-30">|</span>}
-                        <div className="leading-tight">
-                            <span className="hero-stat-value text-sm sm:text-base font-display font-bold">{stat.value}</span>
-                            <span className="hero-stat-label text-[10px] sm:text-xs font-body ml-1.5">{stat.label}</span>
-                        </div>
+                    <div
+                        key={stat.label}
+                        className={`text-center px-1.5 sm:px-2 ${i > 0 ? "border-l border-white/15" : ""}`}
+                    >
+                        <div className="hero-stat-value text-base sm:text-xl font-display font-bold leading-none">{stat.value}</div>
+                        <div className="hero-stat-label text-[9px] sm:text-[11px] font-body mt-1 leading-tight">{stat.label}</div>
                     </div>
                 ))}
             </MotionDiv>
