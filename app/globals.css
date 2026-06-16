@@ -14,8 +14,8 @@
   /* Additional Tailwind Utilities used in Navbar */
   --font-display: 'Playfair Display', serif;
   --font-body: 'DM Sans', sans-serif;
-  --shadow-card: 0 4px 24px -4px hsl(217 72% 18% / 0.08);
-  --shadow-elevated: 0 12px 40px -8px hsl(217 72% 18% / 0.15);
+  --shadow-card: 0 4px 24px -4px hsl(217 72% 18% / 0.14);
+  --shadow-elevated: 0 12px 40px -8px hsl(217 72% 18% / 0.22);
   --shadow-gold: 0 4px 20px -4px hsl(42 85% 55% / 0.4);
 
   --color-sidebar-ring: var(--sidebar-ring);
@@ -99,13 +99,13 @@
 }
 
 :root {
-  --background: hsl(210 20% 98%);
+  --background: hsl(220 22% 93%);
   --foreground: hsl(220 30% 12%);
 
-  --card: hsl(0 0% 100%);
+  --card: hsl(220 18% 97%);
   --card-foreground: hsl(220 30% 12%);
 
-  --popover: hsl(0 0% 100%);
+  --popover: hsl(220 18% 97%);
   --popover-foreground: hsl(220 30% 12%);
 
   --primary: hsl(217 72% 18%);
@@ -114,7 +114,7 @@
   --secondary: hsl(42 85% 55%);
   --secondary-foreground: hsl(220 30% 12%);
 
-  --muted: hsl(210 20% 95%);
+  --muted: hsl(220 18% 88%);
   --muted-foreground: hsl(220 10% 46%);
 
   --accent: hsl(42 85% 55%);
@@ -123,8 +123,8 @@
   --destructive: hsl(0 84.2% 60.2%);
   --destructive-foreground: hsl(210 40% 98%);
 
-  --border: hsl(214 20% 90%);
-  --input: hsl(214 20% 90%);
+  --border: hsl(214 20% 84%);
+  --input: hsl(214 20% 84%);
   --ring: hsl(217 72% 18%);
 
   --radius: 0.75rem;

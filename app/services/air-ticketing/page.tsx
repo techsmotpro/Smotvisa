@@ -1,4 +1,4 @@
-import { ArrowRight, Plane, Users, Ticket, Clock, Shield, Globe, ChevronRight } from "lucide-react";
+import { ArrowRight, Plane, Users, Ticket, Clock, Shield, Globe, ChevronRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import PageHeader from "@/components/ui/PageHeader";
 import { MotionDiv } from "@/components/ui/MotionWrapper";
@@ -6,114 +6,66 @@ import JsonLd from "@/components/ui/JsonLd";
 import { Metadata } from 'next';
 
 const faqs = [
-    {
-        question: "How can I book international flights from India with SmotVisa?",
-        answer: "You can contact SmotVisa’s travel consultants who will help you choose the best flight options based on your destination, travel dates, and budget. Our team will assist you with the entire booking process and confirm your tickets quickly."
-    },
-    {
-        question: "What are the best airlines for international flights from India?",
-        answer: "The best airlines depend on your destination and travel preferences. SmotVisa helps travelers choose reliable airlines that offer comfortable travel, convenient routes, and competitive pricing."
-    },
-    {
-        question: "When is the best time to book international flights from India?",
-        answer: "Booking flights several weeks in advance often helps travelers secure better prices. However, flight prices depend on travel demand, season, and airline availability. SmotVisa helps you find the best booking time for your trip."
-    },
-    {
-        question: "Can SmotVisa help with both flight booking and visa assistance?",
-        answer: "Yes. SmotVisa specializes in both international flight booking and visa assistance, which makes it easier for travelers to plan their international journeys with proper travel timelines."
-    },
-    {
-        question: "Do you provide group flight booking services?",
-        answer: "Yes. SmotVisa assists with family travel, corporate travel, and group flight bookings, ensuring convenient travel schedules and competitive fares for multiple travelers."
-    },
-    {
-        question: "Can I change my flight after booking?",
-        answer: "Flight change options depend on the airline’s policy and ticket type. SmotVisa helps travelers choose tickets that offer flexible options whenever possible."
-    }
+    { question: "Do you book international flights?", answer: "Yes, we book both domestic and international flights across all major airlines." },
+    { question: "Can you get better fares than booking online?", answer: "We have access to competitive fares and can often find good value, especially on complex or group itineraries." },
+    { question: "Can I book a flight reservation for my visa?", answer: "Yes. We arrange confirmed flight reservations that meet embassy requirements for your visa application." },
+    { question: "Do you offer group discounts?", answer: "Yes, we offer special rates for families, friends, corporate teams and educational groups." },
+    { question: "Can I change or reschedule my ticket?", answer: "Yes, subject to the airline's fare rules. Our team helps you manage changes." },
+    { question: "Do you book business and first class?", answer: "Yes, we book premium cabins along with lounge access and other add-ons where available." },
+    { question: "How do I pay?", answer: "We share the fare and payment details once you confirm your itinerary. Pricing is transparent." },
+    { question: "Can you handle multi-city trips?", answer: "Yes, we specialise in complex multi-city and round-the-world itineraries." },
+    { question: "Do you book flights with hotels?", answer: "Yes, we can combine flights and hotels as part of a tour package." },
+    { question: "What if my flight is cancelled by the airline?", answer: "We assist you with rebooking and coordinating with the airline for the best alternative." }
 ];
 
 export const metadata: Metadata = {
-    title: "Fast & Easy Air Ticket Booking | SmotVisa",
-    description: "Fast & easy Air Ticket booking with SmotVisa. Book domestic and international flights at the best prices with quick confirmation and reliable travel support.",
-    keywords: ["air ticketing", "flight booking", "airline tickets", "SmotVisa air ticketing", "cheap flights India"],
-    alternates: {
-        canonical: "https://smotvisa.com/services/air-ticketing",
-    },
-
-    robots: {
-        index: true,
-        follow: true,
-    },
-
+    title: "Flight Booking & Air Ticketing in India | Best Fares Across Airline | SmotVisa",
+    description: "Book domestic & international flights with SmotVisa. Best fares on all major airlines, group discounts & flexible booking. Pair with your visa.",
+    keywords: ["flight booking and air ticketing India", "international flight booking", "domestic flight booking", "cheap air tickets", "group flight booking", "business class booking"],
+    alternates: { canonical: "https://smotvisa.com/services/air-ticketing" },
+    robots: { index: true, follow: true },
     authors: [{ name: "SmotVisa Team" }],
     publisher: "SmotVisa",
-
     openGraph: {
-        title: "Fast & Easy Air Ticket Booking | SmotVisa",
-        description: "Fast & easy Air Ticket booking with SmotVisa. Book domestic and international flights at the best prices with quick confirmation and reliable travel support.",
+        title: "Flight Booking & Air Ticketing in India | Best Fares Across Airline | SmotVisa",
+        description: "Book domestic & international flights with SmotVisa. Best fares on all major airlines, group discounts & flexible booking. Pair with your visa.",
         url: "https://smotvisa.com/services/air-ticketing",
         siteName: "SmotVisa",
         images: ["/images/hero-travel-CJWf8Tv1.webp"],
         type: "website",
     },
-
     twitter: {
         card: "summary_large_image",
-        title: "Fast & Easy Air Ticket Booking | SmotVisa",
-        description: "Fast & easy Air Ticket booking with SmotVisa. Book domestic and international flights at the best prices with quick confirmation and reliable travel support.",
+        title: "Flight Booking & Air Ticketing in India | Best Fares Across Airline | SmotVisa",
+        description: "Book domestic & international flights with SmotVisa. Best fares on all major airlines, group discounts & flexible booking. Pair with your visa.",
         images: ["/images/hero-travel-CJWf8Tv1.webp"],
     }
 };
 
-const features = [
-    {
-        icon: Plane,
-        title: "Expert Travel Consultation",
-        description: "Our experienced team analyzes flight routes, transit times, airline reliability, and travel convenience to help you choose the best international flights from India."
-    },
-    {
-        icon: Ticket,
-        title: "Competitive International Airfares",
-        description: "Air ticket prices change frequently. SmotVisa helps travelers secure competitive international flight fares by identifying the best options available at the time of booking."
-    },
-    {
-        icon: Clock,
-        title: "Smooth Booking Experience",
-        description: "From flight selection to ticket confirmation, SmotVisa manages the entire process with a focus on simplicity and efficiency."
-    },
-    {
-        icon: Shield,
-        title: "Visa-Aligned Travel Planning",
-        description: "We help you select flights that align with your visa process and travel requirements, ensuring a seamless travel experience."
-    },
-    {
-        icon: Users,
-        title: "Group and Family Booking",
-        description: "We assist with family vacation flight bookings, group travel arrangements, corporate travel planning, and educational or student group travel."
-    },
-    {
-        icon: Globe,
-        title: "Complete Travel Support",
-        description: "SmotVisa offers more than just flight booking. We support travelers with visa assistance, tour packages, travel documentation, and travel insurance."
-    }
+const whyBook = [
+    { icon: Ticket, title: "Competitive prices", desc: "Access to attractive fares across all major airlines." },
+    { icon: Plane, title: "All major airlines", desc: "Domestic and international carriers in one place." },
+    { icon: Users, title: "Group discounts", desc: "Special rates for families, friends and corporate groups." },
+    { icon: Clock, title: "Flexible booking", desc: "Support for changes, rescheduling and complex itineraries." },
+    { icon: Shield, title: "Visa-ready reservations", desc: "Confirmed bookings aligned with your visa application." },
+    { icon: Globe, title: "Real human support", desc: "A dedicated team, not just a booking engine." },
 ];
 
-const destinations = [
-    "United States",
-    "United Kingdom",
-    "Europe (Schengen countries)",
-    "Australia",
-    "Dubai and UAE",
-    "Southeast Asia",
-    "Canada"
+const whatWeBook = [
+    "Domestic flights across India",
+    "International flights to all popular destinations",
+    "Round-trip, one-way and multi-city itineraries",
+    "Group and corporate travel bookings",
+    "Premium cabins — business and first class",
+    "Flight reservations to support visa applications",
 ];
 
-const services = [
-    { icon: "✈️", title: "International Flight Booking", desc: "Helping travelers find the best flights for global destinations." },
-    { icon: "📋", title: "Visa Assistance", desc: "Expert support for US B1/B2 visa, Schengen visa, UK visa, Australia visa, Dubai visa, and other visa applications." },
-    { icon: "🏨", title: "International Tour Packages", desc: "Customized travel packages that include hotels, sightseeing, and guided experiences." },
-    { icon: "📄", title: "Travel Documentation Guidance", desc: "Support with travel documents required for international journeys." },
-    { icon: "🛡️", title: "Travel Insurance Assistance", desc: "Guidance on selecting travel insurance for international trips." }
+const steps = [
+    { step: "01", title: "Tell us your trip", desc: "Destinations, dates and how many travellers." },
+    { step: "02", title: "We find the best options", desc: "We compare fares and routes across airlines." },
+    { step: "03", title: "You choose", desc: "Pick the option that fits your budget and schedule." },
+    { step: "04", title: "We book & confirm", desc: "Your tickets are issued and confirmation shared." },
+    { step: "05", title: "Ongoing support", desc: "We help with any changes before you fly." },
 ];
 
 export default function AirTicketingPage() {
@@ -125,162 +77,138 @@ export default function AirTicketingPage() {
                 "mainEntity": faqs.map(faq => ({
                     "@type": "Question",
                     "name": faq.question,
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                    }
+                    "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
                 }))
             }} />
+
             <PageHeader
-                title="Best International Flights from India"
-                description="Book the Best International Flights from India with SmotVisa. Finding the right flights can be challenging, but our experts simplify the process by helping you find the most convenient and affordable options."
+                title="Airline Ticket Booking"
+                description="Best Fares on Every Route, Domestic and International. One trusted partner for your visa and your flights — SmotVisa books competitive air tickets on all major airlines."
                 breadcrumbs={[{ label: "Air Ticketing" }]}
             />
 
-            {/* Introduction Section */}
-            <section className="py-20 bg-background text-center">
-                <div className="container mx-auto px-4 max-w-4xl">
-                    <MotionDiv
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                    >
-                        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-8">
-                            Why Choose SmotVisa for International Flight Booking?
-                        </h2>
-                        <p className="text-lg text-muted-foreground font-body leading-relaxed max-w-3xl mx-auto">
-                            Booking international flights online can sometimes be confusing due to fluctuating prices, multiple airline
-                            options, and travel restrictions. SmotVisa helps travelers navigate these challenges by providing expert
-                            assistance and personalized flight recommendations.
+            {/* Intro */}
+            <section className="py-12 bg-background">
+                <div className="container mx-auto px-4 max-w-4xl text-center">
+                    <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+                        <p className="text-lg text-muted-foreground font-body leading-relaxed mb-5">
+                            Booking flights yourself can mean juggling fare fluctuations, confusing fare rules and add-on charges. SmotVisa gives you access to competitive fares across all major domestic and international airlines, plus the human support to handle changes, group bookings and complex multi-city itineraries.
                         </p>
+                        <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">
+                            Best of all, when you&apos;re applying for a visa with us, we coordinate your flight reservations with your application — including the confirmed bookings that embassies expect to see — so everything lines up perfectly.
+                        </p>
+                        <div className="inline-flex flex-col sm:flex-row items-center gap-3 text-sm font-display font-bold text-foreground bg-muted/50 border border-border rounded-2xl px-6 py-4">
+                            <span>Looking for the best fare? Let&apos;s find it together.</span>
+                            <span className="hidden sm:block text-border">|</span>
+                            <a href="tel:+918904008843" className="text-secondary hover:underline">+91-8904008843</a>
+                            <span className="hidden sm:block text-border">•</span>
+                            <a href="mailto:info@smotvisa.com" className="text-secondary hover:underline">info@smotvisa.com</a>
+                        </div>
                     </MotionDiv>
                 </div>
             </section>
 
-            {/* Features Section */}
-            <section className="py-24 bg-gradient-to-b from-background to-secondary/5">
+            {/* Why Book */}
+            <section className="py-14 bg-gradient-to-b from-background to-secondary/5">
                 <div className="container mx-auto px-4">
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {features.map((feature, idx) => (
+                    <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-8">
+                        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Why Book Flights With SmotVisa</h2>
+                    </MotionDiv>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                        {whyBook.map((item, idx) => (
                             <MotionDiv
                                 key={idx}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: idx * 0.1 }}
-                                className="bg-card rounded-2xl shadow-card border-l-4 border-secondary/50 border-r border-y border-border p-8 hover:shadow-elevated transition-all group"
+                                transition={{ delay: idx * 0.08 }}
+                                className="bg-card rounded-2xl shadow-card border-l-4 border-secondary/50 border-r border-y border-border p-6 hover:shadow-elevated transition-all group"
                             >
-                                <div className="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
-                                    <feature.icon className="h-7 w-7 text-secondary" />
+                                <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary/20 transition-colors">
+                                    <item.icon className="h-6 w-6 text-secondary" />
                                 </div>
-                                <h3 className="text-2xl font-display font-bold text-foreground mb-4">{feature.title}</h3>
-                                <p className="text-muted-foreground font-body leading-relaxed italic">
-                                    {feature.description}
-                                </p>
+                                <h3 className="text-lg font-display font-bold text-foreground mb-2">{item.title}</h3>
+                                <p className="text-muted-foreground font-body text-sm leading-relaxed italic">{item.desc}</p>
                             </MotionDiv>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Destinations Section */}
-            <section className="py-24 bg-background overflow-hidden">
-                <div className="container mx-auto px-4">
-                    <MotionDiv
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-center mb-12"
-                    >
-                        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-                            Popular International Destinations
-                        </h2>
-                        <p className="text-muted-foreground font-body max-w-2xl mx-auto text-lg">
-                            SmotVisa offers international air ticket booking services from India to popular global destinations
-                        </p>
+            {/* What We Book */}
+            <section className="py-14 bg-background">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-8">
+                        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">What We Book</h2>
                     </MotionDiv>
-                    <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-                        {destinations.map((destination, idx) => (
+                    <div className="grid sm:grid-cols-2 gap-3">
+                        {whatWeBook.map((item, idx) => (
                             <MotionDiv
                                 key={idx}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
+                                initial={{ opacity: 0, x: -10 }}
+                                whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: idx * 0.05 }}
-                                className="px-6 py-4 bg-card border border-border rounded-2xl text-base font-body font-semibold text-foreground hover:bg-secondary hover:text-secondary-foreground hover:border-secondary transition-all cursor-default shadow-sm"
+                                transition={{ delay: idx * 0.07 }}
+                                className="flex items-center gap-3 bg-card border border-border rounded-xl p-4 shadow-sm hover:border-secondary/40 transition-colors"
                             >
-                                {destination}
+                                <CheckCircle2 className="h-5 w-5 text-secondary shrink-0" />
+                                <span className="font-body font-semibold text-foreground text-sm">{item}</span>
                             </MotionDiv>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Services Section */}
-            <section className="py-24 bg-gradient-to-b from-background to-secondary/5">
+            {/* How It Works */}
+            <section className="py-14 bg-gradient-to-b from-background to-secondary/5">
                 <div className="container mx-auto px-4">
-                    <MotionDiv
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-center mb-16"
-                    >
-                        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-                            Complete Travel Support from SmotVisa
-                        </h2>
-                        <p className="text-secondary font-body max-w-2xl mx-auto text-lg font-semibold italic">
-                            Beyond just booking flights, we support you from documentation to destination.
-                        </p>
+                    <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-8">
+                        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">How It Works</h2>
                     </MotionDiv>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-                        {services.map((service, idx) => (
+                    <div className="grid md:grid-cols-5 gap-4 max-w-6xl mx-auto">
+                        {steps.map((s, idx) => (
                             <MotionDiv
                                 key={idx}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: idx * 0.1 }}
-                                className="bg-card rounded-2xl shadow-card border-t-4 border-secondary/50 border-x border-b border-border p-6 text-center hover:translate-y-[-5px] transition-transform"
+                                transition={{ delay: idx * 0.08 }}
+                                className="bg-card rounded-2xl shadow-card border-t-4 border-secondary/50 border-x border-b border-border p-5 text-center hover:translate-y-[-4px] transition-transform"
                             >
-                                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
-                                <h3 className="text-lg font-display font-bold text-foreground mb-3">{service.title}</h3>
-                                <p className="text-sm font-body text-muted-foreground leading-relaxed">{service.desc}</p>
+                                <div className="text-2xl font-display font-bold text-secondary mb-2">{s.step}</div>
+                                <h3 className="text-sm font-display font-bold text-foreground mb-1">{s.title}</h3>
+                                <p className="text-xs font-body text-muted-foreground leading-relaxed">{s.desc}</p>
                             </MotionDiv>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* FAQ Section */}
-            <section className="py-24 bg-background">
+            {/* FAQ */}
+            <section className="py-14 bg-background">
                 <div className="container mx-auto px-4">
-                    <MotionDiv
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="max-w-4xl mx-auto"
-                    >
-                        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-12 text-center">
+                    <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto">
+                        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-8 text-center">
                             Frequently Asked Questions
                         </h2>
-                        <div className="space-y-4">
+                        <div className="space-y-3">
                             {faqs.map((faq, idx) => (
                                 <MotionDiv
                                     key={idx}
-                                    initial={{ opacity: 0, y: 20 }}
+                                    initial={{ opacity: 0, y: 10 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: idx * 0.1 }}
-                                    className="bg-card rounded-2xl border-l-4 border-secondary/50 border-r border-y border-border overflow-hidden hover:border-secondary/30 transition-colors shadow-sm"
+                                    transition={{ delay: idx * 0.05 }}
+                                    className="bg-card rounded-xl border-l-4 border-secondary/50 border-r border-y border-border overflow-hidden shadow-sm"
                                 >
                                     <details className="group">
-                                        <summary className="cursor-pointer flex items-center justify-between px-8 py-6 list-none">
-                                            <span className="text-lg font-display font-bold text-foreground pr-8">{faq.question}</span>
-                                            <div className="shrink-0 w-8 h-8 rounded-full bg-muted flex items-center justify-center group-open:bg-secondary transition-colors">
-                                                <ChevronRight className="h-5 w-5 text-foreground group-open:text-secondary-foreground transition-transform duration-300 group-open:rotate-90" />
+                                        <summary className="cursor-pointer flex items-center justify-between px-6 py-4 list-none">
+                                            <span className="text-base font-display font-bold text-foreground pr-6">{faq.question}</span>
+                                            <div className="shrink-0 w-7 h-7 rounded-full bg-muted flex items-center justify-center group-open:bg-secondary transition-colors">
+                                                <ChevronRight className="h-4 w-4 text-foreground group-open:text-secondary-foreground transition-transform duration-300 group-open:rotate-90" />
                                             </div>
                                         </summary>
-                                        <div className="px-8 pb-6 text-base font-body text-muted-foreground leading-relaxed border-t border-border/50 pt-4 mt-2">
+                                        <div className="px-6 pb-4 text-sm font-body text-muted-foreground leading-relaxed border-t border-border/50 pt-3">
                                             {faq.answer}
                                         </div>
                                     </details>
@@ -291,35 +219,54 @@ export default function AirTicketingPage() {
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-24 relative overflow-hidden bg-primary text-primary-foreground">
+            {/* Internal Links */}
+            <section className="py-10 bg-gradient-to-b from-background to-secondary/5">
+                <div className="container mx-auto px-4 max-w-4xl text-center">
+                    <h2 className="text-xl font-display font-bold text-foreground mb-2">Explore More Services</h2>
+                    <p className="text-muted-foreground font-body text-sm mb-6">Pair your flight with a visa or a full tour package.</p>
+                    <div className="flex flex-wrap justify-center gap-3">
+                        {[
+                            { label: "International Tour Packages", href: "/services/tours" },
+                            { label: "UAE / Dubai Visa", href: "/visa/uae-visa-consultant" },
+                            { label: "All Travel Services", href: "/services" },
+                            { label: "Contact Us", href: "/contact" },
+                        ].map((link, idx) => (
+                            <Link
+                                key={idx}
+                                href={link.href}
+                                className="inline-flex items-center gap-2 px-5 py-2.5 bg-card border border-border rounded-full font-display font-bold text-sm text-foreground hover:bg-secondary hover:text-secondary-foreground hover:border-secondary transition-all shadow-sm"
+                            >
+                                {link.label} <ArrowRight className="h-3.5 w-3.5" />
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section className="py-12 relative overflow-hidden bg-primary text-primary-foreground">
                 <div className="absolute inset-0 opacity-10 pointer-events-none bg-grid-white" />
                 <div className="container mx-auto px-4 relative z-10 text-center">
-                    <MotionDiv
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                    >
-                        <h3 className="text-3xl md:text-5xl font-display font-bold mb-6">
-                            Book Your Flight Today!
+                    <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+                        <h3 className="text-3xl md:text-5xl font-display font-bold mb-4">
+                            Pair Your Visa with the Right Flight
                         </h3>
-                        <p className="text-xl font-body text-primary-foreground/70 max-w-2xl mx-auto mb-10 leading-relaxed">
-                            Finding the right flight can make a huge difference in your travel experience. With SmotVisa, you receive
-                            expert support, professional travel guidance, and a smooth booking process.
+                        <p className="text-lg font-body text-primary-foreground/70 max-w-2xl mx-auto mb-8 leading-relaxed">
+                            Ask SmotVisa for a fare today — we&apos;ll find you the best option and make sure your booking is visa-ready.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
                                 href="/contact"
-                                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-secondary text-secondary-foreground font-body font-bold rounded-full hover:shadow-gold transition-all"
+                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-secondary text-secondary-foreground font-body font-bold rounded-full hover:shadow-gold transition-all"
                             >
-                                Book Your Flight <ArrowRight className="h-5 w-5" />
+                                Get a Fare Quote <ArrowRight className="h-5 w-5" />
                             </Link>
-                            <Link
-                                href="/contact"
-                                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-transparent border-2 border-white/20 text-white font-body font-bold rounded-full hover:bg-white/10 transition-all"
+                            <a
+                                href="tel:+918904008843"
+                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent border-2 border-white/20 text-white font-body font-bold rounded-full hover:bg-white/10 transition-all"
                             >
-                                Talk to Travel Experts
-                            </Link>
+                                Call / WhatsApp +91-8904008843
+                            </a>
                         </div>
                     </MotionDiv>
                 </div>
