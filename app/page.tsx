@@ -1,4 +1,5 @@
 import JsonLd from "@/components/ui/JsonLd";
+import { fetchReviews } from "@/data/reviewData";
 import HeroSection from "@/components/sections/HeroSection";
 import WhyTravellersSection from "@/components/sections/WhyTravellersSection";
 import AboutSection from "@/components/sections/AboutSection";
@@ -62,7 +63,11 @@ export const metadata = {
   },
 };
 
-export default function Home() {
+export default async function Home() {
+  const reviews = await fetchReviews();
+  const reviewCount = reviews.length;
+  const avgRating = (reviews.reduce((sum, r) => sum + r.rating, 0) / reviewCount).toFixed(1);
+
   return (
     <>
       <JsonLd data={{
@@ -74,6 +79,27 @@ export default function Home() {
           "@type": "SearchAction",
           "target": "https://smotvisa.com/visa?q={search_term_string}",
           "query-input": "required name=search_term_string"
+        }
+      }} />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "SmotVisa",
+        "url": "https://smotvisa.com",
+        "image": "https://smotvisa.com/images/visa-services-MHOtW-3U.webp",
+        "description": "Trusted visa consultants in India for US, UK, Canada, Schengen and 50+ countries.",
+        "telephone": "+91-8879822338",
+        "email": "info@smotvisa.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IN"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": avgRating,
+          "reviewCount": reviewCount,
+          "bestRating": "5",
+          "worstRating": "1"
         }
       }} />
       <HeroSection />
