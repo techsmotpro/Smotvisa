@@ -57,7 +57,20 @@
     { "source": "/single-entry-vs-multiple-entry-visa-2026-complete-guide-for-smart-international-travelers", "destination": "/blog/single-entry-vs-multiple-entry-visa-2026-complete-guide-for-smart-international-travelers", "permanent": true },
     { "source": "/ecr-ecnr-passport", "destination": "/blog/ecr-ecnr-passport", "permanent": true },
     { "source": "/risks-and-limitations-of-an-ecr-passport", "destination": "/blog/risks-and-limitations-of-an-ecr-passport", "permanent": true },
-    { "source": "/how-to-check-ecr-ecnr-status-on-passport-online", "destination": "/blog/how-to-check-ecr-ecnr-status-on-passport-online", "permanent": true }
+    { "source": "/how-to-check-ecr-ecnr-status-on-passport-online", "destination": "/blog/how-to-check-ecr-ecnr-status-on-passport-online", "permanent": true },
+    { "source": "/home-travel-app", "destination": "/", "permanent": true },
+    { "source": "/country/uae", "destination": "/visa/uae-visa-consultant", "permanent": true },
+    { "source": "/country/schengen-visa", "destination": "/visa/schengen-visa-consultant", "permanent": true },
+    { "source": "/country/:slug*", "destination": "/visa", "permanent": true },
+    { "source": "/countries/australia", "destination": "/visa/australia-visa-consultant", "permanent": true },
+    { "source": "/countries/new-zealand", "destination": "/visa", "permanent": true },
+    { "source": "/countries/:slug*", "destination": "/visa", "permanent": true },
+    { "source": "/contact/shivaji-nagar-pune", "destination": "/contact/pune/visa-agents-in-shivaji-nagar", "permanent": true },
+    { "source": "/contact/saidapet-chennai", "destination": "/contact", "permanent": true },
+    { "source": "/location/pune", "destination": "/contact/pune/visa-agents-in-shivaji-nagar", "permanent": true },
+    { "source": "/reasons-for-australian-student-visa-refusal", "destination": "/blog", "permanent": true },
+    { "source": "/category/:slug*", "destination": "/blog", "permanent": true },
+    { "source": "/blog-portfolio", "destination": "/blog", "permanent": true }
   ],
   "headers": [
     {
