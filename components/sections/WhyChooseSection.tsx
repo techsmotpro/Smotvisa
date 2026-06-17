@@ -55,7 +55,7 @@ const WhyChooseSection = () => {
                     {reasons.map((reason, idx) => (
                         <MotionDiv
                             key={idx}
-                            initial={{ opacity: 1, scale: 0.95 }}
+                            initial={{ opacity: 0, scale: 1 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}

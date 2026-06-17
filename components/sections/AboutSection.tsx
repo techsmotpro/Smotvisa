@@ -39,6 +39,7 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                                 alt="Travellers assisted by SmotVisa"
                                 fill
                                 className="object-cover"
+                                sizes="(max-width: 1024px) 100vw, 50vw"
                             />
                         </div>
                         <div className="absolute bottom-4 right-4 md:-bottom-8 md:-right-8 bg-secondary text-secondary-foreground p-6 md:p-10 rounded-2xl md:rounded-3xl shadow-gold font-body border-4 border-card">

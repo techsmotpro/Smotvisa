@@ -95,7 +95,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
 
                         {/* About the Organization Box */}
                         <MotionDiv
-                            initial={{ opacity: 1, scale: 0.98 }}
+                            initial={{ opacity: 0, scale: 1 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             className="bg-primary rounded-[3rem] p-10 md:p-16 text-primary-foreground relative overflow-hidden shadow-elevated border border-white/10"

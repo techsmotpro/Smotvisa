@@ -288,7 +288,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
             {/* CTA */}
             <section className="py-24 container mx-auto px-4">
                 <MotionDiv
-                    initial={{ opacity: 1, scale: 0.98 }}
+                    initial={{ opacity: 0, scale: 1 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     className="bg-primary p-12 md:p-24 rounded-[3.5rem] shadow-elevated relative overflow-hidden text-center border border-white/10"
