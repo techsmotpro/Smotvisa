@@ -4,8 +4,8 @@ import JsonLd from "@/components/ui/JsonLd";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Visa Agents in Jaipur | SmotVisa",
-    description: "Expert visa consultants in Jaipur. Get professional visa assistance for all countries at SmotVisa Jaipur office.",
+    title: "Top Visa Consultants in Jaipur — US, UK, Canada, Schengen | SmotVisa",
+    description: "Trusted visa agent in Jaipur with 10+ years experience. Fast approvals for US, UK, Canada & Schengen visas. Book your consultation today.",
     keywords: ["visa agents Jaipur", "visa consultancy Jaipur", "SmotVisa Jaipur", "visa services Jaipur", "travel agents Jaipur"],
     alternates: {
         canonical: "https://smotvisa.com/contact/jaipur/visa-agents-in-jaipur",
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     authors: [{ name: "SmotVisa Team" }],
     publisher: "SmotVisa",
     openGraph: {
-        title: "Visa Agents in Jaipur | SmotVisa",
-        description: "Expert visa consultants in Jaipur. Get professional visa assistance for all countries at SmotVisa Jaipur office.",
+        title: "Top Visa Consultants in Jaipur — US, UK, Canada, Schengen | SmotVisa",
+        description: "Trusted visa agent in Jaipur with 10+ years experience. Fast approvals for US, UK, Canada & Schengen visas. Book your consultation today.",
         url: "https://smotvisa.com/contact/jaipur/visa-agents-in-jaipur",
         siteName: "SmotVisa",
         images: ["/images/hero-travel-CJWf8Tv1.webp"],
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Visa Agents in Jaipur | SmotVisa",
-        description: "Expert visa consultants in Jaipur. Get professional visa assistance for all countries at SmotVisa Jaipur office.",
+        title: "Top Visa Consultants in Jaipur — US, UK, Canada, Schengen | SmotVisa",
+        description: "Trusted visa agent in Jaipur with 10+ years experience. Fast approvals for US, UK, Canada & Schengen visas. Book your consultation today.",
         images: ["/images/hero-travel-CJWf8Tv1.webp"],
     }
 };
