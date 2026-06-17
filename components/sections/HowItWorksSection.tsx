@@ -29,7 +29,7 @@ const HowItWorksSection = () => {
         <section id="how-it-works" className="py-20 bg-background">
             <div className="container mx-auto px-4">
                 <MotionDiv
-                    initial={{ opacity: 1, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-12"
@@ -47,7 +47,7 @@ const HowItWorksSection = () => {
                     {steps.map((step, idx) => (
                         <MotionDiv
                             key={step.number}
-                            initial={{ opacity: 1, y: 20 }}
+                            initial={{ opacity: 0, y: 0 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}

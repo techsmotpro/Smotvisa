@@ -26,7 +26,7 @@ export default function VisaFeaturedGrid({ destinations }: { destinations: Desti
                 {destinations.map((dest, idx) => (
                     <MotionDiv
                         key={dest.name}
-                        initial={{ opacity: 1, y: 20 }}
+                        initial={{ opacity: 0, y: 0 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: idx * 0.1 }}

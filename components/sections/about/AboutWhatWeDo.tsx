@@ -32,7 +32,7 @@ const AboutWhatWeDo = () => {
                 {/* What We Do */}
                 <div className="max-w-4xl mx-auto mb-20">
                     <MotionDiv
-                        initial={{ opacity: 1, y: 20 }}
+                        initial={{ opacity: 0, y: 0 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         className="text-center mb-10"
@@ -63,7 +63,7 @@ const AboutWhatWeDo = () => {
 
                 {/* Why Travellers Trust */}
                 <MotionDiv
-                    initial={{ opacity: 1, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-12"
@@ -77,7 +77,7 @@ const AboutWhatWeDo = () => {
                     {trust.map((item, idx) => (
                         <MotionDiv
                             key={item.title}
-                            initial={{ opacity: 1, y: 20 }}
+                            initial={{ opacity: 0, y: 0 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.06 }}
@@ -94,7 +94,7 @@ const AboutWhatWeDo = () => {
 
                 {/* What We Stand For */}
                 <MotionDiv
-                    initial={{ opacity: 1, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-12"
@@ -108,7 +108,7 @@ const AboutWhatWeDo = () => {
                     {values.map((item, idx) => (
                         <MotionDiv
                             key={item.title}
-                            initial={{ opacity: 1, y: 20 }}
+                            initial={{ opacity: 0, y: 0 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.06 }}

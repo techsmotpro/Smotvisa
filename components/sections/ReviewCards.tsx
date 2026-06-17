@@ -48,7 +48,7 @@ const ReviewCards = async () => {
             <JsonLd data={reviewSchema} />
             <div className="container mx-auto px-4">
                 <MotionDiv
-                    initial={{ opacity: 1, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-16"
@@ -66,7 +66,7 @@ const ReviewCards = async () => {
                     {reviews.map((review, idx) => (
                         <MotionDiv
                             key={review.id}
-                            initial={{ opacity: 1, y: 20 }}
+                            initial={{ opacity: 0, y: 0 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}

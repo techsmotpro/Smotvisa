@@ -30,7 +30,7 @@ const AboutMissionWork = () => {
             <div className="container mx-auto px-4">
                 {/* Mission */}
                 <MotionDiv
-                    initial={{ opacity: 1, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="max-w-3xl mx-auto text-center mb-20"
@@ -59,7 +59,7 @@ const AboutMissionWork = () => {
 
                 {/* How We Work */}
                 <MotionDiv
-                    initial={{ opacity: 1, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-12 max-w-2xl mx-auto"
@@ -77,7 +77,7 @@ const AboutMissionWork = () => {
                     {pillars.map((pillar, idx) => (
                         <MotionDiv
                             key={pillar.title}
-                            initial={{ opacity: 1, y: 20 }}
+                            initial={{ opacity: 0, y: 0 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.08 }}

@@ -17,7 +17,7 @@ const ProcessingTimesSection = () => {
         <section id="processing-times" className="py-20 bg-muted/30">
             <div className="container mx-auto px-4">
                 <MotionDiv
-                    initial={{ opacity: 1, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-12 max-w-2xl mx-auto"
@@ -32,7 +32,7 @@ const ProcessingTimesSection = () => {
                 </MotionDiv>
 
                 <MotionDiv
-                    initial={{ opacity: 1, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="max-w-3xl mx-auto overflow-hidden rounded-3xl border border-border shadow-card bg-card"

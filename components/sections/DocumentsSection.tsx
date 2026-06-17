@@ -25,7 +25,7 @@ const DocumentsSection = () => {
         <section id="documents" className="py-20 bg-muted/30">
             <div className="container mx-auto px-4">
                 <MotionDiv
-                    initial={{ opacity: 1, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-12 max-w-2xl mx-auto"
@@ -41,7 +41,7 @@ const DocumentsSection = () => {
 
                 <div className="grid lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
                     <MotionDiv
-                        initial={{ opacity: 1, y: 20 }}
+                        initial={{ opacity: 0, y: 0 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         className="p-8 bg-card rounded-3xl border border-border shadow-card"
@@ -63,7 +63,7 @@ const DocumentsSection = () => {
                     </MotionDiv>
 
                     <MotionDiv
-                        initial={{ opacity: 1, y: 20 }}
+                        initial={{ opacity: 0, y: 0 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}

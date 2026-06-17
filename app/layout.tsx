@@ -8,6 +8,7 @@ import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import JsonLd from "@/components/ui/JsonLd";
 import TawkChat from "@/components/TawkChat";
+import Script from "next/script";
 
 const FloatingCTA = dynamic(() => import("@/components/ui/FloatingCTA"));
 
@@ -71,8 +72,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className={cn("font-sans", geist.variable)}>
-            <head>
-                <script
+            <head />
+            <body className="antialiased">
+                <Script
+                    id="gtm-init"
+                    strategy="afterInteractive"
                     dangerouslySetInnerHTML={{
                         __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -81,8 +85,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WVZ8TS5C');`
                     }}
                 />
-            </head>
-            <body className="antialiased">
                 <noscript>
                     <iframe
                         src="https://www.googletagmanager.com/ns.html?id=GTM-WVZ8TS5C"

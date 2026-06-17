@@ -18,7 +18,7 @@ export default function HeroContent() {
     return (
         <div className="w-full max-w-full overflow-hidden">
             <MotionDiv
-                initial={{ opacity: 1, y: 30 }}
+                initial={{ opacity: 0, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
             >
@@ -29,7 +29,7 @@ export default function HeroContent() {
             </MotionDiv>
 
             <MotionH1
-                initial={{ opacity: 1, y: 30 }}
+                initial={{ opacity: 0, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1 }}
                 className="hero-heading text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6 break-words max-w-full"
@@ -40,7 +40,7 @@ export default function HeroContent() {
             </MotionH1>
 
             <MotionP
-                initial={{ opacity: 1, y: 30 }}
+                initial={{ opacity: 0, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
                 className="hero-text text-lg sm:text-xl font-body leading-relaxed mb-8 max-w-xl"
@@ -52,7 +52,7 @@ export default function HeroContent() {
             </MotionP>
 
             <MotionDiv
-                initial={{ opacity: 1, y: 30 }}
+                initial={{ opacity: 0, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.3 }}
                 className="flex flex-wrap items-center gap-3 sm:gap-4 mb-5"
@@ -78,7 +78,7 @@ export default function HeroContent() {
             </MotionDiv>
 
             <MotionDiv
-                initial={{ opacity: 1, y: 30 }}
+                initial={{ opacity: 0, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
                 className="grid grid-cols-4 gap-1 mt-10 max-w-md"

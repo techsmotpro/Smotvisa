@@ -6,7 +6,7 @@ const AboutStory = () => {
         <section className="py-20 bg-muted/30">
             <div className="container mx-auto px-4 max-w-4xl">
                 <MotionDiv
-                    initial={{ opacity: 1, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
@@ -41,7 +41,7 @@ const AboutStory = () => {
 
                 {/* Meet the Founder */}
                 <MotionDiv
-                    initial={{ opacity: 1, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="mt-12 p-8 sm:p-10 bg-card rounded-3xl border border-border shadow-card"

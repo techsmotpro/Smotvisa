@@ -17,7 +17,7 @@ const AboutScopePromise = () => {
                 {/* Who We Help */}
                 <div className="max-w-4xl mx-auto mb-20">
                     <MotionDiv
-                        initial={{ opacity: 1, y: 20 }}
+                        initial={{ opacity: 0, y: 0 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         className="text-center mb-10"
@@ -34,7 +34,7 @@ const AboutScopePromise = () => {
                         {whoWeHelp.map((item, idx) => (
                             <MotionDiv
                                 key={item}
-                                initial={{ opacity: 1, y: 20 }}
+                                initial={{ opacity: 0, y: 0 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.05 }}
@@ -51,7 +51,7 @@ const AboutScopePromise = () => {
 
                 {/* What We Don't Do */}
                 <MotionDiv
-                    initial={{ opacity: 1, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="max-w-4xl mx-auto mb-20 p-8 sm:p-10 rounded-3xl border border-border bg-muted/40"
@@ -80,7 +80,7 @@ const AboutScopePromise = () => {
 
                 {/* The SmotVisa Promise */}
                 <MotionDiv
-                    initial={{ opacity: 1, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="max-w-3xl mx-auto text-center"

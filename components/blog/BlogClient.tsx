@@ -89,7 +89,7 @@ export default function BlogClient({ blogs }: { blogs: BlogPostSummary[] }) {
                     {filteredBlogs.map((blog, idx) => (
                         <motion.article
                             key={blog.id}
-                            initial={{ opacity: 1, y: 20 }}
+                            initial={{ opacity: 0, y: 0 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}

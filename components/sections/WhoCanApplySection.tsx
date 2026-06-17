@@ -15,7 +15,7 @@ const WhoCanApplySection = () => {
         <section id="who-can-apply" className="py-20 bg-background">
             <div className="container mx-auto px-4">
                 <MotionDiv
-                    initial={{ opacity: 1, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-12 max-w-2xl mx-auto"
@@ -33,7 +33,7 @@ const WhoCanApplySection = () => {
                     {applicants.map((item, idx) => (
                         <MotionDiv
                             key={item}
-                            initial={{ opacity: 1, y: 20 }}
+                            initial={{ opacity: 0, y: 0 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.06 }}
@@ -48,7 +48,7 @@ const WhoCanApplySection = () => {
                 </div>
 
                 <MotionDiv
-                    initial={{ opacity: 1, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="max-w-4xl mx-auto flex items-start gap-4 p-6 rounded-2xl border border-secondary/30 bg-secondary/10"

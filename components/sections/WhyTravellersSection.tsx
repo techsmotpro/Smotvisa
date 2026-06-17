@@ -29,7 +29,7 @@ const WhyTravellersSection = () => {
         <section className="py-16 bg-card border-b border-border">
             <div className="container mx-auto px-4">
                 <MotionDiv
-                    initial={{ opacity: 1, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-10"
@@ -44,7 +44,7 @@ const WhyTravellersSection = () => {
                     {points.map((point, idx) => (
                         <MotionDiv
                             key={point.text}
-                            initial={{ opacity: 1, y: 20 }}
+                            initial={{ opacity: 0, y: 0 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.08 }}

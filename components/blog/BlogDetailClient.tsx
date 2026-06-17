@@ -34,7 +34,7 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost }) {
 
                 <div className="container mx-auto px-4 absolute bottom-0 left-0 right-0 pb-16">
                     <MotionDiv
-                        initial={{ opacity: 1, y: 30 }}
+                        initial={{ opacity: 0, y: 0 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                         className="max-w-5xl"

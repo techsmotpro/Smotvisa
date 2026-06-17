@@ -18,7 +18,7 @@ const RejectionReasonsSection = () => {
         <section id="rejection-reasons" className="py-20 bg-background">
             <div className="container mx-auto px-4">
                 <MotionDiv
-                    initial={{ opacity: 1, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-12 max-w-2xl mx-auto"
@@ -36,7 +36,7 @@ const RejectionReasonsSection = () => {
                     {reasons.map((reason, idx) => (
                         <MotionDiv
                             key={reason}
-                            initial={{ opacity: 1, y: 20 }}
+                            initial={{ opacity: 0, y: 0 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.05 }}
@@ -49,7 +49,7 @@ const RejectionReasonsSection = () => {
                 </div>
 
                 <MotionDiv
-                    initial={{ opacity: 1, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="max-w-5xl mx-auto rounded-3xl border border-secondary/30 bg-secondary/10 p-6 sm:p-8 text-center"

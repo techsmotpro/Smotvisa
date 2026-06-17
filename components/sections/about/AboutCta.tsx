@@ -9,7 +9,7 @@ const AboutCta = () => {
         >
             <div className="container mx-auto px-4 relative z-10">
                 <MotionDiv
-                    initial={{ opacity: 1, y: 20 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="max-w-3xl mx-auto text-center"
