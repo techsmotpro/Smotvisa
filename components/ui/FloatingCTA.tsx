@@ -2,7 +2,7 @@
 
 import { Phone } from "lucide-react";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m as motion, AnimatePresence } from "framer-motion";
 
 const PHONE_NUMBER = "+918904008843";
 

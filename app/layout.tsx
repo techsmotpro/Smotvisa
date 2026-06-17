@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import JsonLd from "@/components/ui/JsonLd";
 import TawkChat from "@/components/TawkChat";
 import Script from "next/script";
+import FramerProvider from "@/components/ui/FramerProvider";
 
 const FloatingCTA = dynamic(() => import("@/components/ui/FloatingCTA"));
 
@@ -122,6 +123,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         },
                     }}
                 />
+                <FramerProvider>
                 <TooltipProvider>
                     <Suspense
                         fallback={
@@ -188,6 +190,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <Footer />
                     <FloatingCTA />
                 </TooltipProvider>
+                </FramerProvider>
                 <Toaster />
                 <Sonner />
                 <TawkChat />
