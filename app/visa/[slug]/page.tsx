@@ -93,7 +93,7 @@ export default async function VisaDetailPage({ params }: { params: Promise<{ slu
 
     if (!visa) {
         return (
-            <div className="py-20 text-center container mx-auto px-4">
+            <div className="py-12 text-center container mx-auto px-4">
                 <h2 className="text-3xl font-display font-bold mb-4 text-foreground">Visa Information Not Found</h2>
                 <p className="text-muted-foreground mb-8">Sorry, we couldn't find information for this destination.</p>
                 <Link href="/" className="text-secondary font-semibold hover:underline">Return to Home</Link>

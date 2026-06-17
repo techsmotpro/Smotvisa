@@ -27,10 +27,10 @@ const values = [
 
 const AboutWhatWeDo = () => {
     return (
-        <section className="py-20 bg-muted/30">
+        <section className="py-12 bg-muted/30">
             <div className="container mx-auto px-4">
                 {/* What We Do */}
-                <div className="max-w-4xl mx-auto mb-20">
+                <div className="max-w-4xl mx-auto mb-10">
                     <MotionDiv
                         initial={{ opacity: 0, y: 0 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ const AboutWhatWeDo = () => {
                         Earned, Not Claimed
                     </h2>
                 </MotionDiv>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto mb-20">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto mb-10">
                     {trust.map((item, idx) => (
                         <MotionDiv
                             key={item.title}

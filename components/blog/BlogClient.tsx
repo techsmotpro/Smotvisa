@@ -53,10 +53,10 @@ export default function BlogClient({ blogs }: { blogs: BlogPostSummary[] }) {
     });
 
     return (
-        <section className="py-20 pb-24">
+        <section className="py-12 pb-14">
             <div className="container mx-auto px-4">
                 {/* Filters & Search */}
-                <div className="flex flex-col lg:flex-row gap-8 justify-between items-center mb-16">
+                <div className="flex flex-col lg:flex-row gap-8 justify-between items-center mb-8">
                     <div className="flex flex-wrap justify-center gap-3">
                         {categories.map((cat) => (
                             <button

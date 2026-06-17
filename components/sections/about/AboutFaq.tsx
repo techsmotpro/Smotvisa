@@ -46,7 +46,7 @@ const faqs: { q: string; a: string }[] = [
 
 const AboutFaq = () => {
     return (
-        <section id="about-faq" className="py-20 bg-muted/30">
+        <section id="about-faq" className="py-12 bg-muted/30">
             <JsonLd
                 data={{
                     "@context": "https://schema.org",

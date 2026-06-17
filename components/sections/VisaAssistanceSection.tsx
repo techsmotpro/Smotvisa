@@ -41,7 +41,7 @@ const services = [
 
 const VisaAssistanceSection = () => {
     return (
-        <section id="visa-assistance" className="py-20 bg-background">
+        <section id="visa-assistance" className="py-12 bg-background">
             <div className="container mx-auto px-4">
                 <MotionDiv
                     initial={{ opacity: 0, y: 0 }}

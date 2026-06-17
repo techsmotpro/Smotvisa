@@ -23,9 +23,9 @@ const aboutStats = [
 
 const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
     return (
-        <section id="about" className={cn("py-20", isFull ? "bg-background" : "bg-card")}>
+        <section id="about" className={cn("py-12", isFull ? "bg-background" : "bg-card")}>
             <div className="container mx-auto px-4">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-8 items-center">
                     <MotionDiv
                         initial={{ opacity: 0, x: 0 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -42,7 +42,7 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                                 sizes="(max-width: 1024px) 100vw, 50vw"
                             />
                         </div>
-                        <div className="absolute bottom-4 right-4 md:-bottom-8 md:-right-8 bg-secondary text-secondary-foreground p-6 md:p-10 rounded-2xl md:rounded-3xl shadow-gold font-body border-4 border-card">
+                        <div className="absolute bottom-4 right-4 md:-bottom-8 md:-right-8 bg-secondary text-secondary-foreground p-6 md:p-6 rounded-2xl md:rounded-3xl shadow-gold font-body border-4 border-card">
                             <div className="text-3xl md:text-5xl font-display font-bold mb-1">98%</div>
                             <div className="text-xs md:text-sm font-bold uppercase tracking-widest text-secondary-foreground/80">Visa Success Rate</div>
                         </div>
@@ -157,7 +157,7 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                className="p-10 bg-card rounded-3xl border border-border hover:border-secondary/30 hover:shadow-elevated transition-all duration-300 group"
+                                className="p-6 bg-card rounded-3xl border border-border hover:border-secondary/30 hover:shadow-elevated transition-all duration-300 group"
                             >
                                 <h3 className="text-2xl font-display font-bold text-foreground mb-4">{item.title}</h3>
                                 <p className="text-muted-foreground font-body leading-relaxed">{item.desc}</p>

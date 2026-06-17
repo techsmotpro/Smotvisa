@@ -124,7 +124,7 @@ export default function DestinationsPage() {
                 breadcrumbs={[{ label: "Visa Services" }]}
             />
 
-            <div className="py-24">
+            <div className="py-14">
                 <div className="container mx-auto px-4">
                     <VisaFeaturedGrid destinations={destinations} />
                     <VisaClient moreCountries={moreCountries} />

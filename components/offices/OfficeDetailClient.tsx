@@ -98,9 +98,9 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                             initial={{ opacity: 0, scale: 1 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            className="bg-primary rounded-[3rem] p-10 md:p-16 text-primary-foreground relative overflow-hidden shadow-elevated border border-white/10"
+                            className="bg-primary rounded-[3rem] p-6 md:p-6 text-primary-foreground relative overflow-hidden shadow-elevated border border-white/10"
                         >
-                            <div className="absolute top-0 right-0 p-12 opacity-10 pointer-events-none">
+                            <div className="absolute top-0 right-0 p-7 opacity-10 pointer-events-none">
                                 <Building2 className="w-48 h-48" />
                             </div>
                             <div className="relative z-10 space-y-8">
@@ -127,7 +127,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                             initial={{ opacity: 0, x: 0 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="bg-card rounded-[2.5rem] border border-border p-10 shadow-elevated sticky top-32 hover:border-secondary/20 transition-all"
+                            className="bg-card rounded-[2.5rem] border border-border p-6 shadow-elevated sticky top-32 hover:border-secondary/20 transition-all"
                         >
                             <h3 className="text-2xl font-display font-bold mb-10 text-foreground flex items-center gap-3">
                                 <Info className="h-6 w-6 text-secondary" /> Branch Intel

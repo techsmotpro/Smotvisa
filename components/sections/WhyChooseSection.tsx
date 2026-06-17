@@ -36,13 +36,13 @@ const reasons = [
 
 const WhyChooseSection = () => {
     return (
-        <section className="py-24 bg-muted/30 overflow-hidden">
+        <section className="py-14 bg-muted/30 overflow-hidden">
             <div className="container mx-auto px-4">
                 <MotionDiv
                     initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-20"
+                    className="text-center mb-10"
                 >
                     <span className="text-sm font-display font-bold text-secondary uppercase tracking-[0.2em] mb-4 block">Why Choose SmotVisa</span>
                     <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold text-foreground mb-6 break-words">The Visa Is Where Most People Get Stuck</h2>
@@ -59,7 +59,7 @@ const WhyChooseSection = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="p-6 sm:p-10 rounded-3xl sm:rounded-[2.5rem] bg-card border border-border hover:shadow-elevated hover:border-secondary/30 transition-all group"
+                            className="p-5 sm:p-7 rounded-3xl sm:rounded-[2.5rem] bg-card border border-border hover:shadow-elevated hover:border-secondary/30 transition-all group"
                         >
                             <div className="w-16 h-16 rounded-[1.5rem] bg-secondary/10 flex items-center justify-center mb-8 group-hover:bg-secondary transition-colors duration-500">
                                 <reason.icon className="h-8 w-8 text-secondary group-hover:text-secondary-foreground" />

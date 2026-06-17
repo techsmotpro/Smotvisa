@@ -12,10 +12,10 @@ const whoWeHelp = [
 
 const AboutScopePromise = () => {
     return (
-        <section className="py-20 bg-background">
+        <section className="py-12 bg-background">
             <div className="container mx-auto px-4">
                 {/* Who We Help */}
-                <div className="max-w-4xl mx-auto mb-20">
+                <div className="max-w-4xl mx-auto mb-10">
                     <MotionDiv
                         initial={{ opacity: 0, y: 0 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ const AboutScopePromise = () => {
                     initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="max-w-4xl mx-auto mb-20 p-8 sm:p-10 rounded-3xl border border-border bg-muted/40"
+                    className="max-w-4xl mx-auto mb-10 p-5 sm:p-8 rounded-3xl border border-border bg-muted/40"
                 >
                     <div className="flex items-center gap-3 mb-5">
                         <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center">

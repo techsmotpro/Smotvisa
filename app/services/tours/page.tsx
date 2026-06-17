@@ -302,7 +302,7 @@ export default function TourPackagesPage() {
             <section className="py-14">
                 <div className="container mx-auto px-4">
                     <div className="bg-card rounded-3xl p-8 md:p-14 shadow-elevated border border-border relative overflow-hidden">
-                        <div className="absolute top-0 right-0 p-16 opacity-5 pointer-events-none">
+                        <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
                             <Star className="w-48 h-48 text-secondary" />
                         </div>
                         <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative z-10">
@@ -391,7 +391,7 @@ export default function TourPackagesPage() {
                     initial={{ opacity: 0, scale: 0.98 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    className="bg-gradient-to-r from-primary via-primary-light to-secondary p-10 md:p-16 rounded-3xl shadow-elevated relative overflow-hidden text-center border border-white/10"
+                    className="bg-gradient-to-r from-primary via-primary-light to-secondary p-6 md:p-6 rounded-3xl shadow-elevated relative overflow-hidden text-center border border-white/10"
                 >
                     <div className="absolute inset-0 opacity-10 pointer-events-none bg-grid-white" />
                     <div className="relative z-10 max-w-3xl mx-auto space-y-6">

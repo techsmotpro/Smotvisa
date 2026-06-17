@@ -55,7 +55,7 @@ export default function ContactFilterClient({ offices }: ContactListClientProps)
     }, [offices, searchTerm, selectedState, selectedCity]);
 
     return (
-        <div className="py-20 lg:py-24 bg-muted/30">
+        <div className="py-12 lg:py-14 bg-muted/30">
             <div className="container mx-auto px-4">
                 {/* Search and Filter Section */}
                 <div className="max-w-5xl mx-auto mb-12 space-y-6">
@@ -107,9 +107,9 @@ export default function ContactFilterClient({ offices }: ContactListClientProps)
             </div>
 
             {/* Quick Benefits Section */}
-            <section className="py-24 bg-gradient-to-b from-background to-muted/50">
+            <section className="py-14 bg-gradient-to-b from-background to-muted/50">
                 <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-8">
                         <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Why Choose SmotVisa</h2>
                         <p className="text-muted-foreground font-body text-lg max-w-2xl mx-auto">
                             Experience the difference with our premium visa and travel services

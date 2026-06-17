@@ -12,7 +12,7 @@ const applicants = [
 
 const WhoCanApplySection = () => {
     return (
-        <section id="who-can-apply" className="py-20 bg-background">
+        <section id="who-can-apply" className="py-12 bg-background">
             <div className="container mx-auto px-4">
                 <MotionDiv
                     initial={{ opacity: 0, y: 0 }}

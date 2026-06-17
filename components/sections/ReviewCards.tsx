@@ -51,7 +51,7 @@ const ReviewCards = async () => {
                     initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-16"
+                    className="text-center mb-8"
                 >
                     <span className="text-sm font-body font-semibold text-secondary uppercase tracking-widest">What Our Clients Say</span>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-4">

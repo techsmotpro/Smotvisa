@@ -209,7 +209,7 @@ const TourPackagesSection = () => {
                     initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="bg-gradient-to-r from-primary via-primary-light to-secondary rounded-3xl p-12 text-center text-white shadow-elevated"
+                    className="bg-gradient-to-r from-primary via-primary-light to-secondary rounded-3xl p-7 text-center text-white shadow-elevated"
                 >
                     <h3 className="text-2xl sm:text-3xl font-display font-bold mb-3">
                         Ready for Your Next Adventure?

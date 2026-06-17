@@ -67,7 +67,7 @@ export default function BlogListingPage() {
             <BlogClient blogs={blogs} />
 
             {/* Newsletter CTA */}
-            <section className="py-24 bg-gradient-to-r from-primary via-primary-light to-secondary text-primary-foreground relative overflow-hidden">
+            <section className="py-14 bg-gradient-to-r from-primary via-primary-light to-secondary text-primary-foreground relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 pointer-events-none bg-grid-white" />
                 <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl px-4">
                     <div className="inline-flex items-center gap-2 px-6 py-2 bg-white/10 backdrop-blur-md rounded-full shadow-sm mb-8 border border-white/20">

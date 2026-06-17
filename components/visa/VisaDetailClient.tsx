@@ -52,7 +52,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
 
             {/* Australia Specifics */}
             {id === "australia" && (
-                <section className="py-24 bg-muted/10 border-b border-border">
+                <section className="py-14 bg-muted/10 border-b border-border">
                     <div className="container mx-auto px-4">
                         <MotionDiv
                             initial={{ opacity: 0, y: 0 }}
@@ -66,7 +66,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                             </div>
 
                             <div className="grid md:grid-cols-2 gap-8">
-                                <div className="p-10 bg-card rounded-[2.5rem] shadow-card border border-border group hover:border-secondary/30 transition-all">
+                                <div className="p-6 bg-card rounded-[2.5rem] shadow-card border border-border group hover:border-secondary/30 transition-all">
                                     <h3 className="text-2xl font-display font-bold text-foreground mb-6">Tourist Stream</h3>
                                     <p className="text-sm text-muted-foreground font-body leading-relaxed mb-8 italic">Perfect for exploring Sydney, Melbourne, or visiting family & friends across the continent.</p>
                                     <ul className="space-y-4">
@@ -77,7 +77,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                                         ))}
                                     </ul>
                                 </div>
-                                <div className="p-10 bg-card rounded-[2.5rem] shadow-card border border-border group hover:border-secondary/30 transition-all">
+                                <div className="p-6 bg-card rounded-[2.5rem] shadow-card border border-border group hover:border-secondary/30 transition-all">
                                     <h3 className="text-2xl font-display font-bold text-foreground mb-6">Business Stream</h3>
                                     <p className="text-sm text-muted-foreground font-body leading-relaxed mb-8 italic">Authorized for professional engagements, conferences, and critical market negotiations.</p>
                                     <ul className="space-y-4">
@@ -96,7 +96,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
 
             {/* UK Specifics */}
             {id === "uk" && (
-                <section className="py-24 bg-muted/10 border-b border-border">
+                <section className="py-14 bg-muted/10 border-b border-border">
                     <div className="container mx-auto px-4">
                         <MotionDiv
                             initial={{ opacity: 0, y: 0 }}
@@ -105,7 +105,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                             className="max-w-4xl mx-auto space-y-12"
                         >
                             <h2 className="text-4xl font-display font-bold text-foreground text-center">UK Standard Visitor Program</h2>
-                            <div className="p-10 bg-card rounded-[2.5rem] border border-border space-y-8">
+                            <div className="p-6 bg-card rounded-[2.5rem] border border-border space-y-8">
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                                     <div className="space-y-2">
                                         <p className="text-[10px] font-display font-bold text-muted-foreground uppercase tracking-widest">Program Scope</p>
@@ -147,7 +147,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
 
             {/* Canada Specifics */}
             {id === "canada" && (
-                <section className="py-24 bg-muted/10 border-b border-border">
+                <section className="py-14 bg-muted/10 border-b border-border">
                     <div className="container mx-auto px-4">
                         <MotionDiv
                             initial={{ opacity: 0, y: 0 }}
@@ -187,7 +187,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
 
             {/* US Specifics */}
             {id === "us" && (
-                <section className="py-24 bg-muted/10 border-b border-border">
+                <section className="py-14 bg-muted/10 border-b border-border">
                     <div className="container mx-auto px-4">
                         <MotionDiv
                             initial={{ opacity: 0, y: 0 }}
@@ -212,7 +212,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                                     </div>
                                 ))}
                             </div>
-                            <div className="p-10 bg-primary rounded-[3rem] text-primary-foreground text-center relative overflow-hidden shadow-elevated">
+                            <div className="p-6 bg-primary rounded-[3rem] text-primary-foreground text-center relative overflow-hidden shadow-elevated">
                                 <div className="absolute inset-0 opacity-10 pointer-events-none bg-grid-white" />
                                 <h3 className="text-2xl font-display font-bold mb-4 relative z-10">High Success Rate Advocacy</h3>
                                 <p className="text-lg font-body text-primary-foreground/70 max-w-2xl mx-auto relative z-10 italic leading-relaxed">Trusted by thousands of applicants across India, SmotVisa provides step-by-step appointment scheduling and real-time monitoring of consulate availability.</p>
@@ -223,9 +223,9 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
             )}
 
             {/* Requirements & Process */}
-            <section id="requirements" className="py-24">
+            <section id="requirements" className="py-14">
                 <div className="container mx-auto px-4">
-                    <div className="grid lg:grid-cols-2 gap-16">
+                    <div className="grid lg:grid-cols-2 gap-8">
                         {/* Requirements */}
                         <MotionDiv
                             initial={{ opacity: 0, x: 0 }}
@@ -275,9 +275,9 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
             </section>
 
             {/* FAQs */}
-            <section className="py-24 bg-muted/50 border-t border-border">
+            <section className="py-14 bg-muted/50 border-t border-border">
                 <div className="container mx-auto px-4 max-w-4xl">
-                    <div className="text-center mb-16 space-y-4">
+                    <div className="text-center mb-8 space-y-4">
                         <h2 className="text-4xl font-display font-bold text-foreground">Frequently Asked Intel</h2>
                         <p className="text-muted-foreground font-body text-lg italic">Expert insights on {visa.name} visa processing.</p>
                     </div>
@@ -286,12 +286,12 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
             </section>
 
             {/* CTA */}
-            <section className="py-24 container mx-auto px-4">
+            <section className="py-14 container mx-auto px-4">
                 <MotionDiv
                     initial={{ opacity: 0, scale: 1 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    className="bg-primary p-12 md:p-24 rounded-[3.5rem] shadow-elevated relative overflow-hidden text-center border border-white/10"
+                    className="bg-primary p-8 md:p-14 rounded-[3.5rem] shadow-elevated relative overflow-hidden text-center border border-white/10"
                 >
                     <div className="absolute inset-0 opacity-10 pointer-events-none bg-grid-white" />
                     <div className="relative z-10 max-w-4xl mx-auto space-y-10">

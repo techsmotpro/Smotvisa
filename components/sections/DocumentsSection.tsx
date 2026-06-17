@@ -22,7 +22,7 @@ const businessDocs = [
 
 const DocumentsSection = () => {
     return (
-        <section id="documents" className="py-20 bg-muted/30">
+        <section id="documents" className="py-12 bg-muted/30">
             <div className="container mx-auto px-4">
                 <MotionDiv
                     initial={{ opacity: 0, y: 0 }}

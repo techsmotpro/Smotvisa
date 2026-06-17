@@ -25,7 +25,7 @@ const HeroSection = () => {
             </div>
 
             <div className="container mx-auto px-4 relative py-10 lg:py-0" style={{ zIndex: 10 }}>
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
                     <div>
                         <HeroContent />
                     </div>

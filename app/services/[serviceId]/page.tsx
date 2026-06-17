@@ -97,8 +97,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
     if (!data) {
         return (
-            <div className="min-h-screen py-20 flex pt-40 items-center justify-center container mx-auto px-4">
-                <div className="text-center p-12 bg-card rounded-3xl border border-border shadow-elevated">
+            <div className="min-h-screen py-12 flex pt-40 items-center justify-center container mx-auto px-4">
+                <div className="text-center p-7 bg-card rounded-3xl border border-border shadow-elevated">
                     <h2 className="text-3xl font-display font-bold mb-6 text-foreground">Service Not Found</h2>
                     <p className="text-muted-foreground mb-10 font-body">Sorry, we couldn't find the service you're looking for.</p>
                     <Link href="/" className="px-8 py-4 bg-secondary text-secondary-foreground font-display font-bold rounded-2xl shadow-gold hover:opacity-90 transition-all">
@@ -118,7 +118,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             />
 
             {/* Features Grid */}
-            <section className="py-24">
+            <section className="py-14">
                 <div className="container mx-auto px-4">
                     <div className="flex items-center gap-3 mb-12">
                         <div className="w-1.5 h-8 bg-secondary rounded-full" />
@@ -132,7 +132,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="p-10 bg-card rounded-[2.5rem] shadow-card border border-border group hover:shadow-elevated hover:border-secondary/30 transition-all"
+                                className="p-6 bg-card rounded-[2.5rem] shadow-card border border-border group hover:shadow-elevated hover:border-secondary/30 transition-all"
                             >
                                 <div className="flex items-start gap-6">
                                     <div className="shrink-0 w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center group-hover:bg-secondary transition-colors duration-500">
@@ -152,15 +152,15 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             </section>
 
             {/* Trust Indicators */}
-            <section className="py-24 bg-muted/30 border-y border-border">
+            <section className="py-14 bg-muted/30 border-y border-border">
                 <div className="container mx-auto px-4 text-center">
                     <MotionDiv
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-16">Why Trust Our {data.title}?</h2>
-                        <div className="grid sm:grid-cols-3 gap-16">
+                        <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-8">Why Trust Our {data.title}?</h2>
+                        <div className="grid sm:grid-cols-3 gap-8">
                             <div className="space-y-4">
                                 <div className="text-5xl font-display font-bold text-secondary">10k+</div>
                                 <div className="flex items-center justify-center gap-1 text-secondary">
@@ -192,12 +192,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             </section>
 
             {/* Branded CTA */}
-            <section className="py-24 container mx-auto px-4">
+            <section className="py-14 container mx-auto px-4">
                 <MotionDiv
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="bg-primary p-12 md:p-20 rounded-[3.5rem] shadow-elevated relative overflow-hidden text-center border border-white/10"
+                    className="bg-primary p-8 md:p-7 rounded-[3.5rem] shadow-elevated relative overflow-hidden text-center border border-white/10"
                 >
                     <div className="absolute top-0 right-0 p-20 opacity-10 pointer-events-none">
                         <data.icon className="w-64 h-64 text-white" />

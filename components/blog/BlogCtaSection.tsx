@@ -10,7 +10,7 @@ export default function BlogCtaSection({ cta }: { cta: BlogCta }) {
                 initial={{ opacity: 0, scale: 0.98 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-r from-primary via-primary-light to-secondary rounded-[3.5rem] p-10 md:p-16 shadow-elevated relative overflow-hidden text-center border border-white/10"
+                className="bg-gradient-to-r from-primary via-primary-light to-secondary rounded-[3.5rem] p-6 md:p-6 shadow-elevated relative overflow-hidden text-center border border-white/10"
             >
                 <div className="absolute inset-0 opacity-10 pointer-events-none bg-grid-white" />
                 <div className="relative z-10 max-w-3xl mx-auto space-y-6">

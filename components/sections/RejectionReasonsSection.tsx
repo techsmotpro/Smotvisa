@@ -15,7 +15,7 @@ const reasons = [
 
 const RejectionReasonsSection = () => {
     return (
-        <section id="rejection-reasons" className="py-20 bg-background">
+        <section id="rejection-reasons" className="py-12 bg-background">
             <div className="container mx-auto px-4">
                 <MotionDiv
                     initial={{ opacity: 0, y: 0 }}

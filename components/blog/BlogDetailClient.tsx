@@ -74,7 +74,7 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost }) {
             </section>
 
             {/* Content Section */}
-            <section className="py-24">
+            <section className="py-14">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <div className="prose prose-lg prose-slate max-w-none font-body text-muted-foreground leading-relaxed 

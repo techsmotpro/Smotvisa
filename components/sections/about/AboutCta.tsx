@@ -4,7 +4,7 @@ import { MessageCircle, Phone, Mail } from "lucide-react";
 const AboutCta = () => {
     return (
         <section
-            className="py-24 relative overflow-hidden"
+            className="py-14 relative overflow-hidden"
             style={{ backgroundColor: "hsl(217, 72%, 18%)" }}
         >
             <div className="container mx-auto px-4 relative z-10">

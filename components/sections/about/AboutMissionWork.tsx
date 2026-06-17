@@ -26,14 +26,14 @@ const pillars = [
 
 const AboutMissionWork = () => {
     return (
-        <section className="py-20 bg-background">
+        <section className="py-12 bg-background">
             <div className="container mx-auto px-4">
                 {/* Mission */}
                 <MotionDiv
                     initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="max-w-3xl mx-auto text-center mb-20"
+                    className="max-w-3xl mx-auto text-center mb-10"
                 >
                     <div className="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center mx-auto mb-6">
                         <Target className="h-7 w-7 text-secondary" />

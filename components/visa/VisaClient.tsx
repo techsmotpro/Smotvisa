@@ -28,14 +28,14 @@ const VisaClient = ({ moreCountries }: VisaClientProps) => {
     );
 
     return (
-        <section className="bg-card rounded-[3rem] shadow-elevated border border-border p-8 md:p-16 overflow-hidden relative">
-            <div className="absolute top-0 right-0 p-16 opacity-5 pointer-events-none">
+        <section className="bg-card rounded-[3rem] shadow-elevated border border-border p-6 md:p-6 overflow-hidden relative">
+            <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
                 <svg className="w-80 h-80 text-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                 </svg>
             </div>
 
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-16 relative z-10">
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-8 relative z-10">
                 <div>
                     <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">Discover More Countries</h2>
                     <p className="text-muted-foreground font-body text-lg max-w-xl">
@@ -69,7 +69,7 @@ const VisaClient = ({ moreCountries }: VisaClientProps) => {
             </div>
 
             {filteredCountries.length === 0 && (
-                <div className="text-center py-24 border-2 border-dashed border-border rounded-3xl">
+                <div className="text-center py-14 border-2 border-dashed border-border rounded-3xl">
                     <p className="text-xl text-muted-foreground font-display font-bold italic">No countries match your search. Contact us for custom assistance!</p>
                 </div>
             )}

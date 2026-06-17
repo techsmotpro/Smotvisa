@@ -68,7 +68,7 @@ export default function PrivacyPolicyPage() {
             {/* Content Section */}
             <div className="container mx-auto px-4 mt-20">
                 <div className="max-w-4xl mx-auto">
-                    <div className="bg-card rounded-3xl border border-border p-8 md:p-12 shadow-lg">
+                    <div className="bg-card rounded-3xl border border-border p-8 md:p-7 shadow-lg">
                         <div className="space-y-8">
                             <section>
                                 <h2 className="text-2xl font-display font-bold text-foreground mb-4">1. Information We Collect</h2>

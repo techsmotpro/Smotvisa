@@ -72,7 +72,7 @@ export default function ServicesPage() {
                 <MotionDiv
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="text-center mb-16"
+                    className="text-center mb-8"
                 >
                     <span className="text-xs font-display font-bold text-secondary uppercase tracking-[0.2em] mb-4 block">Our Expertise</span>
                     <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
@@ -92,7 +92,7 @@ export default function ServicesPage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="p-10 bg-card rounded-[2.5rem] shadow-card border border-border group hover:shadow-elevated hover:border-secondary/30 transition-all flex flex-col"
+                            className="p-6 bg-card rounded-[2.5rem] shadow-card border border-border group hover:shadow-elevated hover:border-secondary/30 transition-all flex flex-col"
                         >
                             <div className="w-16 h-16 rounded-[1.5rem] bg-secondary/10 flex items-center justify-center mb-8 group-hover:bg-secondary transition-colors duration-500">
                                 <service.icon className="h-8 w-8 text-secondary group-hover:text-secondary-foreground" />
@@ -120,12 +120,12 @@ export default function ServicesPage() {
                 </div>
 
                 {/* Visa Services Detailed Grid */}
-                <div className="bg-muted/30 rounded-[3.5rem] p-10 md:p-20 border border-border overflow-hidden relative">
+                <div className="bg-muted/30 rounded-[3.5rem] p-6 md:p-7 border border-border overflow-hidden relative">
                     <div className="absolute top-0 right-0 p-20 opacity-5 pointer-events-none">
                         <Globe className="w-80 h-80 text-foreground" />
                     </div>
                     <div className="relative z-10">
-                        <div className="text-center mb-16">
+                        <div className="text-center mb-8">
                             <h2 className="text-4xl font-display font-bold text-foreground mb-4">Global Visa Destinations</h2>
                             <p className="text-muted-foreground font-body text-lg max-w-2xl mx-auto">
                                 Comprehensive visa processing and consultancy for over 50+ countries worldwide, handled by our expert team.
@@ -158,8 +158,8 @@ export default function ServicesPage() {
                 </div>
 
                 {/* Branded CTA */}
-                <div className="mt-24 text-center bg-primary rounded-[3.5rem] p-12 md:p-20 text-primary-foreground relative overflow-hidden shadow-elevated border border-white/10">
-                    <div className="absolute top-0 right-0 p-12 opacity-10 pointer-events-none">
+                <div className="mt-12 text-center bg-primary rounded-[3.5rem] p-8 md:p-7 text-primary-foreground relative overflow-hidden shadow-elevated border border-white/10">
+                    <div className="absolute top-0 right-0 p-7 opacity-10 pointer-events-none">
                         <ArrowRight className="w-64 h-64 rotate-45 text-white" />
                     </div>
                     <div className="relative z-10 space-y-8">

@@ -104,8 +104,8 @@ export default function VisaServicesInWhitefield() {
                 ]}
             />
 
-            <section className="py-24 container mx-auto px-4">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <section className="py-14 container mx-auto px-4">
+                <div className="grid lg:grid-cols-2 gap-8 items-center">
                     <div className="space-y-8">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full">
                             <Star className="h-4 w-4 text-secondary fill-secondary" />
@@ -140,7 +140,7 @@ export default function VisaServicesInWhitefield() {
 
                     <div className="relative">
                         <div className="absolute inset-0 bg-secondary rounded-[3rem] rotate-3 opacity-10" />
-                        <div className="relative bg-card p-10 rounded-[3rem] border border-border shadow-elevated space-y-8">
+                        <div className="relative bg-card p-6 rounded-[3rem] border border-border shadow-elevated space-y-8">
                             <h3 className="text-2xl font-display font-bold text-foreground">How We Can Help You</h3>
                             <div className="space-y-6">
                                 <div className="p-6 bg-card rounded-2xl border border-border group hover:border-secondary transition-colors shadow-sm">
@@ -160,9 +160,9 @@ export default function VisaServicesInWhitefield() {
                 </div>
             </section>
 
-            <section className="py-24 bg-gradient-to-b from-background to-secondary/5 border-t border-b border-border">
+            <section className="py-14 bg-gradient-to-b from-background to-secondary/5 border-t border-b border-border">
                 <div className="container mx-auto px-4">
-                    <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <div className="text-center max-w-3xl mx-auto mb-8 space-y-4">
                         <h2 className="text-4xl font-display font-bold text-foreground">Visa Agents & Services We Offer</h2>
                         <p className="text-muted-foreground italic tracking-wide">Specialized visa agents and solutions for Whitefield's diverse community.</p>
                     </div>
@@ -172,7 +172,7 @@ export default function VisaServicesInWhitefield() {
                             { icon: Clock, title: "Express UK Processing", desc: "Priority services for leisure and business visitors to the United Kingdom." },
                             { icon: CheckCircle2, title: "Schengen Group Filings", desc: "Hassle-free group applications for corporate and family trips to Europe." }
                         ].map((s, i) => (
-                            <div key={i} className="p-10 bg-card rounded-[2.5rem] shadow-card border border-border hover:shadow-elevated transition-all text-center">
+                            <div key={i} className="p-6 bg-card rounded-[2.5rem] shadow-card border border-border hover:shadow-elevated transition-all text-center">
                                 <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
                                     <s.icon className="h-8 w-8 text-secondary" />
                                 </div>
@@ -184,7 +184,7 @@ export default function VisaServicesInWhitefield() {
                 </div>
             </section>
 
-            <section className="py-24 container mx-auto px-4 text-center">
+            <section className="py-14 container mx-auto px-4 text-center">
                 <div className="max-w-4xl mx-auto space-y-10">
                     <h2 className="text-4xl md:text-7xl font-display font-bold text-foreground leading-tight">
                         Your Trusted Visa Agents in Whitefield.
