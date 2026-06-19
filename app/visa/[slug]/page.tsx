@@ -33,14 +33,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     let metaDescription = visa.description;
     
     if (id === "us") {
-        metaTitle = "Best US Visa Consultant for Fast & Successful Approval | SmotVisa";
-        metaDescription = "Looking for a reliable US Visa Consultant? Get expert guidance for B1/B2 tourist, student, and work visas. Increase your chances of approval with professional visa assistance.";
+        metaTitle = "Tourist & Business US Visa Consultant in India | SmotVisa";
+        metaDescription = "Apply for a US B1/B2 Tourist and Business visa with confidence. SmotVisa helps travellers with DS-160, interview prep & documentation. 99% success rate.";
     } else if (id === "uk") {
-        metaTitle = "Best UK Visa Consultant for Fast & Successful Approval | SmotVisa";
-        metaDescription = "Apply for a UK tourist or business visa with SmotVisa. Expert UK visa consultants providing tourist and business visa processing, document verification, and end-to-end visa application support.";
+        metaTitle = "UK Visa Consultant in India | SmotVisa";
+        metaDescription = "Get expert help with your UK Standard Visitor visa for tourism or business. Online application, document checks & financial support from SmotVisa.";
     } else if (id === "canada") {
-        metaTitle = "Best Canada Visa Consultant service in India | SmotVisa";
-        metaDescription = "Apply for Canada Business, Tourist visa, visitor visa with the help of experienced Canada visa consultants. Get step-by-step support today.";
+        metaTitle = "Canada Tourist Visa Consultant in India | SmotVisa";
+        metaDescription = "Apply Canada tourist visa in India. Get expert assistance for Canada visitor visa, documentation, biometrics & fast processing. Trusted guidance by SmotVisa.";
     } else if (id === "australia") {
         metaTitle = "Trusted Australian Visa Consultant for Business & Tourist Visas in India | SmotVisa";
         metaDescription = "Apply for Australia Tourist or Business Visa with SmotVisa. Get expert guidance, document verification, and end-to-end visa application support.";
@@ -55,7 +55,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
         title: metaTitle,
         description: metaDescription,
-        keywords: [`${visa.name} visa`, `${visa.name} visa consultant`, `${visa.name} visa services`, "SmotVisa", "visa consultant India"],
+        keywords: id === "us"
+            ? ["US B1/B2 visa consultant in India", "US tourist visa India", "US business visa India", "DS-160 form assistance", "US visa interview preparation", "B1 B2 visa India", "SmotVisa"]
+            : id === "uk"
+            ? ["UK visa consultant in India", "UK Standard Visitor visa", "UK tourist visa India", "UK business visa India", "VFS appointment UK", "SmotVisa"]
+            : id === "canada"
+            ? ["Canada tourist visa consultant in India", "Canada visitor visa India", "Canada TRV application", "Canada biometrics VFS", "IRCC visa India", "SmotVisa"]
+            : [`${visa.name} visa`, `${visa.name} visa consultant`, `${visa.name} visa services`, "SmotVisa", "visa consultant India"],
         alternates: {
             canonical: `https://smotvisa.com/visa/${slug}`,
         },
@@ -105,11 +111,11 @@ export default async function VisaDetailPage({ params }: { params: Promise<{ slu
     let pageTitle = `${visa.name} Visa Services ${visa.flag || ""}`;
     
     if (id === "us") {
-        pageTitle = "US Tourist & Business Visa Services";
+        pageTitle = "United States Visitor and Business Visa (B1/B2) Assistance";
     } else if (id === "uk") {
-        pageTitle = "UK Tourist & Business Visa Services";
+        pageTitle = "Expert UK Standard Visitor Visa Consultants in India";
     } else if (id === "canada") {
-        pageTitle = "Canada Tourist & Business Visa Services";
+        pageTitle = "Canada Tourist Visa in India";
     } else if (id === "australia") {
         pageTitle = "Australia Tourist & Business Visa Services";
     } else if (id === "uae") {
