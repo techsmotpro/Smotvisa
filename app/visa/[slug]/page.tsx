@@ -33,10 +33,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     let metaDescription = visa.description;
     
     if (id === "us") {
-        metaTitle = "Tourist & Business US Visa Consultant in India | SmotVisa";
+        metaTitle = "Trusted US Visa Consultant for India | SmotVisa";
         metaDescription = "Apply for a US B1/B2 Tourist and Business visa with confidence. SmotVisa helps travellers with DS-160, interview prep & documentation. 99% success rate.";
     } else if (id === "uk") {
-        metaTitle = "UK Visa Consultant in India | SmotVisa";
+        metaTitle = "Expert UK Visa Visit Visa Consultant in India | SmotVisa";
         metaDescription = "Get expert help with your UK Standard Visitor visa for tourism or business. Online application, document checks & financial support from SmotVisa.";
     } else if (id === "canada") {
         metaTitle = "Canada Tourist Visa Consultant in India | SmotVisa";
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         title: metaTitle,
         description: metaDescription,
         keywords: id === "us"
-            ? ["US B1/B2 visa consultant in India", "US tourist visa India", "US business visa India", "DS-160 form assistance", "US visa interview preparation", "B1 B2 visa India", "SmotVisa"]
+            ? ["US visa consultant in India", "US B1/B2 visa consultant in India", "US tourist visa India", "US business visa India", "DS-160 form assistance", "US visa interview preparation", "B1 B2 visa India", "SmotVisa"]
             : id === "uk"
             ? ["UK visa consultant in India", "UK Standard Visitor visa", "UK tourist visa India", "UK business visa India", "VFS appointment UK", "SmotVisa"]
             : id === "canada"
@@ -111,9 +111,9 @@ export default async function VisaDetailPage({ params }: { params: Promise<{ slu
     let pageTitle = `${visa.name} Visa Services ${visa.flag || ""}`;
     
     if (id === "us") {
-        pageTitle = "United States Visitor and Business Visa (B1/B2) Assistance";
+        pageTitle = "Trusted US Visa Consultant for India";
     } else if (id === "uk") {
-        pageTitle = "Expert UK Standard Visitor Visa Consultants in India";
+        pageTitle = "Expert UK Visa Visit Visa Consultant in India";
     } else if (id === "canada") {
         pageTitle = "Canada Tourist Visa in India";
     } else if (id === "australia") {

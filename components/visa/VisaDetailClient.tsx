@@ -39,7 +39,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
     return (
         <>
             {/* Quick Stats Grid */}
-            <section className="py-12 bg-muted/30 border-b border-border">
+            {id !== "us" && id !== "uk" && <section className="py-12 bg-muted/30 border-b border-border">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {quickStats.map((stat, idx) => (
@@ -53,7 +53,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                         ))}
                     </div>
                 </div>
-            </section>
+            </section>}
 
             {/* Australia Specifics */}
             {id === "australia" && (
@@ -107,17 +107,18 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                         <div className="container mx-auto px-4 max-w-4xl">
                             <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-5">
                                 <p className="text-lg text-muted-foreground font-body leading-relaxed">
-                                    The UK is one of the most popular destinations for Indian travellers, and India files more UK visa applications than any other country in the world. The good news is that the grant rate for visitor visas is high — around 82% — when applications are complete, honest and well presented. The challenge is that the online application is detailed and the financial evidence is scrutinised closely.
-                                </p>
-                                <p className="text-lg text-muted-foreground font-body leading-relaxed">
-                                    SmotVisa takes the guesswork out of it. We help you choose the right validity, complete the online form correctly, build a clean financial and supporting-document file, and book your VFS biometrics appointment — all without ever positioning your trip as anything other than the genuine short visit it is.
+                                    UK is one of the first popular destinations for Indian travellers for a good long time, At SmotVisa we UK Visa Consultant in India take the guesswork out of it. We help you choose the right validity, complete the online form correctly, build a clean financial and supporting-document file, and book your VFS appointment everything under one roof.
                                 </p>
                                 <div className="inline-flex flex-col sm:flex-row items-center gap-3 text-sm font-display font-bold text-foreground bg-muted/50 border border-border rounded-2xl px-6 py-4 mt-4">
-                                    <span>Planning a UK trip? Let&apos;s prepare a winning application.</span>
+                                    <span>Planning a UK trip? Let&apos;s prepare a winning Standard Visitor application.</span>
                                     <span className="hidden sm:block text-border">|</span>
+                                    <span>Call / WhatsApp</span>
                                     <a href="tel:+918904008843" className="text-secondary hover:underline">+91-8904008843</a>
                                     <span className="hidden sm:block text-border">•</span>
+                                    <span>Email</span>
                                     <a href="mailto:info@smotvisa.com" className="text-secondary hover:underline">info@smotvisa.com</a>
+                                    <span className="hidden sm:block text-border">•</span>
+                                    <span>Or send an enquiry on smotvisa.com for a free consultation.</span>
                                 </div>
                             </MotionDiv>
                         </div>
@@ -157,41 +158,57 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                         </div>
                     </section>
 
-                    {/* One Visa, Both Purposes */}
+                    {/* Tourist or Business */}
                     <section className="py-14 bg-muted/10 border-b border-border">
-                        <div className="container mx-auto px-4">
-                            <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto space-y-8">
+                        <div className="container mx-auto px-4 max-w-4xl">
+                            <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-6">
                                 <div className="text-center space-y-3">
                                     <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Tourist or Business — One Visa, Both Purposes</h2>
-                                    <p className="text-muted-foreground font-body leading-relaxed">The UK Standard Visitor visa is wonderfully flexible. Standard visas are issued for six months; frequent travellers can apply for 2, 5 or 10-year visitor visas.</p>
+                                    <p className="text-muted-foreground font-body leading-relaxed">The UK Standard Visitor visa is wonderfully flexible. The same visa lets you holiday, visit friends and family, attend a business meeting or conference, sign contracts, or take a short recreational course. What it does not allow is paid or unpaid work, including freelance work — so we only ever assist with genuine visitor travel. Standard visas are typically issued for six months, but frequent travellers can apply for long-term visitor visas valid for two, five or ten years.</p>
                                 </div>
-                                <div className="grid md:grid-cols-2 gap-6">
-                                    <div className="p-6 bg-card rounded-[2.5rem] shadow-card border border-border hover:border-secondary/30 transition-all">
-                                        <h3 className="text-xl font-display font-bold text-foreground mb-4">Tourism & Personal</h3>
-                                        <p className="text-sm text-muted-foreground font-body leading-relaxed mb-6 italic">Holiday, visiting friends or family, medical travel.</p>
-                                        <ul className="space-y-3">
-                                            {["Holidays & sightseeing", "Visiting friends and family", "Medical treatment", "Short recreational courses"].map((it) => (
-                                                <li key={it} className="flex items-center gap-3 text-sm font-display font-bold text-foreground/80">
-                                                    <CheckCircle2 className="h-4 w-4 text-secondary shrink-0" /> {it}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                    <div className="p-6 bg-card rounded-[2.5rem] shadow-card border border-border hover:border-secondary/30 transition-all">
-                                        <h3 className="text-xl font-display font-bold text-foreground mb-4">Business Activities</h3>
-                                        <p className="text-sm text-muted-foreground font-body leading-relaxed mb-6 italic">Permitted business activities — no paid work allowed.</p>
-                                        <ul className="space-y-3">
-                                            {["Meetings & conferences", "Signing contracts & negotiations", "Trade shows & exhibitions", "Short unpaid training"].map((it) => (
-                                                <li key={it} className="flex items-center gap-3 text-sm font-display font-bold text-foreground/80">
-                                                    <CheckCircle2 className="h-4 w-4 text-secondary shrink-0" /> {it}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
+                            </MotionDiv>
+                        </div>
+                    </section>
+
+                    {/* Steps - UK */}
+                    <section className="py-14 bg-background border-b border-border">
+                        <div className="container mx-auto px-4 max-w-4xl">
+                            <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+                                <div className="flex items-center gap-3 mb-10">
+                                    <div className="w-1.5 h-8 bg-secondary rounded-full" />
+                                    <h2 className="text-3xl font-display font-bold text-foreground">Our Step-by-Step UK Visa Process</h2>
                                 </div>
-                                <div className="p-5 bg-secondary/5 rounded-2xl border border-secondary/20 text-center">
-                                    <p className="text-sm font-display font-bold text-foreground/80 italic">Paid or unpaid work, including freelance work, is not permitted. SmotVisa only assists with genuine visitor travel.</p>
+                                <div className="space-y-10 relative before:absolute before:left-7 before:top-2 before:bottom-2 before:w-px before:bg-border">
+                                    {visa.steps.map((step, idx) => (
+                                        <div key={idx} className="relative pl-16">
+                                            <div className="absolute left-0 top-0 w-14 h-14 bg-secondary text-secondary-foreground rounded-[1.2rem] flex items-center justify-center font-display font-bold text-xl shadow-gold z-10">
+                                                {idx + 1}
+                                            </div>
+                                            <h3 className="text-xl font-display font-bold text-foreground mb-2">{step.title}</h3>
+                                            <p className="text-sm font-body text-muted-foreground leading-relaxed italic">{step.description}</p>
+                                        </div>
+                                    ))}
                                 </div>
+                            </MotionDiv>
+                        </div>
+                    </section>
+
+                    {/* Documents - UK */}
+                    <section className="py-14 bg-muted/10 border-b border-border">
+                        <div className="container mx-auto px-4 max-w-4xl">
+                            <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-6">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <div className="w-1.5 h-8 bg-secondary rounded-full" />
+                                    <h2 className="text-3xl font-display font-bold text-foreground">Documents You Will Need</h2>
+                                </div>
+                                <ul className="space-y-4">
+                                    {visa.requirements.map(req => (
+                                        <li key={req} className="flex items-start gap-4 p-5 bg-card rounded-2xl border border-border shadow-sm group hover:border-secondary transition-colors">
+                                            <CheckCircle2 className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
+                                            <span className="text-sm font-display font-bold text-foreground/80 leading-relaxed italic">{req}</span>
+                                        </li>
+                                    ))}
+                                </ul>
                             </MotionDiv>
                         </div>
                     </section>
@@ -202,29 +219,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                             <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-6">
                                 <div className="text-center space-y-3">
                                     <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Who Can Apply</h2>
-                                    <p className="text-muted-foreground font-body leading-relaxed">Any Indian traveller with a genuine short-term purpose and the funds to cover the trip without working can apply.</p>
-                                </div>
-                                <div className="grid sm:grid-cols-2 gap-3">
-                                    {[
-                                        "Clear finances sufficient to cover the trip",
-                                        "Stable job, business, family or property ties in India",
-                                        "Credible plan to leave the UK at end of visit",
-                                        "Honest and well-defined travel purpose",
-                                        "First-time travellers with a solid profile",
-                                        "Good travel history (helpful but not essential)",
-                                    ].map((item, idx) => (
-                                        <MotionDiv
-                                            key={idx}
-                                            initial={{ opacity: 0, x: -10 }}
-                                            whileInView={{ opacity: 1, x: 0 }}
-                                            viewport={{ once: true }}
-                                            transition={{ delay: idx * 0.07 }}
-                                            className="flex items-center gap-3 bg-card border border-border rounded-xl p-4 shadow-sm hover:border-secondary/40 transition-colors"
-                                        >
-                                            <CheckCircle2 className="h-5 w-5 text-secondary shrink-0" />
-                                            <span className="font-body font-semibold text-foreground text-sm">{item}</span>
-                                        </MotionDiv>
-                                    ))}
+                                    <p className="text-muted-foreground font-body leading-relaxed">Any Indian traveller with a genuine short-term purpose and the funds to cover the trip without working can apply. Strong applications show clear finances, stable ties to India such as a job, business, family or property, and a credible plan to leave the UK at the end of the visit. A good history of past travel helps but is not essential — many first-time travellers are approved every year.</p>
                                 </div>
                             </MotionDiv>
                         </div>
@@ -236,7 +231,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                             <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-6">
                                 <div className="text-center space-y-3">
                                     <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Processing Time & Fees</h2>
-                                    <p className="text-muted-foreground font-body leading-relaxed">Standard processing takes around three weeks from biometrics. Priority service returns a decision in about five working days.</p>
+                                    <p className="text-muted-foreground font-body leading-relaxed">Standard processing usually takes around three weeks from your biometrics appointment. A priority service can return a decision in about five working days for an additional fee. As of 2026, the six-month visit visa fee is approximately ₹16,500, with VFS service charges of roughly ₹2,000–3,500 paid separately. Long-term 2, 5 and 10-year visas cost progressively more but can be excellent value for frequent travellers.</p>
                                 </div>
                                 <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
                                     <table className="w-full text-sm">
@@ -249,9 +244,9 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                                         </thead>
                                         <tbody>
                                             {[
-                                                { type: "6-month Standard Visitor", fee: "₹16,500", processing: "~3 weeks standard" },
-                                                { type: "Priority service add-on", fee: "Extra fee", processing: "~5 working days" },
-                                                { type: "2 / 5 / 10-year visitor", fee: "Higher (multi-year value)", processing: "~3 weeks standard" },
+                                                { type: "6-month Standard Visitor", fee: "₹16,500", processing: "3 weeks standard" },
+                                                { type: "Priority service add-on", fee: "Extra fee", processing: "5 working days" },
+                                                { type: "2 / 5 / 10-year visitor", fee: "Higher (multi-year value)", processing: "3 weeks standard" },
                                             ].map((row, idx) => (
                                                 <tr key={idx} className={idx % 2 === 0 ? "bg-card" : "bg-muted/30"}>
                                                     <td className="px-5 py-3 font-display font-bold text-foreground">{row.type}</td>
@@ -272,7 +267,6 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                             <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-6">
                                 <div className="text-center space-y-3">
                                     <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Common Reasons UK Visas Get Refused</h2>
-                                    <p className="text-muted-foreground font-body leading-relaxed">Financial evidence is the most scrutinised part of a UK application. Our process is built to address these issues upfront.</p>
                                 </div>
                                 <div className="grid sm:grid-cols-2 gap-3">
                                     {[
@@ -516,20 +510,18 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                         <div className="container mx-auto px-4 max-w-4xl">
                             <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-5">
                                 <p className="text-lg text-muted-foreground font-body leading-relaxed">
-                                    From your DS-160 form to your consulate interview, SmotVisa guides you through every step of the US visitor visa so you walk in prepared and walk out approved.
-                                </p>
-                                <p className="text-lg text-muted-foreground font-body leading-relaxed">
-                                    Whether you are visiting family in the States, attending a business meeting or conference, or finally taking that long-planned holiday, the US B1/B2 visa is your gateway. It is also one of the most carefully assessed visitor visas in the world, which is exactly why thousands of Indian travellers choose to apply with expert guidance rather than risk a costly mistake.
-                                </p>
-                                <p className="text-lg text-muted-foreground font-body leading-relaxed">
-                                    At SmotVisa, we have spent over a decade helping travellers across India present clean, well-documented, honest applications. We do not promise outcomes that aren&apos;t ours to give — visa decisions belong to the US consulate alone — but we make sure your paperwork, your DS-160 and your interview answers are as strong as they can possibly be.
+                                    At SmotVisa, every US application is different whether you are attending US for a business meeting or conference, or finally taking that long-planned holiday, the US B1/B2 visa is your gateway. Smotvisa is here to assist from US visa documentation to plan your entire journey.
                                 </p>
                                 <div className="inline-flex flex-col sm:flex-row items-center gap-3 text-sm font-display font-bold text-foreground bg-muted/50 border border-border rounded-2xl px-6 py-4 mt-4">
                                     <span>Ready to start your US visa application the right way?</span>
                                     <span className="hidden sm:block text-border">|</span>
+                                    <span>Call / WhatsApp</span>
                                     <a href="tel:+918904008843" className="text-secondary hover:underline">+91-8904008843</a>
                                     <span className="hidden sm:block text-border">•</span>
+                                    <span>Email</span>
                                     <a href="mailto:info@smotvisa.com" className="text-secondary hover:underline">info@smotvisa.com</a>
+                                    <span className="hidden sm:block text-border">•</span>
+                                    <span>Or send an enquiry on smotvisa.com for a free consultation.</span>
                                 </div>
                             </MotionDiv>
                         </div>
@@ -574,15 +566,15 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                         <div className="container mx-auto px-4">
                             <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto space-y-8">
                                 <div className="text-center space-y-3">
-                                    <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Tourist Visa vs Business Visa</h2>
-                                    <p className="text-muted-foreground font-body leading-relaxed">The United States combines both visitor purposes into a single B1/B2 visa. Most travellers receive a combined stamp valid for up to ten years with multiple entries.</p>
+                                    <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Tourist Visa vs Business Visa — Which B Visa Do You Need?</h2>
+                                    <p className="text-muted-foreground font-body leading-relaxed">The United States combines both visitor purposes into a single B1/B2 visa, but it helps to know which activity applies to you. The B2 covers tourism, holidays, visiting friends and relatives, and medical treatment. The B1 covers short business activities such as attending meetings, conferences, negotiating contracts or attending training. Most travellers receive a combined B1/B2 stamp valid for up to ten years with multiple entries. Importantly, neither category permits paid employment in the US — this is a visitor visa, and we only assist with genuine visitor travel.</p>
                                 </div>
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="p-6 bg-card rounded-[2.5rem] shadow-card border border-border hover:border-secondary/30 transition-all">
                                         <h3 className="text-xl font-display font-bold text-foreground mb-4">B2 — Tourist Visa</h3>
                                         <p className="text-sm text-muted-foreground font-body leading-relaxed mb-6 italic">For leisure, personal visits, and medical travel.</p>
                                         <ul className="space-y-3">
-                                            {["Tourism & holidays", "Visiting friends & relatives", "Medical treatment", "Cultural or recreational events"].map((it) => (
+                                            {["Tourism & holidays", "Visiting friends & relatives", "Medical treatment"].map((it) => (
                                                 <li key={it} className="flex items-center gap-3 text-sm font-display font-bold text-foreground/80">
                                                     <CheckCircle2 className="h-4 w-4 text-secondary shrink-0" /> {it}
                                                 </li>
@@ -593,7 +585,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                                         <h3 className="text-xl font-display font-bold text-foreground mb-4">B1 — Business Visa</h3>
                                         <p className="text-sm text-muted-foreground font-body leading-relaxed mb-6 italic">For short-stay professional activities — not employment.</p>
                                         <ul className="space-y-3">
-                                            {["Attending meetings & conferences", "Negotiating contracts", "Trade shows & exhibitions", "Short-term unpaid training"].map((it) => (
+                                            {["Attending meetings & conferences", "Negotiating contracts", "Attending training"].map((it) => (
                                                 <li key={it} className="flex items-center gap-3 text-sm font-display font-bold text-foreground/80">
                                                     <CheckCircle2 className="h-4 w-4 text-secondary shrink-0" /> {it}
                                                 </li>
@@ -602,28 +594,71 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                                     </div>
                                 </div>
                                 <div className="p-5 bg-secondary/5 rounded-2xl border border-secondary/20 text-center">
-                                    <p className="text-sm font-display font-bold text-foreground/80 italic">Neither category permits paid employment in the US. SmotVisa only assists with genuine visitor travel.</p>
+                                    <p className="text-sm font-display font-bold text-foreground/80 italic">Neither category permits paid employment in the US — this is a visitor visa, and we only assist with genuine visitor travel.</p>
                                 </div>
                             </MotionDiv>
                         </div>
                     </section>
 
-                    {/* Who Can Apply */}
+                    {/* Steps - US */}
+                    <section className="py-14 bg-muted/10 border-b border-border">
+                        <div className="container mx-auto px-4 max-w-4xl">
+                            <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+                                <div className="flex items-center gap-3 mb-10">
+                                    <div className="w-1.5 h-8 bg-secondary rounded-full" />
+                                    <h2 className="text-3xl font-display font-bold text-foreground">Our Step-by-Step US Visa Process</h2>
+                                </div>
+                                <div className="space-y-10 relative before:absolute before:left-7 before:top-2 before:bottom-2 before:w-px before:bg-border">
+                                    {visa.steps.map((step, idx) => (
+                                        <div key={idx} className="relative pl-16">
+                                            <div className="absolute left-0 top-0 w-14 h-14 bg-secondary text-secondary-foreground rounded-[1.2rem] flex items-center justify-center font-display font-bold text-xl shadow-gold z-10">
+                                                {idx + 1}
+                                            </div>
+                                            <h3 className="text-xl font-display font-bold text-foreground mb-2">{step.title}</h3>
+                                            <p className="text-sm font-body text-muted-foreground leading-relaxed italic">{step.description}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </MotionDiv>
+                        </div>
+                    </section>
+
+                    {/* Documents - US */}
                     <section className="py-14 bg-background border-b border-border">
+                        <div className="container mx-auto px-4 max-w-4xl">
+                            <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-6">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <div className="w-1.5 h-8 bg-secondary rounded-full" />
+                                    <h2 className="text-3xl font-display font-bold text-foreground">Documents You Will Need</h2>
+                                </div>
+                                <p className="text-sm font-body text-muted-foreground leading-relaxed">Every profile is different, but a typical B1/B2 file includes:</p>
+                                <ul className="space-y-4">
+                                    {visa.requirements.map(req => (
+                                        <li key={req} className="flex items-start gap-4 p-5 bg-card rounded-2xl border border-border shadow-sm group hover:border-secondary transition-colors">
+                                            <CheckCircle2 className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
+                                            <span className="text-sm font-display font-bold text-foreground/80 leading-relaxed italic">{req}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </MotionDiv>
+                        </div>
+                    </section>
+
+                    {/* Who Can Apply */}
+                    <section className="py-14 bg-muted/10 border-b border-border">
                         <div className="container mx-auto px-4 max-w-4xl">
                             <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-6">
                                 <div className="text-center space-y-3">
                                     <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Who Can Apply</h2>
-                                    <p className="text-muted-foreground font-body leading-relaxed">The B1/B2 visa is open to almost any Indian traveller with a genuine short-term reason to visit the US and strong reasons to return home.</p>
+                                    <p className="text-muted-foreground font-body leading-relaxed">The B1/B2 visa is open to almost any Indian traveller with a genuine short-term reason to visit the US and strong reasons to return home. You are a good candidate if you have stable employment or a running business, clear finances, family or property ties in India, and an honest, well-defined travel purpose. First-time travellers are very welcome — a thin travel history is not a disqualifier when the rest of your profile is solid and truthfully presented.</p>
                                 </div>
                                 <div className="grid sm:grid-cols-2 gap-3">
                                     {[
                                         "Stable employment or a running business",
-                                        "Clear and verifiable finances",
+                                        "Clear finances",
                                         "Family or property ties in India",
                                         "Honest, well-defined travel purpose",
-                                        "First-time travellers with a solid profile",
-                                        "Previous travel history (not mandatory)",
+                                        "First-time travellers are very welcome",
                                     ].map((item, idx) => (
                                         <MotionDiv
                                             key={idx}
@@ -648,7 +683,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                             <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-6">
                                 <div className="text-center space-y-3">
                                     <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Processing Time & Appointment Waits</h2>
-                                    <p className="text-muted-foreground font-body leading-relaxed">US visitor visa timelines depend almost entirely on interview appointment availability. As of 2026, wait times vary by consulate.</p>
+                                    <p className="text-muted-foreground font-body leading-relaxed">US visitor visa timelines depend almost entirely on interview appointment availability, which varies by consulate. As of 2026, wait times for a first B1/B2 interview can range from roughly six weeks at faster posts to several months at busier ones such as Mumbai. Applicants eligible for the Interview Waiver (dropbox) programme — typically renewals of a visa that expired within the last 48 months with no refusals — can often be processed in two to six weeks. The MRV application fee is currently around US $185 (approximately ₹15,500) and is non-refundable. We help you book the earliest realistic slot and plan your travel dates accordingly.</p>
                                 </div>
                                 <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
                                     <table className="w-full text-sm">
@@ -663,7 +698,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                                             {[
                                                 { route: "Fresh B1/B2 interview", timeline: "6 weeks – several months", notes: "Depends on consulate appointment availability" },
                                                 { route: "Interview Waiver (dropbox)", timeline: "2 – 6 weeks", notes: "For eligible renewals, no refusal history" },
-                                                { route: "MRV fee", timeline: "US $185 (~₹15,500)", notes: "Non-refundable, valid 1 year from payment" },
+                                                { route: "MRV fee", timeline: "US $185 (₹15,500)", notes: "Non-refundable, valid 1 year from payment" },
                                             ].map((row, idx) => (
                                                 <tr key={idx} className={idx % 2 === 0 ? "bg-card" : "bg-muted/30"}>
                                                     <td className="px-5 py-3 font-display font-bold text-foreground">{row.route}</td>
@@ -684,16 +719,16 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                             <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-6">
                                 <div className="text-center space-y-3">
                                     <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Common Reasons US Visas Get Refused</h2>
-                                    <p className="text-muted-foreground font-body leading-relaxed">Understanding why applications fail is the best way to avoid it. Our entire process is built to address each of these before you reach the interview window.</p>
+                                    <p className="text-muted-foreground font-body leading-relaxed">Understanding why applications fail is the best way to avoid it. The most frequent reasons under section 214(b) and general scrutiny include:</p>
                                 </div>
                                 <div className="grid sm:grid-cols-2 gap-3">
                                     {[
-                                        "Weak ties to India — doubt you will return",
-                                        "Inconsistent answers between DS-160 and interview",
+                                        "Weak ties to India, making the consular officer doubt you will return",
+                                        "Inconsistent answers between the DS-160 and the interview",
                                         "Unclear or unconvincing travel purpose",
                                         "Insufficient or poorly explained finances",
                                         "Errors or omissions on the DS-160 form",
-                                        "Nervous, over-rehearsed or evasive answers",
+                                        "Nervous, over-rehearsed or evasive interview answers",
                                     ].map((item, idx) => (
                                         <MotionDiv
                                             key={idx}
@@ -708,6 +743,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                                         </MotionDiv>
                                     ))}
                                 </div>
+                                <p className="text-muted-foreground font-body leading-relaxed text-center">Our entire process is built to address each of these before you ever reach the interview window.</p>
                             </MotionDiv>
                         </div>
                     </section>
@@ -715,7 +751,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
             )}
 
             {/* Requirements & Process */}
-            <section id="requirements" className="py-14">
+            {id !== "us" && id !== "uk" && <section id="requirements" className="py-14">
                 <div className="container mx-auto px-4">
                     <div className="grid lg:grid-cols-2 gap-8">
                         {/* Requirements */}
@@ -724,10 +760,13 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                         >
-                            <div className="flex items-center gap-3 mb-10">
+                            <div className="flex items-center gap-3 mb-4">
                                 <div className="w-1.5 h-8 bg-secondary rounded-full" />
-                                <h2 className="text-3xl font-display font-bold text-foreground">Documentation Portfolio</h2>
+                                <h2 className="text-3xl font-display font-bold text-foreground">{id === "us" ? "Documents You Will Need" : "Documentation Portfolio"}</h2>
                             </div>
+                            {id === "us" && (
+                                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-6">Every profile is different, but a typical B1/B2 file includes:</p>
+                            )}
                             <ul className="space-y-4">
                                 {visa.requirements.map(req => (
                                     <li key={req} className="flex items-start gap-4 p-5 bg-card rounded-2xl border border-border shadow-sm group hover:border-secondary transition-colors">
@@ -746,7 +785,7 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                         >
                             <div className="flex items-center gap-3 mb-10">
                                 <div className="w-1.5 h-8 bg-secondary rounded-full" />
-                                <h2 className="text-3xl font-display font-bold text-foreground">Strategic Roadmap</h2>
+                                <h2 className="text-3xl font-display font-bold text-foreground">{id === "us" ? "Our Step-by-Step US Visa Process" : "Strategic Roadmap"}</h2>
                             </div>
                             <div className="space-y-10 relative before:absolute before:left-7 before:top-2 before:bottom-2 before:w-px before:bg-border">
                                 {visa.steps.map((step, idx) => (
@@ -764,14 +803,14 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                         </MotionDiv>
                     </div>
                 </div>
-            </section>
+            </section>}
 
             {/* FAQs */}
             <section className="py-14 bg-muted/50 border-t border-border">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="text-center mb-8 space-y-4">
-                        <h2 className="text-4xl font-display font-bold text-foreground">Frequently Asked Intel</h2>
-                        <p className="text-muted-foreground font-body text-lg italic">Expert insights on {visa.name} visa processing.</p>
+                        <h2 className="text-4xl font-display font-bold text-foreground">{id === "us" || id === "uk" ? "Frequently Asked Questions" : "Frequently Asked Intel"}</h2>
+                        {id !== "us" && id !== "uk" && <p className="text-muted-foreground font-body text-lg italic">Expert insights on {visa.name} visa processing.</p>}
                     </div>
                     <VisaFAQClient faqs={visa.faqs} />
                 </div>
