@@ -33,17 +33,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     let metaDescription = visa.description;
     
     if (id === "us") {
-        metaTitle = "Trusted US Visa Consultant for India | SmotVisa";
+        metaTitle = "Tourist & Business US Visa Consultant in India | SmotVisa";
         metaDescription = "Apply for a US B1/B2 Tourist and Business visa with confidence. SmotVisa helps travellers with DS-160, interview prep & documentation. 99% success rate.";
     } else if (id === "uk") {
-        metaTitle = "Expert UK Visa Visit Visa Consultant in India | SmotVisa";
+        metaTitle = "UK Visa Consultant in India | SmotVisa";
         metaDescription = "Get expert help with your UK Standard Visitor visa for tourism or business. Online application, document checks & financial support from SmotVisa.";
     } else if (id === "canada") {
-        metaTitle = "Canada Tourist Visa Consultant in India | SmotVisa";
-        metaDescription = "Apply Canada tourist visa in India. Get expert assistance for Canada visitor visa, documentation, biometrics & fast processing. Trusted guidance by SmotVisa.";
+        metaTitle = "Best Canada Tourist Visa in India | SmotVisa";
+        metaDescription = "Looking for a Canada visitor visa consultant in India? SmotVisa prepares your TRV application end to end — documents, purpose-of-travel letter, biometrics & more.";
     } else if (id === "australia") {
-        metaTitle = "Trusted Australian Visa Consultant for Business & Tourist Visas in India | SmotVisa";
-        metaDescription = "Apply for Australia Tourist or Business Visa with SmotVisa. Get expert guidance, document verification, and end-to-end visa application support.";
+        metaTitle = "Tourist Australia Visa Assistance in India | SmotVisa";
+        metaDescription = "Looking for Australia tourist visa for Indians? SmotVisa handles your Subclass 600 application end to end — ImmiAccount, documents, financial file & more.";
     } else if (id === "uae") {
         metaTitle = "Best Dubai Visa Consultant | Expert Dubai Visa Agency | SmotVisa";
         metaDescription = "We are Professional Dubai visa consultant offering tourist and business visa services across India. Get quick visa approval and hassle-free travel to the UAE from SmotVisa.";
@@ -56,11 +56,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         title: metaTitle,
         description: metaDescription,
         keywords: id === "us"
-            ? ["US visa consultant in India", "US B1/B2 visa consultant in India", "US tourist visa India", "US business visa India", "DS-160 form assistance", "US visa interview preparation", "B1 B2 visa India", "SmotVisa"]
+            ? ["US B1/B2 visa consultant in India", "US tourist visa India", "US business visa India", "DS-160 form assistance", "US visa interview preparation", "B1 B2 visa India", "SmotVisa"]
             : id === "uk"
             ? ["UK visa consultant in India", "UK Standard Visitor visa", "UK tourist visa India", "UK business visa India", "VFS appointment UK", "SmotVisa"]
             : id === "canada"
-            ? ["Canada tourist visa consultant in India", "Canada visitor visa India", "Canada TRV application", "Canada biometrics VFS", "IRCC visa India", "SmotVisa"]
+            ? ["Canada visitor visa consultant in India", "best Canada tourist visa in India", "Canada TRV application", "Canada visitor visa India", "Canada biometrics VFS", "IRCC visa India", "SmotVisa"]
+            : id === "australia"
+            ? ["Australia tourist visa for Indians", "tourist Australia visa assistance in India", "Subclass 600 visa India", "Australia visitor visa India", "ImmiAccount application India", "SmotVisa"]
             : [`${visa.name} visa`, `${visa.name} visa consultant`, `${visa.name} visa services`, "SmotVisa", "visa consultant India"],
         alternates: {
             canonical: `https://smotvisa.com/visa/${slug}`,
@@ -111,13 +113,13 @@ export default async function VisaDetailPage({ params }: { params: Promise<{ slu
     let pageTitle = `${visa.name} Visa Services ${visa.flag || ""}`;
     
     if (id === "us") {
-        pageTitle = "Trusted US Visa Consultant for India";
+        pageTitle = "United States Visitor and Business Visa (B1/B2) Assistance";
     } else if (id === "uk") {
-        pageTitle = "Expert UK Visa Visit Visa Consultant in India";
+        pageTitle = "Expert UK Standard Visitor Visa Consultants in India";
     } else if (id === "canada") {
-        pageTitle = "Canada Tourist Visa in India";
+        pageTitle = "Best Canada Tourist Visa in India";
     } else if (id === "australia") {
-        pageTitle = "Australia Tourist & Business Visa Services";
+        pageTitle = "Tourist Australia Visa Assistance in India";
     } else if (id === "uae") {
         pageTitle = "UAE Tourist Visa Services";
     } else if (id === "schengen") {
