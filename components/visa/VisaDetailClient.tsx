@@ -934,6 +934,163 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                 </>
             )}
 
+            {/* Schengen Specifics */}
+            {id === "schengen" && (
+                <>
+                    {/* Intro */}
+                    <section className="py-14 bg-background border-b border-border">
+                        <div className="container mx-auto px-4 max-w-4xl">
+                            <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-5">
+                                <p className="text-lg text-muted-foreground font-body leading-relaxed">
+                                    Why SmotVisa shines is because we consult the correct way to get a Schengen visa based on your eligibility, itinerary, arrange the required €30,000 travel insurance, build a clean document and finance file, and book your VFS or BLS appointment.
+                                </p>
+                                <div className="inline-flex flex-col sm:flex-row items-center gap-3 text-sm font-display font-bold text-foreground bg-muted/50 border border-border rounded-2xl px-6 py-4 mt-4">
+                                    <span>Planning a European holiday? Let&apos;s build your Schengen application right.</span>
+                                    <span className="hidden sm:block text-border">|</span>
+                                    <a href="tel:+918904008843" className="text-secondary hover:underline">Call / WhatsApp +91-8904008843</a>
+                                    <span className="hidden sm:block text-border">•</span>
+                                    <a href="mailto:info@smotvisa.com" className="text-secondary hover:underline">Email info@smotvisa.com</a>
+                                    <span className="hidden sm:block text-border">•</span>
+                                    <span>Or send an enquiry on smotvisa.com for a free consultation.</span>
+                                </div>
+                            </MotionDiv>
+                        </div>
+                    </section>
+
+                    {/* Why Choose SmotVisa */}
+                    <section className="py-14 bg-gradient-to-b from-background to-secondary/5 border-b border-border">
+                        <div className="container mx-auto px-4">
+                            <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-8">
+                                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Why Choose SmotVisa for Your Schengen Visa</h2>
+                            </MotionDiv>
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                                {[
+                                    { icon: Globe, title: "Correct Embassy Selection", desc: "The single most common mistake — we get it right based on your main destination." },
+                                    { icon: ShieldCheck, title: "Mandatory Travel Insurance Arranged", desc: "Compliant €30,000 cover across all Schengen countries." },
+                                    { icon: Briefcase, title: "Itinerary & Finance File", desc: "Flight, hotel and bank documents organised to embassy standards." },
+                                    { icon: Clock, title: "Appointment Booking", desc: "VFS Global or BLS appointments handled for you." },
+                                    { icon: Users, title: "Tourist and Business Covered", desc: "Holidays, family visits and business meetings alike." },
+                                    { icon: Star, title: "Proven Results", desc: "5,000+ travellers and a 99% application success rate." },
+                                ].map((item, idx) => (
+                                    <MotionDiv
+                                        key={idx}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: idx * 0.08 }}
+                                        className="bg-card rounded-2xl shadow-card border-l-4 border-secondary\50 border-r border-y border-border p-6 hover:shadow-elevated transition-all group"
+                                    >
+                                        <div className="w-12 h-12 rounded-xl bg-secondary\10 flex items-center justify-center mb-4 group-hover:bg-secondary/20 transition-colors">
+                                            <item.icon className="h-6 w-6 text-secondary" />
+                                        </div>
+                                        <h3 className="text-lg font-display font-bold text-foreground mb-2">{item.title}</h3>
+                                        <p className="text-muted-foreground font-body text-sm leading-relaxed italic">{item.desc}</p>
+                                    </MotionDiv>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Which Embassy Do You Apply To */}
+                    <section className="py-14 bg-muted/10 border-b border-border">
+                        <div className="container mx-auto px-4 max-w-4xl">
+                            <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-6">
+                                <div className="text-center space-y-3">
+                                    <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Which Embassy Do You Apply To?</h2>
+                                </div>
+                                <p className="text-muted-foreground font-body leading-relaxed max-w-3xl mx-auto text-center">
+                                    Schengen rules require you to apply to the embassy of the country that is your main destination — where you&apos;ll spend the most days. If you&apos;re spending equal time in several countries, you apply to the country you enter first. Getting this wrong is a leading cause of rejection, so we map your itinerary carefully and confirm the correct embassy before you do anything else. The same Type C short-stay visa covers both tourism and business travel.
+                                </p>
+                            </MotionDiv>
+                        </div>
+                    </section>
+
+                    {/* Who Can Apply */}
+                    <section className="py-14 bg-background border-b border-border">
+                        <div className="container mx-auto px-4 max-w-4xl">
+                            <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-6">
+                                <div className="text-center space-y-3">
+                                    <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Who Can Apply</h2>
+                                </div>
+                                <p className="text-muted-foreground font-body leading-relaxed max-w-3xl mx-auto text-center">
+                                    Any Indian traveller with a genuine short-stay purpose — tourism, visiting family, or business — and the funds to support the trip can apply. Embassies look for a clear itinerary, sufficient funds, valid insurance and strong ties to India. First-time travellers with a complete, honest file are approved regularly; the quality of the documentation matters more than a long travel history.
+                                </p>
+                            </MotionDiv>
+                        </div>
+                    </section>
+
+                    {/* Processing Time & Fees */}
+                    <section className="py-14 bg-muted/10 border-b border-border">
+                        <div className="container mx-auto px-4 max-w-4xl">
+                            <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-6">
+                                <div className="text-center space-y-3">
+                                    <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Processing Time & Fees</h2>
+                                    <p className="text-muted-foreground font-body leading-relaxed">As of 2026, the Schengen visa fee is €90 for adults and €45 for children aged 6–12, with separate VFS or BLS service charges. Standard processing is around 15 calendar days but can extend to 30 and up to 60 days in complex cases or peak periods. You can apply up to six months before travel and must apply at least 15 days ahead; we recommend submitting at least three weeks before departure. Mandatory travel insurance of at least €30,000 must be in place before you submit.</p>
+                                </div>
+                                <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
+                                    <table className="w-full text-sm">
+                                        <thead>
+                                            <tr className="bg-secondary text-secondary-foreground">
+                                                <th className="text-left px-5 py-3 font-display font-bold">Item</th>
+                                                <th className="text-left px-5 py-3 font-display font-bold">Amount / Timeline</th>
+                                                <th className="text-left px-5 py-3 font-display font-bold">Notes</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {[
+                                                { item: "Adult visa fee", amount: "€90 (₹9,000)", notes: "Plus VFS/BLS service charge" },
+                                                { item: "Child fee (6–12)", amount: "€45 (₹4,500)", notes: "Under 6 often exempt" },
+                                                { item: "Processing time", amount: "15 days (up to 30–60)", notes: "Apply at least 3 weeks before travel" },
+                                                { item: "Travel insurance", amount: "Min €30,000 cover", notes: "Mandatory before submission" },
+                                            ].map((row, idx) => (
+                                                <tr key={idx} className={idx % 2 === 0 ? "bg-card" : "bg-muted/30"}>
+                                                    <td className="px-5 py-3 font-display font-bold text-foreground">{row.item}</td>
+                                                    <td className="px-5 py-3 font-body text-muted-foreground">{row.amount}</td>
+                                                    <td className="px-5 py-3 font-body text-muted-foreground italic">{row.notes}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </MotionDiv>
+                        </div>
+                    </section>
+
+                    {/* Common Rejection Reasons */}
+                    <section className="py-14 bg-background border-b border-border">
+                        <div className="container mx-auto px-4 max-w-4xl">
+                            <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-6">
+                                <div className="text-center space-y-3">
+                                    <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Common Reasons Schengen Visas Get Refused</h2>
+                                </div>
+                                <div className="grid sm:grid-cols-2 gap-3">
+                                    {[
+                                        "Applying at the wrong embassy for your itinerary",
+                                        "Missing or non-compliant travel insurance",
+                                        "Insufficient funds or unexplained bank deposits",
+                                        "Unclear or inconsistent itinerary",
+                                        "Weak ties to India and doubts about return",
+                                        "Incomplete documents or a poorly written cover letter",
+                                    ].map((item, idx) => (
+                                        <MotionDiv
+                                            key={idx}
+                                            initial={{ opacity: 0, x: -10 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: idx * 0.07 }}
+                                            className="flex items-center gap-3 bg-card border border-border rounded-xl p-4 shadow-sm"
+                                        >
+                                            <AlertTriangle className="h-5 w-5 text-amber-500 shrink-0" />
+                                            <span className="font-body font-semibold text-foreground text-sm">{item}</span>
+                                        </MotionDiv>
+                                    ))}
+                                </div>
+                            </MotionDiv>
+                        </div>
+                    </section>
+                </>
+            )}
+
             {/* Requirements & Process */}
             <section id="requirements" className="py-14">
                 <div className="container mx-auto px-4">

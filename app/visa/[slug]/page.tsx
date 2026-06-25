@@ -123,7 +123,7 @@ export default async function VisaDetailPage({ params }: { params: Promise<{ slu
     } else if (id === "uae") {
         pageTitle = "Dubai Tourist & Business Visa for Indians";
     } else if (id === "schengen") {
-        pageTitle = "Schengen Visa Services";
+        pageTitle = "Companion Schengen Visa for Indians";
     }
 
     return (
