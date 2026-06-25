@@ -166,7 +166,6 @@ export default async function VisaDetailPage({ params }: { params: Promise<{ slu
             )}
             <PageHeader
                 title={pageTitle}
-                description={visa.description}
                 breadcrumbs={[
                     { label: "Visa Services", href: "/visa" },
                     { label: visa.name }
