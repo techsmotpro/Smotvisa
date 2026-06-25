@@ -121,7 +121,7 @@ export default async function VisaDetailPage({ params }: { params: Promise<{ slu
     } else if (id === "australia") {
         pageTitle = "Tourist Australia Visa Assistance in India";
     } else if (id === "uae") {
-        pageTitle = "UAE Tourist Visa Services";
+        pageTitle = "Dubai Tourist & Business Visa for Indians";
     } else if (id === "schengen") {
         pageTitle = "Schengen Visa Services";
     }

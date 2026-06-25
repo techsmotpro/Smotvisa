@@ -414,6 +414,164 @@ export default function VisaDetailClient({ visa, id }: { visa: Visa; id: string 
                 </>
             )}
 
+            {/* UAE Specifics */}
+            {id === "uae" && (
+                <>
+                    {/* Intro */}
+                    <section className="py-14 bg-background border-b border-border">
+                        <div className="container mx-auto px-4 max-w-4xl">
+                            <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-5">
+                                <p className="text-lg text-muted-foreground font-body leading-relaxed">
+                                    Dubai and the wider UAE are among the most popular destinations especially for Indian travellers for shopping, family holidays, world-class attractions and fast-growing business links. The best part is how quick the visa process is. With minimal documents and processing often in just a few working days, a UAE tourist or business visit visa is one of the smoothest applications we handle.
+                                </p>
+                                <p className="text-lg text-muted-foreground font-body leading-relaxed">
+                                    SmotVisa offers the full range of UAE visit visas — 30-day and 60-day tourist visas, and business visit visas with express options for urgent travel. We check your documents, submit accurately, and keep your trip on schedule.
+                                </p>
+                                <div className="inline-flex flex-col sm:flex-row items-center gap-3 text-sm font-display font-bold text-foreground bg-muted/50 border border-border rounded-2xl px-6 py-4 mt-4">
+                                    <span>Heading to Dubai soon? Get your UAE visa started today.</span>
+                                    <span className="hidden sm:block text-border">|</span>
+                                    <a href="tel:+918904008843" className="text-secondary hover:underline">Call / WhatsApp +91-8904008843</a>
+                                    <span className="hidden sm:block text-border">•</span>
+                                    <a href="mailto:info@smotvisa.com" className="text-secondary hover:underline">Email info@smotvisa.com</a>
+                                    <span className="hidden sm:block text-border">•</span>
+                                    <span>Or send an enquiry on smotvisa.com for a free consultation.</span>
+                                </div>
+                            </MotionDiv>
+                        </div>
+                    </section>
+
+                    {/* Why Choose SmotVisa */}
+                    <section className="py-14 bg-gradient-to-b from-background to-secondary/5 border-b border-border">
+                        <div className="container mx-auto px-4">
+                            <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-8">
+                                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Why Choose SmotVisa for Your UAE Visa</h2>
+                            </MotionDiv>
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                                {[
+                                    { icon: Clock, title: "Fast Processing", desc: "Many Dubai visas are ready in just 2 to 3 working days, with express options available." },
+                                    { icon: Globe, title: "30 & 60 Day Options", desc: "Single and multiple-entry tourist visas to match your trip." },
+                                    { icon: Briefcase, title: "Business Visit Visas", desc: "For meetings, exhibitions and trade events in Dubai." },
+                                    { icon: CheckCircle2, title: "Minimal Hassle", desc: "We know exactly which documents Dubai requires and check them for you." },
+                                    { icon: CircleDollarSign, title: "Transparent Pricing", desc: "Clear costs with no hidden charges." },
+                                    { icon: Star, title: "Trusted by Thousands", desc: "50,000+ travellers and a 98% application success rate." },
+                                ].map((item, idx) => (
+                                    <MotionDiv
+                                        key={idx}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: idx * 0.08 }}
+                                        className="bg-card rounded-2xl shadow-card border-l-4 border-secondary\50 border-r border-y border-border p-6 hover:shadow-elevated transition-all group"
+                                    >
+                                        <div className="w-12 h-12 rounded-xl bg-secondary\10 flex items-center justify-center mb-4 group-hover:bg-secondary/20 transition-colors">
+                                            <item.icon className="h-6 w-6 text-secondary" />
+                                        </div>
+                                        <h3 className="text-lg font-display font-bold text-foreground mb-2">{item.title}</h3>
+                                        <p className="text-muted-foreground font-body text-sm leading-relaxed italic">{item.desc}</p>
+                                    </MotionDiv>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Tourist or Business Visit Visa */}
+                    <section className="py-14 bg-muted/10 border-b border-border">
+                        <div className="container mx-auto px-4 max-w-4xl">
+                            <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-6">
+                                <div className="text-center space-y-3">
+                                    <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Tourist or Business Visit Visa</h2>
+                                </div>
+                                <p className="text-muted-foreground font-body leading-relaxed max-w-3xl mx-auto text-center">
+                                    Dubai offers short-stay visit visas for both leisure and business. Tourist visas come in 30-day and 60-day versions, available as single or multiple entry, ideal for holidays, shopping trips and family visits. Business visit visas suit travellers attending meetings, exhibitions such as those at the Dubai World Trade Centre, or trade negotiations. Both are visit visas — they do not permit employment in Dubai and that is the only travel we assist with.
+                                </p>
+                            </MotionDiv>
+                        </div>
+                    </section>
+
+                    {/* Who Can Apply */}
+                    <section className="py-14 bg-background border-b border-border">
+                        <div className="container mx-auto px-4 max-w-4xl">
+                            <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-6">
+                                <div className="text-center space-y-3">
+                                    <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Who Can Apply</h2>
+                                </div>
+                                <p className="text-muted-foreground font-body leading-relaxed max-w-3xl mx-auto text-center">
+                                    Almost any Indian traveller with a valid passport can apply for a UAE visit visa. The documentation is light and the approval process is straightforward for genuine visitors. Note that travellers already holding a valid visa or residence permit from countries such as the US, UK, EU, Canada or Australia may be eligible for a short visa on arrival — we&apos;ll let you know if that applies to you.
+                                </p>
+                            </MotionDiv>
+                        </div>
+                    </section>
+
+                    {/* Processing Time & Fees */}
+                    <section className="py-14 bg-muted/10 border-b border-border">
+                        <div className="container mx-auto px-4 max-w-4xl">
+                            <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-6">
+                                <div className="text-center space-y-3">
+                                    <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Processing Time & Fees</h2>
+                                    <p className="text-muted-foreground font-body leading-relaxed">UAE visa processing is fast. Standard tourist visas are typically issued within three to four working days, while express services can deliver in as little as 48 hours. Fees vary by duration and entry type — 30-day visas are the most popular and economical choice, with 60-day visas costing more for longer stays. We quote exact, all-inclusive pricing before you apply.</p>
+                                </div>
+                                <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
+                                    <table className="w-full text-sm">
+                                        <thead>
+                                            <tr className="bg-secondary text-secondary-foreground">
+                                                <th className="text-left px-5 py-3 font-display font-bold">Visa Type</th>
+                                                <th className="text-left px-5 py-3 font-display font-bold">Typical Use</th>
+                                                <th className="text-left px-5 py-3 font-display font-bold">Processing</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {[
+                                                { type: "30-day tourist visa", use: "Short holidays, family visits", processing: "3–4 working days (express 48h)" },
+                                                { type: "60-day tourist visa", use: "Longer stays", processing: "3–4 working days" },
+                                                { type: "Business visit visa", use: "Meetings, exhibitions, trade", processing: "3–4 working days" },
+                                            ].map((row, idx) => (
+                                                <tr key={idx} className={idx % 2 === 0 ? "bg-card" : "bg-muted/30"}>
+                                                    <td className="px-5 py-3 font-display font-bold text-foreground">{row.type}</td>
+                                                    <td className="px-5 py-3 font-body text-muted-foreground">{row.use}</td>
+                                                    <td className="px-5 py-3 font-body text-muted-foreground italic">{row.processing}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </MotionDiv>
+                        </div>
+                    </section>
+
+                    {/* Common Reasons UAE Visas Get Held Up */}
+                    <section className="py-14 bg-background border-b border-border">
+                        <div className="container mx-auto px-4 max-w-4xl">
+                            <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-6">
+                                <div className="text-center space-y-3">
+                                    <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Common Reasons UAE Visas Get Held Up</h2>
+                                </div>
+                                <div className="grid sm:grid-cols-2 gap-3">
+                                    {[
+                                        "Blurred or incomplete passport copies",
+                                        "Photograph not meeting UAE specifications",
+                                        "Name spelling mismatches with the passport",
+                                        "Insufficient passport validity",
+                                        "Previous overstay or immigration issues on record",
+                                    ].map((item, idx) => (
+                                        <MotionDiv
+                                            key={idx}
+                                            initial={{ opacity: 0, x: -10 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: idx * 0.07 }}
+                                            className="flex items-center gap-3 bg-card border border-border rounded-xl p-4 shadow-sm"
+                                        >
+                                            <AlertTriangle className="h-5 w-5 text-amber-500 shrink-0" />
+                                            <span className="font-body font-semibold text-foreground text-sm">{item}</span>
+                                        </MotionDiv>
+                                    ))}
+                                </div>
+                            </MotionDiv>
+                        </div>
+                    </section>
+                </>
+            )}
+
             {/* Canada Specifics */}
             {id === "canada" && (
                 <>
