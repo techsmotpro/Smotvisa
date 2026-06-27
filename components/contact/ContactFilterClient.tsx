@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useMemo } from "react";
 import { Search } from "lucide-react";
@@ -66,7 +66,7 @@ export default function ContactFilterClient({ offices }: ContactListClientProps)
                             placeholder="Search for a city or office location..."
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
-                            className="w-full pl-16 pr-8 py-4 rounded-2xl border border-border bg-card text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/30 focus:border-secondary outline-none transition-all placeholder:text-muted-foreground/50 shadow-sm"
+                            className="w-full pl-16 pr-8 py-4 rounded-xl border border-border bg-card text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/30 focus:border-secondary outline-none transition-all placeholder:text-muted-foreground/50 shadow-sm"
                         />
                     </div>
 
@@ -79,7 +79,7 @@ export default function ContactFilterClient({ offices }: ContactListClientProps)
                                     setSelectedState(e.target.value);
                                     setSelectedCity("");
                                 }}
-                                className="w-full px-6 py-4 rounded-2xl border border-border bg-card text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/30 focus:border-secondary outline-none transition-all appearance-none cursor-pointer"
+                                className="w-full px-6 py-4 rounded-xl border border-border bg-card text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/30 focus:border-secondary outline-none transition-all appearance-none cursor-pointer"
                             >
                                 <option value="">All States</option>
                                 {states.map(state => (
@@ -92,7 +92,7 @@ export default function ContactFilterClient({ offices }: ContactListClientProps)
                             <select
                                 value={selectedCity}
                                 onChange={(e) => setSelectedCity(e.target.value)}
-                                className="w-full px-6 py-4 rounded-2xl border border-border bg-card text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/30 focus:border-secondary outline-none transition-all appearance-none cursor-pointer"
+                                className="w-full px-6 py-4 rounded-xl border border-border bg-card text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/30 focus:border-secondary outline-none transition-all appearance-none cursor-pointer"
                             >
                                 <option value="">All Locations</option>
                                 {cities.map(city => (
@@ -110,52 +110,52 @@ export default function ContactFilterClient({ offices }: ContactListClientProps)
             <section className="py-14 bg-gradient-to-b from-background to-muted/50">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-8">
-                        <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Why Choose SmotVisa</h2>
+                        <h2 className="text-xl sm:text-base font-display font-bold mb-4">Why Choose SmotVisa</h2>
                         <p className="text-muted-foreground font-body text-lg max-w-2xl mx-auto">
                             Experience the difference with our premium visa and travel services
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-                        <div className="group relative bg-card rounded-3xl p-8 border border-border hover:border-secondary/30 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                        <div className="group relative bg-card rounded-xl p-5 border border-border hover:border-secondary/30 hover:shadow-xl transition-all duration-300 overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                             <div className="relative z-10">
-                                <div className="w-20 h-20 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                                <div className="w-20 h-20 bg-secondary/10 rounded-xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                                     <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center group-hover:rotate-5 transition-transform duration-300">
                                         <span className="text-white font-bold text-lg">24/7</span>
                                     </div>
                                 </div>
-                                <h4 className="text-2xl font-display font-bold mb-4 text-center">24/7 Support</h4>
+                                <h4 className="text-sm font-display font-bold mb-4 text-center">24/7 Support</h4>
                                 <p className="text-muted-foreground font-body text-sm leading-relaxed text-center">
                                     Our customer support team is available round-the-clock to assist you with your travel needs.
                                 </p>
                             </div>
                         </div>
 
-                        <div className="group relative bg-card rounded-3xl p-8 border border-border hover:border-secondary/30 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                        <div className="group relative bg-card rounded-xl p-5 border border-border hover:border-secondary/30 hover:shadow-xl transition-all duration-300 overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                             <div className="relative z-10">
-                                <div className="w-20 h-20 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                                <div className="w-20 h-20 bg-secondary/10 rounded-xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                                     <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center group-hover:rotate-5 transition-transform duration-300">
                                         <span className="text-white font-bold text-lg">10+</span>
                                     </div>
                                 </div>
-                                <h4 className="text-2xl font-display font-bold mb-4 text-center">Years of Experience</h4>
+                                <h4 className="text-sm font-display font-bold mb-4 text-center">Years of Experience</h4>
                                 <p className="text-muted-foreground font-body text-sm leading-relaxed text-center">
                                     With over a decade of experience, we provide expert guidance for all your visa and travel requirements.
                                 </p>
                             </div>
                         </div>
 
-                        <div className="group relative bg-card rounded-3xl p-8 border border-border hover:border-secondary/30 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                        <div className="group relative bg-card rounded-xl p-5 border border-border hover:border-secondary/30 hover:shadow-xl transition-all duration-300 overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                             <div className="relative z-10">
-                                <div className="w-20 h-20 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                                <div className="w-20 h-20 bg-secondary/10 rounded-xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                                     <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center group-hover:rotate-5 transition-transform duration-300">
                                         <span className="text-white font-bold text-lg">5K+</span>
                                     </div>
                                 </div>
-                                <h4 className="text-2xl font-display font-bold mb-4 text-center">Happy Customers</h4>
+                                <h4 className="text-sm font-display font-bold mb-4 text-center">Happy Customers</h4>
                                 <p className="text-muted-foreground font-body text-sm leading-relaxed text-center">
                                     We've helped thousands of travelers achieve their dreams with our reliable and efficient services.
                                 </p>
@@ -167,3 +167,4 @@ export default function ContactFilterClient({ offices }: ContactListClientProps)
         </div>
     );
 }
+

@@ -6,6 +6,7 @@ import { tourPackagesData, popularRoutes, travelTips } from "@/data/tourPackages
 import { MotionDiv } from "@/components/ui/MotionWrapper";
 import CountryFlag from "@/components/ui/CountryFlag";
 import JsonLd from "@/components/ui/JsonLd";
+import VisaSidebarForm from "@/components/visa/VisaSidebarForm";
 import { Metadata } from 'next';
 
 const faqs = [
@@ -71,6 +72,7 @@ const steps = [
     { step: "05", title: "Travel with confidence", desc: "With 24/7 support throughout your journey." },
 ];
 
+
 export default function TourPackagesPage() {
     return (
         <main className="min-h-screen bg-background pb-12">
@@ -88,6 +90,7 @@ export default function TourPackagesPage() {
                 title="International Tour Packages"
                 description="Your Whole Trip, Planned by One Team. Flights, hotels, sightseeing and the visa — SmotVisa wraps it all into one seamless package."
                 breadcrumbs={[{ label: "Tours & Packages" }]}
+                bgImage="/images/flight-hero.webp"
             />
 
             {/* Intro */}
@@ -108,6 +111,24 @@ export default function TourPackagesPage() {
                             <a href="mailto:info@smotvisa.com" className="text-secondary hover:underline">info@smotvisa.com</a>
                         </div>
                     </MotionDiv>
+                </div>
+            </section>
+
+            {/* Popular Destinations */}
+            <section className="py-12 bg-muted/20 border-y border-border">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-6">
+                        <span className="text-xs font-body font-semibold text-secondary uppercase tracking-widest">Where We Go</span>
+                        <h2 className="text-xl sm:text-2xl font-display font-bold text-foreground mt-2">Popular Destinations</h2>
+                        <p className="text-sm font-body text-foreground/70 mt-2 leading-relaxed">We build tours across the globe, with especially popular itineraries to Dubai, Europe's Schengen countries, Singapore, Thailand, Malaysia and beyond. Whatever the destination, we shape the trip around you — from fast-paced sightseeing to relaxed leisure travel.</p>
+                    </MotionDiv>
+                    <div className="flex flex-wrap gap-3 mt-6">
+                        {["Dubai & UAE", "Europe (Schengen)", "Singapore", "Thailand", "Malaysia", "Australia", "Canada", "United Kingdom", "United States", "& more"].map((dest) => (
+                            <span key={dest} className="inline-flex items-center px-4 py-2 bg-white border border-border rounded-full text-sm font-body font-semibold text-foreground shadow-sm">
+                                {dest}
+                            </span>
+                        ))}
+                    </div>
                 </div>
             </section>
 
@@ -173,6 +194,33 @@ export default function TourPackagesPage() {
                                 </div>
                             </MotionDiv>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Form with Cover */}
+            <section className="relative overflow-hidden">
+                <div className="relative min-h-[420px] flex items-center">
+                    <Image src="/images/australia-bondi.webp" alt="Plan your international trip with SmotVisa" fill className="object-cover object-center" sizes="100vw" />
+                    <div className="absolute inset-0 bg-primary/80" />
+                    <div className="relative z-10 w-full container mx-auto px-4 py-14">
+                        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+                            <div>
+                                <span className="text-xs font-body font-semibold text-secondary uppercase tracking-widest">Free Consultation</span>
+                                <h2 className="text-2xl sm:text-3xl font-display font-bold text-white mt-3 mb-4 leading-snug">Let's Plan Your Perfect International Trip</h2>
+                                <p className="text-sm font-body text-white/70 leading-relaxed mb-6">Flights, hotels, sightseeing and visa — all in one place. Share your travel dream and we'll take care of the rest.</p>
+                                <ul className="space-y-2">
+                                    {["Custom itineraries for every budget", "Visa assistance included in every package", "Group, family & honeymoon specialists", "24/7 support before and during your trip"].map((it) => (
+                                        <li key={it} className="flex items-center gap-3 text-sm font-body text-white/80">
+                                            <CheckCircle2 className="h-4 w-4 text-secondary shrink-0" /> {it}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div>
+                                <VisaSidebarForm visaName="International Tour Package" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -301,7 +349,7 @@ export default function TourPackagesPage() {
             {/* Travel Tips */}
             <section className="py-14">
                 <div className="container mx-auto px-4">
-                    <div className="bg-card rounded-3xl p-8 md:p-14 shadow-elevated border border-border relative overflow-hidden">
+                    <div className="bg-card rounded-2xl p-6 md:p-8 shadow-sm border border-border relative overflow-hidden">
                         <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
                             <Star className="w-48 h-48 text-secondary" />
                         </div>
@@ -386,33 +434,26 @@ export default function TourPackagesPage() {
             </section>
 
             {/* CTA */}
-            <section className="py-12 container mx-auto px-4">
+            <section className="py-8 container mx-auto px-4">
                 <MotionDiv
                     initial={{ opacity: 0, scale: 0.98 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    className="bg-gradient-to-r from-primary via-primary-light to-secondary p-6 md:p-6 rounded-3xl shadow-elevated relative overflow-hidden text-center border border-white/10"
+                    className="bg-primary px-6 py-8 rounded-2xl shadow-elevated relative overflow-hidden text-center border border-white/10"
                 >
-                    <div className="absolute inset-0 opacity-10 pointer-events-none bg-grid-white" />
-                    <div className="relative z-10 max-w-3xl mx-auto space-y-6">
-                        <h2 className="text-3xl md:text-5xl font-display font-bold text-primary-foreground leading-tight">
-                            Let&apos;s Turn Your Travel Dream into a Finished Itinerary
+                    <div className="relative z-10 max-w-2xl mx-auto">
+                        <h2 className="text-xl md:text-2xl font-display font-bold text-primary-foreground mb-3">
+                            Ready to plan your trip?
                         </h2>
-                        <p className="text-lg md:text-xl text-primary-foreground/70 font-body leading-relaxed border-t border-b border-white/10 py-6">
-                            Talk to us today for a free consultation — we&apos;ll design your perfect trip from start to finish.
+                        <p className="text-sm text-primary-foreground/70 font-body mb-5">
+                            Talk to us today — we'll design your perfect itinerary from start to finish.
                         </p>
-                        <div className="flex flex-col md:flex-row gap-4 justify-center">
-                            <Link
-                                href="/contact"
-                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-secondary text-secondary-foreground font-display font-bold rounded-xl hover:translate-y-[-2px] transition-all shadow-gold group"
-                            >
-                                Plan My Trip <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                            <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-secondary text-secondary-foreground font-display font-bold text-sm rounded-lg hover:opacity-90 transition-all group">
+                                Plan My Trip <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                             </Link>
-                            <a
-                                href="tel:+918904008843"
-                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent border-2 border-white/20 text-white font-display font-bold rounded-xl hover:bg-white/10 transition-all"
-                            >
-                                Call / WhatsApp +91-8904008843
+                            <a href="tel:+918904008843" className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-white/20 text-white font-display font-bold text-sm rounded-lg hover:bg-white/10 transition-all">
+                                Call +91-8904008843
                             </a>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useMemo } from "react";
 import { Search, MapPin, Phone, Mail, ArrowRight, Info } from "lucide-react";
@@ -86,7 +86,7 @@ export default function ContactListClient({ offices }: ContactListClientProps) {
                             placeholder="Search for a city or office location..."
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
-                            className="w-full pl-16 pr-8 py-4 rounded-2xl border border-border bg-card text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/30 focus:border-secondary outline-none transition-all placeholder:text-muted-foreground/50 shadow-sm"
+                            className="w-full pl-16 pr-8 py-4 rounded-xl border border-border bg-card text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/30 focus:border-secondary outline-none transition-all placeholder:text-muted-foreground/50 shadow-sm"
                         />
                     </div>
 
@@ -100,7 +100,7 @@ export default function ContactListClient({ offices }: ContactListClientProps) {
                                     setSelectedState(e.target.value);
                                     setSelectedCity("");
                                 }}
-                                className="w-full px-6 py-4 rounded-2xl border border-border bg-card text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/30 focus:border-secondary outline-none transition-all appearance-none cursor-pointer"
+                                className="w-full px-6 py-4 rounded-xl border border-border bg-card text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/30 focus:border-secondary outline-none transition-all appearance-none cursor-pointer"
                             >
                                 <option value="">All States</option>
                                 {states.map(state => (
@@ -113,7 +113,7 @@ export default function ContactListClient({ offices }: ContactListClientProps) {
                             <select
                                 value={selectedCity}
                                 onChange={(e) => setSelectedCity(e.target.value)}
-                                className="w-full px-6 py-4 rounded-2xl border border-border bg-card text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/30 focus:border-secondary outline-none transition-all appearance-none cursor-pointer"
+                                className="w-full px-6 py-4 rounded-xl border border-border bg-card text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/30 focus:border-secondary outline-none transition-all appearance-none cursor-pointer"
                             >
                                 <option value="">All Locations</option>
                                 {cities.map(city => (
@@ -133,14 +133,14 @@ export default function ContactListClient({ offices }: ContactListClientProps) {
                                 <Link
                                     key={office.id}
                                     href={getOfficeUrl(office.id)}
-                                    className="block rounded-2xl border border-border bg-card p-6 hover:border-secondary/30 hover:shadow-lg transition-all"
+                                    className="block rounded-xl border border-border bg-card p-6 hover:border-secondary/30 hover:shadow-lg transition-all"
                                 >
                                     <div className="flex items-start justify-between mb-4">
                                         <div>
                                             <span className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1 block">
                                                 {office.city} Office
                                             </span>
-                                            <h3 className="text-xl font-display font-bold leading-tight">
+                                            <h3 className="text-base font-display font-bold leading-tight">
                                                 {office.name}
                                             </h3>
                                         </div>
@@ -182,9 +182,9 @@ export default function ContactListClient({ offices }: ContactListClientProps) {
                                 </Link>
                             ))
                         ) : (
-                            <div className="col-span-full rounded-2xl border border-border bg-card p-8 text-center">
+                            <div className="col-span-full rounded-xl border border-border bg-card p-5 text-center">
                                 <Search className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                                <h3 className="text-lg font-display font-bold text-foreground mb-2">No offices found</h3>
+                                <h3 className="text-sm font-display font-bold text-foreground mb-2">No offices found</h3>
                                 <p className="text-muted-foreground font-body text-sm">
                                     Try searching for a different city or location
                                 </p>
@@ -199,56 +199,56 @@ export default function ContactListClient({ offices }: ContactListClientProps) {
                 <div className="container mx-auto px-4">
                     {/* Section Header */}
                     <div className="text-center mb-8">
-                        <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Why Choose SmotVisa</h2>
+                        <h2 className="text-xl sm:text-base font-display font-bold mb-4">Why Choose SmotVisa</h2>
                         <p className="text-muted-foreground font-body text-lg max-w-2xl mx-auto">
                             Experience the difference with our premium visa and travel services
                         </p>
                     </div>
                     
                     <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-                        <div className="group relative bg-card rounded-3xl p-8 border border-border hover:border-secondary/30 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                        <div className="group relative bg-card rounded-xl p-5 border border-border hover:border-secondary/30 hover:shadow-xl transition-all duration-300 overflow-hidden">
                             {/* Background Gradient Effect */}
                             <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                             
                             <div className="relative z-10">
-                                <div className="w-20 h-20 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                                <div className="w-20 h-20 bg-secondary/10 rounded-xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                                     <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center group-hover:rotate-5 transition-transform duration-300">
                                         <span className="text-white font-bold text-lg">24/7</span>
                                     </div>
                                 </div>
-                                <h4 className="text-2xl font-display font-bold mb-4 text-center">24/7 Support</h4>
+                                <h4 className="text-sm font-display font-bold mb-4 text-center">24/7 Support</h4>
                                 <p className="text-muted-foreground font-body text-sm leading-relaxed text-center">
                                     Our customer support team is available round-the-clock to assist you with your travel needs.
                                 </p>
                             </div>
                         </div>
                         
-                        <div className="group relative bg-card rounded-3xl p-8 border border-border hover:border-secondary/30 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                        <div className="group relative bg-card rounded-xl p-5 border border-border hover:border-secondary/30 hover:shadow-xl transition-all duration-300 overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                             
                             <div className="relative z-10">
-                                <div className="w-20 h-20 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                                <div className="w-20 h-20 bg-secondary/10 rounded-xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                                     <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center group-hover:rotate-5 transition-transform duration-300">
                                         <span className="text-white font-bold text-lg">10+</span>
                                     </div>
                                 </div>
-                                <h4 className="text-2xl font-display font-bold mb-4 text-center">Years of Experience</h4>
+                                <h4 className="text-sm font-display font-bold mb-4 text-center">Years of Experience</h4>
                                 <p className="text-muted-foreground font-body text-sm leading-relaxed text-center">
                                     With over a decade of experience, we provide expert guidance for all your visa and travel requirements.
                                 </p>
                             </div>
                         </div>
                         
-                        <div className="group relative bg-card rounded-3xl p-8 border border-border hover:border-secondary/30 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                        <div className="group relative bg-card rounded-xl p-5 border border-border hover:border-secondary/30 hover:shadow-xl transition-all duration-300 overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                             
                             <div className="relative z-10">
-                                <div className="w-20 h-20 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                                <div className="w-20 h-20 bg-secondary/10 rounded-xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                                     <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center group-hover:rotate-5 transition-transform duration-300">
                                         <span className="text-white font-bold text-lg">5K+</span>
                                     </div>
                                 </div>
-                                <h4 className="text-2xl font-display font-bold mb-4 text-center">Happy Customers</h4>
+                                <h4 className="text-sm font-display font-bold mb-4 text-center">Happy Customers</h4>
                                 <p className="text-muted-foreground font-body text-sm leading-relaxed text-center">
                                     We've helped thousands of travelers achieve their dreams with our reliable and efficient services.
                                 </p>
@@ -260,3 +260,4 @@ export default function ContactListClient({ offices }: ContactListClientProps) {
         </div>
     );
 }
+

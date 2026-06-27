@@ -4,7 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import dynamic from "next/dynamic";
 import { Toaster } from "@/components/ui/toaster";
-import { Geist } from "next/font/google";
+import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import JsonLd from "@/components/ui/JsonLd";
 import TawkChat from "@/components/TawkChat";
@@ -13,7 +13,12 @@ import FramerProvider from "@/components/ui/FramerProvider";
 
 const FloatingCTA = dynamic(() => import("@/components/ui/FloatingCTA"));
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
+const inter = Inter({
+    subsets: ["latin"],
+    variable: "--font-inter",
+    display: "swap",
+    weight: ["400", "500", "600", "700", "800"],
+});
 
 export const viewport: Viewport = {
     width: "device-width",
@@ -72,7 +77,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className={cn("font-sans", geist.variable)}>
+        <html lang="en" className={cn("font-sans", inter.variable)}>
             <head />
             <body className="antialiased">
                 <Script
@@ -127,8 +132,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <TooltipProvider>
                     <Suspense
                         fallback={
-                            <nav className="fixed top-0 left-0 w-full z-[9999] bg-primary/95 shadow-card border-b border-primary-foreground/10">
-                                <div className="container mx-auto flex items-center justify-between px-4 py-5">
+                            <nav className="fixed top-0 left-0 w-full z-[9999] bg-primary shadow-card">
+                                <div className="hidden lg:block bg-primary/80 border-b border-primary-foreground/10">
+                                    <div className="container mx-auto px-4 py-1.5 text-xs text-primary-foreground/60 flex justify-between">
+                                        <span>📞 +91-8904008843</span>
+                                        <span>Mon–Sat: 10 AM – 7 PM</span>
+                                    </div>
+                                </div>
+                                <div className="container mx-auto flex items-center justify-between px-4 py-4">
                                     <a href="/" className="flex items-center gap-3">
                                         <span className="text-xl font-bold text-primary-foreground">
                                             SmotVisa
@@ -184,7 +195,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     >
                         <Navbar />
                     </Suspense>
-                    <main id="main" className="pt-20">
+                    <main id="main" className="pt-24">
                         {children}
                     </main>
                     <Footer />

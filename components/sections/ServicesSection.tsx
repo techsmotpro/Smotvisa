@@ -1,4 +1,4 @@
-import { MotionDiv } from "@/components/ui/MotionWrapper";
+﻿import { MotionDiv } from "@/components/ui/MotionWrapper";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { visaCountries } from "@/data/navigationData";
@@ -16,7 +16,7 @@ const ServicesSection = () => {
                     className="text-center mb-8"
                 >
                     <span className="text-sm font-body font-semibold text-secondary uppercase tracking-widest">What We Offer</span>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-4">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-foreground mt-3 mb-4">
                         Our Premium Services
                     </h2>
                     <p className="text-muted-foreground font-body max-w-2xl mx-auto">
@@ -26,7 +26,7 @@ const ServicesSection = () => {
 
                 {/* Visa Services Countries */}
                 <div id="visa-services" className="mb-8">
-                    <h3 className="text-2xl font-display font-bold text-foreground mb-5 text-center">Popular Visa Destinations</h3>
+                    <h3 className="text-sm font-display font-bold text-foreground mb-5 text-center">Popular Visa Destinations</h3>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2.5">
                         {visaCountries.map((country, idx) => (
                             <MotionDiv
@@ -37,9 +37,9 @@ const ServicesSection = () => {
                                 transition={{ delay: idx * 0.1 }}
                                 className="group p-2.5 bg-card rounded-xl shadow-card border border-border hover:shadow-elevated hover:-translate-y-1 transition-all duration-300 text-center relative overflow-hidden"
                             >
-                                <div className="text-4xl mb-2"><CountryFlag emoji={country.flag} /></div>
-                                <h4 className="text-lg font-display font-bold text-foreground mb-1">{country.name}</h4>
-                                <p className="text-sm font-body text-muted-foreground mb-2.5">Visa Services</p>
+                                <div className="text-2xl mb-2"><CountryFlag emoji={country.flag} /></div>
+                                <h4 className="text-sm font-display font-bold text-foreground mb-1">{country.name}</h4>
+                                <p className="text-base font-body text-muted-foreground mb-2.5">Visa Services</p>
                                 <Link
                                     href={country.href}
                                     className="text-xs font-body font-bold text-secondary flex items-center justify-center gap-1 hover:underline"
@@ -53,7 +53,7 @@ const ServicesSection = () => {
 
                 {/* SmotVisa SERVICES */}
                 <div className="mb-8">
-                    <h3 className="text-3xl font-display font-bold text-foreground mb-6 text-center text-gradient-gold">SmotVisa Services</h3>
+                    <h3 className="text-base font-display font-bold text-foreground mb-6 text-center text-gradient-gold">SmotVisa Services</h3>
                     <div className="grid md:grid-cols-3 gap-5">
                         {servicesData.map((service, idx) => (
                             <MotionDiv
@@ -62,13 +62,13 @@ const ServicesSection = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="p-5 bg-card rounded-2xl shadow-card border border-border group hover:shadow-elevated transition-all"
+                                className="p-5 bg-card rounded-xl shadow-card border border-border group hover:shadow-elevated transition-all"
                             >
                                 <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-3 group-hover:bg-secondary/20 transition-colors">
                                     <service.icon className="h-6 w-6 text-secondary" />
                                 </div>
-                                <h3 className="text-xl font-display font-bold text-foreground mb-3">{service.title}</h3>
-                                <p className="text-sm font-body text-muted-foreground mb-3 leading-relaxed">
+                                <h3 className="text-base font-display font-bold text-foreground mb-3">{service.title}</h3>
+                                <p className="text-base font-body text-muted-foreground mb-3 leading-relaxed">
                                     {service.description}
                                 </p>
                                 <ul className="space-y-2 mb-4">
@@ -92,3 +92,6 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
+
+
+

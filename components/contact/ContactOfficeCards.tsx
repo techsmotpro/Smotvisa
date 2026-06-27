@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail } from "lucide-react";
+﻿import { MapPin, Phone, Mail } from "lucide-react";
 import Link from "next/link";
 import { Office } from "@/data/officeData";
 
@@ -28,14 +28,14 @@ export default function ContactOfficeCards({ offices }: { offices: Office[] }) {
                         <Link
                             key={office.id}
                             href={getOfficeUrl(office.id)}
-                            className="block rounded-2xl border border-border bg-card p-6 hover:border-secondary/30 hover:shadow-lg transition-all"
+                            className="block rounded-xl border border-border bg-card p-6 hover:border-secondary/30 hover:shadow-lg transition-all"
                         >
                             <div className="flex items-start justify-between mb-4">
                                 <div>
                                     <span className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1 block">
                                         {office.city} Office
                                     </span>
-                                    <h3 className="text-xl font-display font-bold leading-tight">
+                                    <h3 className="text-base font-display font-bold leading-tight">
                                         {office.name}
                                     </h3>
                                 </div>
@@ -77,9 +77,9 @@ export default function ContactOfficeCards({ offices }: { offices: Office[] }) {
                         </Link>
                     ))
                 ) : (
-                    <div className="col-span-full rounded-2xl border border-border bg-card p-8 text-center">
+                    <div className="col-span-full rounded-xl border border-border bg-card p-5 text-center">
                         <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                        <h3 className="text-lg font-display font-bold text-foreground mb-2">No offices found</h3>
+                        <h3 className="text-sm font-display font-bold text-foreground mb-2">No offices found</h3>
                         <p className="text-muted-foreground font-body text-sm">
                             Try searching for a different city or location
                         </p>

@@ -1,4 +1,4 @@
-import { MotionDiv, MotionH1, MotionP } from "@/components/ui/MotionWrapper";
+﻿import { MotionDiv, MotionH1, MotionP } from "@/components/ui/MotionWrapper";
 import { Globe, ShieldCheck, BadgeCheck, MapPin, CalendarClock, MessageCircle, Phone } from "lucide-react";
 
 interface Stat {
@@ -32,18 +32,18 @@ export default function HeroContent() {
                 initial={{ opacity: 0, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1 }}
-                className="hero-heading text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6 break-words max-w-full"
+                className="hero-heading text-3xl sm:text-3xl lg:text-4xl font-display font-bold leading-tight mb-6 break-words max-w-full"
                 style={{ color: "hsl(42, 100%, 95%)" }}
             >
-                Trusted{" "}
-                <span className="text-gradient-gold">Visa Consultant in India</span>
+                Best{" "}
+                <span className="text-gradient-gold">Visa Consultants in India</span>
             </MotionH1>
 
             <MotionP
                 initial={{ opacity: 0, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="hero-text text-lg sm:text-xl font-body leading-relaxed mb-8 max-w-xl"
+                className="hero-text text-lg sm:text-sm font-body leading-relaxed mb-8 max-w-xl"
                 style={{ color: "hsla(42, 100%, 95%, 0.8)" }}
             >
                 Expert tourist and business visa assistance for Indian travellers. We prepare your
@@ -62,7 +62,7 @@ export default function HeroContent() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hero-btn-primary inline-flex items-center gap-2 px-7 py-4 font-body font-bold text-sm rounded-full shadow-gold hover:opacity-90 transition-all"
-                    style={{ backgroundColor: "hsl(42, 85%, 55%)", color: "hsl(220, 30%, 12%)" }}
+                    style={{ backgroundColor: "hsl(39, 100%, 55%)", color: "hsl(210, 100%, 12%)" }}
                 >
                     <MessageCircle className="h-4 w-4" />
                     WhatsApp 8904008843
@@ -88,7 +88,7 @@ export default function HeroContent() {
                         key={stat.label}
                         className={`text-center px-1.5 sm:px-2 ${i > 0 ? "border-l border-white/15" : ""}`}
                     >
-                        <div className="hero-stat-value text-base sm:text-xl font-display font-bold leading-none">{stat.value}</div>
+                        <div className="hero-stat-value text-base sm:text-base font-display font-bold leading-none">{stat.value}</div>
                         <div className="hero-stat-label text-[9px] sm:text-[11px] font-body mt-1 leading-tight">{stat.label}</div>
                     </div>
                 ))}
@@ -96,3 +96,6 @@ export default function HeroContent() {
         </div>
     );
 }
+
+
+

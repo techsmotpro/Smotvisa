@@ -1,6 +1,6 @@
-"use client";
+﻿"use client";
 
-import { Facebook, Instagram, Twitter, ArrowUp, MapPin } from "lucide-react";
+import { Facebook, Instagram, ArrowUp, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -26,7 +26,7 @@ const Footer = () => {
             <Link href="/" className="block">
                 <Image src="/logo.png" alt="SmotVisa" width={200} height={85} className="w-auto h-20 mb-4 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-500 hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]" />
             </Link>
-            <p className="text-sm font-body text-primary-foreground/70 leading-relaxed italic">
+            <p className="text-base font-body text-primary-foreground/70 leading-relaxed italic">
               "The status of the customer needs is monitored online with the help of our state of technology."
             </p>
             <div className="flex gap-4">
@@ -47,15 +47,6 @@ const Footer = () => {
                 className="p-2.5 bg-primary-foreground/10 rounded-xl hover:bg-secondary hover:text-secondary-foreground transition-all duration-300"
               >
                 <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="https://twitter.com/smotvisa"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter"
-                className="p-2.5 bg-primary-foreground/10 rounded-xl hover:bg-secondary hover:text-secondary-foreground transition-all duration-300"
-              >
-                <Twitter className="h-5 w-5" />
               </a>
             </div>
           </div>

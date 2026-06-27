@@ -1,4 +1,4 @@
-import { MotionDiv } from "@/components/ui/MotionWrapper";
+﻿import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { Calendar, ArrowRight, User, Clock } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -17,7 +17,7 @@ const BlogSection = () => {
                     className="text-center mb-8"
                 >
                     <span className="text-sm font-body font-semibold text-secondary uppercase tracking-widest">Our Blog</span>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-4">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-foreground mt-3 mb-4">
                         Travel Tips & Insights
                     </h2>
                     <p className="text-muted-foreground font-body max-w-2xl mx-auto">
@@ -33,7 +33,7 @@ const BlogSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="group bg-card rounded-2xl overflow-hidden shadow-card border border-border hover:shadow-elevated transition-all duration-300"
+                            className="group bg-card rounded-xl overflow-hidden shadow-card border border-border hover:shadow-elevated transition-all duration-300"
                         >
                             <div className="relative overflow-hidden aspect-video">
                                 <Link href={`/blog/${blog.slug || blog.id}`} className="block w-full h-full">
@@ -51,11 +51,11 @@ const BlogSection = () => {
                             </div>
                             <div className="p-6">
                                 <Link href={`/blog/${blog.slug || blog.id}`}>
-                                    <h3 className="text-lg font-display font-bold text-foreground mb-2 group-hover:text-secondary transition-colors line-clamp-2">
+                                    <h3 className="text-sm font-display font-bold text-foreground mb-2 group-hover:text-secondary transition-colors line-clamp-2">
                                         {blog.title}
                                     </h3>
                                 </Link>
-                                <p className="text-sm font-body text-muted-foreground mb-4 line-clamp-2">{blog.excerpt}</p>
+                                <p className="text-base font-body text-muted-foreground mb-4 line-clamp-2">{blog.excerpt}</p>
                                 <div className="flex items-center justify-between text-xs font-body text-muted-foreground">
                                     <div className="flex items-center gap-1">
                                         <User className="h-3 w-3" /> {blog.author}
@@ -93,3 +93,5 @@ const BlogSection = () => {
 };
 
 export default BlogSection;
+
+

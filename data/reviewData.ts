@@ -24,7 +24,7 @@ export const fetchReviews = async (): Promise<Review[]> => {
             name: "Bindu Rajesh",
             role: "Tourist",
             location: "Australia Visa",
-            rating: 5,
+            rating: 4,
             comment: "I applied for an Australia tourist visa through Smotvisa and received great support. Their team assisted with financial documentation and the entire process was smooth.",
             date: "2025-01-20"
         },
@@ -42,7 +42,7 @@ export const fetchReviews = async (): Promise<Review[]> => {
             name: "Santhosh P",
             role: "Business Traveler",
             location: "US Visa",
-            rating: 5,
+            rating: 4,
             comment: "I applied for my US B1 visa through Smotvisa's Hari and had a smooth experience. The team guided me through documentation and interview preparation. Very professional and responsive staff. I highly recommend Smotvisa for reliable US visa assistance for Indian citizens.",
             date: "2025-02-01"
         }

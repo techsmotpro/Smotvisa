@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { m as motion } from "framer-motion";
 import { ArrowRight, Star, Clock, Users, MapPin, Camera, Heart, Plane } from "lucide-react";
@@ -21,7 +21,7 @@ const TourPackagesSection = () => {
                     <span className="text-sm font-body font-semibold text-secondary uppercase tracking-widest">
                         Tour Packages
                     </span>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-4">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-foreground mt-3 mb-4">
                         Explore the World with SmotVisa
                     </h2>
                     <p className="text-muted-foreground font-body max-w-2xl mx-auto">
@@ -39,7 +39,7 @@ const TourPackagesSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="group relative rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 bg-card border border-border"
+                            className="group relative rounded-xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 bg-card border border-border"
                         >
                             <div className="aspect-[4/3] relative overflow-hidden">
                                 <Image
@@ -58,34 +58,34 @@ const TourPackagesSection = () => {
                                 <div className="absolute bottom-4 left-4">
                                     <div className="flex items-center gap-2 mb-2">
                                         <CountryFlag emoji={pkg.flag} className="text-2xl" />
-                                        <h3 className="text-lg font-display font-bold text-white">{pkg.destination}</h3>
+                                        <h3 className="text-sm font-display font-bold text-white">{pkg.destination}</h3>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="p-6">
                                 <div className="flex items-center justify-between mb-3">
-                                    <h4 className="text-xl font-display font-bold text-foreground">{pkg.name}</h4>
+                                    <h4 className="text-base font-display font-bold text-foreground">{pkg.name}</h4>
                                     <div className="flex items-center gap-2 text-yellow-500">
                                         <Star className="h-4 w-4 fill-current" />
                                         <span className="text-sm font-body font-semibold">4.8/5</span>
                                     </div>
                                 </div>
 
-                                <p className="text-sm font-body text-muted-foreground mb-4 leading-relaxed">
+                                <p className="text-base font-body text-muted-foreground mb-4 leading-relaxed">
                                     {pkg.description}
                                 </p>
 
                                 <div className="space-y-2 mb-4">
-                                    <div className="flex items-center gap-2 text-sm font-body text-muted-foreground">
+                                    <div className="flex items-center gap-2 text-base font-body text-muted-foreground">
                                         <Clock className="h-4 w-4 text-secondary" />
                                         <span>{pkg.duration}</span>
                                     </div>
-                                    <div className="flex items-center gap-2 text-sm font-body text-muted-foreground">
+                                    <div className="flex items-center gap-2 text-base font-body text-muted-foreground">
                                         <Users className="h-4 w-4 text-secondary" />
                                         <span>{pkg.groupSize}</span>
                                     </div>
-                                    <div className="flex items-center gap-2 text-sm font-body text-muted-foreground">
+                                    <div className="flex items-center gap-2 text-base font-body text-muted-foreground">
                                         <MapPin className="h-4 w-4 text-secondary" />
                                         <span>Best: {pkg.bestTime}</span>
                                     </div>
@@ -113,7 +113,7 @@ const TourPackagesSection = () => {
                 </div>
 
                 {/* Flight Packages Section */}
-                <div className="bg-gradient-to-br from-secondary/5 to-primary/5 rounded-3xl p-8 mb-12 border border-secondary/10">
+                <div className="bg-gradient-to-br from-secondary/5 to-primary/5 rounded-xl p-5 mb-12 border border-secondary/10">
                     <motion.div
                         initial={{ opacity: 0, y: 0 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -124,7 +124,7 @@ const TourPackagesSection = () => {
                             <Plane className="h-5 w-5 text-secondary" />
                             <span className="text-sm font-body font-semibold text-secondary">Flight + Tour Packages</span>
                         </div>
-                        <h3 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-3">
+                        <h3 className="text-lg sm:text-base font-display font-bold text-foreground mb-3">
                             Fly with Comfort, Explore with Joy
                         </h3>
                         <p className="text-muted-foreground font-body max-w-2xl mx-auto">
@@ -145,12 +145,12 @@ const TourPackagesSection = () => {
                                 <div className="flex items-center justify-between mb-2">
                                     <div className="text-center">
                                         <p className="text-xs font-body text-muted-foreground">From</p>
-                                        <p className="text-lg font-display font-bold text-foreground">{route.from}</p>
+                                        <p className="text-sm font-display font-bold text-foreground">{route.from}</p>
                                     </div>
                                     <Plane className="h-4 w-4 text-secondary" />
                                     <div className="text-center">
                                         <p className="text-xs font-body text-muted-foreground">To</p>
-                                        <p className="text-lg font-display font-bold text-foreground">{route.to}</p>
+                                        <p className="text-sm font-display font-bold text-foreground">{route.to}</p>
                                     </div>
                                 </div>
                                 <div className="text-center pt-2 border-t border-blue-100">
@@ -172,14 +172,14 @@ const TourPackagesSection = () => {
                 </div>
 
                 {/* Travel Tips Section */}
-                <div className="bg-card rounded-3xl shadow-card border border-border p-8 mb-12 bg-gradient-to-br from-background to-muted/50">
+                <div className="bg-card rounded-xl shadow-card border border-border p-5 mb-12 bg-gradient-to-br from-background to-muted/50">
                     <motion.div
                         initial={{ opacity: 0, y: 0 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         className="text-center mb-6"
                     >
-                        <h3 className="text-2xl font-display font-bold text-foreground mb-3">Travel Smart with SmotVisa</h3>
+                        <h3 className="text-sm font-display font-bold text-foreground mb-3">Travel Smart with SmotVisa</h3>
                         <p className="text-muted-foreground font-body max-w-2xl mx-auto">
                             Expert tips to make your international travel experience smooth and enjoyable
                         </p>
@@ -198,7 +198,7 @@ const TourPackagesSection = () => {
                                 <div className="w-6 h-6 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center flex-shrink-0 mt-0.5">
                                     <span className="text-xs font-bold">{idx + 1}</span>
                                 </div>
-                                <p className="text-sm font-body text-muted-foreground leading-relaxed">{tip}</p>
+                                <p className="text-base font-body text-muted-foreground leading-relaxed">{tip}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -209,9 +209,9 @@ const TourPackagesSection = () => {
                     initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="bg-gradient-to-r from-primary via-primary-light to-secondary rounded-3xl p-7 text-center text-white shadow-elevated"
+                    className="bg-gradient-to-r from-primary via-primary-light to-secondary rounded-xl p-7 text-center text-white shadow-elevated"
                 >
-                    <h3 className="text-2xl sm:text-3xl font-display font-bold mb-3">
+                    <h3 className="text-lg sm:text-base font-display font-bold mb-3">
                         Ready for Your Next Adventure?
                     </h3>
                     <p className="text-blue-100 font-body max-w-2xl mx-auto mb-6">
@@ -239,3 +239,6 @@ const TourPackagesSection = () => {
 };
 
 export default TourPackagesSection;
+
+
+

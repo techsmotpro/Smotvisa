@@ -1,4 +1,4 @@
-import { MotionDiv } from "@/components/ui/MotionWrapper";
+﻿import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { ArrowLeft, Calendar, User, Clock } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -50,7 +50,7 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost }) {
                                 {blog.category}
                             </span>
                         </div>
-                        <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-8 leading-tight">
+                        <h1 className="text-2xl md:text-6xl font-display font-bold text-foreground mb-8 leading-tight">
                             {blog.title}
                         </h1>
                         <div className="flex flex-wrap items-center gap-8 text-foreground/80 font-body text-base">
@@ -112,3 +112,4 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost }) {
         </div>
     );
 }
+

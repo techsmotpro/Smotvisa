@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { MotionDiv } from "@/components/ui/MotionWrapper";
@@ -20,7 +20,7 @@ export default function VisaFeaturedGrid({ destinations }: { destinations: Desti
         <div className="mb-24">
             <div className="flex items-center gap-3 mb-10">
                 <div className="w-1.5 h-8 bg-secondary rounded-full" />
-                <h2 className="text-3xl font-display font-bold text-foreground">Featured Destinations</h2>
+                <h2 className="text-base font-display font-bold text-foreground">Featured Destinations</h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {destinations.map((dest, idx) => (
@@ -30,7 +30,7 @@ export default function VisaFeaturedGrid({ destinations }: { destinations: Desti
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: idx * 0.1 }}
-                        className="group relative rounded-3xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 bg-card border border-border"
+                        className="group relative rounded-xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 bg-card border border-border"
                     >
                         <Link href={`/visa/${dest.id}-visa-consultant`}>
                             <div className="aspect-[3/4] relative overflow-hidden">
@@ -47,10 +47,10 @@ export default function VisaFeaturedGrid({ destinations }: { destinations: Desti
                                         {dest.category}
                                     </span>
                                 </div>
-                                <div className="absolute bottom-0 left-0 right-0 p-8">
+                                <div className="absolute bottom-0 left-0 right-0 p-5">
                                     <div className="flex items-center gap-2 mb-3">
                                         <CountryFlag emoji={dest.flag} className="text-3xl" />
-                                        <h3 className="text-2xl font-display font-bold text-white">{dest.name}</h3>
+                                        <h3 className="text-sm font-display font-bold text-white">{dest.name}</h3>
                                     </div>
                                     <p className="text-xs font-body text-white/70 mb-6 leading-relaxed">{dest.visaType}</p>
 
@@ -72,3 +72,4 @@ export default function VisaFeaturedGrid({ destinations }: { destinations: Desti
         </div>
     );
 }
+

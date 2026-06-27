@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Search, Star, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -29,7 +29,7 @@ const VisaClient = ({ moreCountries }: VisaClientProps) => {
 
     return (
         <section className="bg-card rounded-[3rem] shadow-elevated border border-border p-6 md:p-6 overflow-hidden relative">
-            <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
+            <div className="absolute top-0 right-0 p-5 opacity-5 pointer-events-none">
                 <svg className="w-80 h-80 text-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                 </svg>
@@ -37,7 +37,7 @@ const VisaClient = ({ moreCountries }: VisaClientProps) => {
 
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-8 relative z-10">
                 <div>
-                    <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">Discover More Countries</h2>
+                    <h2 className="text-xl md:text-5xl font-display font-bold text-foreground mb-4">Discover More Countries</h2>
                     <p className="text-muted-foreground font-body text-lg max-w-xl">
                         Can't find your destination above? We process visas for 50+ countries. Search below or chat with our experts.
                     </p>
@@ -49,7 +49,7 @@ const VisaClient = ({ moreCountries }: VisaClientProps) => {
                         placeholder="Search country or region..."
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="w-full pl-14 pr-6 py-5 rounded-2xl border border-border bg-muted/20 font-body text-base focus:ring-2 focus:ring-secondary/30 outline-none transition-all shadow-sm"
+                        className="w-full pl-14 pr-6 py-5 rounded-xl border border-border bg-muted/20 font-body text-base focus:ring-2 focus:ring-secondary/30 outline-none transition-all shadow-sm"
                     />
                 </div>
             </div>
@@ -59,9 +59,9 @@ const VisaClient = ({ moreCountries }: VisaClientProps) => {
                     <Link
                         key={country.name}
                         href="/contact"
-                        className="flex flex-col items-center gap-3 p-8 bg-muted/10 rounded-2xl border border-border/50 hover:border-secondary/30 hover:bg-secondary/5 hover:shadow-card transition-all text-center group"
+                        className="flex flex-col items-center gap-3 p-5 bg-muted/10 rounded-xl border border-border/50 hover:border-secondary/30 hover:bg-secondary/5 hover:shadow-card transition-all text-center group"
                     >
-                        <CountryFlag emoji={country.flag} className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300" />
+                        <CountryFlag emoji={country.flag} className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300" />
                         <span className="text-sm font-display font-bold text-foreground group-hover:text-secondary transition-colors">{country.name}</span>
                         <span className="text-[10px] font-display font-bold text-muted-foreground uppercase tracking-widest">{country.category}</span>
                     </Link>
@@ -69,7 +69,7 @@ const VisaClient = ({ moreCountries }: VisaClientProps) => {
             </div>
 
             {filteredCountries.length === 0 && (
-                <div className="text-center py-14 border-2 border-dashed border-border rounded-3xl">
+                <div className="text-center py-14 border-2 border-dashed border-border rounded-xl">
                     <p className="text-xl text-muted-foreground font-display font-bold italic">No countries match your search. Contact us for custom assistance!</p>
                 </div>
             )}

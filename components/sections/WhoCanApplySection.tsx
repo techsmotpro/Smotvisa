@@ -1,4 +1,4 @@
-import { MotionDiv } from "@/components/ui/MotionWrapper";
+﻿import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { Users, Info } from "lucide-react";
 
 const applicants = [
@@ -21,7 +21,7 @@ const WhoCanApplySection = () => {
                     className="text-center mb-12 max-w-2xl mx-auto"
                 >
                     <span className="text-sm font-body font-semibold text-secondary uppercase tracking-widest">Who Can Apply</span>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-4">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-foreground mt-3 mb-4">
                         Made for Genuine Short-Term Travel
                     </h2>
                     <p className="text-muted-foreground font-body">
@@ -37,7 +37,7 @@ const WhoCanApplySection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.06 }}
-                            className="flex items-start gap-4 p-5 bg-card rounded-2xl border border-border"
+                            className="flex items-start gap-4 p-5 bg-card rounded-xl border border-border"
                         >
                             <div className="w-10 h-10 shrink-0 rounded-xl bg-secondary/10 flex items-center justify-center">
                                 <Users className="h-5 w-5 text-secondary" />
@@ -51,10 +51,10 @@ const WhoCanApplySection = () => {
                     initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="max-w-4xl mx-auto flex items-start gap-4 p-6 rounded-2xl border border-secondary/30 bg-secondary/10"
+                    className="max-w-4xl mx-auto flex items-start gap-4 p-6 rounded-xl border border-secondary/30 bg-secondary/10"
                 >
                     <Info className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-                    <p className="text-sm font-body text-foreground leading-relaxed">
+                    <p className="text-base font-body text-foreground leading-relaxed">
                         <strong>Please note:</strong> SmotVisa assists with tourist and business (short-stay) visas only. We do not handle immigration, permanent residency, work visas, study visas or job placement. If your travel is genuine and short-term, we can almost certainly help.
                     </p>
                 </MotionDiv>
@@ -64,3 +64,6 @@ const WhoCanApplySection = () => {
 };
 
 export default WhoCanApplySection;
+
+
+

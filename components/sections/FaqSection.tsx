@@ -1,4 +1,4 @@
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+﻿import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import JsonLd from "@/components/ui/JsonLd";
 
 const faqs: { q: string; a: string }[] = [
@@ -60,7 +60,7 @@ const faqs: { q: string; a: string }[] = [
     },
     {
         q: "How do I get started?",
-        a: "Message us on WhatsApp at 8904008843, call +91 8904008843, or email dm@smotvisa.com. We'll do a quick free assessment and tell you the right next step.",
+        a: "Message us on WhatsApp at 8904008843, call +91 8904008843. We'll do a quick free assessment and tell you the right next step.",
     },
     {
         q: "What if my travel dates are very soon?",
@@ -88,7 +88,7 @@ const FaqSection = () => {
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12 max-w-2xl mx-auto">
                     <span className="text-sm font-body font-semibold text-secondary uppercase tracking-widest">FAQ</span>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-4">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-foreground mt-3 mb-4">
                         Frequently Asked Questions
                     </h2>
                     <p className="text-muted-foreground font-body">
@@ -96,19 +96,29 @@ const FaqSection = () => {
                     </p>
                 </div>
 
-                <div className="max-w-3xl mx-auto bg-card rounded-3xl border border-border shadow-card p-6 sm:p-8">
-                    <Accordion type="single" collapsible className="w-full">
-                        {faqs.map((faq, idx) => (
-                            <AccordionItem key={faq.q} value={`faq-${idx}`}>
-                                <AccordionTrigger className="text-base font-display font-bold text-foreground py-4 hover:no-underline">
-                                    {faq.q}
-                                </AccordionTrigger>
-                                <AccordionContent className="text-sm font-body text-muted-foreground leading-relaxed">
-                                    {faq.a}
-                                </AccordionContent>
-                            </AccordionItem>
-                        ))}
-                    </Accordion>
+                <div className="max-w-4xl mx-auto">
+
+                    {/* Accordion */}
+                    <div className="bg-white rounded-xl border border-border shadow-md overflow-hidden">
+                        <Accordion type="single" collapsible className="w-full">
+                            {faqs.map((faq, idx) => (
+                                <AccordionItem key={faq.q} value={`faq-${idx}`} className="border-b border-border last:border-0">
+                                    <AccordionTrigger className="px-5 py-4 hover:no-underline hover:bg-muted/30 transition-colors group">
+                                        <div className="flex items-center gap-3 text-left">
+                                            <span className="text-xs font-display font-bold text-secondary bg-secondary/10 rounded-md w-6 h-6 flex items-center justify-center shrink-0">
+                                                {String(idx + 1).padStart(2, "0")}
+                                            </span>
+                                            <span className="text-sm font-display font-bold text-foreground">{faq.q}</span>
+                                        </div>
+                                    </AccordionTrigger>
+                                    <AccordionContent className="px-5 pb-4 text-base font-body text-muted-foreground leading-relaxed pl-14">
+                                        {faq.a}
+                                    </AccordionContent>
+                                </AccordionItem>
+                            ))}
+                        </Accordion>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -116,3 +126,6 @@ const FaqSection = () => {
 };
 
 export default FaqSection;
+
+
+

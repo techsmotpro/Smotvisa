@@ -1,5 +1,5 @@
-import { MotionDiv } from "@/components/ui/MotionWrapper";
-import { AlertTriangle, ArrowRight } from "lucide-react";
+﻿import { MotionDiv } from "@/components/ui/MotionWrapper";
+import { AlertTriangle, ArrowRight, XCircle } from "lucide-react";
 import Link from "next/link";
 
 const reasons = [
@@ -24,7 +24,7 @@ const RejectionReasonsSection = () => {
                     className="text-center mb-12 max-w-2xl mx-auto"
                 >
                     <span className="text-sm font-body font-semibold text-secondary uppercase tracking-widest">Avoid The Pitfalls</span>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-4">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-foreground mt-3 mb-4">
                         Common Reasons Visas Get Rejected
                     </h2>
                     <p className="text-muted-foreground font-body">
@@ -32,27 +32,37 @@ const RejectionReasonsSection = () => {
                     </p>
                 </MotionDiv>
 
-                <div className="grid sm:grid-cols-2 gap-4 max-w-5xl mx-auto mb-10">
+                <MotionDiv
+                    initial={{ opacity: 0, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="max-w-4xl mx-auto mb-10 rounded-xl border border-border overflow-hidden shadow-md"
+                >
+                    {/* Table header */}
+                    <div className="grid grid-cols-[2.5rem_1fr] bg-primary px-5 py-3">
+                        <span className="text-xs font-body font-bold text-primary-foreground/60 uppercase tracking-widest">#</span>
+                        <span className="text-xs font-body font-bold text-primary-foreground/60 uppercase tracking-widest">Common Rejection Reason</span>
+                    </div>
+
+                    {/* Table rows */}
                     {reasons.map((reason, idx) => (
-                        <MotionDiv
+                        <div
                             key={reason}
-                            initial={{ opacity: 0, y: 0 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: idx * 0.05 }}
-                            className="flex items-start gap-4 p-5 bg-card rounded-2xl border border-border"
+                            className={`grid grid-cols-[2.5rem_1fr] items-start px-5 py-3.5 border-b border-border last:border-0 ${idx % 2 === 0 ? "bg-white" : "bg-muted/30"}`}
                         >
-                            <AlertTriangle className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-                            <p className="text-sm font-body text-foreground leading-relaxed">{reason}</p>
-                        </MotionDiv>
+                            <div className="flex items-center justify-center w-6 h-6 rounded-full bg-red-50 border border-red-200 mt-0.5">
+                                <XCircle className="h-3.5 w-3.5 text-red-500" />
+                            </div>
+                            <p className="text-base font-body text-foreground leading-relaxed">{reason}</p>
+                        </div>
                     ))}
-                </div>
+                </MotionDiv>
 
                 <MotionDiv
                     initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="max-w-5xl mx-auto rounded-3xl border border-secondary/30 bg-secondary/10 p-6 sm:p-8 text-center"
+                    className="max-w-5xl mx-auto rounded-xl border border-secondary/30 bg-secondary/10 p-6 sm:p-6 text-center"
                 >
                     <p className="text-base font-body text-foreground leading-relaxed mb-5">
                         If you&apos;ve already been refused, don&apos;t panic and don&apos;t reapply blindly. Our visa rejection guidance reviews what went wrong and helps you build a stronger, properly explained fresh application.
@@ -70,3 +80,6 @@ const RejectionReasonsSection = () => {
 };
 
 export default RejectionReasonsSection;
+
+
+

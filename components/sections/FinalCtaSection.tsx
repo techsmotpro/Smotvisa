@@ -1,4 +1,4 @@
-import { MotionDiv } from "@/components/ui/MotionWrapper";
+﻿import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { MessageCircle, Phone, Mail } from "lucide-react";
 
 const FinalCtaSection = () => {
@@ -16,13 +16,13 @@ const FinalCtaSection = () => {
                     className="max-w-3xl mx-auto text-center"
                 >
                     <h2
-                        className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-6 leading-tight"
+                        className="text-xl sm:text-2xl md:text-3xl font-display font-bold mb-6 leading-tight"
                         style={{ color: "hsl(42, 100%, 95%)" }}
                     >
                         Ready to Apply With <span className="text-gradient-gold">Confidence?</span>
                     </h2>
                     <p
-                        className="text-lg font-body leading-relaxed mb-4"
+                        className="text-sm font-body leading-relaxed mb-4"
                         style={{ color: "hsla(42, 100%, 95%, 0.8)" }}
                     >
                         Don&apos;t leave your trip to chance or to guesswork. Let SmotVisa prepare and review your tourist or business visa application so you can focus on the journey, not the paperwork.
@@ -53,14 +53,6 @@ const FinalCtaSection = () => {
                             <Phone className="h-4 w-4" />
                             Call +91 8904008843
                         </a>
-                        <a
-                            href="mailto:dm@smotvisa.com"
-                            className="inline-flex items-center gap-2 px-7 py-4 font-body font-bold text-sm rounded-full border-2 transition-all hover:bg-white/10"
-                            style={{ borderColor: "hsla(42, 100%, 95%, 0.5)", color: "hsl(42, 100%, 95%)" }}
-                        >
-                            <Mail className="h-4 w-4" />
-                            dm@smotvisa.com
-                        </a>
                     </div>
 
                     <p className="text-sm font-body" style={{ color: "hsla(42, 100%, 95%, 0.7)" }}>
@@ -73,3 +65,6 @@ const FinalCtaSection = () => {
 };
 
 export default FinalCtaSection;
+
+
+

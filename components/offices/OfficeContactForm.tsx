@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Loader2, MessageCircle } from "lucide-react";
 import { useState } from "react";
@@ -51,7 +51,7 @@ export default function OfficeContactForm() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
-        <h3 className="text-xl font-display font-bold text-foreground mb-4">Contact Us</h3>
+        <h3 className="text-base font-display font-bold text-foreground mb-4">Contact Us</h3>
 
         <FormField
           control={form.control}

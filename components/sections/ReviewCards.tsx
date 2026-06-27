@@ -1,4 +1,4 @@
-import { MotionDiv } from "@/components/ui/MotionWrapper";
+﻿import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { fetchReviews } from "@/data/reviewData";
@@ -54,7 +54,7 @@ const ReviewCards = async () => {
                     className="text-center mb-8"
                 >
                     <span className="text-sm font-body font-semibold text-secondary uppercase tracking-widest">What Our Clients Say</span>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-4">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-foreground mt-3 mb-4">
                         Client Testimonials
                     </h2>
                     <p className="text-muted-foreground font-body max-w-2xl mx-auto">
@@ -72,7 +72,7 @@ const ReviewCards = async () => {
                             transition={{ delay: idx * 0.1 }}
                             className="group"
                         >
-                            <Card className="h-full bg-card rounded-2xl overflow-hidden shadow-card border border-border hover:shadow-elevated transition-all duration-300">
+                            <Card className="h-full bg-card rounded-xl overflow-hidden shadow-card border border-border hover:shadow-elevated transition-all duration-300">
                                 <CardContent className="p-6">
                                     {/* Google icon + Verified badge */}
                                     <div className="flex items-center gap-2 mb-3">
@@ -109,7 +109,7 @@ const ReviewCards = async () => {
                                             <h4 className="font-display font-bold text-foreground truncate">
                                                 {review.name}
                                             </h4>
-                                            <p className="text-sm font-body text-muted-foreground truncate">
+                                            <p className="text-base font-body text-muted-foreground truncate">
                                                 {review.role} &middot; {review.location}
                                             </p>
                                         </div>
@@ -125,3 +125,5 @@ const ReviewCards = async () => {
 };
 
 export default ReviewCards;
+
+

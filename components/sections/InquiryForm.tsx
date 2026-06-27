@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { m as motion } from "framer-motion";
 import { Send, Loader2 } from "lucide-react";
@@ -14,7 +14,7 @@ import { submitForm } from "@/lib/submitForm";
 const inquirySchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email"),
-  phone: z.string().optional(),
+  phone: z.string().min(7, "Please enter a valid phone number"),
   service: z.string().optional(),
   message: z.string().optional(),
 });
@@ -31,7 +31,7 @@ const serviceOptions = [
 
 const inputClasses =
   "w-full px-4 py-3 rounded-xl border border-border bg-muted/30 text-foreground font-body text-sm focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition-all placeholder:text-muted-foreground/50";
-const labelClasses = "text-[10px] font-body font-bold text-muted-foreground uppercase tracking-[0.2em] ml-1";
+const labelClasses = "text-xs font-body font-semibold text-foreground/70";
 
 const InquiryForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -46,7 +46,7 @@ const InquiryForm = () => {
     const result = await submitForm({
       name: values.name,
       email: values.email,
-      phone: values.phone,
+      phone: values.phone ?? "",
       service: values.service || "Not specified",
       message: values.message || "No additional details",
     });
@@ -68,15 +68,15 @@ const InquiryForm = () => {
       className="w-full max-w-lg lg:ml-auto"
     >
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="bg-card/90 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/10 p-5 md:p-6 space-y-4">
-          <h3 className="text-xl font-display font-bold text-foreground">Send an Inquiry</h3>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="bg-card/90 backdrop-blur-sm rounded-xl shadow-2xl border border-white/10 p-5 md:p-6 space-y-4">
+          <h3 className="text-base font-display font-bold text-foreground">Send an Inquiry</h3>
 
           <FormField
             control={form.control}
             name="name"
             render={({ field }) => (
               <FormItem className="space-y-1">
-                <FormLabel className={labelClasses}>Full Name</FormLabel>
+                <FormLabel className={labelClasses}>Full Name <span className="text-red-500">*</span></FormLabel>
                 <FormControl>
                   <input {...field} className={inputClasses} placeholder="Enter your name" />
                 </FormControl>
@@ -91,7 +91,7 @@ const InquiryForm = () => {
               name="email"
               render={({ field }) => (
                 <FormItem className="space-y-1">
-                  <FormLabel className={labelClasses}>Email Address</FormLabel>
+                  <FormLabel className={labelClasses}>Email Address <span className="text-red-500">*</span></FormLabel>
                   <FormControl>
                     <input {...field} type="email" className={inputClasses} placeholder="name@example.com" />
                   </FormControl>
@@ -104,7 +104,7 @@ const InquiryForm = () => {
               name="phone"
               render={({ field }) => (
                 <FormItem className="space-y-1">
-                  <FormLabel className={labelClasses}>Phone Number</FormLabel>
+                  <FormLabel className={labelClasses}>Phone Number <span className="text-red-500">*</span></FormLabel>
                   <FormControl>
                     <input {...field} type="tel" className={inputClasses} placeholder="+91 00000 00000" />
                   </FormControl>
@@ -161,9 +161,9 @@ const InquiryForm = () => {
           </button>
         </form>
       </Form>
-
     </motion.div>
   );
 };
 
 export default InquiryForm;
+

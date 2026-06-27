@@ -85,6 +85,7 @@ export default function AirTicketingPage() {
                 title="Airline Ticket Booking"
                 description="Best Fares on Every Route, Domestic and International. One trusted partner for your visa and your flights — SmotVisa books competitive air tickets on all major airlines."
                 breadcrumbs={[{ label: "Air Ticketing" }]}
+                bgImage="/images/airport-tarmac-hero.webp"
             />
 
             {/* Intro */}
@@ -109,31 +110,31 @@ export default function AirTicketingPage() {
             </section>
 
             {/* Why Book */}
-            <section className="py-14 bg-gradient-to-b from-background to-secondary/5">
-                <div className="container mx-auto px-4">
-                    <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-8">
-                        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Why Book Flights With SmotVisa</h2>
+            <section className="py-10 bg-muted/20 border-y border-border">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <MotionDiv initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-6">
+                        <span className="text-xs font-body font-semibold text-secondary uppercase tracking-widest">Why SmotVisa</span>
+                        <h2 className="text-xl sm:text-2xl font-display font-bold text-foreground mt-2">Why Book Flights With SmotVisa</h2>
                     </MotionDiv>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div className="grid md:grid-cols-2 gap-3">
                         {whyBook.map((item, idx) => (
-                            <MotionDiv
-                                key={idx}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: idx * 0.08 }}
-                                className="bg-card rounded-2xl shadow-card border-l-4 border-secondary/50 border-r border-y border-border p-6 hover:shadow-elevated transition-all group"
-                            >
-                                <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary/20 transition-colors">
-                                    <item.icon className="h-6 w-6 text-secondary" />
+                            <MotionDiv key={idx} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: idx * 0.06 }}
+                                className="flex items-start gap-4 p-4 rounded-lg bg-white border border-border/50">
+                                <item.icon className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
+                                <div>
+                                    <h3 className="text-sm font-display font-bold text-foreground mb-0.5">{item.title}</h3>
+                                    <p className="text-sm font-body text-foreground/70 leading-relaxed">{item.desc}</p>
                                 </div>
-                                <h3 className="text-lg font-display font-bold text-foreground mb-2">{item.title}</h3>
-                                <p className="text-muted-foreground font-body text-sm leading-relaxed italic">{item.desc}</p>
                             </MotionDiv>
                         ))}
                     </div>
                 </div>
             </section>
+
+            {/* Airport lounge image */}
+            <div className="w-full h-56 sm:h-72 overflow-hidden border-y border-border">
+                <img src="/images/airport-lounge.webp" alt="Passengers waiting in modern airport departure lounge" width={900} height={400} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+            </div>
 
             {/* What We Book */}
             <section className="py-14 bg-background">
@@ -158,6 +159,11 @@ export default function AirTicketingPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Airport boarding image */}
+            <div className="w-full h-56 sm:h-72 overflow-hidden border-y border-border">
+                <img src="/images/airport-boarding.webp" alt="Passengers boarding flight on tarmac" width={900} height={400} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+            </div>
 
             {/* How It Works */}
             <section className="py-14 bg-gradient-to-b from-background to-secondary/5">

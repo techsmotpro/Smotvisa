@@ -1,4 +1,4 @@
-import { MotionDiv } from "@/components/ui/MotionWrapper";
+﻿import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -33,7 +33,7 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                         transition={{ duration: 0.6 }}
                         className="relative"
                     >
-                        <div className="rounded-3xl overflow-hidden shadow-elevated relative h-[500px] md:h-[600px]">
+                        <div className="rounded-xl overflow-hidden shadow-elevated relative h-[500px] md:h-[600px]">
                             <Image
                                 src="/images/travelers-9_2z2QtE.webp"
                                 alt="Travellers assisted by SmotVisa"
@@ -42,8 +42,8 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                                 sizes="(max-width: 1024px) 100vw, 50vw"
                             />
                         </div>
-                        <div className="absolute bottom-4 right-4 md:-bottom-8 md:-right-8 bg-secondary text-secondary-foreground p-6 md:p-6 rounded-2xl md:rounded-3xl shadow-gold font-body border-4 border-card">
-                            <div className="text-3xl md:text-5xl font-display font-bold mb-1">98%</div>
+                        <div className="absolute bottom-4 right-4 md:-bottom-8 md:-right-8 bg-secondary text-secondary-foreground p-6 md:p-6 rounded-xl md:rounded-xl shadow-gold font-body border-4 border-card">
+                            <div className="text-xl md:text-5xl font-display font-bold mb-1">98%</div>
                             <div className="text-xs md:text-sm font-bold uppercase tracking-widest text-secondary-foreground/80">Visa Success Rate</div>
                         </div>
                     </MotionDiv>
@@ -55,20 +55,18 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                         transition={{ duration: 0.6 }}
                     >
                         <span className="text-sm font-body font-semibold text-secondary uppercase tracking-widest">About SmotVisa</span>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-6 leading-tight break-words">
+                        <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-foreground mt-3 mb-6 leading-tight break-words">
                             Visas Are <span className="text-secondary">All We Do</span>
                         </h2>
 
-                        <div className="space-y-6 text-muted-foreground font-body text-lg leading-relaxed mb-8">
+                        <div className="space-y-4 text-muted-foreground font-body text-sm leading-relaxed mb-8">
                             <p>
                                 SmotVisa is a specialist visa assistance and travel documentation consultancy based in India,
                                 helping travellers across the country secure tourist and business visas without the stress,
                                 confusion and costly mistakes that derail so many applications.
                             </p>
                             <p>
-                                We are not a general travel agency and we are not an immigration firm. Visas are all we do —
-                                and that single-minded focus is exactly why travellers trust us with one of the most important
-                                parts of their trip.
+                                We are not a general travel agency and we are not an immigration firm. Visas are all we do, and that single-minded focus is exactly why travellers trust us with one of the most important parts of their trip.
                             </p>
 
                             {isFull && (
@@ -104,7 +102,7 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                             ))}
                         </div>
 
-                        <h3 className="text-lg font-display font-bold text-foreground mb-4">What we do</h3>
+                        <h3 className="text-sm font-display font-bold text-foreground mb-4">What we do</h3>
                         <div className="grid gap-y-3 mb-10">
                             {whatWeDo.map((item) => (
                                 <div key={item} className="flex items-start gap-3">
@@ -157,9 +155,9 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                className="p-6 bg-card rounded-3xl border border-border hover:border-secondary/30 hover:shadow-elevated transition-all duration-300 group"
+                                className="p-6 bg-card rounded-xl border border-border hover:border-secondary/30 hover:shadow-elevated transition-all duration-300 group"
                             >
-                                <h3 className="text-2xl font-display font-bold text-foreground mb-4">{item.title}</h3>
+                                <h3 className="text-sm font-display font-bold text-foreground mb-4">{item.title}</h3>
                                 <p className="text-muted-foreground font-body leading-relaxed">{item.desc}</p>
                             </MotionDiv>
                         ))}
@@ -171,3 +169,5 @@ const AboutSection = ({ isFull = false }: { isFull?: boolean }) => {
 };
 
 export default AboutSection;
+
+

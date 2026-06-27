@@ -1,5 +1,5 @@
-import { MotionDiv } from "@/components/ui/MotionWrapper";
-import { MessageCircle, Plane, Briefcase, FolderCheck, SearchCheck, CalendarCheck, FileText, RotateCcw } from "lucide-react";
+﻿import { MotionDiv } from "@/components/ui/MotionWrapper";
+import { MessageCircle, Plane, Briefcase, SearchCheck, CalendarCheck, FileText, RotateCcw } from "lucide-react";
 
 const services = [
     {
@@ -11,11 +11,6 @@ const services = [
         icon: Briefcase,
         title: "Business Visa Assistance",
         description: "Invitation letters, employer cover letters and supporting documents for meetings, conferences and trade fairs.",
-    },
-    {
-        icon: FolderCheck,
-        title: "Visa Documentation Support",
-        description: "A personalised checklist for your destination, with help arranging and formatting every document correctly.",
     },
     {
         icon: SearchCheck,
@@ -50,7 +45,7 @@ const VisaAssistanceSection = () => {
                     className="text-center mb-12"
                 >
                     <span className="text-sm font-body font-semibold text-secondary uppercase tracking-widest">Visa Assistance We Provide</span>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-4">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-foreground mt-3 mb-4">
                         Full Support, By Visa Type
                     </h2>
                     <p className="text-muted-foreground font-body max-w-2xl mx-auto">
@@ -58,7 +53,7 @@ const VisaAssistanceSection = () => {
                     </p>
                 </MotionDiv>
 
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {services.map((service, idx) => (
                         <MotionDiv
                             key={service.title}
@@ -66,13 +61,16 @@ const VisaAssistanceSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.06 }}
-                            className="p-6 bg-card rounded-2xl shadow-card border border-border group hover:shadow-elevated hover:border-secondary/30 transition-all"
                         >
-                            <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors duration-500">
-                                <service.icon className="h-6 w-6 text-secondary group-hover:text-secondary-foreground" />
+                            <div className="flex items-start gap-4 p-5 bg-white rounded-xl border border-border shadow-md h-full hover:shadow-elevated hover:-translate-y-1 hover:border-secondary/50 transition-all duration-300">
+                                <div className="w-9 h-9 shrink-0 rounded-lg bg-secondary/15 flex items-center justify-center mt-0.5">
+                                    <service.icon className="h-4 w-4 text-secondary" />
+                                </div>
+                                <div>
+                                    <h3 className="text-base font-display font-bold text-foreground mb-1">{service.title}</h3>
+                                    <p className="text-base font-body text-muted-foreground leading-relaxed">{service.description}</p>
+                                </div>
                             </div>
-                            <h3 className="text-xl font-display font-bold text-foreground mb-2">{service.title}</h3>
-                            <p className="text-sm font-body text-muted-foreground leading-relaxed">{service.description}</p>
                         </MotionDiv>
                     ))}
                 </div>
@@ -102,3 +100,5 @@ const VisaAssistanceSection = () => {
 };
 
 export default VisaAssistanceSection;
+
+

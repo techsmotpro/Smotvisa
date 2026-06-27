@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { m as motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, Phone, Mail } from "lucide-react";
+import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import Image from "next/image";
@@ -54,16 +54,17 @@ const Navbar = () => {
 
     return (
         <>
+            <div className="fixed top-0 left-0 w-full z-[9999]">
             {/* Main nav */}
-            <nav className="fixed top-0 left-0 w-full z-[9999] bg-primary/95 backdrop-blur-md shadow-card border-b border-primary-foreground/10">
-                <div className="container mx-auto flex items-center justify-between px-4 py-5">
+            <nav className="bg-primary/95 backdrop-blur-md shadow-card border-b border-primary-foreground/10">
+                <div className="container mx-auto flex items-center justify-between px-4 py-4">
                     <Link href="/" onClick={handleLinkClick} className="flex items-center gap-3 navbar-logo-container">
                         <Image
                             src="/logo.png"
                             alt="SmotVisa"
                             width={200}
                             height={85}
-                            className="w-auto h-20"
+                            className="w-auto h-16"
                         />
                     </Link>
 
@@ -174,9 +175,15 @@ const Navbar = () => {
                     <div className="hidden xl:block">
                         <a
                             href="tel:+918904008843"
-                            className="px-6 py-2.5 bg-secondary text-secondary-foreground font-body font-bold rounded-full hover:opacity-90 transition-all shadow-gold whitespace-nowrap"
+                            className="flex items-center gap-2.5 px-4 py-2 bg-secondary text-secondary-foreground rounded-full hover:opacity-90 transition-all shadow-gold"
                         >
-                            CALL NOW : +91-8904008843
+                            <div className="w-7 h-7 rounded-full bg-secondary-foreground/10 flex items-center justify-center shrink-0">
+                                <Phone className="h-3.5 w-3.5" />
+                            </div>
+                            <div className="leading-tight">
+                                <div className="text-[10px] font-body font-semibold uppercase tracking-widest opacity-75">Call Now</div>
+                                <div className="text-sm font-display font-bold">+91-8904008843</div>
+                            </div>
                         </a>
                     </div>
 
@@ -309,6 +316,7 @@ const Navbar = () => {
                     )}
                 </AnimatePresence>
             </nav>
+            </div>
         </>
     );
 };

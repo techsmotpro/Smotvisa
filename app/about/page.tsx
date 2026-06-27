@@ -68,6 +68,7 @@ export default function About() {
         title="About SmotVisa"
         description="India's specialist tourist & business visa consultancy — trusted since 2019, with a 98% success rate across 50+ countries."
         breadcrumbs={[{ label: "About Us" }]}
+        bgImage="/images/flags-bg.jpg"
       />
       <div className="bg-yellow-50 border-b border-yellow-200">
         <div className="container mx-auto px-4 py-3 text-center">

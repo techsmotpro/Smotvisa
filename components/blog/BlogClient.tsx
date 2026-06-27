@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { m as motion } from "framer-motion";
@@ -79,7 +79,7 @@ export default function BlogClient({ blogs }: { blogs: BlogPostSummary[] }) {
                             placeholder="Search articles..."
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
-                            className="w-full pl-14 pr-6 py-4 rounded-2xl border border-border bg-card font-body text-sm focus:ring-2 focus:ring-secondary/30 outline-none transition-all shadow-sm"
+                            className="w-full pl-14 pr-6 py-4 rounded-xl border border-border bg-card font-body text-sm focus:ring-2 focus:ring-secondary/30 outline-none transition-all shadow-sm"
                         />
                     </div>
                 </div>
@@ -93,7 +93,7 @@ export default function BlogClient({ blogs }: { blogs: BlogPostSummary[] }) {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="group bg-card rounded-3xl overflow-hidden shadow-card border border-border hover:shadow-elevated transition-all duration-300 flex flex-col h-full"
+                            className="group bg-card rounded-xl overflow-hidden shadow-card border border-border hover:shadow-elevated transition-all duration-300 flex flex-col h-full"
                         >
                             <Link href={`/blog/${blog.slug || blog.id}`} className="block overflow-hidden h-64 relative">
                                 <Image
@@ -108,7 +108,7 @@ export default function BlogClient({ blogs }: { blogs: BlogPostSummary[] }) {
                                 </div>
                             </Link>
 
-                            <div className="p-8 flex flex-col flex-grow">
+                            <div className="p-5 flex flex-col flex-grow">
                                 <div className="flex items-center gap-4 text-muted-foreground text-xs font-body mb-4">
                                     <div className="flex items-center gap-1.5 font-semibold">
                                         <Calendar className="h-3.5 w-3.5 text-secondary" />
@@ -121,7 +121,7 @@ export default function BlogClient({ blogs }: { blogs: BlogPostSummary[] }) {
                                 </div>
 
                                 <Link href={`/blog/${blog.slug || blog.id}`}>
-                                    <h3 className="text-xl md:text-2xl font-display font-bold text-foreground mb-4 group-hover:text-secondary transition-colors line-clamp-2 leading-tight">
+                                    <h3 className="text-xl md:text-base font-display font-bold text-foreground mb-4 group-hover:text-secondary transition-colors line-clamp-2 leading-tight">
                                         {blog.title}
                                     </h3>
                                 </Link>

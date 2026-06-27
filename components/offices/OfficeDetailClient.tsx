@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { Office } from "@/data/officeData";
 import { MapPin, Phone, Mail, Globe, ArrowLeft, CheckCircle2, Building2, Info, ArrowRight } from "lucide-react";
 import { MotionDiv } from "@/components/ui/MotionWrapper";
@@ -32,7 +32,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                             <div className="flex items-center gap-3 text-secondary font-display font-bold uppercase tracking-[0.2em] text-xs mb-6">
                                 <MapPin className="h-4 w-4" /> {office.city} Office
                             </div>
-                            <h1 className="text-4xl md:text-7xl font-display font-bold text-white mb-6 leading-tight">
+                            <h1 className="text-2xl md:text-7xl font-display font-bold text-white mb-6 leading-tight">
                                 {office.name}
                             </h1>
                             <p className="text-lg md:text-xl text-white/70 font-body max-w-2xl leading-relaxed">
@@ -42,7 +42,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                             <div className="mt-6">
                                 <Link
                                     href={`tel:${office.phone[0].replace(/\D/g, '')}`}
-                                    className="inline-flex items-center gap-3 px-6 py-4 bg-secondary text-secondary-foreground font-display font-bold text-base rounded-2xl shadow-gold hover:translate-y-[-2px] transition-all"
+                                    className="inline-flex items-center gap-3 px-6 py-4 bg-secondary text-secondary-foreground font-display font-bold text-base rounded-xl shadow-gold hover:translate-y-[-2px] transition-all"
                                 >
                                     <Phone className="h-5 w-5" />
                                     Reach us : {office.phone[0]}
@@ -54,7 +54,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                             initial={{ opacity: 0, x: 0 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 0.3 }}
-                            className="bg-card/90 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/10 p-4 md:p-6 text-black"
+                            className="bg-card/90 backdrop-blur-sm rounded-xl shadow-2xl border border-white/10 p-4 md:p-6 text-black"
                         >
                             <OfficeContactForm />
                         </MotionDiv>
@@ -75,7 +75,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                         >
                             <div className="flex items-center gap-4">
                                 <div className="w-1.5 h-10 bg-secondary rounded-full" />
-                                <h2 className="text-3xl font-display font-bold text-foreground">Mission Overview</h2>
+                                <h2 className="text-base font-display font-bold text-foreground">Mission Overview</h2>
                             </div>
                             <p className="text-xl text-muted-foreground font-body leading-relaxed border-l-4 border-muted pl-8 italic">
                                 {office.description}
@@ -83,7 +83,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
 
                             <div className="grid md:grid-cols-2 gap-6 pt-6">
                                 {office.features.map((feature, index) => (
-                                    <div key={index} className="flex items-center gap-4 p-6 bg-muted/20 rounded-2xl border border-border group hover:border-secondary/30 transition-all">
+                                    <div key={index} className="flex items-center gap-4 p-6 bg-muted/20 rounded-xl border border-border group hover:border-secondary/30 transition-all">
                                         <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 group-hover:bg-secondary transition-colors duration-500">
                                             <CheckCircle2 className="h-5 w-5 text-secondary group-hover:text-secondary-foreground" />
                                         </div>
@@ -104,14 +104,14 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                                 <Building2 className="w-48 h-48" />
                             </div>
                             <div className="relative z-10 space-y-8">
-                                <h2 className="text-4xl font-display font-bold leading-tight">Our Professional Commitment</h2>
+                                <h2 className="text-base font-display font-bold leading-tight">Our Professional Commitment</h2>
                                 <p className="text-primary-foreground/80 font-body text-lg leading-relaxed max-w-3xl">
                                     {office.aboutOrg}
                                 </p>
                                 <div className="pt-6">
                                     <Link
                                         href="/about"
-                                        className="inline-flex items-center gap-3 px-10 py-5 bg-secondary text-secondary-foreground font-display font-bold rounded-2xl shadow-gold hover:translate-y-[-2px] transition-all group"
+                                        className="inline-flex items-center gap-3 px-10 py-5 bg-secondary text-secondary-foreground font-display font-bold rounded-xl shadow-gold hover:translate-y-[-2px] transition-all group"
                                     >
                                         Our Identity & History
                                         <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -129,13 +129,13 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                             viewport={{ once: true }}
                             className="bg-card rounded-[2.5rem] border border-border p-6 shadow-elevated sticky top-32 hover:border-secondary/20 transition-all"
                         >
-                            <h3 className="text-2xl font-display font-bold mb-10 text-foreground flex items-center gap-3">
+                            <h3 className="text-sm font-display font-bold mb-10 text-foreground flex items-center gap-3">
                                 <Info className="h-6 w-6 text-secondary" /> Branch Intel
                             </h3>
 
                             <div className="space-y-10">
                                 <div className="flex items-start gap-5">
-                                    <div className="p-4 bg-muted/30 rounded-2xl">
+                                    <div className="p-4 bg-muted/30 rounded-xl">
                                         <MapPin className="h-6 w-6 text-secondary" />
                                     </div>
                                     <div>
@@ -152,7 +152,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                                 </div>
 
                                 <div className="flex items-start gap-5">
-                                    <div className="p-4 bg-muted/30 rounded-2xl">
+                                    <div className="p-4 bg-muted/30 rounded-xl">
                                         <Phone className="h-6 w-6 text-secondary" />
                                     </div>
                                     <div>
@@ -171,7 +171,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
 
                                 {office.email && (
                                     <div className="flex items-start gap-5">
-                                        <div className="p-4 bg-muted/30 rounded-2xl">
+                                        <div className="p-4 bg-muted/30 rounded-xl">
                                             <Mail className="h-6 w-6 text-secondary" />
                                         </div>
                                         <div>
@@ -189,7 +189,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
 
                             <div className="mt-12 pt-10 border-t border-border">
                                 <p className="text-[10px] text-muted-foreground font-display font-bold uppercase tracking-[0.2em] mb-6">Visual Pin</p>
-                                <div className="rounded-3xl overflow-hidden h-60 border border-border shadow-inner relative ring-4 ring-muted/10">
+                                <div className="rounded-xl overflow-hidden h-60 border border-border shadow-inner relative ring-4 ring-muted/10">
                                     <iframe
                                         src={office.mapUrl}
                                         width="100%"
@@ -206,7 +206,7 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                             <div className="mt-10">
                                 <Link
                                     href="/reachout"
-                                    className="w-full flex items-center justify-center gap-3 px-8 py-5 bg-secondary text-secondary-foreground font-display font-bold text-base rounded-2xl shadow-gold hover:translate-y-[-2px] transition-all"
+                                    className="w-full flex items-center justify-center gap-3 px-8 py-5 bg-secondary text-secondary-foreground font-display font-bold text-base rounded-xl shadow-gold hover:translate-y-[-2px] transition-all"
                                 >
                                     Book Personal Consultation
                                 </Link>
@@ -218,3 +218,4 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
         </main>
     );
 }
+
