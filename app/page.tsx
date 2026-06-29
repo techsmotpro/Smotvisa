@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import JsonLd from "@/components/ui/JsonLd";
 import { fetchReviews } from "@/data/reviewData";
 import HeroSection from "@/components/sections/HeroSection";
@@ -8,15 +7,14 @@ import WhyChooseSection from "@/components/sections/WhyChooseSection";
 import VisaAssistanceSection from "@/components/sections/VisaAssistanceSection";
 import DestinationsSection from "@/components/sections/DestinationsSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
-
-const DocumentsSection = dynamic(() => import("@/components/sections/DocumentsSection"));
-const WhoCanApplySection = dynamic(() => import("@/components/sections/WhoCanApplySection"));
-const ProcessingTimesSection = dynamic(() => import("@/components/sections/ProcessingTimesSection"));
-const RejectionReasonsSection = dynamic(() => import("@/components/sections/RejectionReasonsSection"));
-const ReviewCards = dynamic(() => import("@/components/sections/ReviewCards"));
-const FaqSection = dynamic(() => import("@/components/sections/FaqSection"));
-const BlogSection = dynamic(() => import("@/components/sections/BlogSection"));
-const FinalCtaSection = dynamic(() => import("@/components/sections/FinalCtaSection"));
+import DocumentsSection from "@/components/sections/DocumentsSection";
+import WhoCanApplySection from "@/components/sections/WhoCanApplySection";
+import ProcessingTimesSection from "@/components/sections/ProcessingTimesSection";
+import RejectionReasonsSection from "@/components/sections/RejectionReasonsSection";
+import ReviewCards from "@/components/sections/ReviewCards";
+import FaqSection from "@/components/sections/FaqSection";
+import BlogSection from "@/components/sections/BlogSection";
+import FinalCtaSection from "@/components/sections/FinalCtaSection";
 
 export const metadata = {
   title: "Visa Consultants in India | Tourist & Business Visa Assistance — Smotvisa",
