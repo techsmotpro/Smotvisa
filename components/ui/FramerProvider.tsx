@@ -1,7 +1,9 @@
 "use client";
 
-import { LazyMotion, domAnimation } from "framer-motion";
+import { LazyMotion } from "framer-motion";
+
+const loadFeatures = () => import("framer-motion").then(m => m.domAnimation);
 
 export default function FramerProvider({ children }: { children: React.ReactNode }) {
-    return <LazyMotion features={domAnimation}>{children}</LazyMotion>;
+    return <LazyMotion features={loadFeatures} strict>{children}</LazyMotion>;
 }
