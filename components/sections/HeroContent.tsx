@@ -1,13 +1,6 @@
-﻿import { MotionDiv, MotionH1, MotionP } from "@/components/ui/MotionWrapper";
 import { Globe, ShieldCheck, BadgeCheck, MapPin, CalendarClock, MessageCircle, Phone } from "lucide-react";
 
-interface Stat {
-    icon: any;
-    value: string;
-    label: string;
-}
-
-const stats: Stat[] = [
+const stats = [
     { icon: CalendarClock, value: "2019", label: "Trusted Since" },
     { icon: ShieldCheck, value: "98%", label: "Visa Success Rate" },
     { icon: BadgeCheck, value: "5,000+", label: "Visas Approved" },
@@ -17,46 +10,31 @@ const stats: Stat[] = [
 export default function HeroContent() {
     return (
         <div className="w-full max-w-full overflow-hidden">
-            <MotionDiv
-                initial={{ opacity: 0, y: 0 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7 }}
-            >
+            <div>
                 <span className="hero-badge inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-body font-medium mb-6">
                     <Globe className="h-4 w-4" style={{ color: "hsl(42, 100%, 95%)" }} />
                     Tourist &amp; Business Visa Assistance · India
                 </span>
-            </MotionDiv>
+            </div>
 
-            <MotionH1
-                initial={{ opacity: 0, y: 0 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.1 }}
+            <h1
                 className="hero-heading text-3xl sm:text-3xl lg:text-4xl font-display font-bold leading-tight mb-6 break-words max-w-full"
                 style={{ color: "hsl(42, 100%, 95%)" }}
             >
                 Best{" "}
                 <span className="text-gradient-gold">Visa Consultants in India</span>
-            </MotionH1>
+            </h1>
 
-            <MotionP
-                initial={{ opacity: 0, y: 0 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.2 }}
+            <p
                 className="hero-text text-lg sm:text-sm font-body leading-relaxed mb-8 max-w-xl"
                 style={{ color: "hsla(42, 100%, 95%, 0.8)" }}
             >
                 Expert tourist and business visa assistance for Indian travellers. We prepare your
                 documents, review every detail, and guide you through the appointment — so you apply
                 with confidence.
-            </MotionP>
+            </p>
 
-            <MotionDiv
-                initial={{ opacity: 0, y: 0 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.3 }}
-                className="flex flex-wrap items-center gap-3 sm:gap-4 mb-5"
-            >
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-5">
                 <a
                     href="https://wa.me/918904008843"
                     target="_blank"
@@ -75,14 +53,9 @@ export default function HeroContent() {
                     <Phone className="h-4 w-4" />
                     Call +91 8904008843
                 </a>
-            </MotionDiv>
+            </div>
 
-            <MotionDiv
-                initial={{ opacity: 0, y: 0 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.4 }}
-                className="grid grid-cols-4 gap-1 mt-10 max-w-md"
-            >
+            <div className="grid grid-cols-4 gap-1 mt-10 max-w-md">
                 {stats.map((stat, i) => (
                     <div
                         key={stat.label}
@@ -92,10 +65,7 @@ export default function HeroContent() {
                         <div className="hero-stat-label text-[9px] sm:text-[11px] font-body mt-1 leading-tight">{stat.label}</div>
                     </div>
                 ))}
-            </MotionDiv>
+            </div>
         </div>
     );
 }
-
-
-
