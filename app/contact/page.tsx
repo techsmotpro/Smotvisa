@@ -1,10 +1,8 @@
 import PageHeader from "@/components/ui/PageHeader";
-import dynamic from "next/dynamic";
+import ContactListClient from "@/components/contact/ContactFilterClient";
 import { offices } from "@/data/officeData";
 import JsonLd from "@/components/ui/JsonLd";
 import type { Metadata } from "next";
-
-const ContactListClient = dynamic(() => import("@/components/contact/ContactFilterClient"));
 
 export const metadata: Metadata = {
     title: "Contact Our Experts | SmotVisa",

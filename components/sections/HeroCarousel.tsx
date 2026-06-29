@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { m as motion, AnimatePresence } from "framer-motion";
 
 const slides = [
     {
@@ -51,9 +50,13 @@ const slides = [
 
 export default function HeroCarousel() {
     const [current, setCurrent] = useState(0);
+    const [prev, setPrev] = useState<number | null>(null);
 
     const next = useCallback(() => {
-        setCurrent((prev) => (prev + 1) % slides.length);
+        setCurrent((c) => {
+            setPrev(c);
+            return (c + 1) % slides.length;
+        });
     }, []);
 
     useEffect(() => {
@@ -61,37 +64,44 @@ export default function HeroCarousel() {
         return () => clearInterval(timer);
     }, [next]);
 
+    const goTo = (i: number) => {
+        setPrev(current);
+        setCurrent(i);
+    };
+
     return (
         <div className="absolute inset-0" style={{ zIndex: -1 }}>
-            {/* Background image crossfade */}
-            <AnimatePresence mode="sync">
-                <motion.div
-                    key={current}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 1.2, ease: "easeInOut" }}
+            {slides.map((slide, i) => (
+                <div
+                    key={i}
                     className="absolute inset-0"
+                    style={{
+                        opacity: i === current ? 1 : 0,
+                        transition: "opacity 1.2s ease-in-out",
+                        pointerEvents: i === current ? "auto" : "none",
+                    }}
                 >
-                    <Image
-                        src={slides[current].src}
-                        alt={slides[current].alt}
-                        fill
-                        className="object-cover object-center"
-                        sizes="100vw"
-                        quality={90}
-                        priority
-                    />
+                    {(i === current || i === prev) && (
+                        <Image
+                            src={slide.src}
+                            alt={slide.alt}
+                            fill
+                            className="object-cover object-center"
+                            sizes="100vw"
+                            priority={i === 0}
+                            loading={i === 0 ? "eager" : "lazy"}
+                        />
+                    )}
                     <div className="hero-overlay" />
-                </motion.div>
-            </AnimatePresence>
+                </div>
+            ))}
 
-            {/* Dots — bottom right */}
+            {/* Dots */}
             <div className="absolute bottom-9 right-4 md:right-8 z-10 flex items-center gap-2">
                 {slides.map((_, i) => (
                     <button
                         key={i}
-                        onClick={() => setCurrent(i)}
+                        onClick={() => goTo(i)}
                         aria-label={`Go to slide ${i + 1}`}
                         className={`rounded-full transition-all duration-300 ${
                             i === current

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { m as motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import Link from "next/link";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import CountryFlag from "@/components/ui/CountryFlag";
 
@@ -16,7 +16,6 @@ const Navbar = () => {
     const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
     const [activeMobileCategory, setActiveMobileCategory] = useState<string | null>(null);
     const pathname = usePathname();
-    const searchParams = useSearchParams();
 
     const handleLinkClick = () => {
         setIsOpen(false);

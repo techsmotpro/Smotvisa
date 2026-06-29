@@ -1,6 +1,8 @@
-﻿import InquiryForm from "./InquiryForm";
+import dynamic from "next/dynamic";
 import HeroContent from "@/components/sections/HeroContent";
 import HeroCarousel from "@/components/sections/HeroCarousel";
+
+const InquiryForm = dynamic(() => import("./InquiryForm"));
 
 const HeroSection = () => {
     return (
@@ -28,6 +30,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-
-

@@ -69,7 +69,6 @@ export const metadata: Metadata = {
 
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Suspense } from "react";
 
 export default function RootLayout({
     children,
@@ -82,7 +81,7 @@ export default function RootLayout({
             <body className="antialiased">
                 <Script
                     id="gtm-init"
-                    strategy="afterInteractive"
+                    strategy="lazyOnload"
                     dangerouslySetInnerHTML={{
                         __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -130,71 +129,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 />
                 <FramerProvider>
                 <TooltipProvider>
-                    <Suspense
-                        fallback={
-                            <nav className="fixed top-0 left-0 w-full z-[9999] bg-primary shadow-card">
-                                <div className="hidden lg:block bg-primary/80 border-b border-primary-foreground/10">
-                                    <div className="container mx-auto px-4 py-1.5 text-xs text-primary-foreground/60 flex justify-between">
-                                        <span>📞 +91-8904008843</span>
-                                        <span>Mon–Sat: 10 AM – 7 PM</span>
-                                    </div>
-                                </div>
-                                <div className="container mx-auto flex items-center justify-between px-4 py-4">
-                                    <a href="/" className="flex items-center gap-3">
-                                        <span className="text-xl font-bold text-primary-foreground">
-                                            SmotVisa
-                                        </span>
-                                    </a>
-                                    <div className="hidden lg:flex items-center gap-2 font-body">
-                                        <a
-                                            href="/"
-                                            className="px-4 py-2 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground rounded-lg hover:bg-primary-foreground/10 transition-all"
-                                        >
-                                            Home
-                                        </a>
-                                        <a
-                                            href="/about"
-                                            className="px-4 py-2 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground rounded-lg hover:bg-primary-foreground/10 transition-all"
-                                        >
-                                            About
-                                        </a>
-                                        <a
-                                            href="/services"
-                                            className="px-4 py-2 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground rounded-lg hover:bg-primary-foreground/10 transition-all"
-                                        >
-                                            Services
-                                        </a>
-                                        <a
-                                            href="/visa"
-                                            className="px-4 py-2 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground rounded-lg hover:bg-primary-foreground/10 transition-all"
-                                        >
-                                            Destinations
-                                        </a>
-                                        <a
-                                            href="/contact"
-                                            className="px-4 py-2 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground rounded-lg hover:bg-primary-foreground/10 transition-all"
-                                        >
-                                            Branches
-                                        </a>
-                                        <a
-                                            href="/blog"
-                                            className="px-4 py-2 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground rounded-lg hover:bg-primary-foreground/10 transition-all"
-                                        >
-                                            Blog
-                                        </a>
-                                    </div>
-                                    <a
-                                        href="tel:+918904008843"
-                                        className="hidden xl:block px-6 py-2.5 bg-secondary text-secondary-foreground font-body font-bold rounded-full hover:opacity-90 transition-all shadow-gold whitespace-nowrap"
-                                    >
-                                        CALL NOW : +91-8904008843
-                                    </a>
-                                </div>
-                            </nav>
-                        }
-                    >
-                        <Navbar />
-                    </Suspense>
+                    <Navbar />
                     <main id="main" className="pt-24">
                         {children}
                     </main>
