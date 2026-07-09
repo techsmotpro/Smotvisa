@@ -70,7 +70,16 @@
     { "source": "/location/pune", "destination": "/contact/pune/visa-agents-in-shivaji-nagar", "permanent": true },
     { "source": "/reasons-for-australian-student-visa-refusal", "destination": "/blog", "permanent": true },
     { "source": "/category/:slug*", "destination": "/blog", "permanent": true },
-    { "source": "/blog-portfolio", "destination": "/blog", "permanent": true }
+    { "source": "/blog-portfolio", "destination": "/blog", "permanent": true },
+    { "source": "/office/bangalore", "destination": "/contact/bangalore/visa-agents-in-cv-raman-nagar", "permanent": true },
+    { "source": "/office/visakhapatnam", "destination": "/contact/visakhapatnam/visa-agents-in-walter", "permanent": true },
+    { "source": "/office/:slug*", "destination": "/contact", "permanent": true },
+    { "source": "/location/bangalore", "destination": "/contact/bangalore/visa-agents-in-cv-raman-nagar", "permanent": true },
+    { "source": "/location/:slug*", "destination": "/contact", "permanent": true },
+    { "source": "/contact/pune", "destination": "/contact/pune/visa-agents-in-shivaji-nagar", "permanent": true },
+    { "source": "/contact/bandra-east-mumbai", "destination": "/contact/mumbai/visa-agents-in-bandra-east", "permanent": true },
+    { "source": "/services/visa", "destination": "/visa", "permanent": true },
+    { "source": "/top-reasons-for-australian-working-visa-rejection", "destination": "/blog", "permanent": true }
   ],
   "headers": [
     {
