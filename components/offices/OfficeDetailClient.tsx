@@ -187,22 +187,6 @@ export default function OfficeDetailClient({ office }: OfficeDetailClientProps) 
                                 )}
                             </div>
 
-                            <div className="mt-12 pt-10 border-t border-border">
-                                <p className="text-[10px] text-muted-foreground font-display font-bold uppercase tracking-[0.2em] mb-6">Visual Pin</p>
-                                <div className="rounded-xl overflow-hidden h-60 border border-border shadow-inner relative ring-4 ring-muted/10">
-                                    <iframe
-                                        src={office.mapUrl}
-                                        width="100%"
-                                        height="100%"
-                                        style={{ border: 0 }}
-                                        allowFullScreen
-                                        loading="lazy"
-                                        sandbox="allow-scripts allow-same-origin allow-popups"
-                                        title={`${office.city} Office Map`}
-                                    />
-                                </div>
-                            </div>
-
                             <div className="mt-10">
                                 <Link
                                     href="/reachout"
