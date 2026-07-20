@@ -79,7 +79,14 @@
     { "source": "/contact/pune", "destination": "/contact/pune/visa-agents-in-shivaji-nagar", "permanent": true },
     { "source": "/contact/bandra-east-mumbai", "destination": "/contact/mumbai/visa-agents-in-bandra-east", "permanent": true },
     { "source": "/services/visa", "destination": "/visa", "permanent": true },
-    { "source": "/top-reasons-for-australian-working-visa-rejection", "destination": "/blog", "permanent": true }
+    { "source": "/top-reasons-for-australian-working-visa-rejection", "destination": "/blog", "permanent": true },
+    { "source": "/typography", "destination": "/", "permanent": true },
+    { "source": "/my-account", "destination": "/", "permanent": true },
+    { "source": "/tag/:slug*", "destination": "/blog", "permanent": true },
+    { "source": "/state/:slug*", "destination": "/contact", "permanent": true },
+    { "source": "/name-mismatch-between-passport-and-tickets-will-you-be-stopped", "destination": "/blog/name-mismatch-between-passport-and-tickets-will-you-be-stopped", "permanent": true },
+    { "source": "/h1b-visa-process-complete-guide-for-indian-professionals", "destination": "/blog/h1b-visa-process-complete-guide-for-indian-professionals", "permanent": true },
+    { "source": "/what-happens-if-i-lose-passport-abroad-during-travel", "destination": "/blog/what-happens-if-i-lose-passport-abroad-during-travel", "permanent": true }
   ],
   "headers": [
     {
