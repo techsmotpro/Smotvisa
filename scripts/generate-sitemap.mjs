@@ -66,6 +66,13 @@ const staticEntries = [
     entry(`${BASE_URL}/visa-agents-in-jp-nagar`, buildDate, "monthly", "0.7"),
     entry(`${BASE_URL}/visa-agents-in-sarjapur-road`, buildDate, "monthly", "0.7"),
     entry(`${BASE_URL}/visa-agents-in-btm-layout`, buildDate, "monthly", "0.7"),
+    entry(`${BASE_URL}/visa-agent-in-pune`, buildDate, "monthly", "0.7"),
+    entry(`${BASE_URL}/visa-agent-in-mumbai`, buildDate, "monthly", "0.7"),
+    entry(`${BASE_URL}/visa-agent-in-jaipur`, buildDate, "monthly", "0.7"),
+    entry(`${BASE_URL}/visa-agent-in-hyderabad`, buildDate, "monthly", "0.7"),
+    entry(`${BASE_URL}/visa-agent-in-delhi`, buildDate, "monthly", "0.7"),
+    entry(`${BASE_URL}/visa-agent-in-chennai`, buildDate, "monthly", "0.7"),
+    entry(`${BASE_URL}/visa-agent-in-ahmedabad`, buildDate, "monthly", "0.7"),
 ];
 
 const blogEntries = blogs.map((b) => {

@@ -18,7 +18,18 @@ export const services = [
         submenu: visaCountries.map(c => ({ id: c.id, name: c.name, flag: c.flag, href: c.href }))
     },
     { id: "tours", name: "Tours", href: "/services/tours" },
-    { id: "air-ticketing", name: "Air Ticketing", href: "/services/air-ticketing" }
+    { id: "air-ticketing", name: "Air Ticketing", href: "/services/air-ticketing" },
+    { id: "destinations", name: "Destinations", href: "/visa" }
+];
+
+export const cities = [
+    { id: "delhi", name: "Delhi", href: "/visa-agent-in-delhi" },
+    { id: "mumbai", name: "Mumbai", href: "/visa-agent-in-mumbai" },
+    { id: "pune", name: "Pune", href: "/visa-agent-in-pune" },
+    { id: "ahmedabad", name: "Ahmedabad", href: "/visa-agent-in-ahmedabad" },
+    { id: "jaipur", name: "Jaipur", href: "/visa-agent-in-jaipur" },
+    { id: "hyderabad", name: "Hyderabad", href: "/visa-agent-in-hyderabad" },
+    { id: "chennai", name: "Chennai", href: "/visa-agent-in-chennai" }
 ];
 
 export const branches = [
@@ -68,7 +79,7 @@ export const navLinks = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Services", href: "/services", dropdown: services },
-    { label: "Destinations", href: "/visa" },
+    { label: "Cities", href: "/contact", dropdown: cities },
     { label: "Branches", href: "/contact", dropdown: branches },
     { label: "Blog", href: "/blog" },
 ];

@@ -13,6 +13,7 @@ import { submitForm } from "@/lib/submitForm";
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email"),
+  phone: z.string().min(7, "Please enter a valid phone number"),
   message: z.string().min(1, "Please enter a message"),
 });
 
@@ -27,7 +28,7 @@ export default function OfficeContactForm() {
 
   const form = useForm<ContactValues>({
     resolver: zodResolver(contactSchema),
-    defaultValues: { name: "", email: "", message: "" },
+    defaultValues: { name: "", email: "", phone: "", message: "" },
   });
 
   const onSubmit = async (values: ContactValues) => {
@@ -35,6 +36,7 @@ export default function OfficeContactForm() {
     const result = await submitForm({
       name: values.name,
       email: values.email,
+      phone: values.phone,
       message: values.message,
       _subject: "New Office Inquiry from SmotVisa Website",
     });
@@ -75,6 +77,20 @@ export default function OfficeContactForm() {
               <FormLabel className={labelClasses}>Email Address</FormLabel>
               <FormControl>
                 <input {...field} type="email" className={inputClasses} placeholder="name@example.com" />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="phone"
+          render={({ field }) => (
+            <FormItem className="space-y-1">
+              <FormLabel className={labelClasses}>Phone Number</FormLabel>
+              <FormControl>
+                <input {...field} type="tel" className={inputClasses} placeholder="+91 98765 43210" />
               </FormControl>
               <FormMessage />
             </FormItem>
