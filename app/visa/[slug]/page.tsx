@@ -136,13 +136,13 @@ export default async function VisaDetailPage({ params }: { params: Promise<{ slu
     } else if (id === "uk") {
         pageTitle = "Expert UK Visit Visa Consultant in India";
     } else if (id === "canada") {
-        pageTitle = "Best Canada Tourist Visa in India";
+        pageTitle = "Best Canada Visa Consultant in India";
     } else if (id === "australia") {
-        pageTitle = "Tourist Australia Visa Assistance in India";
+        pageTitle = "Best Australia Visa Consultant in India";
     } else if (id === "uae") {
-        pageTitle = "Dubai Tourist & Business Visa for Indians";
+        pageTitle = "Trusted UAE (Dubai) Visa Consultant in India";
     } else if (id === "schengen") {
-        pageTitle = "Companion Schengen Visa for Indians";
+        pageTitle = "Expert Schengen Visa Consultant in India";
     }
 
     return (
