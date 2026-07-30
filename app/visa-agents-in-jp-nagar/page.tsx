@@ -1,22 +1,21 @@
 import PageHeader from "@/components/ui/PageHeader";
-import { CheckCircle2, Star, ShieldCheck, Clock, ArrowRight } from "lucide-react";
+import { Star, ArrowRight, ClipboardCheck, Users, Globe2 } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { offices } from "@/data/officeData";
 import JsonLd from "@/components/ui/JsonLd";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Best Visa Agents in JP Nagar | Expert Visa Consultants | SmotVisa",
-    description: "Expert visa agents and consultants in JP Nagar, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for families and professionals across South Bangalore.",
-  keywords: [
+    title: "Visa Agents in JP Nagar Bangalore | SmotVisa",
+    description: "The VFS centre is minutes away but VFS only collects documents. SmotVisa prepares your complete file: Schengen, USA, UK & Canada visas. Free consultation.",
+    keywords: [
         "visa agents in JP Nagar",
-        "best visa agents JP Nagar",
+        "visa agents in JP Nagar Bangalore",
         "JP Nagar visa consultants",
-        "SmotVisa JP Nagar",
-        "JP Nagar visa processing",
-        "visa services in JP Nagar",
-        "visa consultants in JP Nagar"
+        "VFS Global JP Nagar",
+        "parent visitor visa JP Nagar",
+        "document review before VFS appointment",
+        "SmotVisa JP Nagar"
     ],
 
     alternates: {
@@ -32,8 +31,8 @@ export const metadata: Metadata = {
     publisher: "SmotVisa",
 
     openGraph: {
-        title: "Best Visa Agents in JP Nagar | Expert Visa Consultants | SmotVisa",
-        description: "Expert visa agents and consultants in JP Nagar, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for families and professionals across South Bangalore.",
+        title: "Visa Agents in JP Nagar Bangalore | SmotVisa",
+        description: "VFS collects documents; it doesn't prepare them. SmotVisa prepares your complete file for Schengen, USA, UK and Canada visas.",
         url: "https://smotvisa.com/visa-agents-in-jp-nagar",
         siteName: "SmotVisa",
         images: ["/images/hero-travel-CJWf8Tv1.webp"],
@@ -42,13 +41,16 @@ export const metadata: Metadata = {
 
     twitter: {
         card: "summary_large_image",
-        title: "Best Visa Agents in JP Nagar | Expert Visa Consultants | SmotVisa",
-        description: "Expert visa agents and consultants in JP Nagar, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for families and professionals across South Bangalore.",
+        title: "Visa Agents in JP Nagar Bangalore | SmotVisa",
+        description: "VFS collects documents; it doesn't prepare them. SmotVisa prepares your complete file.",
         images: ["/images/hero-travel-CJWf8Tv1.webp"],
     }
 };
 
-export default function VisaServicesInJpNagar() {
+const destinations = ["Schengen Countries", "UK", "USA", "Canada", "Australia", "Japan", "Singapore", "UAE & Dubai"];
+const eVisaDestinations = ["Thailand", "Vietnam", "Malaysia", "Sri Lanka", "Turkey"];
+
+export default function VisaServicesInJPNagar() {
     const bangaloreOffice = offices.find(o => o.id === "cv-raman-nagar-bangalore");
 
     return (
@@ -60,7 +62,7 @@ export default function VisaServicesInJpNagar() {
                         "@type": "LocalBusiness",
                         "@id": "https://smotvisa.com/visa-agents-in-jp-nagar",
                         "name": "SmotVisa JP Nagar",
-                        "description": bangaloreOffice.description,
+                        "description": "SmotVisa provides complete tourist and business visa preparation for JP Nagar, Bangalore: document review, cover letters, form verification, VFS appointment booking and parent visitor visa coordination.",
                         "url": "https://smotvisa.com/visa-agents-in-jp-nagar",
                         "telephone": bangaloreOffice.phone[0],
                         "email": bangaloreOffice.email,
@@ -86,6 +88,21 @@ export default function VisaServicesInJpNagar() {
                     }} />
                     <JsonLd data={{
                         "@context": "https://schema.org",
+                        "@type": "Service",
+                        "serviceType": "Tourist and Business Visa Preparation",
+                        "provider": { "@type": "LocalBusiness", "name": "SmotVisa", "@id": "https://smotvisa.com/visa-agents-in-jp-nagar" },
+                        "areaServed": { "@type": "Place", "name": "JP Nagar, Bangalore" },
+                        "hasOfferCatalog": {
+                            "@type": "OfferCatalog",
+                            "name": "Visa Preparation Services",
+                            "itemListElement": [...destinations, ...eVisaDestinations].map(d => ({
+                                "@type": "Offer",
+                                "itemOffered": { "@type": "Service", "name": `${d} Visa Assistance` }
+                            }))
+                        }
+                    }} />
+                    <JsonLd data={{
+                        "@context": "https://schema.org",
                         "@type": "BreadcrumbList",
                         "itemListElement": [
                             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smotvisa.com/" },
@@ -95,9 +112,10 @@ export default function VisaServicesInJpNagar() {
                     }} />
                 </>
             )}
+
             <PageHeader
-                title="Visa Agents in JP Nagar"
-                description="Expert visa agents for families and professionals in JP Nagar, Bangalore. SmotVisa is your trusted partner for premium travel consultancy across South Bangalore."
+                title="Visa Agents in JP Nagar, Bangalore"
+                description="VFS collects documents; it doesn't prepare them. SmotVisa does."
                 breadcrumbs={[
                     { label: "Visa Services", href: "/visa" },
                     { label: "JP Nagar" }
@@ -105,99 +123,154 @@ export default function VisaServicesInJpNagar() {
             />
 
             <section className="py-14 container mx-auto px-4">
-                <div className="grid lg:grid-cols-2 gap-8 items-center">
-                    <div className="space-y-8">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full">
-                            <Star className="h-4 w-4 text-secondary fill-secondary" />
-                            <span className="text-xs font-display font-bold text-secondary uppercase tracking-widest">Premium Visa Agents</span>
-                        </div>
-                        <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight">
-                            Expert Visa Agents for JP Nagar Families & Professionals.
-                        </h2>
-                        <p className="text-lg font-body text-muted-foreground italic leading-relaxed">
-                            Conveniently serving South Bangalore, SmotVisa provides specialized visa assistance tailored for the families, students, and working professionals across the well-connected neighbourhoods of JP Nagar.
-                        </p>
-
-                        <div className="grid sm:grid-cols-2 gap-6">
-                            {[
-                                { title: "Family & Student Specialization", desc: "Expert guidance for families and students seeking US, UK, Canada, and Schengen visas." },
-                                { title: "Doorstep Services", desc: "Convenient document pickup & delivery across all JP Nagar phases." },
-                                { title: "Dedicated Support", desc: "A personal case manager for every JP Nagar client." },
-                                { title: "High Success Rate", desc: "Proven track record with South Bangalore travellers." }
-                            ].map((item, i) => (
-                                <div key={i} className="flex gap-4">
-                                    <div className="w-10 h-10 bg-primary/5 rounded-xl flex items-center justify-center shrink-0">
-                                        <CheckCircle2 className="h-5 w-5 text-secondary" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-display font-bold text-foreground">{item.title}</h4>
-                                        <p className="text-xs text-muted-foreground italic">{item.desc}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                <div className="max-w-4xl mx-auto space-y-8">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full">
+                        <Star className="h-4 w-4 text-secondary fill-secondary" />
+                        <span className="text-xs font-display font-bold text-secondary uppercase tracking-widest">Tourist &amp; Business Visas</span>
                     </div>
-
-                    <div className="relative">
-                        <div className="absolute inset-0 bg-secondary rounded-[3rem] rotate-3 opacity-10" />
-                        <div className="relative bg-card p-6 rounded-[3rem] border border-border shadow-elevated space-y-8">
-                            <h3 className="text-2xl font-display font-bold text-foreground">How We Can Help You</h3>
-                            <div className="space-y-6">
-                                <div className="p-6 bg-card rounded-2xl border border-border group hover:border-secondary transition-colors shadow-sm">
-                                    <p className="text-sm font-body text-muted-foreground italic leading-relaxed mb-4">
-                                        Our expert agents provide comprehensive visa assistance tailored for JP Nagar residents.
-                                        Whether you're a family traveller, student, or working professional, we're here to assist you.
-                                    </p>
-                                </div>
-                            </div>
-                            <Link href="/contact" className="w-full">
-                                <Button className="w-full bg-primary text-primary-foreground py-8 rounded-2xl font-display font-bold text-lg shadow-gold group">
-                                    Contact Our Team <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                                </Button>
-                            </Link>
-                        </div>
-                    </div>
+                    <p className="text-lg font-body text-muted-foreground leading-relaxed">
+                        JP Nagar residents have the VFS Global centre at Gopalan Innovation Mall practically next door, which
+                        makes biometrics day a short errand instead of a crosstown expedition. But here&rsquo;s what we explain
+                        to applicants every week: proximity to the centre is worth nothing if the file you carry in is weak.
+                        VFS collects documents; it doesn&rsquo;t prepare them. SmotVisa does. We&rsquo;re a Bangalore visa
+                        consultancy providing complete tourist and business visa preparation, so your location advantage
+                        actually translates into an approval.
+                    </p>
                 </div>
             </section>
 
             <section className="py-14 bg-gradient-to-b from-background to-secondary/5 border-t border-b border-border">
                 <div className="container mx-auto px-4">
-                    <div className="text-center max-w-3xl mx-auto mb-8 space-y-4">
-                        <h2 className="text-4xl font-display font-bold text-foreground">Visa Agents & Services We Offer</h2>
-                        <p className="text-muted-foreground italic tracking-wide">Specialized visa agents and solutions for JP Nagar's diverse community.</p>
+                    <div className="max-w-4xl mx-auto space-y-8">
+                        <div className="flex items-center gap-3">
+                            <ClipboardCheck className="h-7 w-7 text-secondary" />
+                            <h2 className="text-4xl font-display font-bold text-foreground leading-tight">
+                                What Happens Before the Centre Visit Is Everything
+                            </h2>
+                        </div>
+
+                        <p className="text-lg font-body text-muted-foreground leading-relaxed">
+                            By the time you reach the VFS counter, your application&rsquo;s fate is largely sealed: the file is
+                            either complete, consistent and persuasive, or it isn&rsquo;t. Our work happens in that critical
+                            before stage. We confirm the right visa category and consulate route, build a checklist specific to
+                            your destination and profile, review and cross-verify every document, fill and check your forms,
+                            draft a cover letter that addresses what officers actually look for, arrange compliant travel
+                            insurance, and book your VFS appointment for a convenient slot. You walk in prepared; your file
+                            goes onward decision-ready.
+                        </p>
+
+                        <div className="p-8 bg-card rounded-[2.5rem] border border-border shadow-card">
+                            <p className="font-body text-muted-foreground leading-relaxed">
+                                If you&rsquo;ve already booked your own appointment, our preparation services work standalone
+                                too: many JP Nagar clients come to us purely for document review and cover letters before a
+                                centre visit.
+                            </p>
+                        </div>
                     </div>
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {[
-                            { icon: ShieldCheck, title: "US B1/B2 & H1B Visas", desc: "Specialized assistance for professionals and families seeking US work and visitor visas." },
-                            { icon: Clock, title: "Express UK Processing", desc: "Priority services for leisure and business visitors to the United Kingdom." },
-                            { icon: CheckCircle2, title: "Schengen Group Filings", desc: "Hassle-free group applications for corporate and family trips to Europe." }
-                        ].map((s, i) => (
-                            <div key={i} className="p-6 bg-card rounded-[2.5rem] shadow-card border border-border hover:shadow-elevated transition-all text-center">
-                                <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                                    <s.icon className="h-8 w-8 text-secondary" />
-                                </div>
-                                <h3 className="text-xl font-display font-bold text-foreground mb-4">{s.title}</h3>
-                                <p className="text-sm font-body text-muted-foreground italic leading-relaxed">{s.desc}</p>
+                </div>
+            </section>
+
+            <section className="py-14 container mx-auto px-4">
+                <div className="max-w-4xl mx-auto space-y-8">
+                    <div className="flex items-center gap-3">
+                        <Users className="h-7 w-7 text-secondary" />
+                        <h2 className="text-4xl font-display font-bold text-foreground leading-tight">
+                            Parent Visitor Visas: A JP Nagar Staple
+                        </h2>
+                    </div>
+
+                    <p className="text-lg font-body text-muted-foreground leading-relaxed">
+                        Many JP Nagar families have children settled in the US, UK, Canada and Australia, and parent visitor
+                        visas are among our most requested services here. We coordinate the sponsorship of half of the file
+                        directly with your family abroad, telling them exactly which documents to send and in what format,
+                        while preparing the India-side file patiently with parents over phone and WhatsApp. US applicants get
+                        dedicated interview preparation; UK, Canada and Australia files are built to succeed on paper, where no
+                        interview exists to clarify anything. Senior travellers also get practical support: pension income
+                        presented correctly, age-appropriate insurance, and thoughtfully scheduled appointments.
+                    </p>
+                </div>
+            </section>
+
+            <section className="py-14 bg-gradient-to-b from-secondary/5 to-background border-t border-b border-border">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto space-y-8">
+                        <div className="flex items-center gap-3">
+                            <Globe2 className="h-7 w-7 text-secondary" />
+                            <h2 className="text-4xl font-display font-bold text-foreground leading-tight">
+                                The Full Service for Every Trip
+                            </h2>
+                        </div>
+
+                        <p className="text-lg font-body text-muted-foreground leading-relaxed">
+                            Tourist and business visas for the Schengen countries, UK, USA, Canada, Australia, Japan,
+                            Singapore, UAE and Dubai, plus fast e-visas for Thailand, Vietnam, Malaysia, Sri Lanka and Turkey.
+                            Business travellers get complete documentation: invitation letters, company covering letters,
+                            financials and itineraries to consulate standards.
+                        </p>
+
+                        <div className="flex flex-wrap gap-3">
+                            {destinations.map((d, i) => (
+                                <span key={i} className="px-5 py-2.5 bg-card border border-border rounded-full text-sm font-display font-bold text-foreground hover:border-secondary transition-colors">
+                                    {d}
+                                </span>
+                            ))}
+                        </div>
+
+                        <div className="p-6 bg-card rounded-[2rem] border border-border space-y-4">
+                            <h3 className="font-display font-bold text-foreground">Plus fast e-visas for</h3>
+                            <div className="flex flex-wrap gap-3">
+                                {eVisaDestinations.map((d, i) => (
+                                    <span key={i} className="px-4 py-2 bg-secondary/10 rounded-full text-xs font-display font-bold text-secondary">
+                                        {d}
+                                    </span>
+                                ))}
                             </div>
-                        ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-14 container mx-auto px-4">
+                <div className="max-w-4xl mx-auto space-y-8">
+                    <h2 className="text-3xl font-display font-bold text-foreground">Before Your VFS Visit</h2>
+
+                    <div className="p-6 bg-card rounded-[2rem] border border-border space-y-3">
+                        <p className="font-body text-muted-foreground">
+                            Read our{" "}
+                            <Link href="/visa/schengen-visa-consultant" className="text-secondary font-bold hover:underline">Schengen Visa</Link>,{" "}
+                            <Link href="/visa/us-visa-consultant" className="text-secondary font-bold hover:underline">USA Visa</Link>{" "}and{" "}
+                            <Link href="/visa/canada-visa-consultant" className="text-secondary font-bold hover:underline">Canada Visitor Visa</Link>{" "}
+                            guides.
+                        </p>
+                    </div>
+
+                    <div className="p-6 bg-card rounded-[2rem] border border-border space-y-4">
+                        <h3 className="font-display font-bold text-foreground">We also serve neighbouring</h3>
+                        <div className="flex flex-wrap gap-3">
+                            {[
+                                { label: "Jayanagar", href: "/visa-agents-in-jayanagar" },
+                                { label: "BTM Layout", href: "/visa-agents-in-btm-layout" }
+                            ].map((n, i) => (
+                                <Link key={i} href={n.href} className="px-5 py-2.5 bg-secondary/10 rounded-full text-sm font-display font-bold text-secondary hover:bg-secondary/20 transition-colors">
+                                    {n.label}
+                                </Link>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section className="py-14 container mx-auto px-4 text-center">
-                <div className="max-w-4xl mx-auto space-y-10">
-                    <h2 className="text-4xl md:text-7xl font-display font-bold text-foreground leading-tight">
-                        Your Trusted Visa Agents in JP Nagar.
+                <div className="max-w-4xl mx-auto space-y-8">
+                    <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight">
+                        Visa Agents in JP Nagar, Bangalore
                     </h2>
-                    <p className="text-xl font-body text-muted-foreground max-w-2xl mx-auto italic leading-relaxed">
-                        Don't let complex visa regulations stand in the way of your travel plans. Connect with our JP Nagar experts today.
-                    </p>
                     <div className="flex flex-col md:flex-row gap-6 justify-center">
                         <Link href="/contact" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-secondary text-secondary-foreground font-display font-bold text-lg rounded-2xl hover:translate-y-[-2px] transition-all shadow-gold group">
-                            Contact JP Nagar Desk <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                            Contact Us <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
                         </Link>
                         <Link href="/visa" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-transparent border-2 border-primary text-primary font-display font-bold text-lg rounded-2xl hover:bg-primary/5 transition-all">
-                            Check Eligibility
+                            Visa Services
                         </Link>
                     </div>
                 </div>

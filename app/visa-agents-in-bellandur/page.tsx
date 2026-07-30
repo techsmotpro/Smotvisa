@@ -1,22 +1,21 @@
 import PageHeader from "@/components/ui/PageHeader";
-import { CheckCircle2, Star, ShieldCheck, Clock, ArrowRight } from "lucide-react";
+import { Star, ArrowRight, FileSearch, Clock, RotateCcw, Info } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { offices } from "@/data/officeData";
 import JsonLd from "@/components/ui/JsonLd";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Best Visa Agents in Bellandur | Expert Visa Consultants | SmotVisa",
-    description: "Expert visa agents and consultants in Bellandur, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates near the Outer Ring Road.",
-  keywords: [
+    title: "Visa Agents in Bellandur Bangalore | SmotVisa",
+    description: "SmotVisa prepares complete visa application for Bellandur Area,  Schengen, USA, UK, Singapore & more, with same-day document review and appointment booking.",
+    keywords: [
         "visa agents in Bellandur",
-        "best visa agents Bellandur",
+        "visa agents in Bellandur Bangalore",
         "Bellandur visa consultants",
-        "SmotVisa Bellandur",
-        "Bellandur visa processing",
-        "visa services in Bellandur",
-        "visa consultants in Bellandur"
+        "same day document review Bangalore",
+        "visa refusal reapplication Bangalore",
+        "business visa Bellandur",
+        "SmotVisa Bellandur"
     ],
 
     alternates: {
@@ -32,8 +31,8 @@ export const metadata: Metadata = {
     publisher: "SmotVisa",
 
     openGraph: {
-        title: "Best Visa Agents in Bellandur | Expert Visa Consultants | SmotVisa",
-        description: "Expert visa agents and consultants in Bellandur, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates near the Outer Ring Road.",
+        title: "Visa Agents in Bellandur Bangalore | SmotVisa",
+        description: "Complete tourist and business visa assistance for Bellandur: Schengen, USA, UK, Singapore and more, with same-day document review and appointment booking.",
         url: "https://smotvisa.com/visa-agents-in-bellandur",
         siteName: "SmotVisa",
         images: ["/images/hero-travel-CJWf8Tv1.webp"],
@@ -42,11 +41,14 @@ export const metadata: Metadata = {
 
     twitter: {
         card: "summary_large_image",
-        title: "Best Visa Agents in Bellandur | Expert Visa Consultants | SmotVisa",
-        description: "Expert visa agents and consultants in Bellandur, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates near the Outer Ring Road.",
+        title: "Visa Agents in Bellandur Bangalore | SmotVisa",
+        description: "Complete visa assistance for Bellandur with same-day document review and appointment booking.",
         images: ["/images/hero-travel-CJWf8Tv1.webp"],
     }
 };
+
+const destinations = ["Schengen Countries", "UK", "USA", "Canada", "Australia", "Japan", "Singapore"];
+const eVisaDestinations = ["Dubai", "Thailand", "Vietnam", "Malaysia", "Sri Lanka"];
 
 export default function VisaServicesInBellandur() {
     const bangaloreOffice = offices.find(o => o.id === "cv-raman-nagar-bangalore");
@@ -60,7 +62,7 @@ export default function VisaServicesInBellandur() {
                         "@type": "LocalBusiness",
                         "@id": "https://smotvisa.com/visa-agents-in-bellandur",
                         "name": "SmotVisa Bellandur",
-                        "description": bangaloreOffice.description,
+                        "description": "SmotVisa provides complete tourist and business visa assistance for Bellandur, Bangalore, with same-day document review, pre-submission file checks, appointment booking and tracking until decision.",
                         "url": "https://smotvisa.com/visa-agents-in-bellandur",
                         "telephone": bangaloreOffice.phone[0],
                         "email": bangaloreOffice.email,
@@ -86,6 +88,21 @@ export default function VisaServicesInBellandur() {
                     }} />
                     <JsonLd data={{
                         "@context": "https://schema.org",
+                        "@type": "Service",
+                        "serviceType": "Tourist and Business Visa Assistance",
+                        "provider": { "@type": "LocalBusiness", "name": "SmotVisa", "@id": "https://smotvisa.com/visa-agents-in-bellandur" },
+                        "areaServed": { "@type": "Place", "name": "Bellandur, Bangalore" },
+                        "hasOfferCatalog": {
+                            "@type": "OfferCatalog",
+                            "name": "Visa Assistance Services",
+                            "itemListElement": [...destinations, ...eVisaDestinations].map(d => ({
+                                "@type": "Offer",
+                                "itemOffered": { "@type": "Service", "name": `${d} Visa Assistance` }
+                            }))
+                        }
+                    }} />
+                    <JsonLd data={{
+                        "@context": "https://schema.org",
                         "@type": "BreadcrumbList",
                         "itemListElement": [
                             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smotvisa.com/" },
@@ -95,9 +112,10 @@ export default function VisaServicesInBellandur() {
                     }} />
                 </>
             )}
+
             <PageHeader
-                title="Visa Agents in Bellandur"
-                description="Expert visa agents for tech professionals and expatriates in Bellandur, Bangalore. SmotVisa is your trusted partner for premium travel consultancy along the Outer Ring Road."
+                title="Visa Agents in Bellandur, Bangalore"
+                description="Every document you share is reviewed the same day, with a clear, itemised response about what's ready and what isn't."
                 breadcrumbs={[
                     { label: "Visa Services", href: "/visa" },
                     { label: "Bellandur" }
@@ -105,99 +123,160 @@ export default function VisaServicesInBellandur() {
             />
 
             <section className="py-14 container mx-auto px-4">
-                <div className="grid lg:grid-cols-2 gap-8 items-center">
-                    <div className="space-y-8">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full">
-                            <Star className="h-4 w-4 text-secondary fill-secondary" />
-                            <span className="text-xs font-display font-bold text-secondary uppercase tracking-widest">Premium Visa Agents</span>
-                        </div>
-                        <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight">
-                            Expert Visa Agents for Bellandur's Tech Corridor.
-                        </h2>
-                        <p className="text-lg font-body text-muted-foreground italic leading-relaxed">
-                            Serving the bustling Outer Ring Road tech belt, SmotVisa provides specialized visa assistance tailored for the IT professionals and expatriate families living and working in and around Bellandur, Bangalore.
-                        </p>
-
-                        <div className="grid sm:grid-cols-2 gap-6">
-                            {[
-                                { title: "Tech Professional Specialization", desc: "Expert guidance for IT professionals seeking US, UK, Canada, and Schengen visas." },
-                                { title: "Doorstep Services", desc: "Convenient document pickup & delivery across Bellandur and the ORR belt." },
-                                { title: "24/7 IT Support", desc: "Dedicated case managers for every Bellandur client." },
-                                { title: "High Success Rate", desc: "Proven track record with Bangalore's global workforce." }
-                            ].map((item, i) => (
-                                <div key={i} className="flex gap-4">
-                                    <div className="w-10 h-10 bg-primary/5 rounded-xl flex items-center justify-center shrink-0">
-                                        <CheckCircle2 className="h-5 w-5 text-secondary" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-display font-bold text-foreground">{item.title}</h4>
-                                        <p className="text-xs text-muted-foreground italic">{item.desc}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                <div className="max-w-4xl mx-auto space-y-8">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full">
+                        <Star className="h-4 w-4 text-secondary fill-secondary" />
+                        <span className="text-xs font-display font-bold text-secondary uppercase tracking-widest">Tourist &amp; Business Visas</span>
                     </div>
-
-                    <div className="relative">
-                        <div className="absolute inset-0 bg-secondary rounded-[3rem] rotate-3 opacity-10" />
-                        <div className="relative bg-card p-6 rounded-[3rem] border border-border shadow-elevated space-y-8">
-                            <h3 className="text-2xl font-display font-bold text-foreground">How We Can Help You</h3>
-                            <div className="space-y-6">
-                                <div className="p-6 bg-card rounded-2xl border border-border group hover:border-secondary transition-colors shadow-sm">
-                                    <p className="text-sm font-body text-muted-foreground italic leading-relaxed mb-4">
-                                        Our expert agents provide comprehensive visa assistance tailored for Bellandur residents.
-                                        Whether you're a tech professional, entrepreneur, or family traveler, we're here to assist you.
-                                    </p>
-                                </div>
-                            </div>
-                            <Link href="/contact" className="w-full">
-                                <Button className="w-full bg-primary text-primary-foreground py-8 rounded-2xl font-display font-bold text-lg shadow-gold group">
-                                    Contact Our Team <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                                </Button>
-                            </Link>
-                        </div>
-                    </div>
+                    <p className="text-lg font-body text-muted-foreground leading-relaxed">
+                        We&rsquo;re a Bangalore visa consultancy providing complete tourist and business visa assistance, with
+                        a core promise our Bellandur clients rely on: every document you share is reviewed the same day, with a
+                        clear, itemised response about what&rsquo;s ready and what isn&rsquo;t.
+                    </p>
                 </div>
             </section>
 
             <section className="py-14 bg-gradient-to-b from-background to-secondary/5 border-t border-b border-border">
                 <div className="container mx-auto px-4">
-                    <div className="text-center max-w-3xl mx-auto mb-8 space-y-4">
-                        <h2 className="text-4xl font-display font-bold text-foreground">Visa Agents & Services We Offer</h2>
-                        <p className="text-muted-foreground italic tracking-wide">Specialized visa agents and solutions for Bellandur's diverse community.</p>
+                    <div className="max-w-4xl mx-auto space-y-8">
+                        <div className="flex items-center gap-3">
+                            <FileSearch className="h-7 w-7 text-secondary" />
+                            <h2 className="text-4xl font-display font-bold text-foreground leading-tight">
+                                The Review That Decides Your Application
+                            </h2>
+                        </div>
+
+                        <p className="text-lg font-body text-muted-foreground leading-relaxed">
+                            Most major visa applications, Schengen, UK, Canada, Australia, are decided entirely on paper. Your
+                            file never gets to explain itself, so it has to be right before it&rsquo;s submitted. Our
+                            pre-submission review reads your file the way a visa officer will: bank statements checked against
+                            your itinerary&rsquo;s cost, leave letter dates checked against tickets, form entries checked
+                            against every annexure, insurance checked against destination rules, and your cover letter checked
+                            for whether it actually explains the trip.
+                        </p>
+
+                        <div className="p-8 bg-card rounded-[2.5rem] border border-border shadow-card">
+                            <p className="font-body text-muted-foreground leading-relaxed">
+                                You get back an itemised list, same day: what&rsquo;s missing, what&rsquo;s weak, what needs
+                                explaining. Fixing a file before submission takes days; recovering from a refusal takes months.
+                                The review is where our service earns its fee.
+                            </p>
+                        </div>
                     </div>
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {[
-                            { icon: ShieldCheck, title: "US B1/B2 & H1B Visas", desc: "Specialized assistance for tech professionals seeking US work and business visas." },
-                            { icon: Clock, title: "Express UK Processing", desc: "Priority services for leisure and business visitors to the United Kingdom." },
-                            { icon: CheckCircle2, title: "Schengen Group Filings", desc: "Hassle-free group applications for corporate and family trips to Europe." }
-                        ].map((s, i) => (
-                            <div key={i} className="p-6 bg-card rounded-[2.5rem] shadow-card border border-border hover:shadow-elevated transition-all text-center">
-                                <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                                    <s.icon className="h-8 w-8 text-secondary" />
-                                </div>
-                                <h3 className="text-xl font-display font-bold text-foreground mb-4">{s.title}</h3>
-                                <p className="text-sm font-body text-muted-foreground italic leading-relaxed">{s.desc}</p>
-                            </div>
+                </div>
+            </section>
+
+            <section className="py-14 container mx-auto px-4">
+                <div className="max-w-4xl mx-auto space-y-8">
+                    <div className="flex items-center gap-3">
+                        <Clock className="h-7 w-7 text-secondary" />
+                        <h2 className="text-4xl font-display font-bold text-foreground leading-tight">
+                            Built for Bellandur&rsquo;s Working Hours
+                        </h2>
+                    </div>
+
+                    <p className="text-lg font-body text-muted-foreground leading-relaxed">
+                        Documents move over WhatsApp and email at whatever hour you find them. Calls happen early morning or
+                        post-dinner for teams synced to US and Europe time zones. Business travellers get complete files,
+                        invitation letters, employer covering letters, financials, itineraries, formatted to each
+                        consulate&rsquo;s requirements, with the letter formats supplied to your HR so nothing stalls. Couples
+                        applying together get one coordinated checklist and back-to-back biometric slots, booked by us for the
+                        time that costs you the least.
+                    </p>
+
+                    <h3 className="text-xl font-display font-bold text-foreground">Destination coverage is complete</h3>
+                    <div className="flex flex-wrap gap-3">
+                        {destinations.map((d, i) => (
+                            <span key={i} className="px-5 py-2.5 bg-card border border-border rounded-full text-sm font-display font-bold text-foreground hover:border-secondary transition-colors">
+                                {d}
+                            </span>
                         ))}
+                    </div>
+
+                    <div className="p-6 bg-card rounded-[2rem] border border-border space-y-4">
+                        <h4 className="font-display font-bold text-foreground">And same-week e-visas for</h4>
+                        <div className="flex flex-wrap gap-3">
+                            {eVisaDestinations.map((d, i) => (
+                                <span key={i} className="px-4 py-2 bg-secondary/10 rounded-full text-xs font-display font-bold text-secondary">
+                                    {d}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="flex items-start gap-4 p-6 bg-primary/5 rounded-[2rem] border border-border">
+                        <div className="w-12 h-12 bg-card rounded-xl flex items-center justify-center shrink-0">
+                            <Info className="h-6 w-6 text-secondary" />
+                        </div>
+                        <p className="font-body text-muted-foreground leading-relaxed">
+                            Tourist and business travel only: SmotVisa has no immigration, PR or work permit services.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-14 bg-gradient-to-b from-secondary/5 to-background border-t border-b border-border">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto space-y-8">
+                        <div className="flex items-center gap-3">
+                            <RotateCcw className="h-7 w-7 text-secondary" />
+                            <h2 className="text-4xl font-display font-bold text-foreground leading-tight">
+                                Refused Before? Bring Us the Letter.
+                            </h2>
+                        </div>
+
+                        <p className="text-lg font-body text-muted-foreground leading-relaxed">
+                            If a previous application was refused, anywhere, by anyone, bring us the refusal letter. We
+                            identify the actual issue, financial documentation, purpose clarity, form errors, rebuild the
+                            application to address it, and time the reapplication properly. Reapplying blind is how one
+                            refusal becomes two; reapplying with the problem fixed is how it becomes an approval.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-14 container mx-auto px-4">
+                <div className="max-w-4xl mx-auto space-y-8">
+                    <h2 className="text-3xl font-display font-bold text-foreground">Explore More from SmotVisa</h2>
+
+                    <div className="p-6 bg-card rounded-[2rem] border border-border space-y-3">
+                        <p className="font-body text-muted-foreground">
+                            Check our{" "}
+                            <Link href="/visa/schengen-visa-consultant" className="text-secondary font-bold hover:underline">Schengen Visa</Link>{" "}
+                            page, and current{" "}
+                            <Link href="/blog/country-wise-tourist-visa-fees-processing-time-comparison" className="text-secondary font-bold hover:underline">visa processing times</Link>{" "}
+                            before locking dates.
+                        </p>
+                    </div>
+
+                    <div className="p-6 bg-card rounded-[2rem] border border-border space-y-4">
+                        <h3 className="font-display font-bold text-foreground">We also serve</h3>
+                        <div className="flex flex-wrap gap-3">
+                            {[
+                                { label: "HSR Layout", href: "/visa-agents-in-hsr-layout" },
+                                { label: "Sarjapur Road", href: "/visa-agents-in-sarjapur-road" },
+                                { label: "Marathahalli", href: "/visa-agents-in-marathahalli" }
+                            ].map((n, i) => (
+                                <Link key={i} href={n.href} className="px-5 py-2.5 bg-secondary/10 rounded-full text-sm font-display font-bold text-secondary hover:bg-secondary/20 transition-colors">
+                                    {n.label}
+                                </Link>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section className="py-14 container mx-auto px-4 text-center">
-                <div className="max-w-4xl mx-auto space-y-10">
-                    <h2 className="text-4xl md:text-7xl font-display font-bold text-foreground leading-tight">
-                        Your Trusted Visa Agents in Bellandur.
+                <div className="max-w-4xl mx-auto space-y-8">
+                    <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight">
+                        Visa Agents in Bellandur, Bangalore
                     </h2>
-                    <p className="text-xl font-body text-muted-foreground max-w-2xl mx-auto italic leading-relaxed">
-                        Don't let complex visa regulations stand in the way of your international career. Connect with our Bellandur experts today.
-                    </p>
                     <div className="flex flex-col md:flex-row gap-6 justify-center">
                         <Link href="/contact" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-secondary text-secondary-foreground font-display font-bold text-lg rounded-2xl hover:translate-y-[-2px] transition-all shadow-gold group">
-                            Contact Bellandur Desk <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                            Contact Us <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
                         </Link>
                         <Link href="/visa" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-transparent border-2 border-primary text-primary font-display font-bold text-lg rounded-2xl hover:bg-primary/5 transition-all">
-                            Check Eligibility
+                            Visa Services
                         </Link>
                     </div>
                 </div>

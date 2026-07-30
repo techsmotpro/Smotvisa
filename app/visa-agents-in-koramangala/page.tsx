@@ -1,5 +1,5 @@
 import PageHeader from "@/components/ui/PageHeader";
-import { MapPin, CheckCircle2, Star, ShieldCheck, Clock, ArrowRight } from "lucide-react";
+import { Star, ArrowRight, Clock, Briefcase, Globe2, AlertCircle } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { offices } from "@/data/officeData";
@@ -7,18 +7,18 @@ import JsonLd from "@/components/ui/JsonLd";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Best Visa Agents in Koramangala | Expert Visa Consultants | SmotVisa",
-    description: "Expert visa agents and consultants in Koramangala, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
-  keywords: [
+    title: "Visa Agents in Koramangala Bangalore | SmotVisa",
+    description: "SmotVisa prepares urgent business & tourist visa files for Koramangala USA, Schengen, UK, Singapore, Japan. Same-day review, honest timelines.",
+    keywords: [
         "visa agents in Koramangala",
-        "best visa agents Koramangala",
+        "visa agents in Koramangala Bangalore",
         "Koramangala visa consultants",
-        "SmotVisa Koramangala",
-        "Koramangala visa processing",
-        "visa services in Koramangala",
-        "visa consultants in Koramangala"
+        "urgent business visa Bangalore",
+        "business visa Koramangala",
+        "fast visa processing Koramangala",
+        "SmotVisa Koramangala"
     ],
-    
+
     alternates: {
         canonical: "https://smotvisa.com/visa-agents-in-koramangala",
     },
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     publisher: "SmotVisa",
 
     openGraph: {
-        title: "Best Visa Agents in Koramangala | Expert Visa Consultants | SmotVisa",
-        description: "Expert visa agents and consultants in Koramangala, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
+        title: "Visa Agents in Koramangala Bangalore | SmotVisa",
+        description: "Urgent business and tourist visa files prepared for Koramangala: USA, Schengen, UK, Singapore and Japan. Same-day review and honest timelines.",
         url: "https://smotvisa.com/visa-agents-in-koramangala",
         siteName: "SmotVisa",
         images: ["/images/hero-travel-CJWf8Tv1.webp"],
@@ -42,11 +42,17 @@ export const metadata: Metadata = {
 
     twitter: {
         card: "summary_large_image",
-        title: "Best Visa Agents in Koramangala | Expert Visa Consultants | SmotVisa",
-        description: "Expert visa agents and consultants in Koramangala, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
+        title: "Visa Agents in Koramangala Bangalore | SmotVisa",
+        description: "Urgent business and tourist visa files prepared for Koramangala. Same-day review, honest timelines.",
         images: ["/images/hero-travel-CJWf8Tv1.webp"],
     }
 };
+
+const destinations = [
+    "Schengen Countries", "UK", "USA", "Canada", "Australia",
+    "Japan", "Singapore", "UAE & Dubai", "Thailand", "Vietnam",
+    "Malaysia", "Sri Lanka", "Turkey", "New Zealand"
+];
 
 export default function VisaServicesInKoramangala() {
     const bangaloreOffice = offices.find(o => o.id === "cv-raman-nagar-bangalore");
@@ -60,7 +66,7 @@ export default function VisaServicesInKoramangala() {
                         "@type": "LocalBusiness",
                         "@id": "https://smotvisa.com/visa-agents-in-koramangala",
                         "name": "SmotVisa Koramangala",
-                        "description": bangaloreOffice.description,
+                        "description": "SmotVisa provides urgent business and tourist visa assistance for Koramangala, Bangalore: same-day document review, appointment monitoring, cover letters and honest timelines.",
                         "url": "https://smotvisa.com/visa-agents-in-koramangala",
                         "telephone": bangaloreOffice.phone[0],
                         "email": bangaloreOffice.email,
@@ -86,6 +92,21 @@ export default function VisaServicesInKoramangala() {
                     }} />
                     <JsonLd data={{
                         "@context": "https://schema.org",
+                        "@type": "Service",
+                        "serviceType": "Business and Tourist Visa Assistance",
+                        "provider": { "@type": "LocalBusiness", "name": "SmotVisa", "@id": "https://smotvisa.com/visa-agents-in-koramangala" },
+                        "areaServed": { "@type": "Place", "name": "Koramangala, Bangalore" },
+                        "hasOfferCatalog": {
+                            "@type": "OfferCatalog",
+                            "name": "Visa Assistance Services",
+                            "itemListElement": destinations.map(d => ({
+                                "@type": "Offer",
+                                "itemOffered": { "@type": "Service", "name": `${d} Visa Assistance` }
+                            }))
+                        }
+                    }} />
+                    <JsonLd data={{
+                        "@context": "https://schema.org",
                         "@type": "BreadcrumbList",
                         "itemListElement": [
                             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smotvisa.com/" },
@@ -95,9 +116,10 @@ export default function VisaServicesInKoramangala() {
                     }} />
                 </>
             )}
+
             <PageHeader
-                title="Visa Agents in Koramangala"
-                description="Expert visa agents for tech professionals and expatriates in Koramangala, Bangalore. SmotVisa is your trusted partner for premium travel consultancy."
+                title="Visa Agents in Koramangala, Bangalore"
+                description="Our Koramangala practice is built around one discipline: realistic speed."
                 breadcrumbs={[
                     { label: "Visa Services", href: "/visa" },
                     { label: "Koramangala" }
@@ -105,51 +127,81 @@ export default function VisaServicesInKoramangala() {
             />
 
             <section className="py-14 container mx-auto px-4">
-                <div className="grid lg:grid-cols-2 gap-8 items-center">
-                    <div className="space-y-8">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full">
-                            <Star className="h-4 w-4 text-secondary fill-secondary" />
-                            <span className="text-xs font-display font-bold text-secondary uppercase tracking-widest">Premium Visa Agents</span>
+                <div className="max-w-4xl mx-auto space-y-8">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full">
+                        <Star className="h-4 w-4 text-secondary fill-secondary" />
+                        <span className="text-xs font-display font-bold text-secondary uppercase tracking-widest">Tourist &amp; Business Visas</span>
+                    </div>
+                    <p className="text-lg font-body text-muted-foreground leading-relaxed">
+                        Koramangala&rsquo;s visa needs usually arrive with a deadline attached a conference in five weeks, a
+                        client meeting confirmed late, an event invitation that can&rsquo;t wait. SmotVisa is a Bangalore visa
+                        consultancy for tourist and business visas, and our Koramangala practice is built around one
+                        discipline: realistic speed. We tell you on day one whether your timeline is achievable, and if it is,
+                        we make every day count.
+                    </p>
+                </div>
+            </section>
+
+            <section className="py-14 bg-gradient-to-b from-background to-secondary/5 border-t border-b border-border">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto space-y-8">
+                        <div className="flex items-center gap-3">
+                            <Clock className="h-7 w-7 text-secondary" />
+                            <h2 className="text-4xl font-display font-bold text-foreground leading-tight">
+                                Urgent Business Visas, Managed Properly
+                            </h2>
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight">
-                            Expert Visa Agents for Koramangala's Tech Community.
-                        </h2>
-                        <p className="text-lg font-body text-muted-foreground italic leading-relaxed">
-                            Strategically located in Koramangala, SmotVisa provides specialized visa assistance tailored for the vibrant tech professionals and expatriate community in this premier IT hub of Bangalore.
+
+                        <p className="text-lg font-body text-muted-foreground leading-relaxed">
+                            Different destinations have different fast paths, and knowing them is the job. Dubai and most
+                            Southeast Asian e-visas can be approved in days. Singapore business visas move quickly with
+                            correct documentation. Schengen and UK timelines depend on appointment availability at the
+                            Bangalore centres, which we monitor daily for cancellations and early slots. US business visa
+                            interviews carry the longest waits, which is why we advise frequent US travellers to apply before
+                            a specific trip exists, so the long-validity visa is already in the passport when the invitation
+                            lands.
                         </p>
 
-                        <div className="grid sm:grid-cols-2 gap-6">
-                            {[
-                                { title: "Tech Professional Specialization", desc: "Expert guidance for IT professionals seeking US, UK, Canada, and Schengen visas." },
-                                { title: "Doorstep Services", desc: "Convenient document pickup & delivery across Koramangala blocks." },
-                                { title: "24/7 IT Support", desc: "Dedicated case managers for every Koramangala client." },
-                                { title: "High Success Rate", desc: "Proven track record with Bangalore's global workforce." }
-                            ].map((item, i) => (
-                                <div key={i} className="flex gap-4">
-                                    <div className="w-10 h-10 bg-primary/5 rounded-xl flex items-center justify-center shrink-0">
-                                        <CheckCircle2 className="h-5 w-5 text-secondary" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-display font-bold text-foreground">{item.title}</h4>
-                                        <p className="text-xs text-muted-foreground italic">{item.desc}</p>
-                                    </div>
-                                </div>
-                            ))}
+                        <div className="flex items-start gap-4 p-6 bg-primary/5 rounded-[2rem] border border-border">
+                            <div className="w-12 h-12 bg-card rounded-xl flex items-center justify-center shrink-0">
+                                <AlertCircle className="h-6 w-6 text-secondary" />
+                            </div>
+                            <p className="font-body text-muted-foreground leading-relaxed">
+                                When a timeline genuinely can&rsquo;t work, we say so before taking your money, and we&rsquo;ll
+                                map the fastest realistic alternative instead.
+                            </p>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-14 container mx-auto px-4">
+                <div className="grid lg:grid-cols-2 gap-10 items-start max-w-6xl mx-auto">
+                    <div className="space-y-6">
+                        <div className="flex items-center gap-3">
+                            <Briefcase className="h-7 w-7 text-secondary" />
+                            <h2 className="text-4xl font-display font-bold text-foreground leading-tight">
+                                Business Files That Hold Up Under Scrutiny
+                            </h2>
+                        </div>
+                        <p className="text-lg font-body text-muted-foreground leading-relaxed">
+                            A business visa file is a chain of documents that must agree with each other: the overseas
+                            invitation letter, your company&rsquo;s covering letter, registration and GST records, financial
+                            statements, and an itinerary matching the stated purpose. We draft and cross-check every link.
+                        </p>
+                        <p className="text-lg font-body text-muted-foreground leading-relaxed">
+                            For self-employed applicants and business owners, we structure company and income evidence the way
+                            each consulate expects, the area where self-prepared files most often fall short. US B1 applicants
+                            get dedicated interview preparation.
+                        </p>
                     </div>
 
                     <div className="relative">
                         <div className="absolute inset-0 bg-secondary rounded-[3rem] rotate-3 opacity-10" />
-                        <div className="relative bg-card p-6 rounded-[3rem] border border-border shadow-elevated space-y-8">
-                            <h3 className="text-2xl font-display font-bold text-foreground">How We Can Help You</h3>
-                            <div className="space-y-6">
-                                <div className="p-6 bg-card rounded-2xl border border-border group hover:border-secondary transition-colors shadow-sm">
-                                    <p className="text-sm font-body text-muted-foreground italic leading-relaxed mb-4">
-                                        Our expert agents provide comprehensive visa assistance tailored for Koramangala residents. 
-                                        Whether you're a tech professional, entrepreneur, or family traveler, we're here to assist you.
-                                    </p>
-                                </div>
-                            </div>
+                        <div className="relative bg-card p-8 rounded-[3rem] border border-border shadow-elevated space-y-6">
+                            <h3 className="text-2xl font-display font-bold text-foreground">
+                                We tell you on day one whether your timeline is achievable.
+                            </h3>
                             <Link href="/contact" className="w-full">
                                 <Button className="w-full bg-primary text-primary-foreground py-8 rounded-2xl font-display font-bold text-lg shadow-gold group">
                                     Contact Our Team <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -160,44 +212,75 @@ export default function VisaServicesInKoramangala() {
                 </div>
             </section>
 
-            <section className="py-14 bg-gradient-to-b from-background to-secondary/5 border-t border-b border-border">
+            <section className="py-14 bg-gradient-to-b from-secondary/5 to-background border-t border-b border-border">
                 <div className="container mx-auto px-4">
-                    <div className="text-center max-w-3xl mx-auto mb-8 space-y-4">
-                        <h2 className="text-4xl font-display font-bold text-foreground">Visa Agents & Services We Offer</h2>
-                        <p className="text-muted-foreground italic tracking-wide">Specialized visa agents and solutions for Koramangala's diverse community.</p>
+                    <div className="max-w-4xl mx-auto space-y-8">
+                        <div className="flex items-center gap-3">
+                            <Globe2 className="h-7 w-7 text-secondary" />
+                            <h2 className="text-4xl font-display font-bold text-foreground leading-tight">
+                                Tourist Visas with the Same Rigour
+                            </h2>
+                        </div>
+
+                        <p className="text-lg font-body text-muted-foreground leading-relaxed">
+                            Europe trips with friends, family holidays, honeymoon itineraries: we coordinate group
+                            applications so every file tells the same story, arrange Schengen-compliant travel insurance,
+                            draft honest and specific cover letters, and book biometric slots together.
+                        </p>
+
+                        <h3 className="text-xl font-display font-bold text-foreground">Full destination coverage</h3>
+                        <div className="flex flex-wrap gap-3">
+                            {destinations.map((d, i) => (
+                                <span key={i} className="px-5 py-2.5 bg-card border border-border rounded-full text-sm font-display font-bold text-foreground hover:border-secondary transition-colors">
+                                    {d}
+                                </span>
+                            ))}
+                        </div>
                     </div>
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {[
-                            { icon: ShieldCheck, title: "US B1/B2 & H1B Visas", desc: "Specialized assistance for tech professionals seeking US work and business visas." },
-                            { icon: Clock, title: "Express UK Processing", desc: "Priority services for leisure and business visitors to the United Kingdom." },
-                            { icon: CheckCircle2, title: "Schengen Group Filings", desc: "Hassle-free group applications for corporate and family trips to Europe." }
-                        ].map((s, i) => (
-                            <div key={i} className="p-6 bg-card rounded-[2.5rem] shadow-card border border-border hover:shadow-elevated transition-all text-center">
-                                <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                                    <s.icon className="h-8 w-8 text-secondary" />
-                                </div>
-                                <h3 className="text-xl font-display font-bold text-foreground mb-4">{s.title}</h3>
-                                <p className="text-sm font-body text-muted-foreground italic leading-relaxed">{s.desc}</p>
-                            </div>
-                        ))}
+                </div>
+            </section>
+
+            <section className="py-14 container mx-auto px-4">
+                <div className="max-w-4xl mx-auto space-y-8">
+                    <h2 className="text-3xl font-display font-bold text-foreground">Explore More from SmotVisa</h2>
+
+                    <div className="p-6 bg-card rounded-[2rem] border border-border space-y-3">
+                        <p className="font-body text-muted-foreground">
+                            Go deeper with{" "}
+                            <Link href="/visa" className="text-secondary font-bold hover:underline">business visa assistance</Link>{" "}and our{" "}
+                            <Link href="/visa/us-visa-consultant" className="text-secondary font-bold hover:underline">USA Visa</Link>{" "}guide, or check current{" "}
+                            <Link href="/blog/country-wise-tourist-visa-fees-processing-time-comparison" className="text-secondary font-bold hover:underline">visa processing times</Link>.
+                        </p>
+                    </div>
+
+                    <div className="p-6 bg-card rounded-[2rem] border border-border space-y-4">
+                        <h3 className="font-display font-bold text-foreground">Also serving</h3>
+                        <div className="flex flex-wrap gap-3">
+                            {[
+                                { label: "HSR Layout", href: "/visa-agents-in-hsr-layout" },
+                                { label: "Indiranagar", href: "/visa-agents-in-indiranagar" },
+                                { label: "BTM Layout", href: "/visa-agents-in-btm-layout" }
+                            ].map((n, i) => (
+                                <Link key={i} href={n.href} className="px-5 py-2.5 bg-secondary/10 rounded-full text-sm font-display font-bold text-secondary hover:bg-secondary/20 transition-colors">
+                                    {n.label}
+                                </Link>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section className="py-14 container mx-auto px-4 text-center">
                 <div className="max-w-4xl mx-auto space-y-10">
-                    <h2 className="text-4xl md:text-7xl font-display font-bold text-foreground leading-tight">
-                        Your Trusted Visa Agents in Koramangala.
+                    <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight">
+                        Visa Agents in Koramangala, Bangalore
                     </h2>
-                    <p className="text-xl font-body text-muted-foreground max-w-2xl mx-auto italic leading-relaxed">
-                        Don't let complex visa regulations stand in the way of your international career. Connect with our Koramangala experts today.
-                    </p>
                     <div className="flex flex-col md:flex-row gap-6 justify-center">
                         <Link href="/contact" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-secondary text-secondary-foreground font-display font-bold text-lg rounded-2xl hover:translate-y-[-2px] transition-all shadow-gold group">
-                            Contact Koramangala Desk <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                            Contact Us <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
                         </Link>
                         <Link href="/visa" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-transparent border-2 border-primary text-primary font-display font-bold text-lg rounded-2xl hover:bg-primary/5 transition-all">
-                            Check Eligibility
+                            Visa Services
                         </Link>
                     </div>
                 </div>

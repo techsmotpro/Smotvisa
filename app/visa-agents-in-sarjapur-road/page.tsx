@@ -1,22 +1,21 @@
 import PageHeader from "@/components/ui/PageHeader";
-import { CheckCircle2, Star, ShieldCheck, Clock, ArrowRight } from "lucide-react";
+import { Star, ArrowRight, Users, CalendarDays, Plane } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { offices } from "@/data/officeData";
 import JsonLd from "@/components/ui/JsonLd";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Best Visa Agents in Sarjapur Road | Expert Visa Consultants | SmotVisa",
-    description: "Expert visa agents and consultants in Sarjapur Road, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas for tech professionals and expatriates.",
+    title: "Visa Agents in Sarjapur Road Bangalore | SmotVisa",
+    description: "School-holiday trips, grandparents included  SmotVisa manages complete family visa files for Sarjapur Road. Schengen, Dubai, Australia & more, on one checklist.",
     keywords: [
         "visa agents in Sarjapur Road",
-        "best visa agents Sarjapur Road",
+        "visa agents in Sarjapur Road Bangalore",
         "Sarjapur Road visa consultants",
-        "SmotVisa Sarjapur Road",
-        "Sarjapur Road visa processing",
-        "visa services in Sarjapur Road",
-        "visa consultants in Sarjapur Road"
+        "family visa assistance Bangalore",
+        "school holiday visa applications",
+        "group visa application Bangalore",
+        "SmotVisa Sarjapur Road"
     ],
 
     alternates: {
@@ -32,8 +31,8 @@ export const metadata: Metadata = {
     publisher: "SmotVisa",
 
     openGraph: {
-        title: "Best Visa Agents in Sarjapur Road | Expert Visa Consultants | SmotVisa",
-        description: "Expert visa agents and consultants in Sarjapur Road, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas.",
+        title: "Visa Agents in Sarjapur Road Bangalore | SmotVisa",
+        description: "School-holiday trips, grandparents included. SmotVisa manages complete family visa files for Sarjapur Road: Schengen, Dubai, Australia and more, on one checklist.",
         url: "https://smotvisa.com/visa-agents-in-sarjapur-road",
         siteName: "SmotVisa",
         images: ["/images/hero-travel-CJWf8Tv1.webp"],
@@ -42,11 +41,13 @@ export const metadata: Metadata = {
 
     twitter: {
         card: "summary_large_image",
-        title: "Best Visa Agents in Sarjapur Road | Expert Visa Consultants | SmotVisa",
-        description: "Expert visa agents and consultants in Sarjapur Road, Bangalore. SmotVisa provides expert assistance for US, UK, Canada, and Schengen visas .",
+        title: "Visa Agents in Sarjapur Road Bangalore | SmotVisa",
+        description: "Complete family visa files for Sarjapur Road, managed on one coordinated checklist.",
         images: ["/images/hero-travel-CJWf8Tv1.webp"],
     }
 };
+
+const eVisaDestinations = ["Dubai", "Thailand", "Vietnam", "Malaysia", "Sri Lanka"];
 
 export default function VisaServicesInSarjapurRoad() {
     const bangaloreOffice = offices.find(o => o.id === "cv-raman-nagar-bangalore");
@@ -60,7 +61,7 @@ export default function VisaServicesInSarjapurRoad() {
                         "@type": "LocalBusiness",
                         "@id": "https://smotvisa.com/visa-agents-in-sarjapur-road",
                         "name": "SmotVisa Sarjapur Road",
-                        "description": bangaloreOffice.description,
+                        "description": "SmotVisa provides tourist and business visa assistance for Sarjapur Road, Bangalore, with deep practice in coordinated family and group visa applications.",
                         "url": "https://smotvisa.com/visa-agents-in-sarjapur-road",
                         "telephone": bangaloreOffice.phone[0],
                         "email": bangaloreOffice.email,
@@ -86,6 +87,21 @@ export default function VisaServicesInSarjapurRoad() {
                     }} />
                     <JsonLd data={{
                         "@context": "https://schema.org",
+                        "@type": "Service",
+                        "serviceType": "Family and Group Visa Assistance",
+                        "provider": { "@type": "LocalBusiness", "name": "SmotVisa", "@id": "https://smotvisa.com/visa-agents-in-sarjapur-road" },
+                        "areaServed": { "@type": "Place", "name": "Sarjapur Road, Bangalore" },
+                        "hasOfferCatalog": {
+                            "@type": "OfferCatalog",
+                            "name": "Visa Assistance Services",
+                            "itemListElement": ["Schengen", "United Kingdom", ...eVisaDestinations].map(d => ({
+                                "@type": "Offer",
+                                "itemOffered": { "@type": "Service", "name": `${d} Visa Assistance` }
+                            }))
+                        }
+                    }} />
+                    <JsonLd data={{
+                        "@context": "https://schema.org",
                         "@type": "BreadcrumbList",
                         "itemListElement": [
                             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smotvisa.com/" },
@@ -95,9 +111,10 @@ export default function VisaServicesInSarjapurRoad() {
                     }} />
                 </>
             )}
+
             <PageHeader
-                title="Visa Agents in Sarjapur Road"
-                description="Expert visa agents for tech professionals and expatriates in Sarjapur Road, Bangalore. SmotVisa is your trusted partner for premium travel consultancy along Bangalore's fastest-growing IT corridor."
+                title="Visa Agents in Sarjapur Road, Bangalore"
+                description="Deep practice in family files, where one weak application can hold up an entire trip."
                 breadcrumbs={[
                     { label: "Visa Services", href: "/visa" },
                     { label: "Sarjapur Road" }
@@ -105,99 +122,136 @@ export default function VisaServicesInSarjapurRoad() {
             />
 
             <section className="py-14 container mx-auto px-4">
-                <div className="grid lg:grid-cols-2 gap-8 items-center">
-                    <div className="space-y-8">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full">
-                            <Star className="h-4 w-4 text-secondary fill-secondary" />
-                            <span className="text-xs font-display font-bold text-secondary uppercase tracking-widest">Premium Visa Agents</span>
-                        </div>
-                        <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight">
-                            Expert Visa Agents for Sarjapur Road's Tech Corridor.
-                        </h2>
-                        <p className="text-lg font-body text-muted-foreground italic leading-relaxed">
-                            Serving one of Bangalore's fastest-growing IT and residential belts, SmotVisa provides specialized visa assistance tailored for the software engineers, startup founders, and expatriate families living and working along Sarjapur Road.
-                        </p>
-
-                        <div className="grid sm:grid-cols-2 gap-6">
-                            {[
-                                { title: "Tech Professional Specialization", desc: "Expert guidance for IT professionals seeking US, UK, Canada, and Schengen visas." },
-                                { title: "Doorstep Services", desc: "Convenient document pickup & delivery across Sarjapur Road and surrounding tech parks." },
-                                { title: "24/7 IT Support", desc: "Dedicated case managers for every Sarjapur Road client." },
-                                { title: "High Success Rate", desc: "Proven track record with Bangalore's global workforce." }
-                            ].map((item, i) => (
-                                <div key={i} className="flex gap-4">
-                                    <div className="w-10 h-10 bg-primary/5 rounded-xl flex items-center justify-center shrink-0">
-                                        <CheckCircle2 className="h-5 w-5 text-secondary" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-display font-bold text-foreground">{item.title}</h4>
-                                        <p className="text-xs text-muted-foreground italic">{item.desc}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                <div className="max-w-4xl mx-auto space-y-8">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full">
+                        <Star className="h-4 w-4 text-secondary fill-secondary" />
+                        <span className="text-xs font-display font-bold text-secondary uppercase tracking-widest">Tourist &amp; Business Visas</span>
                     </div>
-
-                    <div className="relative">
-                        <div className="absolute inset-0 bg-secondary rounded-[3rem] rotate-3 opacity-10" />
-                        <div className="relative bg-card p-6 rounded-[3rem] border border-border shadow-elevated space-y-8">
-                            <h3 className="text-2xl font-display font-bold text-foreground">How We Can Help You</h3>
-                            <div className="space-y-6">
-                                <div className="p-6 bg-card rounded-2xl border border-border group hover:border-secondary transition-colors shadow-sm">
-                                    <p className="text-sm font-body text-muted-foreground italic leading-relaxed mb-4">
-                                        Our expert agents provide comprehensive visa assistance tailored for Sarjapur Road residents.
-                                        Whether you're a tech professional, entrepreneur, or family traveler, we're here to assist you.
-                                    </p>
-                                </div>
-                            </div>
-                            <Link href="/contact" className="w-full">
-                                <Button className="w-full bg-primary text-primary-foreground py-8 rounded-2xl font-display font-bold text-lg shadow-gold group">
-                                    Contact Our Team <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                                </Button>
-                            </Link>
-                        </div>
-                    </div>
+                    <p className="text-lg font-body text-muted-foreground leading-relaxed">
+                        When Sarjapur Road travels, it usually travels as a family: two working parents, children, and often
+                        grandparents, all needing visas approved for the same school-holiday window. Group applications are a
+                        different visa discipline from individual ones, and they&rsquo;re SmotVisa&rsquo;s specialty on this
+                        corridor. We&rsquo;re a Bangalore visa consultancy for tourist and business visas, with deep practice
+                        in family files where one weak application can hold up an entire trip.
+                    </p>
                 </div>
             </section>
 
             <section className="py-14 bg-gradient-to-b from-background to-secondary/5 border-t border-b border-border">
                 <div className="container mx-auto px-4">
-                    <div className="text-center max-w-3xl mx-auto mb-8 space-y-4">
-                        <h2 className="text-4xl font-display font-bold text-foreground">Visa Agents & Services We Offer</h2>
-                        <p className="text-muted-foreground italic tracking-wide">Specialized visa agents and solutions for Sarjapur Road's diverse community.</p>
+                    <div className="max-w-4xl mx-auto space-y-8">
+                        <div className="flex items-center gap-3">
+                            <Users className="h-7 w-7 text-secondary" />
+                            <h2 className="text-4xl font-display font-bold text-foreground leading-tight">
+                                A Family File Is One Story, Told Several Times
+                            </h2>
+                        </div>
+
+                        <p className="text-lg font-body text-muted-foreground leading-relaxed">
+                            Consulates read a family&rsquo;s applications as a set, and inconsistencies between them are what
+                            cause trouble: itineraries that don&rsquo;t match because they were booked separately, a child
+                            missing a school NOC, a grandparent whose insurance doesn&rsquo;t meet the age-specific minimum, a
+                            consent letter nobody knew was required for a parent travelling alone with children.
+                        </p>
+
+                        <div className="p-8 bg-card rounded-[2.5rem] border border-border shadow-card">
+                            <p className="font-body text-muted-foreground leading-relaxed">
+                                Our method removes that risk: one coordinated project per family. Each member gets an
+                                individual checklist, cross-checked against the others. Children&rsquo;s documents, school
+                                NOCs, birth certificates, notarised consent letters, are handled in full. Grandparents&rsquo;
+                                pension income and age-appropriate insurance are documented properly. Biometric appointments
+                                are booked together so the family makes one trip to the centre, and a single consultant tracks
+                                every passport until all of them are home.
+                            </p>
+                        </div>
                     </div>
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {[
-                            { icon: ShieldCheck, title: "US B1/B2 & H1B Visas", desc: "Specialized assistance for tech professionals seeking US work and business visas." },
-                            { icon: Clock, title: "Express UK Processing", desc: "Priority services for leisure and business visitors to the United Kingdom." },
-                            { icon: CheckCircle2, title: "Schengen Group Filings", desc: "Hassle-free group applications for corporate and family trips to Europe." }
-                        ].map((s, i) => (
-                            <div key={i} className="p-6 bg-card rounded-[2.5rem] shadow-card border border-border hover:shadow-elevated transition-all text-center">
-                                <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                                    <s.icon className="h-8 w-8 text-secondary" />
-                                </div>
-                                <h3 className="text-xl font-display font-bold text-foreground mb-4">{s.title}</h3>
-                                <p className="text-sm font-body text-muted-foreground italic leading-relaxed">{s.desc}</p>
+                </div>
+            </section>
+
+            <section className="py-14 container mx-auto px-4">
+                <div className="max-w-4xl mx-auto space-y-8">
+                    <div className="flex items-center gap-3">
+                        <CalendarDays className="h-7 w-7 text-secondary" />
+                        <h2 className="text-4xl font-display font-bold text-foreground leading-tight">
+                            Timed to the School Calendar
+                        </h2>
+                    </div>
+
+                    <p className="text-lg font-body text-muted-foreground leading-relaxed">
+                        Family travel follows the school year: summer vacation, Dasara break, December holidays, and consulate
+                        appointment availability tightens before every one of them. Our standing advice for family Schengen
+                        and UK applications is to start 6 to 8 weeks ahead, earlier for summer. Tell us your school&rsquo;s
+                        holiday dates and we&rsquo;ll work the timeline backward for you, including buffer for any consulate
+                        queries.
+                    </p>
+
+                    <div className="p-8 bg-card rounded-[2.5rem] border border-border shadow-card space-y-4">
+                        <div className="flex items-center gap-3">
+                            <Plane className="h-6 w-6 text-secondary" />
+                            <h3 className="text-xl font-display font-bold text-foreground">
+                                For quick getaways between breaks
+                            </h3>
+                        </div>
+                        <p className="font-body text-muted-foreground leading-relaxed">
+                            We process Dubai, Thailand, Vietnam, Malaysia and Sri Lanka e-visas online within days. And for the
+                            corridor&rsquo;s working professionals, we prepare complete business visa files, invitation
+                            letters, employer letters, financials and itineraries, with same-day document turnaround.
+                        </p>
+                        <div className="flex flex-wrap gap-3 pt-2">
+                            {eVisaDestinations.map((d, i) => (
+                                <span key={i} className="px-4 py-2 bg-secondary/10 rounded-full text-xs font-display font-bold text-secondary">
+                                    {d}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-14 bg-gradient-to-b from-secondary/5 to-background border-t border-b border-border">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto space-y-8">
+                        <h2 className="text-3xl font-display font-bold text-foreground">Plan Your Family Trip</h2>
+
+                        <div className="p-6 bg-card rounded-[2rem] border border-border space-y-3">
+                            <p className="font-body text-muted-foreground">
+                                Start with our{" "}
+                                <Link href="/visa/schengen-visa-consultant" className="text-secondary font-bold hover:underline">Schengen Visa</Link>,{" "}
+                                <Link href="/visa/uae-visa-consultant" className="text-secondary font-bold hover:underline">Dubai Visa</Link>{" "}and{" "}
+                                <Link href="/visa/australia-visa-consultant" className="text-secondary font-bold hover:underline">Australia Visa</Link>{" "}
+                                pages.
+                            </p>
+                        </div>
+
+                        <div className="p-6 bg-card rounded-[2rem] border border-border space-y-4">
+                            <h3 className="font-display font-bold text-foreground">Also serving</h3>
+                            <div className="flex flex-wrap gap-3">
+                                {[
+                                    { label: "Bellandur", href: "/visa-agents-in-bellandur" },
+                                    { label: "HSR Layout", href: "/visa-agents-in-hsr-layout" },
+                                    { label: "Whitefield", href: "/visa-agents-in-whitefield" }
+                                ].map((n, i) => (
+                                    <Link key={i} href={n.href} className="px-5 py-2.5 bg-secondary/10 rounded-full text-sm font-display font-bold text-secondary hover:bg-secondary/20 transition-colors">
+                                        {n.label}
+                                    </Link>
+                                ))}
                             </div>
-                        ))}
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section className="py-14 container mx-auto px-4 text-center">
-                <div className="max-w-4xl mx-auto space-y-10">
-                    <h2 className="text-4xl md:text-7xl font-display font-bold text-foreground leading-tight">
-                        Your Trusted Visa Agents in Sarjapur Road.
+                <div className="max-w-4xl mx-auto space-y-8">
+                    <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight">
+                        Visa Agents in Sarjapur Road, Bangalore
                     </h2>
-                    <p className="text-xl font-body text-muted-foreground max-w-2xl mx-auto italic leading-relaxed">
-                        Don't let complex visa regulations stand in the way of your international career. Connect with our Sarjapur Road experts today.
-                    </p>
                     <div className="flex flex-col md:flex-row gap-6 justify-center">
                         <Link href="/contact" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-secondary text-secondary-foreground font-display font-bold text-lg rounded-2xl hover:translate-y-[-2px] transition-all shadow-gold group">
-                            Contact Sarjapur Road Desk <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                            Contact Us <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
                         </Link>
                         <Link href="/visa" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-transparent border-2 border-primary text-primary font-display font-bold text-lg rounded-2xl hover:bg-primary/5 transition-all">
-                            Check Eligibility
+                            Visa Services
                         </Link>
                     </div>
                 </div>
