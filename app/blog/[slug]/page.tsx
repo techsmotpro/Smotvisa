@@ -17,11 +17,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
     if (!blog) return {};
 
-    const plainExcerpt = blog.excerpt.replace(/<[^>]*>/g, "").substring(0, 160);
+    const plainExcerpt = blog.metaDescription || blog.excerpt.replace(/<[^>]*>/g, "").substring(0, 160);
     const image = blog.image.startsWith("http") ? blog.image : `https://smotvisa.com${blog.image}`;
 
     return {
-        title: `${blog.title} | SmotVisa Blog`,
+        title: blog.seoTitle || `${blog.title} | SmotVisa Blog`,
         description: plainExcerpt,
         keywords: [blog.title, blog.category || "visa blog", "SmotVisa blog", "visa tips", "travel guide"].filter(Boolean),
         alternates: {
@@ -89,6 +89,38 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
                     },
                 }}
             />
+            <JsonLd
+                data={{
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    itemListElement: [
+                        { "@type": "ListItem", position: 1, name: "Home", item: "https://smotvisa.com/" },
+                        { "@type": "ListItem", position: 2, name: "Blog", item: "https://smotvisa.com/blog" },
+                        {
+                            "@type": "ListItem",
+                            position: 3,
+                            name: blog.title,
+                            item: `https://smotvisa.com/blog/${slug}`,
+                        },
+                    ],
+                }}
+            />
+            {blog.faq && blog.faq.length > 0 && (
+                <JsonLd
+                    data={{
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        mainEntity: blog.faq.map((item) => ({
+                            "@type": "Question",
+                            name: item.question,
+                            acceptedAnswer: {
+                                "@type": "Answer",
+                                text: item.answer,
+                            },
+                        })),
+                    }}
+                />
+            )}
             <BlogDetailClient blog={blog} />
         </>
     );

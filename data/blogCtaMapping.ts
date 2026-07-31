@@ -239,4 +239,32 @@ export const blogCtaMapping: Record<string, BlogCta> = {
             ctaDescription: "Unsure which EU country is right for your profile? Book a consultation with our team.",
         },
     },
+    "first-time-student-visa-application-checklist": {
+        primaryCta: {
+            ctaText: "Explore Visa Services",
+            ctaUrl: "/visa",
+            ctaDescription:
+                "SmotVisa does not handle student visa applications. For tourist visas and business visas, our team is here to help.",
+        },
+        secondaryCta: {
+            ctaText: "Talk to Smotvisa",
+            ctaUrl: "/contact",
+            ctaDescription:
+                "Passport renewal, fresh passports, international flight bookings, and curated tour packages — talk to our team.",
+        },
+    },
+    "complete-travel-guide-visa-requirement": {
+        primaryCta: {
+            ctaText: "Explore Visa Services",
+            ctaUrl: "/visa",
+            ctaDescription:
+                "We review your profile before you spend money, tell you honestly where the weak points are, and build the document set to each consulate's current format.",
+        },
+        secondaryCta: {
+            ctaText: "Talk to Smotvisa",
+            ctaUrl: "/contact",
+            ctaDescription:
+                "If you'd rather not manage it alone, send us your travel plan and we'll tell you exactly what your file needs.",
+        },
+    },
 };

@@ -1,5 +1,10 @@
 import blogsData from "./blogs.json";
 
+export interface BlogFaq {
+    question: string;
+    answer: string;
+}
+
 interface BlogPostRaw {
     id: string;
     slug?: string;
@@ -8,6 +13,9 @@ interface BlogPostRaw {
     category_names?: string | string[];
     tagname?: string | string[];
     title: string;
+    seoTitle?: string;
+    metaDescription?: string;
+    faq?: BlogFaq[];
     excerpt: string;
     content: string;
     author: string;
@@ -25,6 +33,9 @@ export interface BlogPost {
     category_names: string[];
     tagname: string[];
     title: string;
+    seoTitle?: string;
+    metaDescription?: string;
+    faq?: BlogFaq[];
     excerpt: string;
     content: string;
     author: string;
@@ -62,6 +73,9 @@ const blogs: BlogPost[] = (blogsData as BlogPostRaw[]).map((b) => ({
           : [],
     tagname: b.tagname ? (Array.isArray(b.tagname) ? b.tagname : [b.tagname]) : [],
     title: b.title,
+    seoTitle: b.seoTitle,
+    metaDescription: b.metaDescription,
+    faq: b.faq,
     excerpt: b.excerpt ? b.excerpt.replace(/<[^>]*>/g, "").replace(/&hellip;/g, "...") : "",
     content: b.content ? convertPlainTextToHtml(b.content) : "",
     author: b.author || "SmotVisa Team",
@@ -80,10 +94,20 @@ export function getBlogBySlug(slug: string): BlogPost | undefined {
 }
 
 export function getBlogSummaries(): BlogPostSummary[] {
-    return blogs.map(({ content: _content, updatedAt: _updatedAt, createdAt: _createdAt, ...summary }) => summary);
+    return blogs.map(
+        ({ content: _content, updatedAt: _updatedAt, createdAt: _createdAt, faq: _faq, ...summary }) => summary,
+    );
 }
 
+// Most posts are authored as HTML already. Running those through the plain-text
+// converter double-processes them: every source line break becomes a literal <br>,
+// which stacks an extra blank line on top of the spacing <p> and <li> already have.
+// Only convert content that genuinely arrives as plain text.
 function convertPlainTextToHtml(text: string): string {
+    if (/^\s*<(p|h[1-6]|ul|ol|table|div|figure|blockquote|section)\b/i.test(text)) {
+        return text;
+    }
+
     const paragraphs = text.split(/\n\n+/).filter((p) => p.trim());
     return paragraphs
         .map((paragraph) => {
