@@ -59,7 +59,7 @@ export default function BlogListingPage() {
                 ]
             }} />
             <PageHeader
-                title="SmotVisa Travel Blog"
+                title="Find out our variety of news on visa and travel"
                 description="Expert insights, visa guides, and travel inspiration to help you navigate the world with confidence."
                 breadcrumbs={[{ label: "Blog" }]}
             />
