@@ -10,10 +10,12 @@ import BlogCtaSection from "./BlogCtaSection";
 
 export default function BlogDetailClient({ blog }: { blog: BlogPost }) {
     const sanitizedContent = useMemo(() => {
-        if (typeof window !== "undefined") {
-            return DOMPurify.sanitize(blog.content);
-        }
-        return blog.content;
+        const html = typeof window !== "undefined" ? DOMPurify.sanitize(blog.content) : blog.content;
+        // Comparison tables are wider than the article column on phones. Give each one
+        // its own scroll container so the table scrolls instead of the whole page.
+        return html
+            .replace(/<table/g, '<div class="overflow-x-auto my-8"><table')
+            .replace(/<\/table>/g, "</table></div>");
     }, [blog.content]);
 
     return (
@@ -77,7 +79,13 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost }) {
                                       prose-p:mb-4 prose-li:mb-1
                                       prose-strong:font-semibold prose-strong:text-foreground/80
                                       prose-a:text-secondary prose-a:font-medium hover:prose-a:underline
-                                      prose-img:rounded-[2rem] prose-img:shadow-elevated prose-img:mt-12 prose-img:mb-12"
+                                      prose-img:rounded-[2rem] prose-img:shadow-elevated prose-img:mt-12 prose-img:mb-12
+                                      prose-table:w-full prose-table:my-0 prose-table:text-sm prose-table:border-collapse
+                                      prose-thead:bg-secondary/10 prose-thead:border-b-0
+                                      prose-th:border prose-th:border-border prose-th:px-4 prose-th:py-3 prose-th:text-left
+                                      prose-th:font-display prose-th:font-semibold prose-th:text-foreground
+                                      prose-td:border prose-td:border-border prose-td:px-4 prose-td:py-3 prose-td:align-top
+                                      [&_td>p]:m-0 [&_th>p]:m-0"
                             dangerouslySetInnerHTML={{ __html: sanitizedContent }}
                         />
 
