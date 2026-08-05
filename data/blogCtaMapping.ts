@@ -196,7 +196,7 @@ export const blogCtaMapping: Record<string, BlogCta> = {
             ctaDescription: "Want accurate, up-to-date visa fees and timelines? Our experts can guide you.",
         },
     },
-    "countries-with-no-interview-visa": {
+    "countries-with-no-interview-visa-for-indians": {
         primaryCta: {
             ctaText: "Check Visa Options",
             ctaUrl: "/visa",
