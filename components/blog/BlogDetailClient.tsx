@@ -30,7 +30,7 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost }) {
                         initial={{ opacity: 0, y: 0 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="max-w-5xl"
+                        className="max-w-4xl mx-auto text-center"
                     >
                         <Link
                             href="/blog"
@@ -46,7 +46,7 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost }) {
                         <h1 className="text-2xl md:text-4xl font-display font-bold text-primary-foreground mb-5 leading-tight">
                             {blog.title}
                         </h1>
-                        <div className="flex flex-wrap items-center gap-x-8 gap-y-3 text-primary-foreground/75 font-body text-sm md:text-base">
+                        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-primary-foreground/75 font-body text-sm md:text-base">
                             <div className="flex items-center gap-3">
                                 <div className="w-9 h-9 rounded-full bg-secondary/20 flex items-center justify-center border border-secondary/30">
                                     <User className="h-4 w-4 text-secondary" />
