@@ -1,7 +1,6 @@
 ﻿import { MotionDiv } from "@/components/ui/MotionWrapper";
 import { ArrowLeft, Calendar, User, Clock } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import { useMemo } from "react";
 import DOMPurify from "dompurify";
 import type { BlogPost } from "@/data/blogData";
@@ -20,19 +19,13 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost }) {
     return (
         <div className="bg-background min-h-screen">
             {/* Hero Section */}
-            <section className="relative h-[65vh] min-h-[500px] overflow-hidden">
-                <Image
-                    src={blog.image || "/images/hero-travel-CJWf8Tv1.webp"}
-                    alt={blog.title}
-                    fill
-                    className="object-cover"
-                    sizes="100vw"
-                    priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-                <div className="absolute inset-0 bg-primary/20" />
+            <section className="relative overflow-hidden bg-black pt-28 pb-14">
+                <div className="absolute inset-0 opacity-10 pointer-events-none">
+                    <div className="absolute top-0 left-0 w-96 h-96 bg-secondary blur-[120px] rounded-full -translate-x-1/2 -translate-y-1/2" />
+                    <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary blur-[120px] rounded-full translate-x-1/2 translate-y-1/2" />
+                </div>
 
-                <div className="container mx-auto px-4 absolute bottom-0 left-0 right-0 pb-16">
+                <div className="container mx-auto px-4 relative z-10">
                     <MotionDiv
                         initial={{ opacity: 0, y: 0 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -41,31 +34,31 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost }) {
                     >
                         <Link
                             href="/blog"
-                            className="inline-flex items-center gap-2 text-secondary font-body font-bold mb-8 hover:translate-x-[-4px] transition-all"
+                            className="inline-flex items-center gap-2 text-secondary font-body font-bold mb-5 hover:translate-x-[-4px] transition-all"
                         >
                             <ArrowLeft className="h-4 w-4" /> Back to Blog
                         </Link>
-                        <div className="mb-6">
+                        <div className="mb-4">
                             <span className="px-4 py-1.5 bg-secondary text-secondary-foreground text-xs font-body font-bold rounded-full uppercase tracking-widest shadow-gold">
                                 {blog.category}
                             </span>
                         </div>
-                        <h1 className="text-2xl md:text-6xl font-display font-bold text-foreground mb-8 leading-tight">
+                        <h1 className="text-2xl md:text-4xl font-display font-bold text-primary-foreground mb-5 leading-tight">
                             {blog.title}
                         </h1>
-                        <div className="flex flex-wrap items-center gap-8 text-foreground/80 font-body text-base">
+                        <div className="flex flex-wrap items-center gap-x-8 gap-y-3 text-primary-foreground/75 font-body text-sm md:text-base">
                             <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center border border-secondary/30">
-                                    <User className="h-5 w-5 text-secondary" />
+                                <div className="w-9 h-9 rounded-full bg-secondary/20 flex items-center justify-center border border-secondary/30">
+                                    <User className="h-4 w-4 text-secondary" />
                                 </div>
                                 <span className="font-semibold">{blog.author}</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <Calendar className="h-5 w-5 text-secondary" />
+                                <Calendar className="h-4 w-4 text-secondary" />
                                 <span>{blog.date}</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <Clock className="h-5 w-5 text-secondary" />
+                                <Clock className="h-4 w-4 text-secondary" />
                                 <span>{blog.readTime} read</span>
                             </div>
                         </div>
