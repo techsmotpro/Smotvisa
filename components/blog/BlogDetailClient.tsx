@@ -32,7 +32,7 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost }) {
                         initial={{ opacity: 0, y: 0 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="max-w-4xl mx-auto text-center"
+                        className="max-w-3xl mx-auto text-center"
                     >
                         <Link
                             href="/blog"
@@ -71,7 +71,7 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost }) {
             {/* Content Section */}
             <section className="py-10">
                 <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto">
+                    <div className="max-w-3xl mx-auto">
                         <div className="prose prose-lg prose-slate max-w-none font-body text-muted-foreground leading-relaxed
                                       prose-headings:font-display prose-headings:font-semibold prose-headings:text-foreground
                                       prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-3
