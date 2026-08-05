@@ -67,16 +67,16 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost }) {
             </section>
 
             {/* Content Section */}
-            <section className="py-14">
+            <section className="py-10">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
-                        <div className="prose prose-lg prose-slate max-w-none font-body text-muted-foreground leading-relaxed 
-                                      prose-headings:font-display prose-headings:font-bold prose-headings:text-foreground
-                                      prose-h2:text-3xl prose-h2:mt-8 prose-h2:mb-3 prose-h2:pb-3 prose-h2:border-b prose-h2:border-border/50
-                                      prose-h3:text-2xl prose-h3:mt-6 prose-h3:mb-2
+                        <div className="prose prose-lg prose-slate max-w-none font-body text-muted-foreground leading-relaxed
+                                      prose-headings:font-display prose-headings:font-semibold prose-headings:text-foreground
+                                      prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-3
+                                      prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-2
                                       prose-p:mb-4 prose-li:mb-1
                                       prose-strong:font-semibold prose-strong:text-foreground/80
-                                      prose-a:text-secondary prose-a:font-bold hover:prose-a:underline
+                                      prose-a:text-secondary prose-a:font-medium hover:prose-a:underline
                                       prose-img:rounded-[2rem] prose-img:shadow-elevated prose-img:mt-12 prose-img:mb-12"
                             dangerouslySetInnerHTML={{ __html: sanitizedContent }}
                         />
