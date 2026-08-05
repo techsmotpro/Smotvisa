@@ -88,7 +88,7 @@ export default function VisaServicesInJayanagar() {
                         "@context": "https://schema.org",
                         "@type": "Service",
                         "serviceType": "Visitor Visa Assistance for Parents and Senior Citizens",
-                        "provider": { "@type": "LocalBusiness", "name": "SmotVisa", "@id": "https://smotvisa.com/visa-agents-in-jayanagar" },
+                        "provider": { "@id": "https://smotvisa.com/visa-agents-in-jayanagar" },
                         "areaServed": { "@type": "Place", "name": "Jayanagar, Bangalore" },
                         "hasOfferCatalog": {
                             "@type": "OfferCatalog",

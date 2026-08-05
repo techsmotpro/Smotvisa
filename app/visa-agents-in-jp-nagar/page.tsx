@@ -90,7 +90,7 @@ export default function VisaServicesInJPNagar() {
                         "@context": "https://schema.org",
                         "@type": "Service",
                         "serviceType": "Tourist and Business Visa Preparation",
-                        "provider": { "@type": "LocalBusiness", "name": "SmotVisa", "@id": "https://smotvisa.com/visa-agents-in-jp-nagar" },
+                        "provider": { "@id": "https://smotvisa.com/visa-agents-in-jp-nagar" },
                         "areaServed": { "@type": "Place", "name": "JP Nagar, Bangalore" },
                         "hasOfferCatalog": {
                             "@type": "OfferCatalog",

@@ -94,7 +94,7 @@ export default function VisaServicesInIndiranagar() {
                         "@context": "https://schema.org",
                         "@type": "Service",
                         "serviceType": "Tourist and Business Visa Assistance",
-                        "provider": { "@type": "LocalBusiness", "name": "SmotVisa", "@id": "https://smotvisa.com/visa-agents-in-indiranagar" },
+                        "provider": { "@id": "https://smotvisa.com/visa-agents-in-indiranagar" },
                         "areaServed": { "@type": "Place", "name": "Indiranagar, Bangalore" },
                         "hasOfferCatalog": {
                             "@type": "OfferCatalog",

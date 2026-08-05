@@ -99,7 +99,7 @@ export default function VisaServicesInKRPuram() {
                         "@context": "https://schema.org",
                         "@type": "Service",
                         "serviceType": "Tourist and Business Visa Assistance",
-                        "provider": { "@type": "LocalBusiness", "name": "SmotVisa", "@id": "https://smotvisa.com/visa-agents-in-kr-puram" },
+                        "provider": { "@id": "https://smotvisa.com/visa-agents-in-kr-puram" },
                         "areaServed": { "@type": "Place", "name": "KR Puram, Bangalore" },
                         "hasOfferCatalog": {
                             "@type": "OfferCatalog",

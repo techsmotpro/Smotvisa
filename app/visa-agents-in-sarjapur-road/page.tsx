@@ -89,7 +89,7 @@ export default function VisaServicesInSarjapurRoad() {
                         "@context": "https://schema.org",
                         "@type": "Service",
                         "serviceType": "Family and Group Visa Assistance",
-                        "provider": { "@type": "LocalBusiness", "name": "SmotVisa", "@id": "https://smotvisa.com/visa-agents-in-sarjapur-road" },
+                        "provider": { "@id": "https://smotvisa.com/visa-agents-in-sarjapur-road" },
                         "areaServed": { "@type": "Place", "name": "Sarjapur Road, Bangalore" },
                         "hasOfferCatalog": {
                             "@type": "OfferCatalog",

@@ -106,7 +106,7 @@ export default function VisaServicesInHSRLayout() {
                         "@context": "https://schema.org",
                         "@type": "Service",
                         "serviceType": "Tourist and Business Visa Assistance",
-                        "provider": { "@type": "LocalBusiness", "name": "SmotVisa", "@id": "https://smotvisa.com/visa-agents-in-hsr-layout" },
+                        "provider": { "@id": "https://smotvisa.com/visa-agents-in-hsr-layout" },
                         "areaServed": { "@type": "Place", "name": "HSR Layout, Bangalore" },
                         "hasOfferCatalog": {
                             "@type": "OfferCatalog",

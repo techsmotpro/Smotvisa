@@ -90,7 +90,7 @@ export default function VisaServicesInBellandur() {
                         "@context": "https://schema.org",
                         "@type": "Service",
                         "serviceType": "Tourist and Business Visa Assistance",
-                        "provider": { "@type": "LocalBusiness", "name": "SmotVisa", "@id": "https://smotvisa.com/visa-agents-in-bellandur" },
+                        "provider": { "@id": "https://smotvisa.com/visa-agents-in-bellandur" },
                         "areaServed": { "@type": "Place", "name": "Bellandur, Bangalore" },
                         "hasOfferCatalog": {
                             "@type": "OfferCatalog",

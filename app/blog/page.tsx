@@ -60,7 +60,7 @@ export default function BlogListingPage() {
             }} />
             <PageHeader
                 title="Find out our variety of news on visa and travel"
-                description="Expert insights, visa guides, and travel inspiration to help you navigate the world with confidence."
+                description="Explore the collection of SmotVisa blogs for the latest news on visa, travel guides, destination insights, and practical tips to make your international travel easier."
                 breadcrumbs={[{ label: "Blog" }]}
             />
 

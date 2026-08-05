@@ -95,7 +95,7 @@ export default function VisaServicesInWhitefield() {
                         "@context": "https://schema.org",
                         "@type": "Service",
                         "serviceType": "Business and Family Visa Assistance",
-                        "provider": { "@type": "LocalBusiness", "name": "SmotVisa", "@id": "https://smotvisa.com/visa-agents-in-whitefield" },
+                        "provider": { "@id": "https://smotvisa.com/visa-agents-in-whitefield" },
                         "areaServed": { "@type": "Place", "name": "Whitefield, Bangalore" },
                         "hasOfferCatalog": {
                             "@type": "OfferCatalog",

@@ -94,7 +94,7 @@ export default function VisaServicesInKoramangala() {
                         "@context": "https://schema.org",
                         "@type": "Service",
                         "serviceType": "Business and Tourist Visa Assistance",
-                        "provider": { "@type": "LocalBusiness", "name": "SmotVisa", "@id": "https://smotvisa.com/visa-agents-in-koramangala" },
+                        "provider": { "@id": "https://smotvisa.com/visa-agents-in-koramangala" },
                         "areaServed": { "@type": "Place", "name": "Koramangala, Bangalore" },
                         "hasOfferCatalog": {
                             "@type": "OfferCatalog",

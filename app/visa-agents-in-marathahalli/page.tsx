@@ -103,7 +103,7 @@ export default function VisaServicesInMarathahalli() {
                         "@context": "https://schema.org",
                         "@type": "Service",
                         "serviceType": "Tourist and Business Visa Assistance",
-                        "provider": { "@type": "LocalBusiness", "name": "SmotVisa", "@id": "https://smotvisa.com/visa-agents-in-marathahalli" },
+                        "provider": { "@id": "https://smotvisa.com/visa-agents-in-marathahalli" },
                         "areaServed": { "@type": "Place", "name": "Marathahalli, Bangalore" },
                         "hasOfferCatalog": {
                             "@type": "OfferCatalog",

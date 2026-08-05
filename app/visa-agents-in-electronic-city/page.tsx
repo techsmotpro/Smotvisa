@@ -88,7 +88,7 @@ export default function VisaServicesInElectronicCity() {
                         "@context": "https://schema.org",
                         "@type": "Service",
                         "serviceType": "Tourist and Business Visa Assistance",
-                        "provider": { "@type": "LocalBusiness", "name": "SmotVisa", "@id": "https://smotvisa.com/visa-agents-in-electronic-city" },
+                        "provider": { "@id": "https://smotvisa.com/visa-agents-in-electronic-city" },
                         "areaServed": { "@type": "Place", "name": "Electronic City, Bangalore" },
                         "hasOfferCatalog": {
                             "@type": "OfferCatalog",
