@@ -177,18 +177,6 @@ export const blogCtaMapping: Record<string, BlogCta> = {
             ctaDescription: "Need urgent help with a name mismatch issue? Reach out to our team.",
         },
     },
-    "name-mismatch-between-passport-and-tickets-will-you-be-stopped": {
-        primaryCta: {
-            ctaText: "Book Air Tickets",
-            ctaUrl: "/services/air-ticketing",
-            ctaDescription: "Name on your passport and tickets don't match? We will help you get it sorted.",
-        },
-        secondaryCta: {
-            ctaText: "Contact Us",
-            ctaUrl: "/contact",
-            ctaDescription: "Need urgent help with a name mismatch issue? Reach out to our team.",
-        },
-    },
     "tourist-visa-fees-and-processing-time-for-major-countries": {
         primaryCta: {
             ctaText: "Check Visa Options",
