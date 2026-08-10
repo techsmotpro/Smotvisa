@@ -158,7 +158,7 @@ export const blogCtaMapping: Record<string, BlogCta> = {
             ctaDescription: "Compare fees and timelines across countries. Our experts can help you decide.",
         },
     },
-    "key-documents-required-for-study-visa-applications-complete-2025-guide-for-international-students": {
+    "key-documents-required-for-study-visa-applications": {
         primaryCta: {
             ctaText: "Get Study Visa Help",
             ctaUrl: "/visa",
