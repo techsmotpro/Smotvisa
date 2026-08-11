@@ -15,6 +15,8 @@
     { "source": "/get-a-quote", "destination": "/reachout", "permanent": true },
     { "source": "/contact/navi-mumbai", "destination": "/contact/mumbai/visa-agents-in-goregaon-east", "permanent": true },
     { "source": "/country-wise-tourist-visa-fees-processing-time-comparison", "destination": "/blog/country-wise-tourist-visa-fees-processing-time-comparison", "permanent": true },
+    { "source": "/blog/tourist-visa-fees-and-processing-time-for-major-countries", "destination": "/blog/country-wise-tourist-visa-fees-processing-time-comparison", "permanent": true },
+    { "source": "/tourist-visa-fees-and-processing-time-for-major-countries", "destination": "/blog/country-wise-tourist-visa-fees-processing-time-comparison", "permanent": true },
     { "source": "/canada-federal-skilled-worker-program", "destination": "/visa/canada-visa-consultant", "permanent": true },
     { "source": "/faqs", "destination": "/reachout", "permanent": true },
     { "source": "/our-services", "destination": "/services", "permanent": true },

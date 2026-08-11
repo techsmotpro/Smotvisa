@@ -177,13 +177,6 @@ export const blogCtaMapping: Record<string, BlogCta> = {
             ctaDescription: "Need urgent help with a name mismatch issue? Reach out to our team.",
         },
     },
-    "tourist-visa-fees-and-processing-time-for-major-countries": {
-        primaryCta: {
-            ctaText: "Check Visa Options",
-            ctaUrl: "/visa",
-            ctaDescription: "Want accurate, up-to-date visa fees and timelines? Our experts can guide you.",
-        },
-    },
     "countries-with-no-interview-visa-for-indians": {
         primaryCta: {
             ctaText: "Check Visa Options",
